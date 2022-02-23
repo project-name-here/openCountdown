@@ -1,13 +1,32 @@
+var newDateObj = new Date();
+newDateObj =  new Date(newDateObj.getTime() + 1000*20)
+
 function handleUpdate() {
-  resp = httpGet("/api/v1/data");
+  resp = httpGet("/api/v1/data?markRead=mark");
 
   var data = JSON.parse(resp);
+  if(data.changed){
+    newDateObj = data.countdownGoal;
+  }
+
   if (data.mode == "clock") {
     document.getElementById("timer").innerHTML = getTime();
     document.getElementById("testImg").style.display = "none";
 
   } else if (data.mode == "timer") {
-    document.getElementById("timer").innerHTML = data.timeLeft;
+    
+    countdown(
+      newDateObj,
+      function(ts) {
+        // console.log(ts)
+        if(ts.value <= 0){
+          document.getElementById("timer").innerHTML = ('00'+ts.hours).slice(-2) + ":" + ('00'+ts.minutes).slice(-2) + ":" + ('00'+ts.seconds).slice(-2);
+        }else{
+          document.getElementById("timer").innerHTML  = "00:00:00"
+        }
+        
+      },
+      countdown.HOURS|countdown.MINUTES|countdown.SECONDS);
     document.getElementById("testImg").style.display = "none";
 
   } else if (data.mode == "black") {

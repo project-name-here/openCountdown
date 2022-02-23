@@ -18,8 +18,8 @@ app.use(
 
 currentState = {
   mode: "clock",
-  timeLeft: "00:00:00",
-  timerInternal: 0,
+  countdownGoal: new Date(),
+  changed: true
 };
 
 app.get("/", function (req, res) {
@@ -30,7 +30,7 @@ app.get("/", function (req, res) {
 app.post("/", function (req, res) {
   console.log(req.body);
   currentState.mode = req.body.mode;
-  currentState.timeLeft = req.body.timeLeft;
+  currentState.countdownGoal = req.body.countdownGoal;
   res.send("OK");
 });
 
@@ -40,7 +40,11 @@ app.get("/timer", function (req, res) {
 });
 
 app.get("/api/v1/data", function (req, res) {
+  
   res.json(currentState);
+  if(req.query.markRead == "mark"){
+    currentState.changed = false
+  }
 });
 
 app.get("/api/v1/set/mode", function (req, res) {
@@ -48,11 +52,12 @@ app.get("/api/v1/set/mode", function (req, res) {
   res.json({ status: "ok" });
 });
 
-app.get("/api/v1/set/timeLeft", function (req, res) {
-  currentState.timerInternal = req.query.time;
+app.get("/api/v1/set/timerGoal", function (req, res) {
+  currentState.countdownGoal = req.query.time;
+  currentState.changed = true
   res.json({ status: "ok" });
 });
 
 console.log(countdown( new Date(2022, 1, 24) ).toString())
 
-app.listen(3000);
+app.listen(3005);
