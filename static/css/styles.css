@@ -40,12 +40,30 @@ html, body {
   order: 1;
 }
 
+.progWrapper{
+  font-size: 10em;
+  background-color: rgba(63, 63, 63, 0.733);
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+  font-family: sans-serif;
+  order: 1;
+  height: 24px;
+  width: 80%;
+  border: 1px solid rgb(63, 63, 63);
+}
+
+.progBar {
+  appearance: none;
+  height: 100%;
+  width: 80%;
+  border-radius: 0px;
+  background-color: darkcyan;
+}
+
 .testImg{
   height: 100%;
   width: 100%;
 }
-
-
 
 #overlay {
   position: fixed;

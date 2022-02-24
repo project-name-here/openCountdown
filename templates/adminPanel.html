@@ -51,6 +51,7 @@
 
   <form action="/api/v1/set/addMillisToTimer" target="hiddenFrame">
     <select id="time" name="time" onchange="">
+      <option value="20000">debug 1 (20 secs)</option>
       <option value="300000">00:05:00</option>
       <option value="600000">00:10:00</option>
       <option value="900000">00:15:00</option>
@@ -74,7 +75,7 @@
   <form action="/api/v1/ctrl/timer/restart" target="hiddenFrame">
     <button type="submit">Restart</button>
   </form>
-  
+
   Message: 
   <form action="/api/v1/ctrl/message/show" target="hiddenFrame">
     <input type="text" name="msg">

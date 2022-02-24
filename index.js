@@ -26,7 +26,9 @@ currentState = {
   showTimeOnCountdown: true,
   message: "",
   showMessage: false,
-  messageAppearTime: 0
+  messageAppearTime: 0,
+  showProgressbar: true,
+  colorSegments: {20000: "#FFAE00", 5000: "#ff0000", "START": "yellow"}
 };
 
 app.get("/", function (req, res) {
@@ -85,6 +87,12 @@ app.get("/api/v1/set/showTime", function (req, res) {
   currentState.showTimeOnCountdown = (req.query.show === 'true');
   res.json({ status: "ok" });
 });
+
+app.get("/api/v1/set/showProgressBar", function (req, res) {
+  currentState.showProgressbar = (req.query.show === 'true');
+  res.json({ status: "ok" });
+});
+
 
 app.get("/api/v1/ctrl/message/show", function (req, res) {
   currentState.message = req.query.msg

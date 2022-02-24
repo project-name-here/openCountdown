@@ -13,6 +13,10 @@ function enterFullscreen(element) {
   }
 }
 
+function percentage(partialValue, totalValue) {
+  return (100 * partialValue) / totalValue;
+} 
+
 function updateFullscreen(){
   if(JSON.parse(document.getElementById("incomeData").innerHTML).defaultFullScreen && allowFullscreen){
     enterFullscreen(document.documentElement)
@@ -43,6 +47,24 @@ function msToTime(s, data) {
     out = "-" + out
   }
   return out;
+}
+
+function findProgessColor(colors, value){
+  console.info("\n\n\n\n\n")
+  const allColors = Object.keys(colors);
+  let resColor = colors["START"]
+
+  for(let color in allColors){
+    const currColor = allColors[color]
+    console.log(color, currColor, parseInt(currColor), value, colors[String(currColor)])
+    if(value <= parseInt(currColor)){
+      console.log("trith")
+      resColor = colors[currColor]
+    }
+  }
+
+ //  console.info(resColor, value)
+  return(resColor)
 }
 
 function handleUpdate() {
@@ -77,13 +99,22 @@ function handleUpdate() {
   if (data.mode == "clock") {
     document.getElementById("timer").innerHTML = getTime();
     document.getElementById("testImg").style.display = "none";
+    document.getElementById("wholeProgBar").style.display = "none";
 
   } else if (data.mode == "timer") {
+
+    
+    
+
+    document.getElementById("wholeProgBar").style.display = "block";
     if(data.timerRunState){
       const now = new Date()
       const diff = data.countdownGoal - now.getTime()
       document.getElementById("timer").innerHTML = msToTime(diff, data);
+      document.getElementById("progBar").style.width = percentage(diff, data.timeAmountInital) + "%";
+      document.getElementById("progBar").style.backgroundColor = findProgessColor(data.colorSegments,diff)
       document.getElementById("testImg").style.display = "none";
+
     }
     if(data.showTimeOnCountdown){
       document.getElementById("clockSec").innerHTML = getTime();
@@ -94,10 +125,12 @@ function handleUpdate() {
   } else if (data.mode == "black") {
     document.getElementById("timer").innerHTML = "";
     document.getElementById("testImg").style.display = "none";
+    document.getElementById("wholeProgBar").style.display = "none";
     
   } else if (data.mode == "test") {
     document.getElementById("timer").innerHTML = "";
     document.getElementById("testImg").style.display = "block";
+    document.getElementById("progBar").style.display = "none";
   }
 }
 
