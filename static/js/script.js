@@ -60,13 +60,12 @@ function handleUpdate() {
     document.getElementById("testImg").style.display = "none";
 
   } else if (data.mode == "timer") {
-    const now = new Date()
-    const diff = data.countdownGoal - now.getTime()
-
-
-    
-    document.getElementById("timer").innerHTML = msToTime(diff, data);
-    document.getElementById("testImg").style.display = "none";
+    if(data.timerRunState){
+      const now = new Date()
+      const diff = data.countdownGoal - now.getTime()
+      document.getElementById("timer").innerHTML = msToTime(diff, data);
+      document.getElementById("testImg").style.display = "none";
+    }
 
   } else if (data.mode == "black") {
     document.getElementById("timer").innerHTML = "";

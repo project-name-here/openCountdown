@@ -18,21 +18,16 @@ app.use(
 currentState = {
   mode: "clock",
   countdownGoal: new Date().getTime(),
-  changed: true,
   showMilliSeconds: true,
-  defaultFullScreen: true
+  defaultFullScreen: true,
+  timeAmountInital: 0,
+  timerRunState: true,
+  pauseMoment: 0
 };
 
 app.get("/", function (req, res) {
   const data = fs.readFileSync("templates/adminPanel.html", "utf8");
   res.send(data);
-});
-
-app.post("/", function (req, res) {
-  console.log(req.body);
-  currentState.mode = req.body.mode;
-  currentState.countdownGoal = req.body.countdownGoal;
-  res.send("OK");
 });
 
 app.get("/timer", function (req, res) {
@@ -60,8 +55,25 @@ app.get("/api/v1/set/timerGoal", function (req, res) {
 });
 
 app.get("/api/v1/set/addMillisToTimer", function (req, res) {
-  console.log(req.query.time)
+  currentState.timeAmountInital = req.query.time;
   currentState.countdownGoal = new Date().getTime() + parseInt(req.query.time)
+  res.json({ status: "ok" });
+});
+
+app.get("/api/v1/ctrl/timer/pause", function (req, res) {
+  currentState.timerRunState = false;
+  currentState.pauseMoment = new Date().getTime();
+  res.json({ status: "ok" });
+});
+
+app.get("/api/v1/ctrl/timer/play", function (req, res) {
+  currentState.timerRunState = true
+  currentState.countdownGoal += new Date().getTime() - currentState.pauseMoment;
+  res.json({ status: "ok" });
+});
+
+app.get("/api/v1/ctrl/timer/restart", function (req, res) {
+  currentState.countdownGoal = new Date().getTime() + parseInt(currentState.timeAmountInital)
   res.json({ status: "ok" });
 });
 

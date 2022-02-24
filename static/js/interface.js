@@ -3,6 +3,6 @@ function convertTimeOffset(){
     document.getElementById("time").value = selTime
 }
 
-function updateHiddenForm(){
-    document.getElementById("time").value = document.getElementById('time2').valueAsNumber
+function updateHiddenForm2(){
+    document.getElementById("time4").value = document.getElementById('time3').value
 }
