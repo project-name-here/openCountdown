@@ -1,10 +1,49 @@
-<form method="POST">
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>openCountdown - Admin</title>
+    <meta name="description" content="openCountdown">
+    <meta name="author" content="TheGreydiamond">
+
+    <link rel="stylesheet" href="css/styles.css?v=1.1">
+</head>
+
+<body>
+
+
+<form action="/api/v1/set/mode" target="hiddenFrame">
     <select id="mode" name="mode">
         <option value="timer">Timer</option>
         <option value="clock">Clock</option>
         <option value="black">Black</option>
         <option value="test">Test</option>
       </select>
-    <input type="text" name="timeLeft">
     <button type="submit">Submit</button>
 </form>
+<br>
+<form action="/api/v1/set/showMillis" target="hiddenFrame">
+  <select id="show" name="show">
+    <option value="true">Enable Milliseconds</option>
+    <option value="false">Disable Milliseconds</option>
+  </select>
+  <button type="submit">Submit</button>
+</form>
+
+<form action="/api/v1/set/addMillisToTimer" target="hiddenFrame">
+  <input type="time" step="0.001" name="time2" id="time2" onchange="updateHiddenForm()"></input>
+  <input type="hidden" step="0.001" name="time" id="time"></input>
+  <button type="submit">Submit</button>
+</form>
+
+<iframe name="hiddenFrame" style="display: none"></iframe>
+
+
+<iframe src="/timer?smaller=true" height="80%" width="80%"> </iframe>
+</body>
+<script src="js/interface.js"></script>
+</html>

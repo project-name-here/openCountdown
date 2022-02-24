@@ -1,7 +1,6 @@
 const express = require("express");
 const fs = require("fs");
 const bodyParser = require("body-parser");
-const countdown = require("countdown")
 
 const app = express();
 
@@ -18,8 +17,10 @@ app.use(
 
 currentState = {
   mode: "clock",
-  countdownGoal: new Date(),
-  changed: true
+  countdownGoal: new Date().getTime(),
+  changed: true,
+  showMilliSeconds: true,
+  defaultFullScreen: true
 };
 
 app.get("/", function (req, res) {
@@ -40,11 +41,7 @@ app.get("/timer", function (req, res) {
 });
 
 app.get("/api/v1/data", function (req, res) {
-  
   res.json(currentState);
-  if(req.query.markRead == "mark"){
-    currentState.changed = false
-  }
 });
 
 app.get("/api/v1/set/mode", function (req, res) {
@@ -52,12 +49,20 @@ app.get("/api/v1/set/mode", function (req, res) {
   res.json({ status: "ok" });
 });
 
-app.get("/api/v1/set/timerGoal", function (req, res) {
-  currentState.countdownGoal = req.query.time;
-  currentState.changed = true
+app.get("/api/v1/set/showMillis", function (req, res) {
+  currentState.showMilliSeconds = (req.query.show === 'true');
   res.json({ status: "ok" });
 });
 
-console.log(countdown( new Date(2022, 1, 24) ).toString())
+app.get("/api/v1/set/timerGoal", function (req, res) {
+  currentState.countdownGoal = new Date(parseInt(req.query.time)).getTime();
+  res.json({ status: "ok" });
+});
+
+app.get("/api/v1/set/addMillisToTimer", function (req, res) {
+  console.log(req.query.time)
+  currentState.countdownGoal = new Date().getTime() + parseInt(req.query.time)
+  res.json({ status: "ok" });
+});
 
 app.listen(3005);

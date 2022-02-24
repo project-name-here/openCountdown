@@ -23,11 +23,14 @@ html, body {
 }
 
 .timer {
-  font-size: 200px;
+  font-size: 20em;
   text-align: center;
+  font-variant-numeric: tabular-nums;
+  font-family: sans-serif;
 }
 
 .testImg{
   height: 100%;
   width: 100%;
 }
+
