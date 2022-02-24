@@ -22,7 +22,11 @@ currentState = {
   defaultFullScreen: true,
   timeAmountInital: 0,
   timerRunState: true,
-  pauseMoment: 0
+  pauseMoment: 0,
+  showTimeOnCountdown: true,
+  message: "",
+  showMessage: false,
+  messageAppearTime: 0
 };
 
 app.get("/", function (req, res) {
@@ -58,7 +62,7 @@ app.get("/api/v1/set/addMillisToTimer", function (req, res) {
   currentState.timeAmountInital = req.query.time;
   currentState.countdownGoal = new Date().getTime() + parseInt(req.query.time)
   res.json({ status: "ok" });
-});
+}); 
 
 app.get("/api/v1/ctrl/timer/pause", function (req, res) {
   currentState.timerRunState = false;
@@ -74,6 +78,23 @@ app.get("/api/v1/ctrl/timer/play", function (req, res) {
 
 app.get("/api/v1/ctrl/timer/restart", function (req, res) {
   currentState.countdownGoal = new Date().getTime() + parseInt(currentState.timeAmountInital)
+  res.json({ status: "ok" });
+});
+
+app.get("/api/v1/set/showTime", function (req, res) {
+  currentState.showTimeOnCountdown = (req.query.show === 'true');
+  res.json({ status: "ok" });
+});
+
+app.get("/api/v1/ctrl/message/show", function (req, res) {
+  currentState.message = req.query.msg
+  currentState.showMessage = true
+  currentState.messageAppearTime = new Date().getTime()
+  res.json({ status: "ok" });
+});
+
+app.get("/api/v1/ctrl/message/hide", function (req, res) {
+  currentState.showMessage = false
   res.json({ status: "ok" });
 });
 

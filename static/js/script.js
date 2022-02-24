@@ -1,6 +1,8 @@
 var newDateObj = new Date();
 newDateObj =  new Date(newDateObj.getTime() + 1000*20)
 
+allowFullscreen = true
+
 function enterFullscreen(element) {
   if(element.requestFullscreen) {
     element.requestFullscreen();
@@ -12,7 +14,7 @@ function enterFullscreen(element) {
 }
 
 function updateFullscreen(){
-  if(JSON.parse(document.getElementById("incomeData").innerHTML).defaultFullScreen){
+  if(JSON.parse(document.getElementById("incomeData").innerHTML).defaultFullScreen && allowFullscreen){
     enterFullscreen(document.documentElement)
   }
 }
@@ -44,14 +46,31 @@ function msToTime(s, data) {
 }
 
 function handleUpdate() {
-  resp = httpGet("/api/v1/data?markRead=mark");
+  resp = httpGet("/api/v1/data");
 
   var data = JSON.parse(resp);
   document.getElementById("incomeData").innerHTML = JSON.stringify(data)
 
-  if(data.defaultFullScreen && document.getElementById("initalDate").innerHTML.includes("true")){
+  if(data.defaultFullScreen && document.getElementById("initalDate").innerHTML.includes("true") && allowFullscreen){
     enterFullscreen(document.documentElement);  
     document.getElementById("initalDate").innerHTML = "false"
+  }
+
+  if(data.showMessage) {
+    document.getElementById("overlay").style.display = "block";
+    document.getElementById("text").innerHTML = data.message
+  }else{
+    off()
+  }
+
+  if(new Date().getTime() - data.messageAppearTime < 5000) {
+    if (! document.getElementById("text").classList.contains('blink') ){
+      document.getElementById("text").classList.add("blink")
+    }
+  }else{
+    if ( document.getElementById("text").classList.contains('blink') ){
+      document.getElementById("text").classList.remove("blink")
+    }
   }
 
 
@@ -65,6 +84,11 @@ function handleUpdate() {
       const diff = data.countdownGoal - now.getTime()
       document.getElementById("timer").innerHTML = msToTime(diff, data);
       document.getElementById("testImg").style.display = "none";
+    }
+    if(data.showTimeOnCountdown){
+      document.getElementById("clockSec").innerHTML = getTime();
+    } else {
+      document.getElementById("clockSec").innerHTML = "";
     }
 
   } else if (data.mode == "black") {
@@ -98,6 +122,14 @@ function getTime() {
   return time;
 }
 
+function on() {
+  document.getElementById("overlay").style.display = "block";
+}
+
+function off() {
+  document.getElementById("overlay").style.display = "none";
+}
+
 setInterval(handleUpdate, 200);
 
 let temp = new URLSearchParams(window.location.search).get("smaller");
@@ -106,4 +138,5 @@ let temp = new URLSearchParams(window.location.search).get("smaller");
 if (temp == "true") {
   var cssURL = '/css/smallerTextMod.css';
   document.head.innerHTML +='<link rel="stylesheet" href="' + cssURL + '"/>'
+  allowFullscreen = false
 }

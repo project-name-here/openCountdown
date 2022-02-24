@@ -19,7 +19,7 @@ html, body {
   position: relative;
   justify-content: center;
   align-items: center;
-  
+  flex-direction: column;
 }
 
 .timer {
@@ -27,6 +27,17 @@ html, body {
   text-align: center;
   font-variant-numeric: tabular-nums;
   font-family: sans-serif;
+  order: 1;
+}
+
+.clockSec {
+  padding: 5%;
+  font-size: 10em;
+  color: grey;
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+  font-family: sans-serif;
+  order: 1;
 }
 
 .testImg{
@@ -34,3 +45,44 @@ html, body {
   width: 100%;
 }
 
+
+
+#overlay {
+  position: fixed;
+  font-family: sans-serif;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+}
+
+#text{
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  font-size: 50px;
+  color: white;
+  transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+}
+
+@keyframes fade {
+  from { opacity: 1.0; }
+  50% { opacity: 0.5; }
+  to { opacity: 1.0; }
+}                                                                                                                                                                                                                                  
+
+@-webkit-keyframes fade {
+  from { opacity: 1.0; }
+  50% { opacity: 0.5; }
+  to { opacity: 1.0; }
+}
+
+.blink {
+animation:fade 1000ms infinite;
+-webkit-animation:fade 1000ms infinite;
+}

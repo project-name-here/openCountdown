@@ -14,17 +14,26 @@
 </head>
 
 <body onclick="updateFullscreen()">
+
+    <div id="overlay" onclick="off()">
+        <div id="text">Message here</div>
+    </div>
+
     <img src='SMPTE_Color_Bars.svg' class='testImg' id="testImg" style="display: none;">
-</img>
-<valueStore style="display: none;">
-    <value id="initalDate">true</value>
-    <value id="incomeData"></value>
-</valueStore>
+    </img>
+    <valueStore style="display: none;">
+        <value id="initalDate">true</value>
+        <value id="incomeData"></value>
+    </valueStore>
 
     <div class="container">
         <div class="timer" id="timer">
             00:00:00
         </div>
+        <div class="clockSec" id="clockSec">
+
+        </div>
+
     </div>
     <script src="js/countdown.js"></script>
     <script src="js/script.js"></script>

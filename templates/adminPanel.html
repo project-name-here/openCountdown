@@ -25,11 +25,20 @@
     </select>
     <button type="submit">Submit</button>
   </form>
+
   <br>
   <form action="/api/v1/set/showMillis" target="hiddenFrame">
     <select id="show" name="show">
       <option value="true">Enable Milliseconds</option>
       <option value="false">Disable Milliseconds</option>
+    </select>
+    <button type="submit">Submit</button>
+  </form>
+
+  <form action="/api/v1/set/showTime" target="hiddenFrame">
+    <select id="show" name="show">
+      <option value="true">Show Clock on Countdown page</option>
+      <option value="false">Do not show Clock on Countdown page</option>
     </select>
     <button type="submit">Submit</button>
   </form>
@@ -55,6 +64,7 @@
     <button type="submit">Submit</button>
   </form>
 
+  Play controls:
   <form action="/api/v1/ctrl/timer/play" target="hiddenFrame">
     <button type="submit">Play</button>
   </form>
@@ -64,7 +74,15 @@
   <form action="/api/v1/ctrl/timer/restart" target="hiddenFrame">
     <button type="submit">Restart</button>
   </form>
-
+  
+  Message: 
+  <form action="/api/v1/ctrl/message/show" target="hiddenFrame">
+    <input type="text" name="msg">
+    <button type="submit">Submit</button>
+  </form>
+  <form action="/api/v1/ctrl/message/hide" target="hiddenFrame">
+    <button type="submit">Hide</button>
+  </form>
   <iframe name="hiddenFrame" style="display: none"></iframe>
 
 
