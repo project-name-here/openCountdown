@@ -1,0 +1,323 @@
+swagger: "2.0"
+info:
+  description: "This is a sample server Petstore server.  You can find out more about     Swagger at [http://swagger.io](http://swagger.io) or on [irc.freenode.net, #swagger](http://swagger.io/irc/).      For this sample, you can use the api key `special-key` to test the authorization     filters."
+  version: "1.0.0"
+  title: "openCountdown API"
+  license:
+    name: "Apache 2.0"
+    url: "http://www.apache.org/licenses/LICENSE-2.0.html"
+host: "localhost:3005"
+basePath: "/api/v1"
+tags:
+- name: "pet"
+  description: "Everything about your Pets"
+  externalDocs:
+    description: "Find out more"
+    url: "http://swagger.io"
+- name: "store"
+  description: "Access to Petstore orders"
+- name: "user"
+  description: "Operations about user"
+  externalDocs:
+    description: "Find out more about about openCountdown"
+    url: "http://swagger.io"
+schemes:
+- "http"
+paths:
+  /set/mode:
+    get:
+      tags:
+      - "pet"
+      summary: "Set the current timers mode"
+      description: ""
+      operationId: "setMode"
+      parameters:
+        - in: path
+          name: mode
+          required: true
+          type: string
+          description: The timers mode, can be any of timer, clock, test or black.
+      produces:
+      - "application/json"
+      responses:
+        "200":
+          description: "Request was succesful"
+
+
+
+  /set/timerGoal:
+    get:
+      tags:
+      - "pet"
+      summary: "Sets the timers goal to `time`, using epoch"
+      description: ""
+      operationId: "setTimerGoal"
+      parameters:
+        - in: path
+          name: "time"
+          required: true
+          type: number
+          description: The time when the timer will reach 0 in milliseconds since the epoch start.
+      produces:
+      - "application/json"
+      responses:
+        "200":
+          description: "Request was succesful"
+          
+  /set/addMillisToTimer:
+    get:
+      tags:
+      - "pet"
+      summary: "Sets the timers goal to now + `time`"
+      description: ""
+      operationId: "addMillis"
+      parameters:
+        - in: path
+          name: "time"
+          required: true
+          type: number
+          description: Adds the given input to the current time. Using milliseconds
+      produces:
+      - "application/json"
+      responses:
+        "200":
+          description: "Request was succesful"
+          
+
+  /set/layout/showTime:
+    get:
+      tags:
+      - "layout"
+      summary: "If set to true will show the current time on timer page"
+      description: ""
+      operationId: "showTime"
+      parameters:
+        - in: path
+          name: "show"
+          required: true
+          type: boolean
+          description: If true will show the current time as a clock below the timer
+      produces:
+      - "application/json"
+      responses:
+        "200":
+          description: "Request was succesful"
+          
+
+  /set/layout/showMillis:
+    get:
+      tags:
+      - "layout"
+      summary: "If set to true will show the milliseconds left on timer page"
+      description: ""
+      operationId: "showMillis"
+      parameters:
+        - in: path
+          name: "show"
+          required: true
+          type: boolean
+          description: If true will show the milliseconds left on the timer page
+      produces:
+      - "application/json"
+      responses:
+        "200":
+          description: "Request was succesful"
+          
+  /set/progressbar/show:
+    get:
+      tags:
+      - "progressbar"
+      summary: "If set to true will show the progressbar"
+      description: ""
+      operationId: "showProgress"
+      parameters:
+        - in: path
+          name: "show"
+          required: true
+          type: boolean
+          description: "If true will show the progressbar on the timer page"
+      produces:
+      - "application/json"
+      responses:
+        "200":
+          description: "Request was succesful"
+
+  /set/progressbar/colors:
+    get:
+      tags:
+      - "progressbar"
+      summary: "Allows to set the color by value"
+      description: ""
+      operationId: "progressColors"
+      parameters:
+        - in: path
+          name: "colors"
+          required: true
+          type: string
+          description: "Takes a dictonary with the key being the time left on the countdown and any css color as the value. Example: `{5000: 'red'}`"
+      produces:
+      - "application/json"
+      responses:
+        "200":
+          description: "Request was succesful"
+
+  /set/text/enableColoring:
+    get:
+      tags:
+      - "text"
+      summary: "Enable or disable color based on value for the timer"
+      description: ""
+      operationId: "textEnableColoring"
+      parameters:
+        - in: path
+          name: "show"
+          required: true
+          type: boolean
+          description: "If true the timer will change color by value, else the timer stays white."
+      produces:
+      - "application/json"
+      responses:
+        "200":
+          description: "Request was succesful"
+
+  /set/text/colors:
+    get:
+      tags:
+      - "text"
+      summary: "Allows to set the color by value"
+      description: ""
+      operationId: "textColors"
+      parameters:
+        - in: path
+          name: "colors"
+          required: true
+          type: string
+          description: "Takes a dictonary with the key being the time left on the countdown and any css color as the value. Example: `{5000: 'red'}`"
+      produces:
+      - "application/json"
+      responses:
+        "200":
+          description: "Request was succesful"
+
+definitions:
+  Order:
+    type: "object"
+    properties:
+      id:
+        type: "integer"
+        format: "int64"
+      petId:
+        type: "integer"
+        format: "int64"
+      quantity:
+        type: "integer"
+        format: "int32"
+      shipDate:
+        type: "string"
+        format: "date-time"
+      status:
+        type: "string"
+        description: "Order Status"
+        enum:
+        - "placed"
+        - "approved"
+        - "delivered"
+      complete:
+        type: "boolean"
+        default: false
+    xml:
+      name: "Order"
+  Category:
+    type: "object"
+    properties:
+      id:
+        type: "integer"
+        format: "int64"
+      name:
+        type: "string"
+    xml:
+      name: "Category"
+  User:
+    type: "object"
+    properties:
+      id:
+        type: "integer"
+        format: "int64"
+      username:
+        type: "string"
+      firstName:
+        type: "string"
+      lastName:
+        type: "string"
+      email:
+        type: "string"
+      password:
+        type: "string"
+      phone:
+        type: "string"
+      userStatus:
+        type: "integer"
+        format: "int32"
+        description: "User Status"
+    xml:
+      name: "User"
+  Tag:
+    type: "object"
+    properties:
+      id:
+        type: "integer"
+        format: "int64"
+      name:
+        type: "string"
+    xml:
+      name: "Tag"
+  Pet:
+    type: "object"
+    required:
+    - "name"
+    - "photoUrls"
+    properties:
+      id:
+        type: "integer"
+        format: "int64"
+      category:
+        $ref: "#/definitions/Category"
+      name:
+        type: "string"
+        example: "doggie"
+      photoUrls:
+        type: "array"
+        xml:
+          name: "photoUrl"
+          wrapped: true
+        items:
+          type: "string"
+      tags:
+        type: "array"
+        xml:
+          name: "tag"
+          wrapped: true
+        items:
+          $ref: "#/definitions/Tag"
+      status:
+        type: "string"
+        description: "pet status in the store"
+        enum:
+        - "available"
+        - "pending"
+        - "sold"
+    xml:
+      name: "Pet"
+  ApiResponse:
+    type: "object"
+    properties:
+      code:
+        type: "integer"
+        format: "int32"
+      type:
+        type: "string"
+      message:
+        type: "string"
+externalDocs:
+  description: "Find out more about Swagger"
+  url: "http://swagger.io"

@@ -6,5 +6,5 @@
 - [X] time on countdown page
 - [X] one-way messaging
 - [ ] Better UI
-- [ ] Progress bar
-- [ ] Endpoint docs
+- [X] Progress bar
+- [P] Endpoint docs
