@@ -78,6 +78,7 @@ function handleUpdate() {
       var data = JSON.parse(resp);
       document.getElementById("incomeData").innerHTML = JSON.stringify(data)
       document.getElementById("timediff").innerHTML = new Date().getTime() - data.srvTime;
+
       if(data.debug){
         document.getElementById("timediff").style.display = "block";
       }else{
@@ -111,6 +112,8 @@ function handleUpdate() {
         document.getElementById("timer").innerHTML = getTime();
         document.getElementById("testImg").style.display = "none";
         document.getElementById("wholeProgBar").style.display = "none";
+        document.getElementById("clockSec").innerHTML = "";
+        document.getElementById("timer").style.color = "white"
   
       } else if (data.mode == "timer") {
   
@@ -145,11 +148,13 @@ function handleUpdate() {
         document.getElementById("timer").innerHTML = "";
         document.getElementById("testImg").style.display = "none";
         document.getElementById("wholeProgBar").style.display = "none";
+        document.getElementById("clockSec").innerHTML = "";
   
       } else if (data.mode == "test") {
         document.getElementById("timer").innerHTML = "";
         document.getElementById("testImg").style.display = "block";
         document.getElementById("progBar").style.display = "none";
+        document.getElementById("clockSec").innerHTML = "";
       }
     }
     

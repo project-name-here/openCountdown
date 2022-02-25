@@ -39,9 +39,15 @@ currentState.textColors = currentState.colorSegments
 
 
 app.get("/", function (req, res) {
+  const data = fs.readFileSync("templates/newAdminPanel.html", "utf8");
+  res.send(data);
+});
+
+app.get("/old", function (req, res) {
   const data = fs.readFileSync("templates/adminPanel.html", "utf8");
   res.send(data);
 });
+
 
 app.get("/timer", function (req, res) {
   const data = fs.readFileSync("templates/timerPage.html", "utf8");
