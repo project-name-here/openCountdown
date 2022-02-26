@@ -15,6 +15,7 @@
     "countdown": "^2.6.0",
     "express": "^4.17.3",
     "jquery": "^3.6.0",
+    "mdbootstrap": "^4.20.0",
     "moment": "^2.29.1"
   }
 }

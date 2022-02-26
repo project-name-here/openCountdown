@@ -9,14 +9,16 @@
     <meta name="description" content="openCountdown">
     <meta name="author" content="TheGreydiamond">
 
-    <link href="/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-    </link>
-    <link href="/css/mainStyle.css" rel="stylesheet">
+
     <link rel="stylesheet" href="/css/bootstrap-icons.css">
+    <link rel="stylesheet" href="/mdbootstrap/css/style.css">
 
     <script src="/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="/js/jquery.min.js"></script>
-    <script src="/js/moment.js"></script>
+    <script type="text/javascript" src="/mdbootstrap/js/mdb.min.js"></script>
+
+    <link href="/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/mainStyle.css" rel="stylesheet">
 </head>
 
 <body>
@@ -142,102 +144,185 @@
             <page id="homeP" class="pageC flex-fill overflow-auto">
                 <h1>Home page</h1>
 
-                <placeholder>ToDo: Load current settings</placeholder>
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <h3>Preview: </h3>
+                            <iframe src="/timer?smaller=true" height="100%" width="100%"> </iframe>
+                        </div>
+                        <div class="col">
+                            <h3>Mode</h3>
+                            <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                                <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off"
+                                    checked>
+                                <label class="btn btn-outline-primary" for="btnradio1">Timer</label>
 
-                <h3>Preview: </h3>
-                <iframe src="/timer?smaller=true" height="50%" width="70%"> </iframe>
+                                <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+                                <label class="btn btn-outline-primary" for="btnradio2">Clock</label>
 
-                <hr>
-                <h3>Mode</h3>
-                <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
-                    <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
-                    <label class="btn btn-outline-primary" for="btnradio1">Timer</label>
-                  
-                    <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
-                    <label class="btn btn-outline-primary" for="btnradio2">Clock</label>
-                  
-                    <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
-                    <label class="btn btn-outline-primary" for="btnradio3">Black</label>
+                                <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
+                                <label class="btn btn-outline-primary" for="btnradio3">Black</label>
 
-                    <input type="radio" class="btn-check" name="btnradio" id="btnradio4" autocomplete="off">
-                    <label class="btn btn-outline-primary" for="btnradio4">Testimage</label>
-                  </div>
-                  <br>
-                <hr>
-                <h3>Timer</h3>
-                
-                <controls>
-                    <button class="btn btn-outline-success m-1 p-4" id="funcPlay"><svg
-                            xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                            class="bi bi-play-fill" viewBox="0 0 16 16">
-                            <path
-                                d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z" />
-                        </svg></button>
+                                <input type="radio" class="btn-check" name="btnradio" id="btnradio4" autocomplete="off">
+                                <label class="btn btn-outline-primary" for="btnradio4">Testimage</label>
+                            </div>
+                            <br>
+                            <br>
+                            <br>
+                            <controls>
+                                <button class="btn btn-outline-success p-4" id="funcPlay"><svg
+                                        xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-play-fill" viewBox="0 0 16 16">
+                                        <path
+                                            d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z" />
+                                    </svg></button>
 
-                    <button class="btn btn-outline-warning m-1 p-4" id="funcPause"><svg
-                            xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                            class="bi bi-pause" viewBox="0 0 16 16">
-                            <path
-                                d="M6 3.5a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5zm4 0a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5z" />
-                        </svg></button>
-                    <button class="btn btn-outline-info m-1 p-4" id="funcRestart"><svg
-                            xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                            class="bi bi-arrow-clockwise" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd"
-                                d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z" />
-                            <path
-                                d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z" />
-                        </svg></button>
-                </controls>
-                <presets class="d-flex m-3">
-                    <button class="btn btn-outline-secondary m-1">Preset 1</button>
-                    <button class="btn btn-outline-secondary m-1">Preset 2</button>
-                    <button class="btn btn-outline-secondary m-1">Preset 3</button>
-                    <button class="btn btn-outline-secondary m-1">Preset 3</button>
-                    <button class="btn btn-outline-secondary m-1">Preset 5</button>
-                    <button class="btn btn-outline-secondary m-1">Preset 6</button>
-                </presets>
-                <button class="btn btn-outline-primary m-3 mt-0">Go</button><br>
-                <placeholder>Time duration picker</placeholder>
+                                <button class="btn btn-outline-warning p-4" id="funcPause"><svg
+                                        xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-pause" viewBox="0 0 16 16">
+                                        <path
+                                            d="M6 3.5a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5zm4 0a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5z" />
+                                    </svg></button>
+                                <button class="btn btn-outline-info p-4" id="funcRestart"><svg
+                                        xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-arrow-clockwise" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z" />
+                                        <path
+                                            d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z" />
+                                    </svg></button>
+                            </controls>
+                            <br>
+                            <br>
+                            <br>
 
-                <hr>
-                <h3>Messaging</h3>
-                <input type="text" id="messageContent">
-                 <button class="btn btn-outline-primary m-1"
-                    id="sendMessage"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                        class="bi bi-send" viewBox="0 0 16 16">
-                        <path
-                            d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576 6.636 10.07Zm6.787-8.201L1.591 6.602l4.339 2.76 7.494-7.493Z" />
-                    </svg></button>
+                            <presets>
+                                <button class="btn btn-outline-secondary m-1 pres" value="300000">00:05:00</button>
+                                <button class="btn btn-outline-secondary m-1 pres" value="600000">00:10:00</button>
+                                <button class="btn btn-outline-secondary m-1 pres" value="900000">00:15:00</button><br>
+                                <button class="btn btn-outline-secondary m-1 pres" value="1200000">00:20:00</button>
+                                <button class="btn btn-outline-secondary m-1 pres" value="1500000">00:25:00</button>
+                                <button class="btn btn-outline-secondary m-1 pres"
+                                    value="1800000">00:30:00</button><button class="btn btn-outline-primary m-1 mt-0"
+                                    id="GoPreset">Go</button><br>
+                                <button class="btn btn-outline-secondary m-1 pres" value="2100000">00:35:00</button>
+                                <button class="btn btn-outline-secondary m-1 pres" value="2400000">00:40:00</button>
+                                <button class="btn btn-outline-secondary m-1 pres" value="2700000">00:45:00</button>
+                            </presets>
 
-                    <button class="btn btn-outline-primary m-1" id="ctrlRemoveMessage">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye-slash-fill" viewBox="0 0 16 16">
-                            <path d="m10.79 12.912-1.614-1.615a3.5 3.5 0 0 1-4.474-4.474l-2.06-2.06C.938 6.278 0 8 0 8s3 5.5 8 5.5a7.029 7.029 0 0 0 2.79-.588zM5.21 3.088A7.028 7.028 0 0 1 8 2.5c5 0 8 5.5 8 5.5s-.939 1.721-2.641 3.238l-2.062-2.062a3.5 3.5 0 0 0-4.474-4.474L5.21 3.089z"/>
-                            <path d="M5.525 7.646a2.5 2.5 0 0 0 2.829 2.829l-2.83-2.829zm4.95.708-2.829-2.83a2.5 2.5 0 0 1 2.829 2.829zm3.171 6-12-12 .708-.708 12 12-.708.708z"/>
-                          </svg>
-                    </button>
+                        </div>
+                    </div>
+                </div>
 
+                <h3>Timer / Messaging</h3>
+                <div class="container">
+                    <div class="row" style="width: 60%;">
+                        <div class="col">
+                            <h4>H</h4>
+                            <button class="btn btn-outline-secondary" id="timerHourInc">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-plus" viewBox="0 0 16 16">
+                                    <path
+                                        d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+                                </svg>
+                            </button><br>
+                            <b id="timerHoursV">0</b><br>
+                            <button class="btn btn-outline-secondary" id="timerHourDec">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-dash" viewBox="0 0 16 16">
+                                    <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z" />
+                                </svg>
+                            </button>
+                        </div>
 
+                        <div class="col">
+                            <h4>M</h4>
+                            <button class="btn btn-outline-secondary" id="timerMinuteInc">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-plus" viewBox="0 0 16 16">
+                                    <path
+                                        d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+                                </svg>
+                            </button><br>
+                            <b id="timerMinuteV">0</b><br>
+                            <button class="btn btn-outline-secondary" id="timerMinuteDev">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-dash" viewBox="0 0 16 16">
+                                    <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z" />
+                                </svg>
+                            </button>
+                        </div>
+
+                        <div class="col">
+                            <h4>S</h4>
+                            <button class="btn btn-outline-secondary" id="timerSecondsInc">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-plus" viewBox="0 0 16 16">
+                                    <path
+                                        d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+                                </svg>
+                            </button><br>
+                            <b id="timerSecondsV">0</b><br>
+                            <button class="btn btn-outline-secondary" id="timerSecondsDec">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-dash" viewBox="0 0 16 16">
+                                    <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z" />
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="col">
+                            <button class="btn btn-outline-primary m-1 mt-0" id="goJogger">Go</button>
+                        </div>
+                    <div class="col">
+                        <div style="border-left:1px solid #000;height:100%"></div>
+
+                    </div>
+
+                    <div class="col">
+                        <br>
+                        <input type="text" id="messageContent" class="form-control" style="width: 200%" placeholder="Message here">
+                        <button class="btn btn-outline-primary m-1" id="sendMessage"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-send" viewBox="0 0 16 16">
+                                <path
+                                    d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576 6.636 10.07Zm6.787-8.201L1.591 6.602l4.339 2.76 7.494-7.493Z" />
+                            </svg></button>
+                        <button class="btn btn-outline-primary m-1" id="ctrlRemoveMessage">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-eye-slash-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="m10.79 12.912-1.614-1.615a3.5 3.5 0 0 1-4.474-4.474l-2.06-2.06C.938 6.278 0 8 0 8s3 5.5 8 5.5a7.029 7.029 0 0 0 2.79-.588zM5.21 3.088A7.028 7.028 0 0 1 8 2.5c5 0 8 5.5 8 5.5s-.939 1.721-2.641 3.238l-2.062-2.062a3.5 3.5 0 0 0-4.474-4.474L5.21 3.089z" />
+                                <path
+                                    d="M5.525 7.646a2.5 2.5 0 0 0 2.829 2.829l-2.83-2.829zm4.95.708-2.829-2.83a2.5 2.5 0 0 1 2.829 2.829zm3.171 6-12-12 .708-.708 12 12-.708.708z" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                </div>
                 <hr>
                 <h3>Layout</h3>
-                
+
 
                 <label for="showTime">Show clock on Timer:</label>
-                <input type="checkbox" name="showTime" id="showTime" ><br>
+                <input type="checkbox" name="showTime" id="showTime"><br>
 
                 <label for="showMillis">Show Milliseconds on Timer:</label>
-                <input type="checkbox" name="showMillis" id="showMillis" ><br>
+                <input type="checkbox" name="showMillis" id="showMillis"><br>
 
                 <label for="progBarShow">Show progressbar:</label>
-                <input type="checkbox" name="progBarShow" id="progBarShow" ><br>
-                <br><placeholder>Colors</placeholder><br>
+                <input type="checkbox" name="progBarShow" id="progBarShow"><br>
+                <br>
+                <placeholder>Colors</placeholder><br>
                 <label for="textColors">Enable Text Colors:</label>
-                <input type="checkbox" name="textColors" id="textColors" ><br>
-                <br><placeholder>Colors</placeholder><br>
+                <input type="checkbox" name="textColors" id="textColors"><br>
+                <br>
+                <placeholder>Colors</placeholder><br>
 
                 <button type="button" class="btn btn-outline-success" id="applyLayout">Apply settings</button>
 
-                <button type="button" class="btn btn-outline-success" id="saveLayout">Save as startup settings (Layout only)</button>
+                <button type="button" class="btn btn-outline-success" id="saveLayout">Save as startup settings (Layout
+                    only)</button>
 
             </page>
 
@@ -256,6 +341,72 @@
                 <button type="button" class="btn btn-outline-success" id="applyDebug">Apply settings</button>
 
 
+                <div class="card">
+                    <div class="card-body">
+                        <div id="table" class="table-editable">
+                            <span class="table-add float-right mb-3 mr-2"><a href="#!" class="text-success"><i
+                                        class="fas fa-plus fa-2x" aria-hidden="true"></i></a></span>
+                            <table class="table table-bordered table-responsive-md table-striped text-center">
+                                <thead>
+                                    <tr>
+                                        <th class="text-center">Time</th>
+                                        <th class="text-center">Color</th>
+                                        <th class="text-center">Remove</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="pt-3-half" contenteditable="true">Aurelia Vega</td>
+                                        <td class="pt-3-half" contenteditable="false"><input type="color"></td>
+
+                                        <td>
+                                            <span class="table-remove"><button type="button"
+                                                    class="btn btn-danger btn-rounded btn-sm my-0">
+                                                    Remove
+                                                </button></span>
+                                        </td>
+                                    </tr>
+                                    <!-- This is our clonable table line -->
+                                    <tr>
+                                        <td class="pt-3-half" contenteditable="true">5000</td>
+                                        <td class="pt-3-half" contenteditable="false"><input type="color"></td>
+                                        <td>
+                                            <span class="table-remove"><button type="button"
+                                                    class="btn btn-danger btn-rounded btn-sm my-0">
+                                                    Remove
+                                                </button></span>
+                                        </td>
+                                    </tr>
+                                    <!-- This is our clonable table line -->
+                                    <tr>
+                                        <td class="pt-3-half" contenteditable="true">Guadalupe House</td>
+                                        <td class="pt-3-half" contenteditable="false"><input type="color"></td>
+                                        <td>
+                                            <span class="table-remove"><button type="button"
+                                                    class="btn btn-danger btn-rounded btn-sm my-0">
+                                                    Remove
+                                                </button></span>
+                                        </td>
+                                    </tr>
+                                    <!-- This is our clonable table line -->
+                                    <tr class="hide">
+                                        <td class="pt-3-half" contenteditable="true">Elisa Gallagher</td>
+                                        <td class="pt-3-half" contenteditable="false"><input type="color"></td>
+
+                                        <td>
+                                            <span class="table-remove"><button type="button"
+                                                    class="btn btn-danger btn-rounded btn-sm my-0">
+                                                    Remove
+                                                </button></span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+
             </page>
             <page id="about" class="pageC hidden flex-fill">
                 <h1>About</h1>
@@ -268,13 +419,14 @@
     <script>
         $(document).ready(function () {
             const modes = ["timer", "clock", "black", "test"]
+            let selectPresetTime = 0;
 
             // Restore settings
             saveOption("/api/v1/data", function (event, xmlHttp) {
                 const jsonResult = JSON.parse(xmlHttp.response)
                 // Restore mode radio
                 const currentModeInt = modes.indexOf(jsonResult.mode);
-                $("#btnradio" + (currentModeInt+1))[0].checked = true
+                $("#btnradio" + (currentModeInt + 1))[0].checked = true
                 // Restore layout settings
                 $("#showTime")[0].checked = jsonResult.showTimeOnCountdown;
                 $("#showMillis")[0].checked = jsonResult.showMilliSeconds;
@@ -283,9 +435,132 @@
                 console.debug(jsonResult, currentModeInt)
             })
 
+            // Presets
+            $(".pres").click(function (event) {
+                selectPresetTime = parseInt(event.currentTarget.value)
+            })
+
+            $("#GoPreset").click(function (event) {
+                $("#GoPreset")[0].innerHTML = '<div class="spinner-border"></div>'
+
+                saveOption("/api/v1/set/addMillisToTimer?time=" + selectPresetTime, function (event) {
+                    setTimeout(function () {
+                        $("#GoPreset")[0].innerHTML = 'Go'
+                    }, 200)
+
+                })
+            })
+
+
+            $("#goJogger").click(function (event) {
+                $("#goJogger")[0].innerHTML = '<div class="spinner-border"></div>'
+
+                saveOption("/api/v1/set/addMillisToTimer?time=" + currentTime, function (event) {
+                    setTimeout(function () {
+                        $("#goJogger")[0].innerHTML = 'Go'
+                    }, 200)
+
+                })
+            })
+
+            // Layout settings
+            $("#applyLayout").click(function (event) {
+                $("#applyLayout")[0].innerHTML = '<div class="spinner-border"></div>'
+
+                // Collect all data, build all paths3
+                const allPathes = [];
+
+                const showTimeB = $("#showTime")[0].checked
+                const showMillisB = $("#showMillis")[0].checked
+                const progBarShowB = $("#progBarShow")[0].checked
+                const textColorsB = $("#textColors")[0].checked
+                allPathes.push("/api/v1/set/layout/showTime?show=" + showTimeB)
+                allPathes.push("/api/v1/set/layout/showMillis?show=" + showMillisB)
+                allPathes.push("/api/v1/set/progressbar/show?show=" + progBarShowB)
+                allPathes.push("/api/v1/set/text/enableColoring?show=" + textColorsB)
+
+                for (pI in allPathes) {
+                    const path = allPathes[pI];
+                    saveOption(path, function (event) {
+                        console.debug(event)
+                    })
+                }
+
+                setTimeout(function () {
+                    $("#applyLayout")[0].innerHTML = 'Apply settings'
+                }, 500)
+
+            })
+
+
+            function msToTime(s, data) {
+                var ms = s % 1000;
+                s = (s - ms) / 1000;
+                var secs = s % 60;
+                s = (s - secs) / 60;
+                var mins = s % 60;
+                var hrs = (s - mins) / 60;
+                let out = ""
+
+                return [ms, secs, mins, hrs];
+            }
+
+            //  Timer custom
+            let currentTime = 0;
+            $("#timerHourInc").click(function (event) {
+                currentTime += 3600000
+                const times = msToTime(currentTime)
+                $("#timerHoursV")[0].innerHTML = times[3];
+                $("#timerMinuteV")[0].innerHTML = times[2];
+                $("#timerSecondsV")[0].innerHTML = times[1];
+            })
+
+            $("#timerHourDec").click(function (event) {
+                if (currentTime > 3600000) {
+                    currentTime -= 3600000
+                    const times = msToTime(currentTime)
+                    $("#timerHoursV")[0].innerHTML = times[3];
+                    $("#timerMinuteV")[0].innerHTML = times[2];
+                    $("#timerSecondsV")[0].innerHTML = times[1];
+                }
+            })
+
+            $("#timerMinuteInc").click(function (event) {
+                currentTime += 60000
+                const times = msToTime(currentTime)
+                $("#timerHoursV")[0].innerHTML = times[3];
+                $("#timerMinuteV")[0].innerHTML = times[2];
+                $("#timerSecondsV")[0].innerHTML = times[1];
+            })
+            $("#timerMinuteDec").click(function (event) {
+                if (currentTime > 60000) {
+                    currentTime -= 60000
+                    const times = msToTime(currentTime)
+                    $("#timerHoursV")[0].innerHTML = times[3];
+                    $("#timerMinuteV")[0].innerHTML = times[2];
+                    $("#timerSecondsV")[0].innerHTML = times[1];
+                }
+            })
+            $("#timerSecondsInc").click(function (event) {
+                currentTime += 1000
+                const times = msToTime(currentTime)
+                $("#timerHoursV")[0].innerHTML = times[3];
+                $("#timerMinuteV")[0].innerHTML = times[2];
+                $("#timerSecondsV")[0].innerHTML = times[1];
+            })
+            $("#timerSecondsDec").click(function (event) {
+                if (currentTime > 1000) {
+                    currentTime -= 1000
+                    const times = msToTime(currentTime)
+                    $("#timerHoursV")[0].innerHTML = times[3];
+                    $("#timerMinuteV")[0].innerHTML = times[2];
+                    $("#timerSecondsV")[0].innerHTML = times[1];
+                }
+            })
+
             $("input[name='btnradio']").click(function (event) {
                 $("#sendMessage")[0].innerHTML = '<div class="spinner-border"></div>'
-                let value = modes[parseInt(event.currentTarget.id.replace("btnradio", ""))-1]
+                let value = modes[parseInt(event.currentTarget.id.replace("btnradio", "")) - 1]
                 console.log(value, parseInt(event.currentTarget.id.replace("btnradio", "")))
                 saveOption("/api/v1/set/mode?mode=" + value, function (event) {
                     setTimeout(function () {

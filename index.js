@@ -87,8 +87,12 @@ app.get("/api/v1/ctrl/timer/pause", function (req, res) {
 });
 
 app.get("/api/v1/ctrl/timer/play", function (req, res) {
-  currentState.timerRunState = true
-  currentState.countdownGoal += new Date().getTime() - currentState.pauseMoment;
+  
+  if(currentState.timerRunState == false){
+    currentState.timerRunState = true
+    currentState.countdownGoal += new Date().getTime() - currentState.pauseMoment;
+  }
+  
   res.json({ status: "ok" });
 });
 
