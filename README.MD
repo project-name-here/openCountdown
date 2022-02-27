@@ -5,7 +5,7 @@
 - [X] Presets
 - [X] time on countdown page
 - [X] one-way messaging
-- [ ] Better UI
+- [P] Better UI
     - [ ] Wait for all resources to load
     - [ ] Error popups
 - [X] Progress bar
