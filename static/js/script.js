@@ -2,6 +2,7 @@ var newDateObj = new Date();
 newDateObj = new Date(newDateObj.getTime() + 1000 * 20)
 
 allowFullscreen = true
+let dataFame = {}
 
 function enterFullscreen(element) {
   if (element.requestFullscreen) {
@@ -69,98 +70,99 @@ function findProgessColor(colors, value) {
   return (resColor)
 }
 
-function handleUpdate() {
+function requestBackend() {
   resp = httpGet("/api/v1/data");
-
   resp.onloadend = function (e) {
-    if(resp.status == 200){
+    if (resp.status == 200) {
       resp = resp.responseText;
       var data = JSON.parse(resp);
-      document.getElementById("incomeData").innerHTML = JSON.stringify(data)
-      document.getElementById("timediff").innerHTML = new Date().getTime() - data.srvTime;
-
-      if(data.debug){
-        document.getElementById("timediff").style.display = "block";
-      }else{
-        document.getElementById("timediff").style.display = "none";
-      }
-  
-      if (data.defaultFullScreen && document.getElementById("initalDate").innerHTML.includes("true") && allowFullscreen) {
-        enterFullscreen(document.documentElement);
-        document.getElementById("initalDate").innerHTML = "false"
-      }
-  
-      if (data.showMessage) {
-        document.getElementById("overlay").style.display = "block";
-        document.getElementById("text").innerHTML = data.message
-      } else {
-        off()
-      }
-  
-      if (new Date().getTime() - data.messageAppearTime < 5000) {
-        if (!document.getElementById("text").classList.contains('blink')) {
-          document.getElementById("text").classList.add("blink")
-        }
-      } else {
-        if (document.getElementById("text").classList.contains('blink')) {
-          document.getElementById("text").classList.remove("blink")
-        }
-      }
-  
-  
-      if (data.mode == "clock") {
-        document.getElementById("timer").innerHTML = getTime();
-        document.getElementById("testImg").style.display = "none";
-        document.getElementById("wholeProgBar").style.display = "none";
-        document.getElementById("clockSec").innerHTML = "";
-        document.getElementById("timer").style.color = "white"
-  
-      } else if (data.mode == "timer") {
-  
-        document.getElementById("wholeProgBar").style.display = "block";
-  
-        if (data.timerRunState) {
-          const now = new Date()
-          const diff = data.countdownGoal - now.getTime()
-          document.getElementById("timer").innerHTML = msToTime(diff, data);
-          if (diff > 0) {
-            document.getElementById("progBar").style.width = percentage(diff, data.timeAmountInital) + "%";
-          } else {
-            document.getElementById("progBar").style.width = "0%";
-          }
-  
-          document.getElementById("progBar").style.backgroundColor = findProgessColor(data.colorSegments, diff)
-          document.getElementById("testImg").style.display = "none";
-          if (data.enableColoredText) {
-            document.getElementById("timer").style.color = findProgessColor(data.textColors, diff)
-          } else {
-            document.getElementById("timer").style.color = "white"
-          }
-  
-        }
-        if (data.showTimeOnCountdown) {
-          document.getElementById("clockSec").innerHTML = getTime();
-        } else {
-          document.getElementById("clockSec").innerHTML = "";
-        }
-  
-      } else if (data.mode == "black") {
-        document.getElementById("timer").innerHTML = "";
-        document.getElementById("testImg").style.display = "none";
-        document.getElementById("wholeProgBar").style.display = "none";
-        document.getElementById("clockSec").innerHTML = "";
-  
-      } else if (data.mode == "test") {
-        document.getElementById("timer").innerHTML = "";
-        document.getElementById("testImg").style.display = "block";
-        document.getElementById("progBar").style.display = "none";
-        document.getElementById("clockSec").innerHTML = "";
-      }
+      dataFame = data;
     }
-    
+  }
+}
+
+function handleUpdate() {
+  var data = dataFame;
+  document.getElementById("incomeData").innerHTML = JSON.stringify(data)
+  document.getElementById("timediff").innerHTML = new Date().getTime() - data.srvTime;
+
+  if (data.debug) {
+    document.getElementById("timediff").style.display = "block";
+  } else {
+    document.getElementById("timediff").style.display = "none";
+  }
+
+  if (data.defaultFullScreen && document.getElementById("initalDate").innerHTML.includes("true") && allowFullscreen) {
+    enterFullscreen(document.documentElement);
+    document.getElementById("initalDate").innerHTML = "false"
+  }
+
+  if (data.showMessage) {
+    document.getElementById("overlay").style.display = "block";
+    document.getElementById("text").innerHTML = data.message
+  } else {
+    off()
+  }
+
+  if (new Date().getTime() - data.messageAppearTime < 5000) {
+    if (!document.getElementById("text").classList.contains('blink')) {
+      document.getElementById("text").classList.add("blink")
+    }
+  } else {
+    if (document.getElementById("text").classList.contains('blink')) {
+      document.getElementById("text").classList.remove("blink")
+    }
   }
 
 
+  if (data.mode == "clock") {
+    document.getElementById("timer").innerHTML = getTime();
+    document.getElementById("testImg").style.display = "none";
+    document.getElementById("wholeProgBar").style.display = "none";
+    document.getElementById("clockSec").innerHTML = "";
+    document.getElementById("timer").style.color = "white"
+
+  } else if (data.mode == "timer") {
+
+    document.getElementById("wholeProgBar").style.display = "block";
+
+    if (data.timerRunState) {
+      const now = new Date()
+      const diff = data.countdownGoal - now.getTime()
+      document.getElementById("timer").innerHTML = msToTime(diff, data);
+      if (diff > 0) {
+        document.getElementById("progBar").style.width = percentage(diff, data.timeAmountInital) + "%";
+      } else {
+        document.getElementById("progBar").style.width = "0%";
+      }
+
+      document.getElementById("progBar").style.backgroundColor = findProgessColor(data.colorSegments, diff)
+      document.getElementById("testImg").style.display = "none";
+      if (data.enableColoredText) {
+        document.getElementById("timer").style.color = findProgessColor(data.textColors, diff)
+      } else {
+        document.getElementById("timer").style.color = "white"
+      }
+
+    }
+    if (data.showTimeOnCountdown) {
+      document.getElementById("clockSec").innerHTML = getTime();
+    } else {
+      document.getElementById("clockSec").innerHTML = "";
+    }
+
+  } else if (data.mode == "black") {
+    document.getElementById("timer").innerHTML = "";
+    document.getElementById("testImg").style.display = "none";
+    document.getElementById("wholeProgBar").style.display = "none";
+    document.getElementById("clockSec").innerHTML = "";
+
+  } else if (data.mode == "test") {
+    document.getElementById("timer").innerHTML = "";
+    document.getElementById("testImg").style.display = "block";
+    document.getElementById("progBar").style.display = "none";
+    document.getElementById("clockSec").innerHTML = "";
+  }
 }
 
 function httpGet(theUrl) {
@@ -195,7 +197,8 @@ function off() {
   document.getElementById("overlay").style.display = "none";
 }
 
-setInterval(handleUpdate, 200);
+setInterval(requestBackend, 500);
+setInterval(handleUpdate, 2);
 
 let temp = new URLSearchParams(window.location.search).get("smaller");
 

@@ -17,6 +17,8 @@
     <script src="/js/jquery.min.js"></script>
     <script type="text/javascript" src="/mdbootstrap/js/mdb.min.js"></script>
 
+    <script type="text/javascript" src="/js/darkreader.js"></script>
+    <script type="text/javascript" src="/js/cookie.js"></script>
     <link href="/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="/css/mainStyle.css" rel="stylesheet">
 </head>
@@ -136,7 +138,32 @@
                 </li>
             </ul>
             <hr>
-            openCountdown
+            openCountdown <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+
+                <input type="radio" class="btn-check" name="btnradio2" id="Mbtnradio1" autocomplete="off" checked>
+                <label class="btn btn-outline-primary" for="Mbtnradio1"><svg xmlns="http://www.w3.org/2000/svg"
+                        width="16" height="16" fill="currentColor" class="bi bi-brightness-high-fill"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M12 8a4 4 0 1 1-8 0 4 4 0 0 1 8 0zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z" />
+                    </svg>
+                </label>
+
+                <input type="radio" class="btn-check" name="btnradio2" id="Mbtnradio2" autocomplete="off">
+                <label class="btn btn-outline-primary" for="Mbtnradio2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-moon-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z" />
+                    </svg>
+                </label>
+
+                <input type="radio" class="btn-check" name="btnradio2" id="Mbtnradio3" autocomplete="off">
+                <label class="btn btn-outline-primary" for="Mbtnradio3">
+                    Auto
+                </label>
+
+            </div>
         </div>
         <pages class="d-flex flex-fill">
 
@@ -213,7 +240,7 @@
                         </div>
                     </div>
                 </div>
-
+                <br><br><br>
                 <h3>Timer / Messaging</h3>
                 <div class="container">
                     <div class="row" style="width: 60%;">
@@ -273,31 +300,32 @@
                         <div class="col">
                             <button class="btn btn-outline-primary m-1 mt-0" id="goJogger">Go</button>
                         </div>
-                    <div class="col">
-                        <div style="border-left:1px solid #000;height:100%"></div>
+                        <div class="col">
+                            <div style="border-left:1px solid #000;height:100%"></div>
 
-                    </div>
+                        </div>
 
-                    <div class="col">
-                        <br>
-                        <input type="text" id="messageContent" class="form-control" style="width: 200%" placeholder="Message here">
-                        <button class="btn btn-outline-primary m-1" id="sendMessage"><svg
-                                xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                class="bi bi-send" viewBox="0 0 16 16">
-                                <path
-                                    d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576 6.636 10.07Zm6.787-8.201L1.591 6.602l4.339 2.76 7.494-7.493Z" />
-                            </svg></button>
-                        <button class="btn btn-outline-primary m-1" id="ctrlRemoveMessage">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                class="bi bi-eye-slash-fill" viewBox="0 0 16 16">
-                                <path
-                                    d="m10.79 12.912-1.614-1.615a3.5 3.5 0 0 1-4.474-4.474l-2.06-2.06C.938 6.278 0 8 0 8s3 5.5 8 5.5a7.029 7.029 0 0 0 2.79-.588zM5.21 3.088A7.028 7.028 0 0 1 8 2.5c5 0 8 5.5 8 5.5s-.939 1.721-2.641 3.238l-2.062-2.062a3.5 3.5 0 0 0-4.474-4.474L5.21 3.089z" />
-                                <path
-                                    d="M5.525 7.646a2.5 2.5 0 0 0 2.829 2.829l-2.83-2.829zm4.95.708-2.829-2.83a2.5 2.5 0 0 1 2.829 2.829zm3.171 6-12-12 .708-.708 12 12-.708.708z" />
-                            </svg>
-                        </button>
+                        <div class="col">
+                            <br>
+                            <input type="text" id="messageContent" class="form-control" style="width: 200%"
+                                placeholder="Message here">
+                            <button class="btn btn-outline-primary m-1" id="sendMessage"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-send" viewBox="0 0 16 16">
+                                    <path
+                                        d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576 6.636 10.07Zm6.787-8.201L1.591 6.602l4.339 2.76 7.494-7.493Z" />
+                                </svg></button>
+                            <button class="btn btn-outline-primary m-1" id="ctrlRemoveMessage">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-eye-slash-fill" viewBox="0 0 16 16">
+                                    <path
+                                        d="m10.79 12.912-1.614-1.615a3.5 3.5 0 0 1-4.474-4.474l-2.06-2.06C.938 6.278 0 8 0 8s3 5.5 8 5.5a7.029 7.029 0 0 0 2.79-.588zM5.21 3.088A7.028 7.028 0 0 1 8 2.5c5 0 8 5.5 8 5.5s-.939 1.721-2.641 3.238l-2.062-2.062a3.5 3.5 0 0 0-4.474-4.474L5.21 3.089z" />
+                                    <path
+                                        d="M5.525 7.646a2.5 2.5 0 0 0 2.829 2.829l-2.83-2.829zm4.95.708-2.829-2.83a2.5 2.5 0 0 1 2.829 2.829zm3.171 6-12-12 .708-.708 12 12-.708.708z" />
+                                </svg>
+                            </button>
+                        </div>
                     </div>
-                </div>
 
                 </div>
                 <hr>
@@ -339,6 +367,12 @@
                 <input type="checkbox" name="debugMode" id="debugModeEnable" value="true"><br><br>
 
                 <button type="button" class="btn btn-outline-success" id="applyDebug">Apply settings</button>
+                <br><br>
+                <h3>Raw server reponse</h3>
+                <code id="responeSnippet" style="width: 40%; display: inline-block;">
+
+                </code>
+
 
 
                 <div class="card">
@@ -417,13 +451,42 @@
         </pages>
     </main>
     <script>
+
+
         $(document).ready(function () {
             const modes = ["timer", "clock", "black", "test"]
             let selectPresetTime = 0;
 
+            if (Cookies.get("interfaceColor") != undefined) {
+                const color = Cookies.get("interfaceColor");
+                $("#Mbtnradio" + (color))[0].checked = true
+                if (color == 1) {
+                    DarkReader.disable()
+                } else if (color == 2) {
+                    DarkReader.enable()
+                } else {
+                    DarkReader.auto()
+                }
+            }
+
+            $("input[name='btnradio2']").click(function (event) {
+                console.debug()
+                const darkid = parseInt(event.currentTarget.id.replace("Mbtnradio", ""))
+                if (darkid == 1) {
+                    DarkReader.disable()
+                } else if (darkid == 2) {
+                    DarkReader.enable()
+                } else {
+                    DarkReader.auto()
+                }
+                Cookies.set("interfaceColor", darkid)
+            });
+
             // Restore settings
             saveOption("/api/v1/data", function (event, xmlHttp) {
+
                 const jsonResult = JSON.parse(xmlHttp.response)
+                document.getElementById("responeSnippet").innerHTML = JSON.stringify(jsonResult)
                 // Restore mode radio
                 const currentModeInt = modes.indexOf(jsonResult.mode);
                 $("#btnradio" + (currentModeInt + 1))[0].checked = true
@@ -441,7 +504,7 @@
             })
 
             $("#GoPreset").click(function (event) {
-                $("#GoPreset")[0].innerHTML = '<div class="spinner-border"></div>'
+                $("#GoPreset")[0].innerHTML = '<div class="spinner-border-sm spinner-border"></div>'
 
                 saveOption("/api/v1/set/addMillisToTimer?time=" + selectPresetTime, function (event) {
                     setTimeout(function () {
@@ -453,7 +516,7 @@
 
 
             $("#goJogger").click(function (event) {
-                $("#goJogger")[0].innerHTML = '<div class="spinner-border"></div>'
+                $("#goJogger")[0].innerHTML = '<div class="spinner-border-sm spinner-border"></div>'
 
                 saveOption("/api/v1/set/addMillisToTimer?time=" + currentTime, function (event) {
                     setTimeout(function () {
@@ -465,7 +528,7 @@
 
             // Layout settings
             $("#applyLayout").click(function (event) {
-                $("#applyLayout")[0].innerHTML = '<div class="spinner-border"></div>'
+                $("#applyLayout")[0].innerHTML = '<div class="spinner-border-sm spinner-border"></div>'
 
                 // Collect all data, build all paths3
                 const allPathes = [];
@@ -559,7 +622,7 @@
             })
 
             $("input[name='btnradio']").click(function (event) {
-                $("#sendMessage")[0].innerHTML = '<div class="spinner-border"></div>'
+                $("#sendMessage")[0].innerHTML = '<div class="spinner-border-sm spinner-border"></div>'
                 let value = modes[parseInt(event.currentTarget.id.replace("btnradio", "")) - 1]
                 console.log(value, parseInt(event.currentTarget.id.replace("btnradio", "")))
                 saveOption("/api/v1/set/mode?mode=" + value, function (event) {
@@ -574,7 +637,7 @@
 
 
             $("#sendMessage").click(function (event) {
-                $("#sendMessage")[0].innerHTML = '<div class="spinner-border"></div>'
+                $("#sendMessage")[0].innerHTML = '<div class="spinner-border-sm spinner-border"></div>'
                 let value = $("#messageContent").val()
                 saveOption("/api/v1/ctrl/message/show?msg=" + value, function (event) {
                     setTimeout(function () {
@@ -587,7 +650,7 @@
             })
 
             $("#ctrlRemoveMessage").click(function (event) {
-                $("#ctrlRemoveMessage")[0].innerHTML = '<div class="spinner-border"></div>'
+                $("#ctrlRemoveMessage")[0].innerHTML = '<div class="spinner-border-sm spinner-border"></div>'
                 saveOption("/api/v1/ctrl/message/hide", function (event) {
                     setTimeout(function () {
                         $("#ctrlRemoveMessage")[0].innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye-slash-fill" viewBox="0 0 16 16">\
@@ -600,24 +663,36 @@
             })
 
             $("#funcPlay").click(function (event) {
+                $("#funcPlay")[0].innerHTML = '<div class="spinner-border-sm spinner-border"></div>'
                 saveOption("/api/v1/ctrl/timer/play", function (event) {
+                    setTimeout(function () {
+                        $("#funcPlay")[0].innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16"><path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"></path></svg>'
+                    }, 200);
                 })
             })
 
 
             $("#funcPause").click(function (event) {
-                saveOption("/api/v1/ctrl/timer/pause", function (event) {
+                $("#funcPause")[0].innerHTML = '<div class="spinner-border-sm spinner-border"></div>'
 
+                saveOption("/api/v1/ctrl/timer/pause", function (event) {
+                    setTimeout(function () {
+                        $("#funcPause")[0].innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pause" viewBox="0 0 16 16" style="--darkreader-inline-fill: currentColor;" data-darkreader-inline-fill=""><path d="M6 3.5a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5zm4 0a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5z"></path></svg>'
+                    }, 200);
                 })
             })
 
             $("#funcRestart").click(function (event) {
+                $("#funcRestart")[0].innerHTML = '<div class="spinner-border-sm spinner-border"></div>'
                 saveOption("/api/v1/ctrl/timer/restart", function (event) {
+                    setTimeout(function () {
+                        $("#funcRestart")[0].innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-clockwise" viewBox="0 0 16 16" style="--darkreader-inline-fill: currentColor;" data-darkreader-inline-fill=""><path fill-rule="evenodd" d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z"></path><path d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z"></path></svg>'
+                    }, 200)
                 })
             })
 
             $("#applyDebug").click(function (event) {
-                $("#applyDebug")[0].innerHTML = '<div class="spinner-border"></div>'
+                $("#applyDebug")[0].innerHTML = '<div class="spinner-border-sm spinner-border"></div>'
                 let value = $("#debugModeEnable")[0].checked
                 saveOption("/api/v1/debug?enable=" + value, function (event) {
                     setTimeout(function () {

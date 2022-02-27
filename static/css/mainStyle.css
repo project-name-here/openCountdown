@@ -102,3 +102,9 @@ placeholder {
   border: red 2px dashed;
   background-color: yellow;
 }
+
+pre {
+  overflow: auto;
+  word-wrap: normal;
+  white-space: pre;
+}

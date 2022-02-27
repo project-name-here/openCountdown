@@ -155,3 +155,5 @@ app.get("/api/v1/ctrl/message/hide", function (req, res) {
 });
 
 app.listen(3005);
+
+console.log("Server running on port 3005");
