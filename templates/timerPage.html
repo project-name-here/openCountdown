@@ -15,8 +15,14 @@
 
 <body onclick="updateFullscreen()">
 
+
+
     <div id="overlay" onclick="off()">
         <div id="text">Message here</div>
+    </div>
+
+    <div class="connectionWarning" id="warningBanner" style="display: none;">
+        Connection lost. Trying to reconnect...
     </div>
 
     <img src='SMPTE_Color_Bars.svg' class='testImg' id="testImg" style="display: none;">

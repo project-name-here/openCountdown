@@ -230,8 +230,7 @@
                                 <button class="btn btn-outline-secondary m-1 pres" value="1200000">00:20:00</button>
                                 <button class="btn btn-outline-secondary m-1 pres" value="1500000">00:25:00</button>
                                 <button class="btn btn-outline-secondary m-1 pres"
-                                    value="1800000">00:30:00</button><button class="btn btn-outline-primary m-1 mt-0"
-                                    id="GoPreset">Go</button><br>
+                                    value="1800000">00:30:00</button><button class="btn btn-outline-primary m-1 mt-0 goTimer" >Go</button><br>
                                 <button class="btn btn-outline-secondary m-1 pres" value="2100000">00:35:00</button>
                                 <button class="btn btn-outline-secondary m-1 pres" value="2400000">00:40:00</button>
                                 <button class="btn btn-outline-secondary m-1 pres" value="2700000">00:45:00</button>
@@ -298,7 +297,7 @@
                             </button>
                         </div>
                         <div class="col">
-                            <button class="btn btn-outline-primary m-1 mt-0" id="goJogger">Go</button>
+                            <button class="btn btn-outline-primary m-1 mt-0 goTimer" id="goJogger">Go</button>
                         </div>
                         <div class="col">
                             <div style="border-left:1px solid #000;height:100%"></div>
@@ -500,28 +499,24 @@
 
             // Presets
             $(".pres").click(function (event) {
-                selectPresetTime = parseInt(event.currentTarget.value)
+                currentTime = parseInt(event.currentTarget.value)
+                const times = msToTime(currentTime)
+                    $("#timerHoursV")[0].innerHTML = times[3];
+                    $("#timerMinuteV")[0].innerHTML = times[2];
+                    $("#timerSecondsV")[0].innerHTML = times[1];
             })
 
-            $("#GoPreset").click(function (event) {
-                $("#GoPreset")[0].innerHTML = '<div class="spinner-border-sm spinner-border"></div>'
-
-                saveOption("/api/v1/set/addMillisToTimer?time=" + selectPresetTime, function (event) {
-                    setTimeout(function () {
-                        $("#GoPreset")[0].innerHTML = 'Go'
-                    }, 200)
-
-                })
-            })
+           
 
 
-            $("#goJogger").click(function (event) {
-                $("#goJogger")[0].innerHTML = '<div class="spinner-border-sm spinner-border"></div>'
+            $(".goTimer").click(function (event) {
+                event.currentTarget.innerHTML = '<div class="spinner-border-sm spinner-border"></div>'
+                setTimeout(function () {
+                    event.currentTarget.innerHTML = 'Go'
+                }, 200);
 
-                saveOption("/api/v1/set/addMillisToTimer?time=" + currentTime, function (event) {
-                    setTimeout(function () {
-                        $("#goJogger")[0].innerHTML = 'Go'
-                    }, 200)
+                saveOption("/api/v1/set/addMillisToTimer?time=" + currentTime, function (ev) {
+                    
 
                 })
             })
@@ -537,13 +532,15 @@
                 const showMillisB = $("#showMillis")[0].checked
                 const progBarShowB = $("#progBarShow")[0].checked
                 const textColorsB = $("#textColors")[0].checked
+ 
                 allPathes.push("/api/v1/set/layout/showTime?show=" + showTimeB)
                 allPathes.push("/api/v1/set/layout/showMillis?show=" + showMillisB)
                 allPathes.push("/api/v1/set/progressbar/show?show=" + progBarShowB)
-                allPathes.push("/api/v1/set/text/enableColoring?show=" + textColorsB)
+                allPathes.push("/api/v1/set/text/enableColoring?enable=" + textColorsB)
 
                 for (pI in allPathes) {
                     const path = allPathes[pI];
+                    console.warn(path)
                     saveOption(path, function (event) {
                         console.debug(event)
                     })

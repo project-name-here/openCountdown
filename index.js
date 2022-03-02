@@ -2,6 +2,7 @@ const express = require("express");
 const fs = require("fs");
 const bodyParser = require("body-parser");
 
+console.log("Preparing server...");
 const app = express();
 
 app.use(express.static("static"));
@@ -37,7 +38,7 @@ currentState = {
 
 currentState.textColors = currentState.colorSegments
 
-
+console.log("Preparing routes...");
 app.get("/", function (req, res) {
   const data = fs.readFileSync("templates/newAdminPanel.html", "utf8");
   res.send(data);
@@ -92,7 +93,6 @@ app.get("/api/v1/ctrl/timer/play", function (req, res) {
     currentState.timerRunState = true
     currentState.countdownGoal += new Date().getTime() - currentState.pauseMoment;
   }
-  
   res.json({ status: "ok" });
 });
 
@@ -135,6 +135,7 @@ app.get("/api/v1/set/text/colors", function (req, res) {
 
 app.get("/api/v1/set/text/enableColoring", function (req, res) {
   currentState.enableColoredText = (req.query.enable === 'true');
+  res.json({ status: "ok" });
 });
 
 app.get("/api/v1/ctrl/message/show", function (req, res) {
@@ -153,7 +154,9 @@ app.get("/api/v1/ctrl/message/hide", function (req, res) {
   currentState.showMessage = false
   res.json({ status: "ok" });
 });
-
+console.log("Starting server...");
 app.listen(3005);
 
-console.log("Server running on port 3005");
+console.info("Server running on port 3005");
+console.info("Visit localhost:3005/timer for the timer page");
+console.info("Visit localhost:3005 for the admin page");

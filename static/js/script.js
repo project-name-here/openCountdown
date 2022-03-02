@@ -3,6 +3,7 @@ newDateObj = new Date(newDateObj.getTime() + 1000 * 20)
 
 allowFullscreen = true
 let dataFame = {}
+let timeDiff = 0
 
 function enterFullscreen(element) {
   if (element.requestFullscreen) {
@@ -76,15 +77,48 @@ function requestBackend() {
     if (resp.status == 200) {
       resp = resp.responseText;
       var data = JSON.parse(resp);
+      timeDiff = new Date().getTime() - data.srvTime
       dataFame = data;
     }
   }
 }
 
+let isSlowed = false
+
+function handleRecovery() {
+  var img = document.body.appendChild(document.createElement("img"));
+    img.onload = function()
+    {
+      location.reload(); 
+    };
+    img.src = "SMPTE_Color_Bars.svg";
+}
+
+let recoInter = -1
+
 function handleUpdate() {
   var data = dataFame;
   document.getElementById("incomeData").innerHTML = JSON.stringify(data)
-  document.getElementById("timediff").innerHTML = new Date().getTime() - data.srvTime;
+  document.getElementById("timediff").innerHTML = timeDiff + "<br>" + String(new Date().getTime() - data.srvTime);
+  if (new Date().getTime() - data.srvTime > 1000 * 5) {
+    
+    if (!isSlowed) {
+      console.error("Server timeout")
+      clearInterval(updateInter)
+      updateInter = setInterval(handleUpdate, 900)
+      document.getElementById("warningBanner").style.display = "block"
+      isSlowed = true
+      recoInter = setInterval(handleRecovery, 10000)
+    }
+  } else {
+    if(isSlowed){
+      clearInterval(updateInter)
+      clearInterval(recoInter)
+      updateInter = setInterval(handleUpdate, 2)
+      document.getElementById("warningBanner").style.display = "none"
+      isSlowed = false
+    }
+  }
 
   if (data.debug) {
     document.getElementById("timediff").style.display = "block";
@@ -101,7 +135,13 @@ function handleUpdate() {
     document.getElementById("overlay").style.display = "block";
     document.getElementById("text").innerHTML = data.message
   } else {
-    off()
+    document.getElementById("overlay").style.display = "none";
+  }
+
+  if (data.showTimeOnCountdown && data.mode == "timer") {
+    document.getElementById("clockSec").innerHTML = getTime();
+  } else {
+    document.getElementById("clockSec").innerHTML = "";
   }
 
   if (new Date().getTime() - data.messageAppearTime < 5000) {
@@ -123,9 +163,7 @@ function handleUpdate() {
     document.getElementById("timer").style.color = "white"
 
   } else if (data.mode == "timer") {
-
     document.getElementById("wholeProgBar").style.display = "block";
-
     if (data.timerRunState) {
       const now = new Date()
       const diff = data.countdownGoal - now.getTime()
@@ -145,12 +183,6 @@ function handleUpdate() {
       }
 
     }
-    if (data.showTimeOnCountdown) {
-      document.getElementById("clockSec").innerHTML = getTime();
-    } else {
-      document.getElementById("clockSec").innerHTML = "";
-    }
-
   } else if (data.mode == "black") {
     document.getElementById("timer").innerHTML = "";
     document.getElementById("testImg").style.display = "none";
@@ -189,16 +221,9 @@ function getTime() {
   return time;
 }
 
-function on() {
-  document.getElementById("overlay").style.display = "block";
-}
-
-function off() {
-  document.getElementById("overlay").style.display = "none";
-}
 
 setInterval(requestBackend, 500);
-setInterval(handleUpdate, 2);
+updateInter = setInterval(handleUpdate, 2);
 
 let temp = new URLSearchParams(window.location.search).get("smaller");
 
