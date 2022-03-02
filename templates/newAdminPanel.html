@@ -21,6 +21,8 @@
     <script type="text/javascript" src="/js/cookie.js"></script>
     <link href="/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="/css/mainStyle.css" rel="stylesheet">
+    <link href="colorpicker/css/bootstrap-colorpicker.css" rel="stylesheet">
+    <script src="colorpicker/js/bootstrap-colorpicker.js"></script>
 </head>
 
 <body>
@@ -230,7 +232,8 @@
                                 <button class="btn btn-outline-secondary m-1 pres" value="1200000">00:20:00</button>
                                 <button class="btn btn-outline-secondary m-1 pres" value="1500000">00:25:00</button>
                                 <button class="btn btn-outline-secondary m-1 pres"
-                                    value="1800000">00:30:00</button><button class="btn btn-outline-primary m-1 mt-0 goTimer" >Go</button><br>
+                                    value="1800000">00:30:00</button><button
+                                    class="btn btn-outline-primary m-1 mt-0 goTimer">Go</button><br>
                                 <button class="btn btn-outline-secondary m-1 pres" value="2100000">00:35:00</button>
                                 <button class="btn btn-outline-secondary m-1 pres" value="2400000">00:40:00</button>
                                 <button class="btn btn-outline-secondary m-1 pres" value="2700000">00:45:00</button>
@@ -372,7 +375,10 @@
 
                 </code>
 
-
+                <div class="demo">
+                    test
+                    <input id="demo-input" class="colorPicky" type="button" value="rgb(255, 128, 0)" />
+                </div>
 
                 <div class="card">
                     <div class="card-body">
@@ -389,8 +395,8 @@
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td class="pt-3-half" contenteditable="true">Aurelia Vega</td>
-                                        <td class="pt-3-half" contenteditable="false"><input type="color"></td>
+                                        <td class="pt-3-half numVal" contenteditable="true">2000</td>
+                                        <td class="pt-3-half" contenteditable="false"><input id="demo-input0" class="colorPicky" type="button" value="rgb(255, 128, 0)" /></td>
 
                                         <td>
                                             <span class="table-remove"><button type="button"
@@ -401,8 +407,8 @@
                                     </tr>
                                     <!-- This is our clonable table line -->
                                     <tr>
-                                        <td class="pt-3-half" contenteditable="true">5000</td>
-                                        <td class="pt-3-half" contenteditable="false"><input type="color"></td>
+                                        <td class="pt-3-half numVal" contenteditable="true">5000</td>
+                                        <td class="pt-3-half" contenteditable="false"><input id="demo-input1" class="colorPicky" type="button" value="rgb(255, 128, 0)" /></td>
                                         <td>
                                             <span class="table-remove"><button type="button"
                                                     class="btn btn-danger btn-rounded btn-sm my-0">
@@ -412,8 +418,8 @@
                                     </tr>
                                     <!-- This is our clonable table line -->
                                     <tr>
-                                        <td class="pt-3-half" contenteditable="true">Guadalupe House</td>
-                                        <td class="pt-3-half" contenteditable="false"><input type="color"></td>
+                                        <td class="pt-3-half numVal" contenteditable="true">10000</td>
+                                        <td class="pt-3-half" contenteditable="false"><input id="demo-input2" class="colorPicky" type="button" value="rgb(255, 128, 0)" /></td>
                                         <td>
                                             <span class="table-remove"><button type="button"
                                                     class="btn btn-danger btn-rounded btn-sm my-0">
@@ -423,8 +429,8 @@
                                     </tr>
                                     <!-- This is our clonable table line -->
                                     <tr class="hide">
-                                        <td class="pt-3-half" contenteditable="true">Elisa Gallagher</td>
-                                        <td class="pt-3-half" contenteditable="false"><input type="color"></td>
+                                        <td class="pt-3-half numVal" contenteditable="true">20000</td>
+                                        <td class="pt-3-half" contenteditable="false"><input id="demo-input3" class="colorPicky" type="button" value="rgb(255, 128, 0)" /></td>
 
                                         <td>
                                             <span class="table-remove"><button type="button"
@@ -453,6 +459,14 @@
 
 
         $(document).ready(function () {
+
+            $('.colorPicky').colorpicker();
+            $('#demo-input').on('colorpickerChange', function (event) {
+                $('#demo-input').css('background-color', event.color.toString());
+            });
+
+            $(".numVal").bind("DOMSubtreeModified", alert);
+
             const modes = ["timer", "clock", "black", "test"]
             let selectPresetTime = 0;
 
@@ -501,12 +515,12 @@
             $(".pres").click(function (event) {
                 currentTime = parseInt(event.currentTarget.value)
                 const times = msToTime(currentTime)
-                    $("#timerHoursV")[0].innerHTML = times[3];
-                    $("#timerMinuteV")[0].innerHTML = times[2];
-                    $("#timerSecondsV")[0].innerHTML = times[1];
+                $("#timerHoursV")[0].innerHTML = times[3];
+                $("#timerMinuteV")[0].innerHTML = times[2];
+                $("#timerSecondsV")[0].innerHTML = times[1];
             })
 
-           
+
 
 
             $(".goTimer").click(function (event) {
@@ -516,7 +530,7 @@
                 }, 200);
 
                 saveOption("/api/v1/set/addMillisToTimer?time=" + currentTime, function (ev) {
-                    
+
 
                 })
             })
@@ -532,7 +546,7 @@
                 const showMillisB = $("#showMillis")[0].checked
                 const progBarShowB = $("#progBarShow")[0].checked
                 const textColorsB = $("#textColors")[0].checked
- 
+
                 allPathes.push("/api/v1/set/layout/showTime?show=" + showTimeB)
                 allPathes.push("/api/v1/set/layout/showMillis?show=" + showMillisB)
                 allPathes.push("/api/v1/set/progressbar/show?show=" + progBarShowB)

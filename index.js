@@ -155,8 +155,9 @@ app.get("/api/v1/ctrl/message/hide", function (req, res) {
   res.json({ status: "ok" });
 });
 console.log("Starting server...");
-app.listen(3005);
+const port = 8005
+app.listen(port);
 
-console.info("Server running on port 3005");
-console.info("Visit localhost:3005/timer for the timer page");
-console.info("Visit localhost:3005 for the admin page");
+console.info("Server running on port " + port );
+console.info("Visit localhost:" + port + "/timer for the timer page");
+console.info("Visit localhost:" + port + " for the admin page");
