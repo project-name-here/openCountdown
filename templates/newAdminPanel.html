@@ -567,6 +567,42 @@
             })
 
 
+            $("#saveLayout").click(function (event) {
+                $("#saveLayout")[0].innerHTML = '<div class="spinner-border-sm spinner-border"></div>'
+
+                // Collect all data, build all paths3
+                const allPathes = [];
+
+                const showTimeB = $("#showTime")[0].checked
+                const showMillisB = $("#showMillis")[0].checked
+                const progBarShowB = $("#progBarShow")[0].checked
+                const textColorsB = $("#textColors")[0].checked
+
+                allPathes.push("/api/v1/set/layout/showTime?persist=true&show=" + showTimeB)
+                allPathes.push("/api/v1/set/layout/showMillis?persist=true&show=" + showMillisB)
+                allPathes.push("/api/v1/set/progressbar/show?persist=true&show=" + progBarShowB)
+                allPathes.push("/api/v1/set/text/enableColoring?persist=true&enable=" + textColorsB)
+
+                for (pI in allPathes) {
+                    const path = allPathes[pI];
+                    console.warn(path)
+                    saveOption(path, function (event) {
+                        console.debug(event)
+                    })
+                }
+
+                saveOption("/api/v1/storage/commit", function (event) {
+                    console.debug(event)
+                    setTimeout(function () {
+                        $("#saveLayout")[0].innerHTML = 'Save as startup settings (Layout only)'
+                    }, 500)
+                })
+
+                
+
+            })
+
+
             function msToTime(s, data) {
                 var ms = s % 1000;
                 s = (s - ms) / 1000;
