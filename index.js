@@ -1,6 +1,7 @@
 const express = require("express");
 const fs = require("fs");
 const bodyParser = require("body-parser");
+const helper = require("./helpers.js");
 
 console.log("Preparing server...");
 const app = express();
@@ -18,10 +19,10 @@ app.use(
 
 let loadedData = {}
 
-if(fs.existsSync("data-persistence.json")) {
+if (fs.existsSync("data-persistence.json")) {
   const loadedDataRaw = fs.readFileSync("data-persistence.json", "utf8");
   loadedData = JSON.parse(loadedDataRaw);
-}else{
+} else {
   console.warn("Unable to load persistent data");
 }
 
@@ -38,7 +39,7 @@ currentState = {
   showMessage: false,
   messageAppearTime: 0,
   showProgressbar: true,
-  colorSegments: {20000: "#FFAE00", 5000: "#ff0000", "START": "yellow"},
+  colorSegments: { 20000: "#FFAE00", 5000: "#ff0000", "START": "yellow" },
   textColors: {},
   srvTime: 0,
   enableColoredText: true,
@@ -83,11 +84,15 @@ app.get("/api/v1/set/mode", function (req, res) {
 });
 
 app.get("/api/v1/set/layout/showMillis", function (req, res) {
-  currentState.showMilliSeconds = (req.query.show === 'true');
-  if(req.query.persist === 'true'){
-    dataToBeWritten.showMilliSeconds = currentState.showMilliSeconds
+  const resy = helper.wrapBooleanConverter(req.query.show, res)
+  if (resy) {
+    currentState.showMilliSeconds = resy;
+    if (req.query.persist === 'true') {
+      dataToBeWritten.showMilliSeconds = currentState.showMilliSeconds
+    }
+    res.json({ status: "ok" });
   }
-  res.json({ status: "ok" });
+
 });
 
 app.get("/api/v1/set/timerGoal", function (req, res) {
@@ -99,7 +104,7 @@ app.get("/api/v1/set/addMillisToTimer", function (req, res) {
   currentState.timeAmountInital = req.query.time;
   currentState.countdownGoal = new Date().getTime() + parseInt(req.query.time)
   res.json({ status: "ok" });
-}); 
+});
 
 app.get("/api/v1/ctrl/timer/pause", function (req, res) {
   currentState.timerRunState = false;
@@ -108,8 +113,8 @@ app.get("/api/v1/ctrl/timer/pause", function (req, res) {
 });
 
 app.get("/api/v1/ctrl/timer/play", function (req, res) {
-  
-  if(currentState.timerRunState == false){
+
+  if (currentState.timerRunState == false) {
     currentState.timerRunState = true
     currentState.countdownGoal += new Date().getTime() - currentState.pauseMoment;
   }
@@ -122,16 +127,20 @@ app.get("/api/v1/ctrl/timer/restart", function (req, res) {
 });
 
 app.get("/api/v1/set/layout/showTime", function (req, res) {
-  currentState.showTimeOnCountdown = (req.query.show === 'true');
-  if(req.query.persist === 'true'){
-    dataToBeWritten.showTimeOnCountdown = currentState.showTimeOnCountdown
+  const resy = helper.wrapBooleanConverter(req.query.show, res)
+  if (resy) {
+    currentState.showTimeOnCountdown = resy;
+    if (req.query.persist === 'true') {
+      dataToBeWritten.showTimeOnCountdown = currentState.showTimeOnCountdown
+    }
+    res.json({ status: "ok" });
   }
   res.json({ status: "ok" });
 });
 
 app.get("/api/v1/set/progressbar/show", function (req, res) {
   currentState.showProgressbar = (req.query.show === 'true');
-  if(req.query.persist === 'true'){
+  if (req.query.persist === 'true') {
     dataToBeWritten.showProgressbar = currentState.showProgressbar
   }
   res.json({ status: "ok" });
@@ -140,7 +149,7 @@ app.get("/api/v1/set/progressbar/show", function (req, res) {
 app.get("/api/v1/set/progressbar/colors", function (req, res) {
   try {
     currentState.colorSegments = JSON.parse(req.query.colors);
-    if(req.query.persist === 'true'){
+    if (req.query.persist === 'true') {
       dataToBeWritten.colorSegments = currentState.colorSegments
     }
     res.json({ status: "ok" });
@@ -151,12 +160,12 @@ app.get("/api/v1/set/progressbar/colors", function (req, res) {
 
 app.get("/api/v1/set/text/colors", function (req, res) {
   try {
-    if(req.query.copy === "true"){
+    if (req.query.copy === "true") {
       currentState.textColors = currentState.colorSegments;
     } else {
       currentState.textColors = JSON.parse(req.query.colors);
     }
-    if(req.query.persist === 'true'){
+    if (req.query.persist === 'true') {
       dataToBeWritten.textColors = currentState.textColors
     }
     res.json({ status: "ok" });
@@ -167,7 +176,7 @@ app.get("/api/v1/set/text/colors", function (req, res) {
 
 app.get("/api/v1/set/text/enableColoring", function (req, res) {
   currentState.enableColoredText = (req.query.enable === 'true');
-  if(req.query.persist === 'true'){
+  if (req.query.persist === 'true') {
     dataToBeWritten.enableColoredText = currentState.enableColoredText
   }
   res.json({ status: "ok" });
@@ -192,8 +201,28 @@ app.get("/api/v1/ctrl/message/hide", function (req, res) {
 
 app.get("/api/v1/storage/commit", function (req, res) {
   const tempString = JSON.stringify(dataToBeWritten);
-  fs.writeFileSync("data-persistence.json", tempString);
-  res.json({ status: "ok" });
+  try {
+    fs.writeFileSync("data-persistence.json", tempString);
+    res.json({ status: "ok" });
+  } catch (error) {
+    res.json({ status: "error", reason: error });
+  }
+});
+
+
+app.get("/api/v1/storage/delete", function (req, res) {
+  if (req.query.delete === "true") {
+    if (fs.existsSync("data-persistence.json")) {
+      fs.unlinkSync("data-persistence.json");
+      res.json({ status: "ok" });
+    } else {
+      res.json({ status: "error", reason: "No persistence data was found" });
+    }
+
+  } else {
+
+  } res.json({ status: "error", reason: "Missing delete argument" });
+
 });
 
 
@@ -201,6 +230,6 @@ console.log("Starting server...");
 const port = 8005
 app.listen(port);
 
-console.info("Server running on port " + port );
+console.info("Server running on port " + port);
 console.info("Visit localhost:" + port + "/timer for the timer page");
 console.info("Visit localhost:" + port + " for the admin page");

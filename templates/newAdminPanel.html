@@ -343,11 +343,31 @@
                 <label for="progBarShow">Show progressbar:</label>
                 <input type="checkbox" name="progBarShow" id="progBarShow"><br>
                 <br>
-                <placeholder>Colors</placeholder><br>
+                <placeholder>Make this writeable, currently read only</placeholder>
+                <div class="card">
+                    <div class="card-body">
+                        <div id="table" class="table-editable">
+                            <span class="table-add float-right mb-3 mr-2"><a href="#!" class="text-success"><i
+                                        class="fas fa-plus fa-2x" aria-hidden="true"></i></a></span>
+                            <table class="table table-bordered table-responsive-md table-striped text-center" id="colors1">
+                                <thead>
+                                    <tr>
+                                        <th class="text-center">Time</th>
+                                        <th class="text-center">Color</th>
+                                        <th class="text-center">Remove</th>
+                                    </tr>
+                                </thead>
+                               
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
                 <label for="textColors">Enable Text Colors:</label>
                 <input type="checkbox" name="textColors" id="textColors"><br>
                 <br>
-                <placeholder>Colors</placeholder><br>
+
 
                 <button type="button" class="btn btn-outline-success" id="applyLayout">Apply settings</button>
 
@@ -380,72 +400,6 @@
                     <input id="demo-input" class="colorPicky" type="button" value="rgb(255, 128, 0)" />
                 </div>
 
-                <div class="card">
-                    <div class="card-body">
-                        <div id="table" class="table-editable">
-                            <span class="table-add float-right mb-3 mr-2"><a href="#!" class="text-success"><i
-                                        class="fas fa-plus fa-2x" aria-hidden="true"></i></a></span>
-                            <table class="table table-bordered table-responsive-md table-striped text-center">
-                                <thead>
-                                    <tr>
-                                        <th class="text-center">Time</th>
-                                        <th class="text-center">Color</th>
-                                        <th class="text-center">Remove</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td class="pt-3-half numVal" contenteditable="true">2000</td>
-                                        <td class="pt-3-half" contenteditable="false"><input id="demo-input0" class="colorPicky" type="button" value="rgb(255, 128, 0)" /></td>
-
-                                        <td>
-                                            <span class="table-remove"><button type="button"
-                                                    class="btn btn-danger btn-rounded btn-sm my-0">
-                                                    Remove
-                                                </button></span>
-                                        </td>
-                                    </tr>
-                                    <!-- This is our clonable table line -->
-                                    <tr>
-                                        <td class="pt-3-half numVal" contenteditable="true">5000</td>
-                                        <td class="pt-3-half" contenteditable="false"><input id="demo-input1" class="colorPicky" type="button" value="rgb(255, 128, 0)" /></td>
-                                        <td>
-                                            <span class="table-remove"><button type="button"
-                                                    class="btn btn-danger btn-rounded btn-sm my-0">
-                                                    Remove
-                                                </button></span>
-                                        </td>
-                                    </tr>
-                                    <!-- This is our clonable table line -->
-                                    <tr>
-                                        <td class="pt-3-half numVal" contenteditable="true">10000</td>
-                                        <td class="pt-3-half" contenteditable="false"><input id="demo-input2" class="colorPicky" type="button" value="rgb(255, 128, 0)" /></td>
-                                        <td>
-                                            <span class="table-remove"><button type="button"
-                                                    class="btn btn-danger btn-rounded btn-sm my-0">
-                                                    Remove
-                                                </button></span>
-                                        </td>
-                                    </tr>
-                                    <!-- This is our clonable table line -->
-                                    <tr class="hide">
-                                        <td class="pt-3-half numVal" contenteditable="true">20000</td>
-                                        <td class="pt-3-half" contenteditable="false"><input id="demo-input3" class="colorPicky" type="button" value="rgb(255, 128, 0)" /></td>
-
-                                        <td>
-                                            <span class="table-remove"><button type="button"
-                                                    class="btn btn-danger btn-rounded btn-sm my-0">
-                                                    Remove
-                                                </button></span>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-
-
             </page>
             <page id="about" class="pageC hidden flex-fill">
                 <h1>About</h1>
@@ -460,7 +414,7 @@
 
         $(document).ready(function () {
 
-            $('.colorPicky').colorpicker();
+            
             $('#demo-input').on('colorpickerChange', function (event) {
                 $('#demo-input').css('background-color', event.color.toString());
             });
@@ -498,6 +452,15 @@
             // Restore settings
             saveOption("/api/v1/data", function (event, xmlHttp) {
 
+                const tableEntry = ' <tr><td class="pt-3-half numVal" contenteditable="true">#VALUE#</td>\
+                    <td class="pt-3-half" contenteditable="false" style="background-color: #bg-COLOR#;"><input id="demo-input1" class="colorPicky" type="button" value="#COLOR#" /></td>\
+                    <td>\
+                        <span class="table-remove"><button type="button"\
+                                class="btn btn-danger btn-rounded btn-sm my-0">\
+                                Remove\
+                            </button></span>\
+                    </td></tr>'
+
                 const jsonResult = JSON.parse(xmlHttp.response)
                 document.getElementById("responeSnippet").innerHTML = JSON.stringify(jsonResult)
                 // Restore mode radio
@@ -508,7 +471,15 @@
                 $("#showMillis")[0].checked = jsonResult.showMilliSeconds;
                 $("#progBarShow")[0].checked = jsonResult.showProgressbar;
                 $("#textColors")[0].checked = jsonResult.enableColoredText;
+                for (item in jsonResult.colorSegments) {
+                    let temp = tableEntry.replace("#VALUE#", item);
+                    temp = temp.replace("#COLOR#", jsonResult.colorSegments[item]);
+                    temp = temp.replace("#bg-COLOR#", jsonResult.colorSegments[item]);
+                    document.getElementById("colors1").innerHTML += temp
+                    console.log(jsonResult.colorSegments[item])
+                }
                 console.debug(jsonResult, currentModeInt)
+                $('.colorPicky').colorpicker();
             })
 
             // Presets
@@ -598,7 +569,7 @@
                     }, 500)
                 })
 
-                
+
 
             })
 
