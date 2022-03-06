@@ -343,27 +343,28 @@
                 <label for="progBarShow">Show progressbar:</label>
                 <input type="checkbox" name="progBarShow" id="progBarShow"><br>
                 <br>
-                <placeholder>Make this writeable, currently read only</placeholder>
-                <div class="card">
-                    <div class="card-body">
-                        <div id="table" class="table-editable">
-                            <span class="table-add float-right mb-3 mr-2"><a href="#!" class="text-success"><i
-                                        class="fas fa-plus fa-2x" aria-hidden="true"></i></a></span>
-                            <table class="table table-bordered table-responsive-md table-striped text-center" id="colors1">
-                                <thead>
-                                    <tr>
-                                        <th class="text-center">Time</th>
-                                        <th class="text-center">Color</th>
-                                        <th class="text-center">Remove</th>
-                                    </tr>
-                                </thead>
-                               
+                <placeholder>Add a way to add more rows</placeholder>
 
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
+                <div id="table" class="table-editable">
+                    <span class="table-add float-right mb-3 mr-2"><a href="#!" class="text-success"><i
+                                class="fas fa-plus fa-2x" aria-hidden="true"></i></a></span>
+                    <table class="table table-bordered table-responsive-md table-striped text-center" id="colors1">
+                        <thead>
+                            <tr>
+                                <th class="text-center">Time</th>
+                                <th class="text-center">Color</th>
+                                <th class="text-center">Remove</th>
+                            </tr>
+                        </thead>
+
+
+                        </tbody>
+                    </table>
                 </div>
+                <button type="button" class="btn btn-outline-success" id="addRow">Add row</button>
+                <br>
+
+
                 <label for="textColors">Enable Text Colors:</label>
                 <input type="checkbox" name="textColors" id="textColors"><br>
                 <br>
@@ -411,14 +412,20 @@
     </main>
     <script>
 
+        function convertColorSegments(elementId) {
+            const raw = document.getElementById(elementId);
+            const segmentData = {}
+            for (elm in raw.children) {
+                if (raw.children[elm].nodeName == "TBODY") {
+                    const child = raw.children[elm].firstChild.childNodes
+                    segmentData[child[0].innerText] = child[2].firstChild.value
+                }
+            }
+            console.info(segmentData)
+            return (segmentData)
+        }
 
         $(document).ready(function () {
-
-            
-            $('#demo-input').on('colorpickerChange', function (event) {
-                $('#demo-input').css('background-color', event.color.toString());
-            });
-
             $(".numVal").bind("DOMSubtreeModified", alert);
 
             const modes = ["timer", "clock", "black", "test"]
@@ -435,6 +442,22 @@
                     DarkReader.auto()
                 }
             }
+
+            $("#addRow").click(function(event){
+                $("#colors1").append(
+                    '<tr>' +
+                    '<td contenteditable="true" class="time"></td>' +
+                    '<td contenteditable="true" class="color"><input id="demo-input1" class="colorPicky" type="button" value="#COLOR#" /></td></td>' +
+                    '<td><button type="button" class="btn btn-danger btn-rounded btn-sm my-0 deleteRow1">Remove</button></td>' +
+                    '</tr>'
+                );
+                $('.colorPicky').colorpicker();
+                $(".deleteRow1").click(function (event) {
+                    console.log(event.target)
+                    $(event.target).closest("tr").remove();
+                });
+            });
+            
 
             $("input[name='btnradio2']").click(function (event) {
                 console.debug()
@@ -456,7 +479,7 @@
                     <td class="pt-3-half" contenteditable="false" style="background-color: #bg-COLOR#;"><input id="demo-input1" class="colorPicky" type="button" value="#COLOR#" /></td>\
                     <td>\
                         <span class="table-remove"><button type="button"\
-                                class="btn btn-danger btn-rounded btn-sm my-0">\
+                                class="btn btn-danger btn-rounded btn-sm my-0 deleteRow1">\
                                 Remove\
                             </button></span>\
                     </td></tr>'
@@ -478,8 +501,20 @@
                     document.getElementById("colors1").innerHTML += temp
                     console.log(jsonResult.colorSegments[item])
                 }
+                let temp = tableEntry.replace("#VALUE#", "");
+                    temp = temp.replace("#COLOR#", "white");
+                    temp = temp.replace("#bg-COLOR#", "white");
+                document.getElementById("colors1").innerHTML += temp
+
                 console.debug(jsonResult, currentModeInt)
                 $('.colorPicky').colorpicker();
+                $('.colorPicky').on('colorpickerChange', function (event) {
+                    event.target.parentElement.style.backgroundColor = event.target.value
+                });
+                $(".deleteRow1").click(function (event) {
+                    console.log(event.target)
+                    $(event.target).closest("tr").remove();
+                });
             })
 
             // Presets
@@ -492,8 +527,6 @@
             })
 
 
-
-
             $(".goTimer").click(function (event) {
                 event.currentTarget.innerHTML = '<div class="spinner-border-sm spinner-border"></div>'
                 setTimeout(function () {
@@ -501,8 +534,6 @@
                 }, 200);
 
                 saveOption("/api/v1/set/addMillisToTimer?time=" + currentTime, function (ev) {
-
-
                 })
             })
 
@@ -518,10 +549,16 @@
                 const progBarShowB = $("#progBarShow")[0].checked
                 const textColorsB = $("#textColors")[0].checked
 
+                const colors = convertColorSegments("colors1")
+
+                console.log(JSON.stringify(colors))
+
                 allPathes.push("/api/v1/set/layout/showTime?show=" + showTimeB)
                 allPathes.push("/api/v1/set/layout/showMillis?show=" + showMillisB)
                 allPathes.push("/api/v1/set/progressbar/show?show=" + progBarShowB)
                 allPathes.push("/api/v1/set/text/enableColoring?enable=" + textColorsB)
+                allPathes.push("/api/v1/set/progressbar/colors?isBase64=true&colors=" + btoa(JSON.stringify(colors)))
+
 
                 for (pI in allPathes) {
                     const path = allPathes[pI];
@@ -534,7 +571,6 @@
                 setTimeout(function () {
                     $("#applyLayout")[0].innerHTML = 'Apply settings'
                 }, 500)
-
             })
 
 

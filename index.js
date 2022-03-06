@@ -39,7 +39,7 @@ currentState = {
   showMessage: false,
   messageAppearTime: 0,
   showProgressbar: true,
-  colorSegments: { 20000: "#FFAE00", 5000: "#ff0000", "START": "yellow" },
+  colorSegments: {  40000: "yellow", 20000: "#FFAE00", 5000: "#ff0000", "START": "green" },
   textColors: {},
   srvTime: 0,
   enableColoredText: true,
@@ -135,7 +135,6 @@ app.get("/api/v1/set/layout/showTime", function (req, res) {
     }
     res.json({ status: "ok" });
   }
-  res.json({ status: "ok" });
 });
 
 app.get("/api/v1/set/progressbar/show", function (req, res) {
@@ -148,13 +147,19 @@ app.get("/api/v1/set/progressbar/show", function (req, res) {
 
 app.get("/api/v1/set/progressbar/colors", function (req, res) {
   try {
-    currentState.colorSegments = JSON.parse(req.query.colors);
+    let data = req.query.colors
+    if(req.query.isBase64 === "true"){
+      data = atob(data)
+    }
+    console.debug(data)
+    currentState.colorSegments = JSON.parse(data);
     if (req.query.persist === 'true') {
       dataToBeWritten.colorSegments = currentState.colorSegments
     }
     res.json({ status: "ok" });
   } catch (error) {
     res.json({ status: "error", message: error });
+    console.error(error)
   }
 });
 
