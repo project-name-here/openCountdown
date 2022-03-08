@@ -151,7 +151,6 @@ app.get("/api/v1/set/progressbar/colors", function (req, res) {
     if(req.query.isBase64 === "true"){
       data = atob(data)
     }
-    console.debug(data)
     currentState.colorSegments = JSON.parse(data);
     if (req.query.persist === 'true') {
       dataToBeWritten.colorSegments = currentState.colorSegments
@@ -165,17 +164,19 @@ app.get("/api/v1/set/progressbar/colors", function (req, res) {
 
 app.get("/api/v1/set/text/colors", function (req, res) {
   try {
-    if (req.query.copy === "true") {
-      currentState.textColors = currentState.colorSegments;
-    } else {
-      currentState.textColors = JSON.parse(req.query.colors);
+    let data = req.query.colors
+    if(req.query.isBase64 === "true"){
+      data = atob(data)
     }
+    console.debug(data)
+    currentState.textColors = JSON.parse(data);
     if (req.query.persist === 'true') {
       dataToBeWritten.textColors = currentState.textColors
     }
     res.json({ status: "ok" });
   } catch (error) {
     res.json({ status: "error", message: error });
+    console.error(error)
   }
 });
 
