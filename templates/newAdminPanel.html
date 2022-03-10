@@ -342,7 +342,7 @@
 
                 <label for="progBarShow">Show progressbar:</label>
                 <input type="checkbox" name="progBarShow" id="progBarShow"><br>
-                
+
                 <details>
                     <summary>Progressbar Colors</summary>
                     <p>
@@ -357,7 +357,7 @@
                                     <th class="text-center">Remove</th>
                                 </tr>
                             </thead>
-                        </tbody>
+                            </tbody>
                         </table>
                     </div>
 
@@ -380,7 +380,7 @@
                                     <th class="text-center">Remove</th>
                                 </tr>
                             </thead>
-                        </tbody>
+                            </tbody>
                         </table>
                     </div>
                     <button type="button" class="btn btn-outline-success" id="copyColors">Copy from progressbar
@@ -399,7 +399,7 @@
 
             </page>
 
-            <page id="debug" class="pageC hidden flex-fill">
+            <page id="debug" class="pageC hidden flex-fill overflow-auto">
                 <h1>Debug page</h1>
                 <div class="alert alert-warning" role="alert">
                     <h4 class="alert-heading">Attention</h4>
@@ -414,7 +414,7 @@
                 <button type="button" class="btn btn-outline-success" id="applyDebug">Apply settings</button>
                 <br><br>
                 <h3>Raw server reponse</h3>
-                <code id="responeSnippet" style="width: 40%; display: inline-block;">
+                <code id="responeSnippet" style="width: 40%; display: inline-block;" class="overflow-auto">
 
                 </code>
 
@@ -424,15 +424,18 @@
                 </div>
 
             </page>
-            <page id="about" class="pageC hidden flex-fill">
+            <page id="about" class="pageC hidden flex-fill overflow-auto">
                 <h1>About</h1>
                 Version: 1.0.0<br>
-                NodeJS Version: UNKNOWN<br>
-                Express Version: UNKNOWN<br>
+                NodeJS Version: <i id="nodejsVers"></i><br>
+                <code id="systemInfo" class="overflow-auto">
+
+                </code>
             </page>
         </pages>
     </main>
-    <script src="/js/interface.js"> </script>
+    <script type="text/javascript" src="js/jsonview.js"></script>
+    <script type="text/javascript" src="/js/interface.js"> </script>
 
 
 </body>

@@ -1,7 +1,8 @@
-function convertTimeOffset(){
+function convertTimeOffset() {
     selTime = new Date().getTime() + document.getElementById('time2').valueAsNumber
     document.getElementById("time").value = selTime
 }
+
 
 
 function convertColorSegments(elementId) {
@@ -36,6 +37,16 @@ $(document).ready(function () {
         }
     }
 
+    saveOption("/api/v1/system", function systemInfo(event) {
+        const dataSystem = JSON.parse(event.originalTarget.response)
+        document.getElementById("nodejsVers").innerHTML = dataSystem.nodeVersion
+
+        const tree2 = jsonview.create(dataSystem);
+        jsonview.render(tree2, document.getElementById("systemInfo"));
+        jsonview.expand(tree2);
+        // console.log(dataSystem)
+    })
+
     $("#addRow").click(function (event) {
         $("#colors1").append(
             '<tr>' +
@@ -45,7 +56,7 @@ $(document).ready(function () {
             '</tr>'
         );
         $('.colorPicky').colorpicker();
-        
+
     });
 
     $("#addRow2").click(function (event) {
@@ -61,11 +72,11 @@ $(document).ready(function () {
 
     $("#copyColors").click(function CopyTextColors(event) {
         event.target.innerHTML = '<div class="spinner-border-sm spinner-border"></div>'
-        saveOption("/api/v1/set/text/colors?copy=true", function finishCopyColors(event){
-            setTimeout(function(){
+        saveOption("/api/v1/set/text/colors?copy=true", function finishCopyColors(event) {
+            setTimeout(function () {
                 document.getElementById("copyColors").innerHTML = "Copy from progressbar colors"
             }, 500)
-            
+
         })
     });
 
@@ -96,7 +107,10 @@ $(document).ready(function () {
             </td></tr>'
 
         const jsonResult = JSON.parse(xmlHttp.response)
-        document.getElementById("responeSnippet").innerHTML = JSON.stringify(jsonResult)
+        //.innerHTML = JSON.stringify(jsonResult, null, 4)
+        const tree = jsonview.create(jsonResult);
+        jsonview.render(tree, document.getElementById("responeSnippet"));
+        jsonview.expand(tree);
         // Restore mode radio
         const currentModeInt = modes.indexOf(jsonResult.mode);
         $("#btnradio" + (currentModeInt + 1))[0].checked = true

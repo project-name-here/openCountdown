@@ -44,15 +44,13 @@ currentState = {
   textColors: {},
   srvTime: 0,
   enableColoredText: true,
-  debug: false
+  debug: false,
+  sessionToken: Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15), 
 };
 
 const dataToBeWritten = {};
 
 currentState = Object.assign({}, currentState, loadedData);
-
-console.log(currentState)
-
 currentState.textColors = currentState.colorSegments
 
 
@@ -80,7 +78,7 @@ function updatedData() {
   currentState.srvTime = new Date().getTime()
   wsServer.broadcast(JSON.stringify(currentState));
   clearTimeout(updatey);
-  setTimeout(updatedData, 5000);
+  setTimeout(updatedData, 5000 );
 }
 
 console.log("Preparing routes...");
@@ -104,6 +102,26 @@ app.get("/api/v1/data", function (req, res) {
   currentState.srvTime = new Date().getTime()
   res.json(currentState);
 });
+
+app.get("/api/v1/system", function (req, res) {
+  const systemData = {
+    uptime: process.uptime(),
+    memoryUsage: process.memoryUsage(),
+    cpuUsage: process.cpuUsage(),
+    platform: process.platform,
+    arch: process.arch,
+    nodeVersion: process.version,
+    nodePath: process.execPath,
+    nodeArgv: process.argv,
+    nodeExecArgv: process.execArgv,
+    nodeCwd: process.cwd(),
+    nodeEnv: process.env,
+    nodeConfig: process.config,
+    nodeTitle: process.title,
+  }
+  res.json(systemData);
+});
+
 
 app.get("/api/v1/set/mode", function (req, res) {
   currentState.mode = req.query.mode;

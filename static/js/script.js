@@ -6,7 +6,8 @@ websocketFailed = false
 recoveryAttempts = 0;
 
 let socket = new ReconnectingWebSocket("ws://localhost:" + location.port);
-
+let ackdSessionToken = false
+let isFirstPacket = true
 
 socket.onopen = function (e) {
   // alert("[open] Connection established");
@@ -16,8 +17,27 @@ socket.onopen = function (e) {
 
 socket.onmessage = function (event) {
   // alert(`[message] Data received from server: ${event.data}`);
-  dataFame = JSON.parse(event.data);
-  timeDiff = new Date().getTime() - dataFame.srvTime
+  let inData = JSON.parse(event.data)
+  if (isFirstPacket) {
+    isFirstPacket = false
+    dataFame = JSON.parse(event.data);
+    timeDiff = new Date().getTime() - dataFame.srvTime
+  } else {
+    if (inData.sessionToken == dataFame.sessionToken) {
+      dataFame = JSON.parse(event.data);
+      timeDiff = new Date().getTime() - dataFame.srvTime
+    } else {
+      if (ackdSessionToken == false) {
+
+        ackdSessionToken = true
+
+        if (confirm("Session token mismatch, reload the page?")) {
+          location.reload();
+        }
+      }
+    }
+  }
+
 };
 
 socket.onclose = function (event) {
@@ -49,7 +69,7 @@ socket.onclose = function (event) {
 };
 
 socket.onerror = function (error) {
-  alert(`[error] ${error.message}`);
+  // alert(`[error] ${error.message}`);
 };
 
 allowFullscreen = true
@@ -154,17 +174,17 @@ function handleUpdate() {
 
     if (!isSlowed) {
       console.error("Server timeout")
-      clearInterval(updateInter)
-      updateInter = setInterval(handleUpdate, 900)
+      // clearInterval(updateInter)
+      // updateInter = setInterval(handleUpdate, 900)
       document.getElementById("warningBanner").style.display = "block"
       isSlowed = true
-      recoInter = setInterval(handleRecovery, 10000)
+      // recoInter = setInterval(handleRecovery, 10000)
     }
   } else {
     if (isSlowed) {
-      clearInterval(updateInter)
-      clearInterval(recoInter)
-      updateInter = setInterval(handleUpdate, 2)
+      //clearInterval(updateInter)
+      //clearInterval(recoInter)
+      //updateInter = setInterval(handleUpdate, 2)
       document.getElementById("warningBanner").style.display = "none"
       isSlowed = false
     }
