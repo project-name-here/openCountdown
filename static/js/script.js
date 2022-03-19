@@ -9,6 +9,9 @@ let socket = new ReconnectingWebSocket("ws://localhost:" + location.port);
 let ackdSessionToken = false
 let isFirstPacket = true
 
+let lastTime = "00:00:00";
+let timerCountdownFirst = true;
+
 socket.onopen = function (e) {
   // alert("[open] Connection established");
   //alert("Sending to server");
@@ -47,29 +50,7 @@ socket.onclose = function (event) {
     // e.g. server process killed or network down
     // event.code is usually 1006 in this case
     console.error('[close] Connection died');
-
-    /*websocketFailed = true
-    if (recoveryAttempts < 5) {
-      setTimeout(function handleWebsocketRecovery() {
-        // requestBackend()
-        websocketFailed = false
-        recoveryAttempts++;
-        console.warn("Trying to recover websocket connection")
-        socket.onopen = function (e) {
-          // alert("[open] Connection established");
-          //alert("Sending to server");
-          socket.send("new client");
-        };
-      }, 1000)
-    } else {
-      backReqInt = setInterval(requestBackend, 500);
-    }
-    */
   }
-};
-
-socket.onerror = function (error) {
-  // alert(`[error] ${error.message}`);
 };
 
 allowFullscreen = true
@@ -79,9 +60,9 @@ let timeDiff = 0
 function enterFullscreen(element) {
   if (element.requestFullscreen) {
     element.requestFullscreen();
-  } else if (element.msRequestFullscreen) {      // for IE11 (remove June 15, 2022)
+  } else if (element.msRequestFullscreen) {
     element.msRequestFullscreen();
-  } else if (element.webkitRequestFullscreen) {  // iOS Safari
+  } else if (element.webkitRequestFullscreen) {
     element.webkitRequestFullscreen();
   }
 }
@@ -99,7 +80,6 @@ function updateFullscreen() {
     enterFullscreen(document.documentElement)
   }
 }
-
 
 
 function msToTime(s, data) {
@@ -170,26 +150,7 @@ function handleUpdate() {
   var data = dataFame;
   document.getElementById("incomeData").innerHTML = JSON.stringify(data)
   document.getElementById("timediff").innerHTML = timeDiff + "<br>" + String(new Date().getTime() - data.srvTime);
-  if (new Date().getTime() - data.srvTime > 1000 * 5) {
-
-    if (!isSlowed) {
-      console.error("Server timeout")
-      // clearInterval(updateInter)
-      // updateInter = setInterval(handleUpdate, 900)
-      document.getElementById("warningBanner").style.display = "block"
-      isSlowed = true
-      // recoInter = setInterval(handleRecovery, 10000)
-    }
-  } else {
-    if (isSlowed) {
-      //clearInterval(updateInter)
-      //clearInterval(recoInter)
-      //updateInter = setInterval(handleUpdate, 2)
-      document.getElementById("warningBanner").style.display = "none"
-      isSlowed = false
-    }
-  }
-
+ 
   if (data.debug) {
     document.getElementById("timediff").style.display = "block";
   } else {
@@ -231,12 +192,15 @@ function handleUpdate() {
     document.getElementById("wholeProgBar").style.display = "none";
     document.getElementById("clockSec").innerHTML = "";
     document.getElementById("timer").style.color = "white"
+    timerCountdownFirst = true;
 
   } else if (data.mode == "timer") {
     document.getElementById("wholeProgBar").style.display = "block";
-    if (data.timerRunState) {
-      const now = new Date()
+    const now = new Date()
+
+    if(timerCountdownFirst){
       const diff = data.countdownGoal - now.getTime()
+      timerCountdownFirst = false
       document.getElementById("timer").innerHTML = msToTime(diff, data);
       if (diff > 0) {
         document.getElementById("progBar").style.width = percentage(diff, data.timeAmountInital) + "%";
@@ -251,15 +215,38 @@ function handleUpdate() {
       } else {
         document.getElementById("timer").style.color = "white"
       }
+    }
 
+    if (data.timerRunState) {
+      const diff = data.countdownGoal - now.getTime()
+      document.getElementById("timer").innerHTML = msToTime(diff, data);
+      lastTime = msToTime(diff, data);
+      if (diff > 0) {
+        document.getElementById("progBar").style.width = percentage(diff, data.timeAmountInital) + "%";
+      } else {
+        document.getElementById("progBar").style.width = "0%";
+      }
+
+      document.getElementById("progBar").style.backgroundColor = findProgessColor(data.colorSegments, diff)
+      document.getElementById("testImg").style.display = "none";
+      if (data.enableColoredText) {
+        document.getElementById("timer").style.color = findProgessColor(data.textColors, diff)
+      } else {
+        document.getElementById("timer").style.color = "white"
+      }
+
+    } else {
+      document.getElementById("timer").innerHTML = lastTime
     }
   } else if (data.mode == "black") {
+    timerCountdownFirst = true;
     document.getElementById("timer").innerHTML = "";
     document.getElementById("testImg").style.display = "none";
     document.getElementById("wholeProgBar").style.display = "none";
     document.getElementById("clockSec").innerHTML = "";
 
   } else if (data.mode == "test") {
+    timerCountdownFirst = true;
     document.getElementById("timer").innerHTML = "";
     document.getElementById("testImg").style.display = "block";
     document.getElementById("progBar").style.display = "none";

@@ -21,8 +21,8 @@
     <script type="text/javascript" src="/js/cookie.js"></script>
     <link href="/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="/css/mainStyle.css" rel="stylesheet">
-    <link href="colorpicker/css/bootstrap-colorpicker.css" rel="stylesheet">
-    <script src="colorpicker/js/bootstrap-colorpicker.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/mdbassit/Coloris@latest/dist/coloris.min.css"/>
+    <script src="https://cdn.jsdelivr.net/gh/mdbassit/Coloris@latest/dist/coloris.min.js"></script>
 </head>
 
 <body>
@@ -412,6 +412,13 @@
                 <input type="checkbox" name="debugMode" id="debugModeEnable" value="true"><br><br>
 
                 <button type="button" class="btn btn-outline-success" id="applyDebug">Apply settings</button>
+                <br>
+                <div class="full">
+                    <p>Full size thumbnail</p>
+                    <div class="clr-field" style="color: rgb(255, 204, 0);">
+                        <button aria-labelledby="clr-open-label"></button>
+                        <input type="text" class="coloris" value="#ffcc00"></div>
+                  </div>
                 <br><br>
                 <h3>Raw server reponse</h3>
                 <code id="responeSnippet" style="width: 40%; display: inline-block;" class="overflow-auto">
@@ -436,7 +443,13 @@
     </main>
     <script type="text/javascript" src="js/jsonview.js"></script>
     <script type="text/javascript" src="/js/interface.js"> </script>
+    <script type="text/javascript">
 
+        Coloris({
+          el: '.coloris',
+          alpha: false,
+        });
+    </script>
 
 </body>
 

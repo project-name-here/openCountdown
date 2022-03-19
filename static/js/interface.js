@@ -51,11 +51,10 @@ $(document).ready(function () {
         $("#colors1").append(
             '<tr>' +
             '<td contenteditable="true" class="time"></td>' +
-            '<td contenteditable="true" class="color"><input id="demo-input1" class="colorPicky" type="button" value="#COLOR#" /></td></td>' +
+            '<td contenteditable="true" class="color full"><input id="demo-input1" "type="text" value="#COLOR#" data-coloris /></td></td>' +
             '<td><button type="button" class="btn btn-danger btn-rounded btn-sm my-0 deleteRow1">Remove</button></td>' +
             '</tr>'
         );
-        $('.colorPicky').colorpicker();
 
     });
 
@@ -63,42 +62,23 @@ $(document).ready(function () {
         $("#colors2").append(
             '<tr>' +
             '<td contenteditable="true" class="time"></td>' +
-            '<td contenteditable="true" class="color"><input id="demo-input2" class="colorPicky" type="button" value="#COLOR#" /></td></td>' +
+            '<td contenteditable="true" class="color full"><input id="demo-input2" type="text" value="#COLOR#" data-coloris /></td></td>' +
             '<td><button type="button" class="btn btn-danger btn-rounded btn-sm my-0 deleteRow1">Remove</button></td>' +
             '</tr>'
         );
-        $('.colorPicky').colorpicker();
     });
 
-    $("#copyColors").click(function CopyTextColors(event) {
-        event.target.innerHTML = '<div class="spinner-border-sm spinner-border"></div>'
-        saveOption("/api/v1/set/text/colors?copy=true", function finishCopyColors(event) {
-            setTimeout(function () {
-                document.getElementById("copyColors").innerHTML = "Copy from progressbar colors"
-            }, 500)
-
-        })
-    });
-
-
-    $("input[name='btnradio2']").click(function (event) {
-        console.debug()
-        const darkid = parseInt(event.currentTarget.id.replace("Mbtnradio", ""))
-        if (darkid == 1) {
-            DarkReader.disable()
-        } else if (darkid == 2) {
-            DarkReader.enable()
-        } else {
-            DarkReader.auto()
-        }
-        Cookies.set("interfaceColor", darkid)
-    });
+    
 
     // Restore settings
     saveOption("/api/v1/data", function (event, xmlHttp) {
 
         const tableEntry = ' <tr><td class="pt-3-half numVal" contenteditable="true">#VALUE#</td>\
-            <td class="pt-3-half" contenteditable="false" style="background-color: #bg-COLOR#;"><input id="demo-input1" class="colorPicky" type="button" value="#COLOR#" /></td>\
+            <td class="pt-3-half full" contenteditable="false"> \
+            <div class="clr-field" style="color: #bg-COLOR#;"> \
+                        <button aria-labelledby="clr-open-label"></button> \
+                        <input id="demo-input1" type="text" class="coloris" value="#COLOR#"></div> \
+                  </div> \
             <td>\
                 <span class="table-remove"><button type="button"\
                         class="btn btn-danger btn-rounded btn-sm my-0 deleteRow1">\
@@ -124,7 +104,7 @@ $(document).ready(function () {
             temp = temp.replace("#COLOR#", jsonResult.colorSegments[item]);
             temp = temp.replace("#bg-COLOR#", jsonResult.colorSegments[item]);
             document.getElementById("colors1").innerHTML += temp
-            console.log(jsonResult.colorSegments[item])
+            //console.log(jsonResult.colorSegments[item])
         }
 
         // Text colors
@@ -133,22 +113,44 @@ $(document).ready(function () {
             temp = temp.replace("#COLOR#", jsonResult.textColors[item]);
             temp = temp.replace("#bg-COLOR#", jsonResult.textColors[item]);
             document.getElementById("colors2").innerHTML += temp
-            console.log(jsonResult.textColors[item])
+            //console.log(jsonResult.textColors[item])
         }
 
 
 
-        console.debug(jsonResult, currentModeInt)
-        $('.colorPicky').colorpicker();
+        //console.debug(jsonResult, currentModeInt)
         $('.colorPicky').on('colorpickerChange', function (event) {
             event.target.parentElement.style.backgroundColor = event.target.value
         });
         $(".deleteRow1").on("click", function removeRowEntry(event) {
-            console.warn(event.target.parentElement)
+            //console.warn(event.target.parentElement)
             $(event.target).closest("tbody").remove();
         });
     })
 
+    $("#copyColors").click(function CopyTextColors(event) {
+        event.target.innerHTML = '<div class="spinner-border-sm spinner-border"></div>'
+        saveOption("/api/v1/set/text/colors?copy=true", function finishCopyColors(event) {
+            setTimeout(function () {
+                document.getElementById("copyColors").innerHTML = "Copy from progressbar colors"
+            }, 500)
+
+        })
+    });
+
+
+    $("input[name='btnradio2']").click(function (event) {
+        const darkid = parseInt(event.currentTarget.id.replace("Mbtnradio", ""))
+        if (darkid == 1) {
+            DarkReader.disable()
+        } else if (darkid == 2) {
+            DarkReader.enable()
+        } else {
+            DarkReader.auto()
+        }
+        Cookies.set("interfaceColor", darkid)
+    });
+    
     // Presets
     $(".pres").click(function (event) {
         currentTime = parseInt(event.currentTarget.value)
@@ -184,8 +186,6 @@ $(document).ready(function () {
         const colors = convertColorSegments("colors1")
         const colors2 = convertColorSegments("colors2")
 
-        console.log(JSON.stringify(colors))
-
         allPathes.push("/api/v1/set/layout/showTime?show=" + showTimeB)
         allPathes.push("/api/v1/set/layout/showMillis?show=" + showMillisB)
         allPathes.push("/api/v1/set/progressbar/show?show=" + progBarShowB)
@@ -196,7 +196,6 @@ $(document).ready(function () {
 
         for (pI in allPathes) {
             const path = allPathes[pI];
-            console.warn(path)
             saveOption(path, function (event) {
                 console.debug(event)
             })
@@ -226,7 +225,6 @@ $(document).ready(function () {
 
         for (pI in allPathes) {
             const path = allPathes[pI];
-            console.warn(path)
             saveOption(path, function (event) {
                 console.debug(event)
             })
@@ -398,7 +396,7 @@ $(document).ready(function () {
 
         $(".pageC").addClass("hidden")
         $("#" + event.target.href.split("#")[1]).removeClass("hidden")
-        console.log(event.target.href.split("#")[1])
+        // console.log(event.target.href.split("#")[1])
     });
 });
 
