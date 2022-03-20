@@ -114,3 +114,7 @@ pre {
   word-wrap: normal;
   white-space: pre;
 }
+
+.hidden {
+  display: none !important;
+}

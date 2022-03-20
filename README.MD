@@ -1,11 +1,5 @@
 # openCountdown
 
 # ToDo
-- [X] Pausing functions
-- [X] Presets
-- [X] time on countdown page
-- [X] one-way messaging
-- [P] Better UI
-    - [ ] Error popups
-- [X] Progress bar
+- [ ] Improve duration picker in table view
 - [P] Endpoint docs

@@ -4,7 +4,6 @@ function convertTimeOffset() {
 }
 
 
-
 function convertColorSegments(elementId) {
     const raw = document.getElementById(elementId);
     console.log(raw)
@@ -313,9 +312,7 @@ $(document).ready(function () {
         console.log(value, parseInt(event.currentTarget.id.replace("btnradio", "")))
         saveOption("/api/v1/set/mode?mode=" + value, function (event) {
             setTimeout(function () {
-                $("#sendMessage")[0].innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-send" viewBox="0 0 16 16"> \
-                    <path d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576 6.636 10.07Zm6.787-8.201L1.591 6.602l4.339 2.76 7.494-7.493Z"/> \
-                  </svg>'
+                $("#sendMessage")[0].innerHTML = '<i class="bi bi-send"></i>'
             }, 200)
 
         })
@@ -327,9 +324,7 @@ $(document).ready(function () {
         let value = $("#messageContent").val()
         saveOption("/api/v1/ctrl/message/show?msg=" + value, function (event) {
             setTimeout(function () {
-                $("#sendMessage")[0].innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-send" viewBox="0 0 16 16"> \
-                    <path d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576 6.636 10.07Zm6.787-8.201L1.591 6.602l4.339 2.76 7.494-7.493Z"/> \
-                  </svg>'
+                $("#sendMessage")[0].innerHTML = '<i class="bi bi-send"></i>'
             }, 200)
 
         })
@@ -339,10 +334,7 @@ $(document).ready(function () {
         $("#ctrlRemoveMessage")[0].innerHTML = '<div class="spinner-border-sm spinner-border"></div>'
         saveOption("/api/v1/ctrl/message/hide", function (event) {
             setTimeout(function () {
-                $("#ctrlRemoveMessage")[0].innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye-slash-fill" viewBox="0 0 16 16">\
-                    <path d="m10.79 12.912-1.614-1.615a3.5 3.5 0 0 1-4.474-4.474l-2.06-2.06C.938 6.278 0 8 0 8s3 5.5 8 5.5a7.029 7.029 0 0 0 2.79-.588zM5.21 3.088A7.028 7.028 0 0 1 8 2.5c5 0 8 5.5 8 5.5s-.939 1.721-2.641 3.238l-2.062-2.062a3.5 3.5 0 0 0-4.474-4.474L5.21 3.089z"/>\
-                    <path d="M5.525 7.646a2.5 2.5 0 0 0 2.829 2.829l-2.83-2.829zm4.95.708-2.829-2.83a2.5 2.5 0 0 1 2.829 2.829zm3.171 6-12-12 .708-.708 12 12-.708.708z"/>\
-                  </svg>'
+                $("#ctrlRemoveMessage")[0].innerHTML = '<i class="bi bi-eye-slash-fill"></i>'
             }, 200)
 
         })
@@ -352,7 +344,7 @@ $(document).ready(function () {
         $("#funcPlay")[0].innerHTML = '<div class="spinner-border-sm spinner-border"></div>'
         saveOption("/api/v1/ctrl/timer/play", function (event) {
             setTimeout(function () {
-                $("#funcPlay")[0].innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16"><path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"></path></svg>'
+                $("#funcPlay")[0].innerHTML = '<i class="bi bi-play-fill"></i>'
             }, 200);
         })
     })
@@ -363,7 +355,7 @@ $(document).ready(function () {
 
         saveOption("/api/v1/ctrl/timer/pause", function (event) {
             setTimeout(function () {
-                $("#funcPause")[0].innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pause" viewBox="0 0 16 16" style="--darkreader-inline-fill: currentColor;" data-darkreader-inline-fill=""><path d="M6 3.5a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5zm4 0a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5z"></path></svg>'
+                $("#funcPause")[0].innerHTML = '<i class="bi bi-pause"></i>'
             }, 200);
         })
     })
@@ -372,7 +364,7 @@ $(document).ready(function () {
         $("#funcRestart")[0].innerHTML = '<div class="spinner-border-sm spinner-border"></div>'
         saveOption("/api/v1/ctrl/timer/restart", function (event) {
             setTimeout(function () {
-                $("#funcRestart")[0].innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-clockwise" viewBox="0 0 16 16" style="--darkreader-inline-fill: currentColor;" data-darkreader-inline-fill=""><path fill-rule="evenodd" d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z"></path><path d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z"></path></svg>'
+                $("#funcRestart")[0].innerHTML = '<i class="bi bi-arrow-clockwise"></i>'
             }, 200)
         })
     })
