@@ -261,7 +261,7 @@
                     <summary>Text Colors</summary>
                     <p>
 
-                    <div id="table" class="table-editable">
+                    <div id="table2" class="table-editable">
                         <table class="table table-bordered table-responsive-md table-striped text-center" id="colors2">
                             <thead>
                                 <tr>
@@ -314,26 +314,53 @@
                 </div>
                 <br><br>
                 <i class="bi-alarm"></i>
-                <templateObj id="tableCopySource">
-                    <tr>
-                        <td contenteditable="true" class="time">
-                            <form>
-                                <div class="form-group">
-                                    <label>Duration with seconds</label>
-                                    <input type="text" class="form-control" id="duration2">
-                                </div>
-                                <value></value>
-                            </form>
+                <templateObj>
+                    <table class="table table-bordered table-responsive-md table-striped text-center" id="colors1">
+                        <thead>
+                            <tr>
+                                <th class="text-center">Time</th>
+                                <th class="text-center">Color</th>
+                                <th class="text-center">Remove</th>
+                            </tr>
+                        </thead>
+                        <tr id="tableCopySource">
+                            <td contenteditable="false" class="time">
+                                        <input type="text" class="form-control timeDurPicker" id="timeValue-ID" value="#VALUE#">
+                                    <value></value>
+                            </td>
+                            <td class="pt-3-half full" contenteditable="false"> 
+                                <div class="clr-field" style="color: #bg-COLOR#;"> 
+                                            <button aria-labelledby="clr-open-label"></button> 
+                                            <input  type="text" class="coloris" value="#COLOR#"></div> 
+                                      </div> 
+                                      </td>
+                                      <td>
+                                        <span class="table-remove"><button type="button"
+                                                class="btn btn-danger btn-rounded btn-sm my-0 deleteRow1">
+                                                Remove
+                                            </button></span>
+                                    </td>
+                        </tr>
+                        </tbody>
+                    </table>
 
-                        </td>
-                        <td contenteditable="true" class="color full"><input id="demo-input2" type="text"
-                                value="#COLOR#" data-coloris /></td>
-                        </td>
-                        <td>
-                            <button type="button"
-                                class="btn btn-danger btn-rounded btn-sm my-0 deleteRow1">Remove</button>
-                        </td>
-                    </tr>
+                   
+                    
+                
+                <tr><td class="pt-3-half numVal" contenteditable="true">#VALUE#</td>
+                    <td class="pt-3-half full" contenteditable="false"> 
+                    <div class="clr-field" style="color: #bg-COLOR#;"> 
+                                <button aria-labelledby="clr-open-label"></button> 
+                                <input id="demo-input1" type="text" class="coloris" value="#COLOR#"></div> 
+                          </div> 
+                          </td>
+                    <td>
+                        <span class="table-remove"><button type="button"
+                                class="btn btn-danger btn-rounded btn-sm my-0 deleteRow1">
+                                Remove
+                            </button></span>
+                    </td>
+                </tr>
                 </templateObj>
                 <script>
                     $('#duration2').durationPicker({
@@ -376,7 +403,10 @@
         Coloris({
             el: '.coloris',
             alpha: false,
-        });
+        }); 
+            $(function () {
+                $('[data-toggle="tooltip"]').tooltip({container: "body"})
+              })                        
     </script>
 
 </body>

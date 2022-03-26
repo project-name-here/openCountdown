@@ -6,20 +6,24 @@ function convertTimeOffset() {
 
 function convertColorSegments(elementId) {
     const raw = document.getElementById(elementId);
-    console.log(raw)
     const segmentData = {}
     for (elm in raw.children) {
-        if (raw.children[elm].nodeName == "TBODY") {
-            const child = raw.children[elm].firstChild.childNodes
-            segmentData[child[0].innerText] = child[2].firstChild.value
+        if (raw.children[elm].nodeName == "TR") {
+            const child = raw.children[elm].children[1].children[0]
+            let timeVal = parseInt(raw.children[elm].children[0].children[0].value * 1000);
+            if(Number.isInteger(timeVal)){
+                segmentData[timeVal] = child.style.color
+            } else {
+                segmentData["START"] = child.style.color
+            }
         }
     }
     console.info(segmentData)
     return (segmentData)
 }
 
-$(document).ready(function () {
-    $(".numVal").bind("DOMSubtreeModified", alert);
+$(function () {
+    // $(".numVal").bind("DOMSubtreeModified", alert);
 
     const modes = ["timer", "clock", "black", "test"]
     let selectPresetTime = 0;
@@ -43,28 +47,33 @@ $(document).ready(function () {
         const tree2 = jsonview.create(dataSystem);
         jsonview.render(tree2, document.getElementById("systemInfo"));
         jsonview.expand(tree2);
-        // console.log(dataSystem)
     })
 
     $("#addRow").click(function (event) {
-        $("#colors1").append(
-            '<tr>' +
-            '<td contenteditable="true" class="time"></td>' +
-            '<td contenteditable="true" class="color full"><input id="demo-input1" "type="text" value="#COLOR#" data-coloris /></td></td>' +
-            '<td><button type="button" class="btn btn-danger btn-rounded btn-sm my-0 deleteRow1">Remove</button></td>' +
-            '</tr>'
-        );
+        tableEntryDom = document.getElementById("tableCopySource").cloneNode(true)
+        let temp = tableEntryDom.innerHTML
+        temp = temp.replace("#COLOR#", "gray");
+        temp = temp.replace("#bg-COLOR#", "gray");
+        temp = temp.replace("#VALUE#", 60); // BUG: Doesn't work but not too important
+        tableEntryDom.innerHTML = temp;
+        document.getElementById("colors1").appendChild(tableEntryDom)
+        $(".deleteRow1").on("click", function removeRowEntry(event) {
+            $(event.target).closest("tr").remove();
+        });
 
     });
 
     $("#addRow2").click(function (event) {
-        $("#colors2").append(
-            '<tr>' +
-            '<td contenteditable="true" class="time"></td>' +
-            '<td contenteditable="true" class="color full"><input id="demo-input2" type="text" value="#COLOR#" data-coloris /></td></td>' +
-            '<td><button type="button" class="btn btn-danger btn-rounded btn-sm my-0 deleteRow1">Remove</button></td>' +
-            '</tr>'
-        );
+        tableEntryDom = document.getElementById("tableCopySource").cloneNode(true)
+        let temp = tableEntryDom.innerHTML
+        temp = temp.replace("#COLOR#", "gray");
+        temp = temp.replace("#bg-COLOR#", "gray");
+        temp = temp.replace("#VALUE#", 60);
+        tableEntryDom.innerHTML = temp;
+        document.getElementById("colors2").appendChild(tableEntryDom)
+        $(".deleteRow1").on("click", function removeRowEntry(event) {
+            $(event.target).closest("tr").remove();
+        });
     });
 
     
@@ -93,27 +102,81 @@ $(document).ready(function () {
         // Restore mode radio
         const currentModeInt = modes.indexOf(jsonResult.mode);
         $("#btnradio" + (currentModeInt + 1))[0].checked = true
+
         // Restore layout settings
         $("#showTime")[0].checked = jsonResult.showTimeOnCountdown;
         $("#showMillis")[0].checked = jsonResult.showMilliSeconds;
         $("#progBarShow")[0].checked = jsonResult.showProgressbar;
         $("#textColors")[0].checked = jsonResult.enableColoredText;
+        console.log(document.getElementById("tableCopySource"))
+
+        let tableEntryDom = document.getElementById("tableCopySource").cloneNode(true)
+        let currIndex = 0
         for (item in jsonResult.colorSegments) {
-            let temp = tableEntry.replace("#VALUE#", item);
+            tableEntryDom = document.getElementById("tableCopySource").cloneNode(true)
+            let temp = tableEntryDom.innerHTML
             temp = temp.replace("#COLOR#", jsonResult.colorSegments[item]);
             temp = temp.replace("#bg-COLOR#", jsonResult.colorSegments[item]);
-            document.getElementById("colors1").innerHTML += temp
-            //console.log(jsonResult.colorSegments[item])
+            temp = temp.replace("timeValue-ID", "timeValue-1C" + currIndex)
+
+            if(item != "START"){
+                temp = temp.replace("#VALUE#", item/1000);
+                tableEntryDom.innerHTML = temp;
+            } else {
+                tableEntryDom.innerHTML = temp;
+                tableEntryDom.children[2].children[0].children[0].disabled = true;
+                tableEntryDom.children[2].children[0].setAttribute("data-toggle", "tooltip")
+                tableEntryDom.children[2].children[0].setAttribute("data-placement", "right")// 'data-placement="right" title="Tooltip on right"'
+                tableEntryDom.children[2].children[0].setAttribute("title", "You cannot delete the start time")
+                
+                tableEntryDom.children[0].innerHTML = '<i class="bi bi-flag-fill"></i> Start'
+            }
+            tableEntryDom.id = "1C" + currIndex
+            tableEntryDom.style.display = "table-row"
+            document.getElementById("colors1").appendChild(tableEntryDom)
+            currIndex++;
         }
 
+        
+
         // Text colors
+        currIndex = 0
         for (item in jsonResult.textColors) {
-            let temp = tableEntry.replace("#VALUE#", item);
+            tableEntryDom = document.getElementById("tableCopySource").cloneNode(true)
+            let temp = tableEntryDom.innerHTML
             temp = temp.replace("#COLOR#", jsonResult.textColors[item]);
             temp = temp.replace("#bg-COLOR#", jsonResult.textColors[item]);
-            document.getElementById("colors2").innerHTML += temp
-            //console.log(jsonResult.textColors[item])
+            temp = temp.replace("timeValue-ID", "timeValue-1C" + currIndex)
+
+            if(item != "START"){
+                temp = temp.replace("#VALUE#", item/1000);
+                tableEntryDom.innerHTML = temp;
+            } else {
+                tableEntryDom.innerHTML = temp;
+                tableEntryDom.children[2].children[0].children[0].disabled = true;
+                tableEntryDom.children[2].children[0].setAttribute("data-toggle", "tooltip")
+                tableEntryDom.children[2].children[0].setAttribute("data-placement", "right")// 'data-placement="right" title="Tooltip on right"'
+                tableEntryDom.children[2].children[0].setAttribute("title", "You cannot delete the start time")
+                
+                tableEntryDom.children[0].innerHTML = '<i class="bi bi-flag-fill"></i> Start'
+            }
+            tableEntryDom.id = "1C" + currIndex
+            tableEntryDom.style.display = "table-row"
+            document.getElementById("colors2").appendChild(tableEntryDom)
+            currIndex++;
         }
+
+
+        $('.timeDurPicker').durationPicker({
+            showSeconds: true,
+            showDays: false,
+            onChanged: function (newVal, test, val2) {
+                //   $('#duration-label2').text(newVal);
+                val2.days[0].parentElement.parentElement.parentElement.parentElement.children[1].value = newVal
+                //console.log(val2.days[0].parentElement.parentElement.parentElement.parentElement.children[1].value)
+                //console.log(val2.days[0].parentElement.parentElement.parentElement.parentElement.children[1])
+            }
+        });
 
 
 
@@ -121,10 +184,11 @@ $(document).ready(function () {
         $('.colorPicky').on('colorpickerChange', function (event) {
             event.target.parentElement.style.backgroundColor = event.target.value
         });
+
         $(".deleteRow1").on("click", function removeRowEntry(event) {
-            //console.warn(event.target.parentElement)
-            $(event.target).closest("tbody").remove();
+            $(event.target).closest("tr").remove();
         });
+        $('[data-toggle="tooltip"]').tooltip({container: "body"})
     })
 
     $("#copyColors").click(function CopyTextColors(event) {
@@ -174,7 +238,7 @@ $(document).ready(function () {
     $("#applyLayout").click(function (event) {
         $("#applyLayout")[0].innerHTML = '<div class="spinner-border-sm spinner-border"></div>'
 
-        // Collect all data, build all paths3
+        // Collect all data, build all paths
         const allPathes = [];
 
         const showTimeB = $("#showTime")[0].checked
@@ -190,7 +254,7 @@ $(document).ready(function () {
         allPathes.push("/api/v1/set/progressbar/show?show=" + progBarShowB)
         allPathes.push("/api/v1/set/text/enableColoring?enable=" + textColorsB)
         allPathes.push("/api/v1/set/progressbar/colors?isBase64=true&colors=" + btoa(JSON.stringify(colors)))
-        allPathes.push("/api/v1/set/text/colors?isBase64=true&colors=" + btoa(JSON.stringify(colors2)))
+        ///allPathes.push("/api/v1/set/text/colors?isBase64=true&colors=" + btoa(JSON.stringify(colors2)))
 
 
         for (pI in allPathes) {
