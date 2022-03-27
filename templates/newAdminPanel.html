@@ -32,7 +32,8 @@
 <body>
 
     <main>
-        <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark" style="width: 280px;">
+        <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark trans" style="width: 250px;"
+            id="navbarToggleExternalContent">
             <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
                 <svg class="bi me-2" width="40" height="32">
                     <use xlink:href="#bootstrap" />
@@ -94,7 +95,14 @@
 
             </div>
         </div>
-        <pages class="d-flex flex-fill">
+        <pages class="d-flex flex-fill" id="pageCont" class="z-index: 50;">
+            <div class="">
+                <button type="button"
+                    class="opacity mx-2 svg-center btn btn-outline-transparent rounded-circle border-0"
+                    onclick="toogleNav()">
+                    <i class="bi bi-list"></i>
+                </button>
+            </div>
 
 
             <page id="homeP" class="pageC flex-fill overflow-auto">
@@ -103,11 +111,26 @@
                 <div class="container">
                     <div class="row">
                         <div class="col">
-                            <h3>Preview: </h3>
-                            <iframe src="/timer?smaller=true" height="100%" width="100%"> </iframe>
+                            <h3>Preview <span class="helperTip" data-placement="right" title="A preview of what is currently visible on the countdown view" data-toggle="tooltip">
+                                <i class="bi bi-question-circle-fill" ></i>
+                                
+                            </span>
+                            <span class="helperTip" data-placement="right" title="Copies the link to the timer view" data-toggle="tooltip">
+                                <button class="btn" onclick="navigator.clipboard.writeText(window.location.toString() + 'timer')"><i class="bi bi-clipboard"></i></button>
+                            </span>
+                            <span class="helperTip" data-placement="right" title="Open the countdown view in a new tab" data-toggle="tooltip">
+                                <a href="/timer" class="btn " target="_blank"><i class="bi bi-box-arrow-up-right"></i></a>
+                                
+                            </span>
+                            
+                        </h3>
+                            <iframe src="/timer?smaller=true" height="100%" width="100%" style="min-height: 400px;">
+                            </iframe>
                         </div>
                         <div class="col">
-                            <h3>Mode</h3>
+                            <h3>Mode <span class="helperTip" data-placement="right" title="Select what to show on the countdown view" data-toggle="tooltip">
+                                <i class="bi bi-question-circle-fill" ></i>
+                            </span></h3>
                             <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
                                 <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off"
                                     checked>
@@ -151,72 +174,13 @@
                             <br>
                             <br>
                             <br>
-
-                            <presets>
-                                <button class="btn btn-outline-secondary m-1 pres" value="300000">00:05:00</button>
-                                <button class="btn btn-outline-secondary m-1 pres" value="600000">00:10:00</button>
-                                <button class="btn btn-outline-secondary m-1 pres" value="900000">00:15:00</button><br>
-                                <button class="btn btn-outline-secondary m-1 pres" value="1200000">00:20:00</button>
-                                <button class="btn btn-outline-secondary m-1 pres" value="1500000">00:25:00</button>
-                                <button class="btn btn-outline-secondary m-1 pres"
-                                    value="1800000">00:30:00</button><button
-                                    class="btn btn-outline-primary m-1 mt-0 goTimer">Go</button><br>
-                                <button class="btn btn-outline-secondary m-1 pres" value="2100000">00:35:00</button>
-                                <button class="btn btn-outline-secondary m-1 pres" value="2400000">00:40:00</button>
-                                <button class="btn btn-outline-secondary m-1 pres" value="2700000">00:45:00</button>
-                            </presets>
-
-                        </div>
-                    </div>
-                </div>
-                <br><br><br>
-                <h3>Timer / Messaging</h3>
-                <div class="container">
-                    <div class="row" style="width: 60%;">
-                        <div class="col">
-                            <h4>H</h4>
-                            <button class="btn btn-outline-secondary" id="timerHourInc">
-                                <i class="bi bi-plus"></i>
-                            </button><br>
-                            <b id="timerHoursV">0</b><br>
-                            <button class="btn btn-outline-secondary" id="timerHourDec">
-                                <i class="bi bi-dash"></i>
-                            </button>
-                        </div>
-
-                        <div class="col">
-                            <h4>M</h4>
-                            <button class="btn btn-outline-secondary" id="timerMinuteInc">
-                                <i class="bi bi-plus"></i>
-                            </button><br>
-                            <b id="timerMinuteV">0</b><br>
-                            <button class="btn btn-outline-secondary" id="timerMinuteDev">
-                                <i class="bi bi-dash"></i>
-                            </button>
-                        </div>
-
-                        <div class="col">
-                            <h4>S</h4>
-                            <button class="btn btn-outline-secondary" id="timerSecondsInc">
-                                <i class="bi bi-plus"></i>
-                            </button><br>
-                            <b id="timerSecondsV">0</b><br>
-                            <button class="btn btn-outline-secondary" id="timerSecondsDec">
-                                <i class="bi bi-dash"></i>
-                            </button>
-                        </div>
-                        <div class="col">
-                            <button class="btn btn-outline-primary m-1 mt-0 goTimer" id="goJogger">Go</button>
-                        </div>
-                        <div class="col">
-                            <div style="border-left:1px solid #000;height:100%"></div>
-
-                        </div>
-
-                        <div class="col">
+                            <h3>Messaging <span class="helperTip" data-placement="right" title="Shows a given message on the timer view" data-toggle="tooltip">
+                                <i class="bi bi-question-circle-fill" ></i>
+                            </span></h3>
+                            
+                            <input type="text" id="messageContent" class="form-control" placeholder="Message here" style="width: 50%;">
+                            
                             <br>
-                            <input type="text" id="messageContent" class="form-control" style="width: 200%"
-                                placeholder="Message here">
                             <button class="btn btn-outline-primary m-1" id="sendMessage"><i
                                     class="bi bi-send"></i></button>
                             <button class="btn btn-outline-primary m-1" id="ctrlRemoveMessage">
@@ -225,7 +189,50 @@
                         </div>
                     </div>
                 </div>
+                <br><br><br>
+                <h3>Timer</h3>
+                <div class="container">
+
+
+
+
+                        <div class="row">
+                            <presets class="d-inline-flex justify-content-center">
+                                <button class="btn btn-outline-secondary m-1 pres" value="300000">00:05:00</button>
+                                <button class="btn btn-outline-secondary m-1 pres" value="600000">00:10:00</button>
+                                <button class="btn btn-outline-secondary m-1 pres" value="900000">00:15:00</button>
+                                <button class="btn btn-outline-secondary m-1 pres" value="1200000">00:20:00</button>
+                                <button class="btn btn-outline-secondary m-1 pres" value="1500000">00:25:00</button>
+                                <button class="btn btn-outline-secondary m-1 pres" value="1800000">00:30:00</button>
+                                <button class="btn btn-outline-secondary m-1 pres" value="2100000">00:35:00</button>
+                                <button class="btn btn-outline-secondary m-1 pres" value="2400000">00:40:00</button>
+                                <button class="btn btn-outline-secondary m-1 pres" value="2700000">00:45:00</button>
+                            </presets>
+                            <div class="row" style="width: 100%;">
+                                <div class="d-inline-flex justify-content-center p-2 col">
+                                    <input type="text" class="form-control m-1" id="customValue"> 
+                                    <button class="btn btn-outline-primary m-1 mt-0 goTimer"><i class="bi bi-check2-circle"></i></button>
+                                    <script>
+                                        $("#customValue").durationPicker({
+                                            showSeconds: true,
+                                            showDays: false,
+                                            onChanged: function(val, t1, t2) {
+                                                currentTime = val * 1000
+                                            }
+                                        })
+                                    </script>
+                                </div>
+
+        
+                        </div>
+                    </div>
+                </div>
             </page>
+
+
+
+
+
             <page id="settings" class="pageC hidden flex-fill overflow-auto">
                 <h1>Settings</h1>
                 <label for="showTime">Show clock on Timer:</label>
@@ -295,12 +302,12 @@
 
             <page id="debug" class="pageC hidden flex-fill overflow-auto">
                 <h1>Debug page</h1>
-                <div class="alert alert-warning" role="alert">
+                <div class="alert alert-danger" role="alert">
                     <h4 class="alert-heading">Attention</h4>
                     <p>This is a debug page which should only be used by professionals. Changing any options below might
                         impact operation.</p>
                     <hr>
-                    <p class="mb-0">Proceed with caution.</p>
+                    <p class="mb-0"><b>Proceed with caution.</b></p>
                 </div>
                 <label for="debugMode">Enable time variance display:</label>
                 <input type="checkbox" name="debugMode" id="debugModeEnable" value="true"><br><br>
@@ -309,6 +316,13 @@
                 <br>
                 <hr>
                 <br>
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="bi bi-list"></i>
+                </button>
+
                 <h3>Host information</h3>
                 <code id="systemInfo" class="overflow-auto">
 
@@ -388,7 +402,7 @@
                 <h1>About</h1>
                 Version: <b id="nodeSwVers"></b><br>
                 NodeJS Version: <b id="nodejsVers"></b><br>
-                
+
             </page>
         </pages>
     </main>

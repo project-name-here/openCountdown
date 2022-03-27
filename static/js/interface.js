@@ -228,14 +228,11 @@ $(function () {
     // Presets
     $(".pres").click(function (event) {
         currentTime = parseInt(event.currentTarget.value)
-        const times = msToTime(currentTime)
-        $("#timerHoursV")[0].innerHTML = times[3];
-        $("#timerMinuteV")[0].innerHTML = times[2];
-        $("#timerSecondsV")[0].innerHTML = times[1];
+        $("#customValue").data("durationPicker").setValue(currentTime/1000)
     })
 
 
-    $(".goTimer").click(function (event) {
+    $(".goTimer").on("click", function (event) {
         event.currentTarget.innerHTML = '<div class="spinner-border-sm spinner-border"></div>'
         setTimeout(function () {
             event.currentTarget.innerHTML = 'Go'
@@ -478,3 +475,31 @@ function saveOption(path, callback) {
         callback(event, xmlHttp)
     }
 }
+
+navStatus = true
+function openNav() {
+    document.getElementById("navbarToggleExternalContent").style.width = "250px";
+    document.getElementById("navbarToggleExternalContent").style.opacity = "1";
+    document.getElementById("navbarToggleExternalContent").style.display = "block";
+    document.getElementById("navbarToggleExternalContent").style.zIndex = 999999;
+    document.getElementById("pageCont").style.marginLeft = "0px";
+    navStatus = true
+  }
+  
+  function closeNav() {
+    document.getElementById("navbarToggleExternalContent").style.width = "0px";
+    document.getElementById("navbarToggleExternalContent").style.opacity = "0";
+    document.getElementById("navbarToggleExternalContent").style.display = "none";
+    document.getElementById("navbarToggleExternalContent").style.zIndex = -999999;
+    document.getElementById("pageCont").style.marginLeft = "0";
+    navStatus = false
+  }
+
+  function toogleNav(){
+      if(navStatus){
+          closeNav()
+      }else{
+          openNav()
+      }
+
+  }
