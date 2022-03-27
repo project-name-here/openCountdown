@@ -111,26 +111,32 @@
                 <div class="container">
                     <div class="row">
                         <div class="col">
-                            <h3>Preview <span class="helperTip" data-placement="right" title="A preview of what is currently visible on the countdown view" data-toggle="tooltip">
-                                <i class="bi bi-question-circle-fill" ></i>
-                                
-                            </span>
-                            <span class="helperTip" data-placement="right" title="Copies the link to the timer view" data-toggle="tooltip">
-                                <button class="btn" onclick="navigator.clipboard.writeText(window.location.toString() + 'timer')"><i class="bi bi-clipboard"></i></button>
-                            </span>
-                            <span class="helperTip" data-placement="right" title="Open the countdown view in a new tab" data-toggle="tooltip">
-                                <a href="/timer" class="btn " target="_blank"><i class="bi bi-box-arrow-up-right"></i></a>
-                                
-                            </span>
-                            
-                        </h3>
+                            <h3 class="d-flex">Preview <span class="helperTip" data-placement="right" title="A preview of what is currently visible on the countdown view" data-toggle="tooltip">
+                                    <i class="bi bi-question-circle-fill"></i>
+                                </span>
+                                 <div class="ms-auto">
+                                    <span class="helperTip" data-placement="right"
+                                        title="Copies the link to the timer view" data-toggle="tooltip">
+                                        <button class="btn" onclick="navigator.clipboard.writeText(window.location.toString() + 'timer')">
+                                            <i class="bi bi-clipboard"></i>
+                                        </button>
+                                    </span>
+
+                                    <span class="helperTip" data-placement="right"
+                                        title="Open the countdown view in a new tab" data-toggle="tooltip">
+                                        <a href="/timer" class="btn " target="_blank"><i
+                                                class="bi bi-box-arrow-up-right"></i></a>
+                                    </span>
+                                </div>
+                            </h3>
                             <iframe src="/timer?smaller=true" height="100%" width="100%" style="min-height: 400px;">
                             </iframe>
                         </div>
                         <div class="col">
-                            <h3>Mode <span class="helperTip" data-placement="right" title="Select what to show on the countdown view" data-toggle="tooltip">
-                                <i class="bi bi-question-circle-fill" ></i>
-                            </span></h3>
+                            <h3>Mode <span class="helperTip" data-placement="right"
+                                    title="Select what to show on the countdown view" data-toggle="tooltip">
+                                    <i class="bi bi-question-circle-fill"></i>
+                                </span></h3>
                             <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
                                 <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off"
                                     checked>
@@ -174,12 +180,14 @@
                             <br>
                             <br>
                             <br>
-                            <h3>Messaging <span class="helperTip" data-placement="right" title="Shows a given message on the timer view" data-toggle="tooltip">
-                                <i class="bi bi-question-circle-fill" ></i>
-                            </span></h3>
-                            
-                            <input type="text" id="messageContent" class="form-control" placeholder="Message here" style="width: 50%;">
-                            
+                            <h3>Messaging <span class="helperTip" data-placement="right"
+                                    title="Shows a given message on the timer view" data-toggle="tooltip">
+                                    <i class="bi bi-question-circle-fill"></i>
+                                </span></h3>
+
+                            <input type="text" id="messageContent" class="form-control" placeholder="Message here"
+                                style="width: 50%;">
+
                             <br>
                             <button class="btn btn-outline-primary m-1" id="sendMessage"><i
                                     class="bi bi-send"></i></button>
@@ -196,34 +204,35 @@
 
 
 
-                        <div class="row">
-                            <presets class="d-inline-flex justify-content-center">
-                                <button class="btn btn-outline-secondary m-1 pres" value="300000">00:05:00</button>
-                                <button class="btn btn-outline-secondary m-1 pres" value="600000">00:10:00</button>
-                                <button class="btn btn-outline-secondary m-1 pres" value="900000">00:15:00</button>
-                                <button class="btn btn-outline-secondary m-1 pres" value="1200000">00:20:00</button>
-                                <button class="btn btn-outline-secondary m-1 pres" value="1500000">00:25:00</button>
-                                <button class="btn btn-outline-secondary m-1 pres" value="1800000">00:30:00</button>
-                                <button class="btn btn-outline-secondary m-1 pres" value="2100000">00:35:00</button>
-                                <button class="btn btn-outline-secondary m-1 pres" value="2400000">00:40:00</button>
-                                <button class="btn btn-outline-secondary m-1 pres" value="2700000">00:45:00</button>
-                            </presets>
-                            <div class="row" style="width: 100%;">
-                                <div class="d-inline-flex justify-content-center p-2 col">
-                                    <input type="text" class="form-control m-1" id="customValue"> 
-                                    <button class="btn btn-outline-primary m-1 mt-0 goTimer"><i class="bi bi-check2-circle"></i></button>
-                                    <script>
-                                        $("#customValue").durationPicker({
-                                            showSeconds: true,
-                                            showDays: false,
-                                            onChanged: function(val, t1, t2) {
-                                                currentTime = val * 1000
-                                            }
-                                        })
-                                    </script>
-                                </div>
+                    <div class="row">
+                        <presets class="d-inline-flex justify-content-center">
+                            <button class="btn btn-outline-secondary m-1 pres" value="300000">00:05:00</button>
+                            <button class="btn btn-outline-secondary m-1 pres" value="600000">00:10:00</button>
+                            <button class="btn btn-outline-secondary m-1 pres" value="900000">00:15:00</button>
+                            <button class="btn btn-outline-secondary m-1 pres" value="1200000">00:20:00</button>
+                            <button class="btn btn-outline-secondary m-1 pres" value="1500000">00:25:00</button>
+                            <button class="btn btn-outline-secondary m-1 pres" value="1800000">00:30:00</button>
+                            <button class="btn btn-outline-secondary m-1 pres" value="2100000">00:35:00</button>
+                            <button class="btn btn-outline-secondary m-1 pres" value="2400000">00:40:00</button>
+                            <button class="btn btn-outline-secondary m-1 pres" value="2700000">00:45:00</button>
+                        </presets>
+                        <div class="row" style="width: 100%;">
+                            <div class="d-inline-flex justify-content-center p-2 col">
+                                <input type="text" class="form-control m-1" id="customValue">
+                                <button class="btn btn-outline-primary m-1 mt-0 goTimer"><i
+                                        class="bi bi-check2-circle"></i></button>
+                                <script>
+                                    $("#customValue").durationPicker({
+                                        showSeconds: true,
+                                        showDays: false,
+                                        onChanged: function (val, t1, t2) {
+                                            currentTime = val * 1000
+                                        }
+                                    })
+                                </script>
+                            </div>
 
-        
+
                         </div>
                     </div>
                 </div>
