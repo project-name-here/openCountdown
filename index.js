@@ -87,12 +87,6 @@ app.get("/", function (req, res) {
   res.send(data);
 });
 
-app.get("/old", function (req, res) {
-  const data = fs.readFileSync("templates/adminPanel.html", "utf8");
-  res.send(data);
-});
-
-
 app.get("/timer", function (req, res) {
   const data = fs.readFileSync("templates/timerPage.html", "utf8");
   res.send(data);
@@ -104,6 +98,8 @@ app.get("/api/v1/data", function (req, res) {
 });
 
 app.get("/api/v1/system", function (req, res) {
+  const tempPkgFile = fs.readFileSync("package.json", "utf8");
+  const tempPkgObj = JSON.parse(tempPkgFile);
   const systemData = {
     uptime: process.uptime(),
     memoryUsage: process.memoryUsage(),
@@ -118,6 +114,7 @@ app.get("/api/v1/system", function (req, res) {
     nodeEnv: process.env,
     nodeConfig: process.config,
     nodeTitle: process.title,
+    systemVersion: tempPkgObj.version
   }
   res.json(systemData);
 });
@@ -297,6 +294,28 @@ app.get("/api/v1/storage/delete", function (req, res) {
   } res.json({ status: "error", reason: "Missing delete argument" });
   updatedData()
 });
+
+app.use(function(req, res, next) {
+  res.status(404);
+
+  // respond with html page
+  if (req.accepts('html')) {
+    const data = fs.readFileSync("templates/errorPages/404.html", "utf8");
+    res.status(404)
+    res.send(data);
+    return;
+  }
+
+  // respond with json
+  if (req.accepts('json')) {
+    res.json({ error: 'Not found' });
+    return;
+  }
+
+  // default to plain-text. send()
+  res.type('txt').send('Not found');
+});
+
 
 
 console.log("Starting server...");

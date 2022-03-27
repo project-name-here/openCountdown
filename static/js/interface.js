@@ -40,9 +40,10 @@ $(function () {
         }
     }
 
-    saveOption("/api/v1/system", function systemInfo(event) {
-        const dataSystem = JSON.parse(event.originalTarget.response)
+    saveOption("/api/v1/system", function systemInfoLoader(event) {
+        const dataSystem = JSON.parse(event.target.response)
         document.getElementById("nodejsVers").innerHTML = dataSystem.nodeVersion
+        document.getElementById("nodeSwVers").innerHTML = dataSystem.systemVersion
 
         const tree2 = jsonview.create(dataSystem);
         jsonview.render(tree2, document.getElementById("systemInfo"));
@@ -95,8 +96,6 @@ $(function () {
             onChanged: function (newVal, test, val2) {
                 //   $('#duration-label2').text(newVal);
                 val2.days[0].parentElement.parentElement.parentElement.parentElement.children[1].value = newVal
-                //console.log(val2.days[0].parentElement.parentElement.parentElement.parentElement.children[1].value)
-                //console.log(val2.days[0].parentElement.parentElement.parentElement.parentElement.children[1])
             }
         });
     });
@@ -105,25 +104,11 @@ $(function () {
 
     // Restore settings
     saveOption("/api/v1/data", function (event, xmlHttp) {
-
-        const tableEntry = ' <tr><td class="pt-3-half numVal" contenteditable="true">#VALUE#</td>\
-            <td class="pt-3-half full" contenteditable="false"> \
-            <div class="clr-field" style="color: #bg-COLOR#;"> \
-                        <button aria-labelledby="clr-open-label"></button> \
-                        <input id="demo-input1" type="text" class="coloris" value="#COLOR#"></div> \
-                  </div> \
-            <td>\
-                <span class="table-remove"><button type="button"\
-                        class="btn btn-danger btn-rounded btn-sm my-0 deleteRow1">\
-                        Remove\
-                    </button></span>\
-            </td></tr>'
-
         const jsonResult = JSON.parse(xmlHttp.response)
-        //.innerHTML = JSON.stringify(jsonResult, null, 4)
         const tree = jsonview.create(jsonResult);
         jsonview.render(tree, document.getElementById("responeSnippet"));
         jsonview.expand(tree);
+
         // Restore mode radio
         const currentModeInt = modes.indexOf(jsonResult.mode);
         $("#btnradio" + (currentModeInt + 1))[0].checked = true
@@ -163,7 +148,6 @@ $(function () {
             currIndex++;
         }
 
-        
 
         // Text colors
         currIndex = 0
@@ -201,10 +185,7 @@ $(function () {
             showSeconds: true,
             showDays: false,
             onChanged: function (newVal, test, val2) {
-                //   $('#duration-label2').text(newVal);
                 val2.days[0].parentElement.parentElement.parentElement.parentElement.children[1].value = newVal
-                //console.log(val2.days[0].parentElement.parentElement.parentElement.parentElement.children[1].value)
-                //console.log(val2.days[0].parentElement.parentElement.parentElement.parentElement.children[1])
             }
         });
 
@@ -358,7 +339,7 @@ $(function () {
     })
 
     $("#timerHourDec").click(function (event) {
-        if (currentTime > 3600000) {
+        if (currentTime >= 3600000) {
             currentTime -= 3600000
             const times = msToTime(currentTime)
             $("#timerHoursV")[0].innerHTML = times[3];
@@ -375,7 +356,7 @@ $(function () {
         $("#timerSecondsV")[0].innerHTML = times[1];
     })
     $("#timerMinuteDec").click(function (event) {
-        if (currentTime > 60000) {
+        if (currentTime >= 60000) {
             currentTime -= 60000
             const times = msToTime(currentTime)
             $("#timerHoursV")[0].innerHTML = times[3];
@@ -391,7 +372,7 @@ $(function () {
         $("#timerSecondsV")[0].innerHTML = times[1];
     })
     $("#timerSecondsDec").click(function (event) {
-        if (currentTime > 1000) {
+        if (currentTime >= 1000) {
             currentTime -= 1000
             const times = msToTime(currentTime)
             $("#timerHoursV")[0].innerHTML = times[3];

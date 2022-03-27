@@ -48,6 +48,12 @@
                     </a>
                 </li>
                 <li>
+                    <a href="#settings" class="nav-link text-white" id="PageSettings">
+                        <i class="bi bi-gear"></i>
+                        Settings
+                    </a>
+                </li>
+                <li>
                     <a href="#debug" class="nav-link text-white" id="PageDebug">
                         <i class="bi bi-bug"></i>
                         Debug
@@ -218,12 +224,10 @@
                             </button>
                         </div>
                     </div>
-
                 </div>
-                <hr>
-                <h3>Layout</h3>
-
-
+            </page>
+            <page id="settings" class="pageC hidden flex-fill overflow-auto">
+                <h1>Settings</h1>
                 <label for="showTime">Show clock on Timer:</label>
                 <input type="checkbox" name="showTime" id="showTime"><br>
 
@@ -232,7 +236,6 @@
 
                 <label for="progBarShow">Show progressbar:</label>
                 <input type="checkbox" name="progBarShow" id="progBarShow"><br>
-
                 <details>
                     <summary>Progressbar Colors</summary>
                     <p>
@@ -288,7 +291,6 @@
                 <button type="button" class="btn btn-outline-success" id="saveLayout"><i class="bi bi-save"></i> Save as
                     startup settings (Layout
                     only)</button>
-
             </page>
 
             <page id="debug" class="pageC hidden flex-fill overflow-auto">
@@ -305,15 +307,19 @@
 
                 <button type="button" class="btn btn-outline-success" id="applyDebug">Apply settings</button>
                 <br>
-                <div class="full">
-                    <p>Full size thumbnail</p>
-                    <div class="clr-field" style="color: rgb(255, 204, 0);">
-                        <button aria-labelledby="clr-open-label"></button>
-                        <input type="text" class="coloris" value="#ffcc00">
-                    </div>
-                </div>
-                <br><br>
-                <i class="bi-alarm"></i>
+                <hr>
+                <br>
+                <h3>Host information</h3>
+                <code id="systemInfo" class="overflow-auto">
+
+                </code>
+                <h3>Raw server reponse</h3>
+                <code id="responeSnippet" style="width: 40%; display: inline-block;" class="overflow-auto">
+
+                </code>
+                <br>
+                <hr>
+                <br>
                 <templateObj>
                     <table class="table table-bordered table-responsive-md table-striped text-center" id="colors1">
                         <thead>
@@ -325,42 +331,44 @@
                         </thead>
                         <tr id="tableCopySource">
                             <td contenteditable="false" class="time">
-                                        <input type="text" class="form-control " id="timeValue-ID" value="#VALUE#">
-                                    <value></value>
+                                <input type="text" class="form-control " id="timeValue-ID" value="#VALUE#">
+                                <value></value>
                             </td>
-                            <td class="pt-3-half full" contenteditable="false"> 
-                                <div class="clr-field" style="color: #bg-COLOR#;"> 
-                                            <button aria-labelledby="clr-open-label"></button> 
-                                            <input  type="text" class="coloris" value="#COLOR#"></div> 
-                                      </div> 
-                                      </td>
-                                      <td>
-                                        <span class="table-remove"><button type="button"
-                                                class="btn btn-danger btn-rounded btn-sm my-0 deleteRow1">
-                                                Remove
-                                            </button></span>
-                                    </td>
+                            <td class="pt-3-half full" contenteditable="false">
+                                <div class="clr-field" style="color: #bg-COLOR#;">
+                                    <button aria-labelledby="clr-open-label"></button>
+                                    <input type="text" class="coloris" value="#COLOR#">
+                                </div>
+                                </div>
+                            </td>
+                            <td>
+                                <span class="table-remove"><button type="button"
+                                        class="btn btn-danger btn-rounded btn-sm my-0 deleteRow1">
+                                        Remove
+                                    </button></span>
+                            </td>
                         </tr>
                         </tbody>
                     </table>
 
-                   
-                    
-                
-                <tr><td class="pt-3-half numVal" contenteditable="true">#VALUE#</td>
-                    <td class="pt-3-half full" contenteditable="false"> 
-                    <div class="clr-field" style="color: #bg-COLOR#;"> 
-                                <button aria-labelledby="clr-open-label"></button> 
-                                <input id="demo-input1" type="text" class="coloris" value="#COLOR#"></div> 
-                          </div> 
-                          </td>
-                    <td>
-                        <span class="table-remove"><button type="button"
-                                class="btn btn-danger btn-rounded btn-sm my-0 deleteRow1">
-                                Remove
-                            </button></span>
-                    </td>
-                </tr>
+
+
+                    <tr>
+                        <td class="pt-3-half numVal" contenteditable="true">#VALUE#</td>
+                        <td class="pt-3-half full" contenteditable="false">
+                            <div class="clr-field" style="color: #bg-COLOR#;">
+                                <button aria-labelledby="clr-open-label"></button>
+                                <input id="demo-input1" type="text" class="coloris" value="#COLOR#">
+                            </div>
+                            </div>
+                        </td>
+                        <td>
+                            <span class="table-remove"><button type="button"
+                                    class="btn btn-danger btn-rounded btn-sm my-0 deleteRow1">
+                                    Remove
+                                </button></span>
+                        </td>
+                    </tr>
                 </templateObj>
                 <script>
                     $('#duration2').durationPicker({
@@ -375,24 +383,12 @@
                 </script>
 
                 <br><br>
-                <h3>Raw server reponse</h3>
-                <code id="responeSnippet" style="width: 40%; display: inline-block;" class="overflow-auto">
-
-                </code>
-
-                <div class="demo">
-                    test
-                    <input id="demo-input" class="colorPicky" type="button" value="rgb(255, 128, 0)" />
-                </div>
-
             </page>
             <page id="about" class="pageC hidden flex-fill overflow-auto">
                 <h1>About</h1>
-                Version: 1.0.0<br>
-                NodeJS Version: <i id="nodejsVers"></i><br>
-                <code id="systemInfo" class="overflow-auto">
-
-                </code>
+                Version: <b id="nodeSwVers"></b><br>
+                NodeJS Version: <b id="nodejsVers"></b><br>
+                
             </page>
         </pages>
     </main>
@@ -403,10 +399,10 @@
         Coloris({
             el: '.coloris',
             alpha: false,
-        }); 
-            $(function () {
-                $('[data-toggle="tooltip"]').tooltip({container: "body"})
-              })                        
+        });
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip({ container: "body" })
+        })                        
     </script>
 
 </body>
