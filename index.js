@@ -40,12 +40,12 @@ currentState = {
   showMessage: false,
   messageAppearTime: 0,
   showProgressbar: true,
-  colorSegments: {  40000: "yellow", 20000: "#FFAE00", 5000: "#ff0000", "START": "green" },
+  colorSegments: { 40000: "yellow", 20000: "#FFAE00", 5000: "#ff0000", "START": "green" },
   textColors: {},
   srvTime: 0,
   enableColoredText: true,
   debug: false,
-  sessionToken: Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15), 
+  sessionToken: Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15),
 };
 
 const dataToBeWritten = {};
@@ -58,7 +58,7 @@ currentState.textColors = currentState.colorSegments
 const wsServer = new ws.Server({ noServer: true });
 wsServer.on('connection', socket => {
   socket.on('message', function incoming(data) {
-    if(data.toString() == "new client"){
+    if (data.toString() == "new client") {
       updatedData()
     }
   });
@@ -78,7 +78,7 @@ function updatedData() {
   currentState.srvTime = new Date().getTime()
   wsServer.broadcast(JSON.stringify(currentState));
   clearTimeout(updatey);
-  setTimeout(updatedData, 5000 );
+  setTimeout(updatedData, 5000);
 }
 
 console.log("Preparing routes...");
@@ -131,7 +131,7 @@ app.get("/api/v1/set/mode", function (req, res) {
 
 app.get("/api/v1/set/layout/showMillis", function (req, res) {
   const resy = helper.wrapBooleanConverter(req.query.show, res)
-  if (resy) {
+  if (resy != undefined) {
     currentState.showMilliSeconds = resy;
     if (req.query.persist === 'true') {
       dataToBeWritten.showMilliSeconds = currentState.showMilliSeconds
@@ -151,6 +151,7 @@ app.get("/api/v1/set/timerGoal", function (req, res) {
 app.get("/api/v1/set/addMillisToTimer", function (req, res) {
   currentState.timeAmountInital = req.query.time;
   currentState.countdownGoal = new Date().getTime() + parseInt(req.query.time)
+  currentState.pauseMoment = new Date().getTime();
   res.json({ status: "ok" });
   updatedData()
 });
@@ -180,7 +181,7 @@ app.get("/api/v1/ctrl/timer/restart", function (req, res) {
 
 app.get("/api/v1/set/layout/showTime", function (req, res) {
   const resy = helper.wrapBooleanConverter(req.query.show, res)
-  if (resy) {
+  if (resy != undefined) {
     currentState.showTimeOnCountdown = resy;
     if (req.query.persist === 'true') {
       dataToBeWritten.showTimeOnCountdown = currentState.showTimeOnCountdown
@@ -202,7 +203,7 @@ app.get("/api/v1/set/progressbar/show", function (req, res) {
 app.get("/api/v1/set/progressbar/colors", function (req, res) {
   try {
     let data = req.query.colors
-    if(req.query.isBase64 === "true"){
+    if (req.query.isBase64 === "true") {
       data = atob(data)
     }
     currentState.colorSegments = JSON.parse(data);
@@ -219,14 +220,19 @@ app.get("/api/v1/set/progressbar/colors", function (req, res) {
 
 app.get("/api/v1/set/text/colors", function (req, res) {
   try {
-    let data = req.query.colors
-    if(req.query.isBase64 === "true"){
-      data = atob(data)
-    }
-    console.debug(data)
-    currentState.textColors = JSON.parse(data);
-    if (req.query.persist === 'true') {
-      dataToBeWritten.textColors = currentState.textColors
+    if (req.query.copy === "true") {
+      currentState.textColors = currentState.colorSegments
+      res.json({ status: "ok" });
+    } else {
+      let data = req.query.colors
+      if (req.query.isBase64 === "true") {
+        data = atob(data)
+      }
+      console.debug(data)
+      currentState.textColors = JSON.parse(data);
+      if (req.query.persist === 'true') {
+        dataToBeWritten.textColors = currentState.textColors
+      }
     }
     res.json({ status: "ok" });
   } catch (error) {

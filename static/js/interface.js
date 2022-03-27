@@ -49,30 +49,55 @@ $(function () {
         jsonview.expand(tree2);
     })
 
-    $("#addRow").click(function (event) {
-        tableEntryDom = document.getElementById("tableCopySource").cloneNode(true)
+    $("#addRow").on("click", function (event) {
+        const tableEntryDom = document.getElementById("tableCopySource").cloneNode(true)
         let temp = tableEntryDom.innerHTML
         temp = temp.replace("#COLOR#", "gray");
         temp = temp.replace("#bg-COLOR#", "gray");
         temp = temp.replace("#VALUE#", 60); // BUG: Doesn't work but not too important
+        temp = temp.replace("timeValue-ID", Math.floor(Math.random() * 9999999))
         tableEntryDom.innerHTML = temp;
+        tableEntryDom.firstChild.nextSibling.children[0].classList.add("timeDurPicker")
+        tableEntryDom.id = Math.floor(Math.random() * 9999999)
         document.getElementById("colors1").appendChild(tableEntryDom)
         $(".deleteRow1").on("click", function removeRowEntry(event) {
             $(event.target).closest("tr").remove();
         });
-
+        $('.timeDurPicker').durationPicker({
+            showSeconds: true,
+            showDays: false,
+            onChanged: function (newVal, test, val2) {
+                //   $('#duration-label2').text(newVal);
+                val2.days[0].parentElement.parentElement.parentElement.parentElement.children[1].value = newVal
+                //console.log(val2.days[0].parentElement.parentElement.parentElement.parentElement.children[1].value)
+                //console.log(val2.days[0].parentElement.parentElement.parentElement.parentElement.children[1])
+            }
+        });
     });
 
-    $("#addRow2").click(function (event) {
-        tableEntryDom = document.getElementById("tableCopySource").cloneNode(true)
+    $("#addRow2").on("click", function (event) {
+        const tableEntryDom = document.getElementById("tableCopySource").cloneNode(true)
         let temp = tableEntryDom.innerHTML
         temp = temp.replace("#COLOR#", "gray");
         temp = temp.replace("#bg-COLOR#", "gray");
-        temp = temp.replace("#VALUE#", 60);
+        temp = temp.replace("#VALUE#", 60); // BUG: Doesn't work but not too important
+        temp = temp.replace("timeValue-ID", Math.floor(Math.random() * 9999999))
         tableEntryDom.innerHTML = temp;
+        tableEntryDom.firstChild.nextSibling.children[0].classList.add("timeDurPicker")
+        tableEntryDom.id = Math.floor(Math.random() * 9999999)
         document.getElementById("colors2").appendChild(tableEntryDom)
         $(".deleteRow1").on("click", function removeRowEntry(event) {
             $(event.target).closest("tr").remove();
+        });
+        $('.timeDurPicker').durationPicker({
+            showSeconds: true,
+            showDays: false,
+            onChanged: function (newVal, test, val2) {
+                //   $('#duration-label2').text(newVal);
+                val2.days[0].parentElement.parentElement.parentElement.parentElement.children[1].value = newVal
+                //console.log(val2.days[0].parentElement.parentElement.parentElement.parentElement.children[1].value)
+                //console.log(val2.days[0].parentElement.parentElement.parentElement.parentElement.children[1])
+            }
         });
     });
 
@@ -122,6 +147,7 @@ $(function () {
             if(item != "START"){
                 temp = temp.replace("#VALUE#", item/1000);
                 tableEntryDom.innerHTML = temp;
+                tableEntryDom.firstChild.nextSibling.children[0].classList.add("timeDurPicker")
             } else {
                 tableEntryDom.innerHTML = temp;
                 tableEntryDom.children[2].children[0].children[0].disabled = true;
@@ -151,6 +177,7 @@ $(function () {
             if(item != "START"){
                 temp = temp.replace("#VALUE#", item/1000);
                 tableEntryDom.innerHTML = temp;
+                tableEntryDom.firstChild.nextSibling.children[0].classList.add("timeDurPicker")
             } else {
                 tableEntryDom.innerHTML = temp;
                 tableEntryDom.children[2].children[0].children[0].disabled = true;
@@ -160,6 +187,9 @@ $(function () {
                 
                 tableEntryDom.children[0].innerHTML = '<i class="bi bi-flag-fill"></i> Start'
             }
+            
+            
+            // timeDurPicker
             tableEntryDom.id = "1C" + currIndex
             tableEntryDom.style.display = "table-row"
             document.getElementById("colors2").appendChild(tableEntryDom)
@@ -254,7 +284,7 @@ $(function () {
         allPathes.push("/api/v1/set/progressbar/show?show=" + progBarShowB)
         allPathes.push("/api/v1/set/text/enableColoring?enable=" + textColorsB)
         allPathes.push("/api/v1/set/progressbar/colors?isBase64=true&colors=" + btoa(JSON.stringify(colors)))
-        ///allPathes.push("/api/v1/set/text/colors?isBase64=true&colors=" + btoa(JSON.stringify(colors2)))
+        allPathes.push("/api/v1/set/text/colors?isBase64=true&colors=" + btoa(JSON.stringify(colors2)))
 
 
         for (pI in allPathes) {

@@ -22,12 +22,11 @@ function convertStringBooleanToBoolean(stringBoolean) {
 
 function wrapBooleanConverter(stringBoolean, res) {
   const temp = convertStringBooleanToBoolean(stringBoolean);
-  if(temp === -1) {
+  if(temp == -1) {
     res.json({ status: "error", message: "Invalid boolean value" });
   } else {
     return(temp);
   }
 }
 
-// export { convertStringBooleanToBoolean, wrapBooleanConverter };
 module.exports = { convertStringBooleanToBoolean, wrapBooleanConverter };
