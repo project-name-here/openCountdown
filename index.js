@@ -319,7 +319,7 @@ app.use(function(req, res, next) {
 
 
 console.log("Starting server...");
-const port = 3006
+const port = 3005
 const server = app.listen(port);
 server.on('upgrade', (request, socket, head) => {
   wsServer.handleUpgrade(request, socket, head, socket => {

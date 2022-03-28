@@ -462,6 +462,31 @@ $(function () {
         $("#" + event.target.href.split("#")[1]).removeClass("hidden")
         // console.log(event.target.href.split("#")[1])
     });
+    $("#customValue").durationPicker({
+        showSeconds: true,
+        showDays: false,
+        onChanged: function (newVal, test, val2) {
+            currentTime = newVal * 1000
+        }
+    })
+
+    flatty = flatpickr("#datetimetester", {
+        enableTime: true,
+        time_24hr: true,
+        dateFormat: "H:i d.m.Y",
+    });
+
+    $(".goTimeGoalCountdown").on("click", function handleCountdownToTime(){
+        const selectTime = flatty.selectedDates[0].getTime()
+        const timeDiff = selectTime - new Date().getTime() 
+        $(".goTimeGoalCountdown")[0].innerHTML = '<div class="spinner-border-sm spinner-border"></div>'
+        saveOption("/api/v1/set/addMillisToTimer?time=" + timeDiff, function (ev) {
+            setTimeout(function () {
+                $(".goTimeGoalCountdown")[0].innerHTML = '<i class="bi bi-check2-circle"></i>'
+            }, 200);
+        })
+        console.log( timeDiff)
+    })
 });
 
 function saveOption(path, callback) {
