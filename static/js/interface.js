@@ -11,7 +11,7 @@ function convertColorSegments(elementId) {
         if (raw.children[elm].nodeName == "TR") {
             const child = raw.children[elm].children[1].children[0]
             let timeVal = parseInt(raw.children[elm].children[0].children[0].value * 1000);
-            if(Number.isInteger(timeVal)){
+            if (Number.isInteger(timeVal)) {
                 segmentData[timeVal] = child.style.color
             } else {
                 segmentData["START"] = child.style.color
@@ -100,7 +100,7 @@ $(function () {
         });
     });
 
-    
+
 
     // Restore settings
     saveOption("/api/v1/data", function (event, xmlHttp) {
@@ -129,8 +129,8 @@ $(function () {
             temp = temp.replace("#bg-COLOR#", jsonResult.colorSegments[item]);
             temp = temp.replace("timeValue-ID", "timeValue-1C" + currIndex)
 
-            if(item != "START"){
-                temp = temp.replace("#VALUE#", item/1000);
+            if (item != "START") {
+                temp = temp.replace("#VALUE#", item / 1000);
                 tableEntryDom.innerHTML = temp;
                 tableEntryDom.firstChild.nextSibling.children[0].classList.add("timeDurPicker")
             } else {
@@ -139,7 +139,7 @@ $(function () {
                 tableEntryDom.children[2].children[0].setAttribute("data-toggle", "tooltip")
                 tableEntryDom.children[2].children[0].setAttribute("data-placement", "right")// 'data-placement="right" title="Tooltip on right"'
                 tableEntryDom.children[2].children[0].setAttribute("title", "You cannot delete the start time")
-                
+
                 tableEntryDom.children[0].innerHTML = '<i class="bi bi-flag-fill"></i> Start'
             }
             tableEntryDom.id = "1C" + currIndex
@@ -158,8 +158,8 @@ $(function () {
             temp = temp.replace("#bg-COLOR#", jsonResult.textColors[item]);
             temp = temp.replace("timeValue-ID", "timeValue-1C" + currIndex)
 
-            if(item != "START"){
-                temp = temp.replace("#VALUE#", item/1000);
+            if (item != "START") {
+                temp = temp.replace("#VALUE#", item / 1000);
                 tableEntryDom.innerHTML = temp;
                 tableEntryDom.firstChild.nextSibling.children[0].classList.add("timeDurPicker")
             } else {
@@ -168,11 +168,11 @@ $(function () {
                 tableEntryDom.children[2].children[0].setAttribute("data-toggle", "tooltip")
                 tableEntryDom.children[2].children[0].setAttribute("data-placement", "right")// 'data-placement="right" title="Tooltip on right"'
                 tableEntryDom.children[2].children[0].setAttribute("title", "You cannot delete the start time")
-                
+
                 tableEntryDom.children[0].innerHTML = '<i class="bi bi-flag-fill"></i> Start'
             }
-            
-            
+
+
             // timeDurPicker
             tableEntryDom.id = "1C" + currIndex
             tableEntryDom.style.display = "table-row"
@@ -199,7 +199,7 @@ $(function () {
         $(".deleteRow1").on("click", function removeRowEntry(event) {
             $(event.target).closest("tr").remove();
         });
-        $('[data-toggle="tooltip"]').tooltip({container: "body"})
+        $('[data-toggle="tooltip"]').tooltip({ container: "body" })
     })
 
     $("#copyColors").click(function CopyTextColors(event) {
@@ -224,11 +224,11 @@ $(function () {
         }
         Cookies.set("interfaceColor", darkid)
     });
-    
+
     // Presets
     $(".pres").click(function (event) {
         currentTime = parseInt(event.currentTarget.value)
-        $("#customValue").data("durationPicker").setValue(currentTime/1000)
+        $("#customValue").data("durationPicker").setValue(currentTime / 1000)
     })
 
 
@@ -476,16 +476,15 @@ $(function () {
         dateFormat: "H:i d.m.Y",
     });
 
-    $(".goTimeGoalCountdown").on("click", function handleCountdownToTime(){
+    $(".goTimeGoalCountdown").on("click", function handleCountdownToTime() {
         const selectTime = flatty.selectedDates[0].getTime()
-        const timeDiff = selectTime - new Date().getTime() 
+        const timeDiff = selectTime - new Date().getTime()
         $(".goTimeGoalCountdown")[0].innerHTML = '<div class="spinner-border-sm spinner-border"></div>'
         saveOption("/api/v1/set/addMillisToTimer?time=" + timeDiff, function (ev) {
             setTimeout(function () {
                 $(".goTimeGoalCountdown")[0].innerHTML = '<i class="bi bi-check2-circle"></i>'
             }, 200);
         })
-        console.log( timeDiff)
     })
 });
 
@@ -509,22 +508,22 @@ function openNav() {
     document.getElementById("navbarToggleExternalContent").style.zIndex = 999999;
     document.getElementById("pageCont").style.marginLeft = "0px";
     navStatus = true
-  }
-  
-  function closeNav() {
+}
+
+function closeNav() {
     document.getElementById("navbarToggleExternalContent").style.width = "0px";
     document.getElementById("navbarToggleExternalContent").style.opacity = "0";
     document.getElementById("navbarToggleExternalContent").style.display = "none";
     document.getElementById("navbarToggleExternalContent").style.zIndex = -999999;
     document.getElementById("pageCont").style.marginLeft = "0";
     navStatus = false
-  }
+}
 
-  function toogleNav(){
-      if(navStatus){
-          closeNav()
-      }else{
-          openNav()
-      }
+function toogleNav() {
+    if (navStatus) {
+        closeNav()
+    } else {
+        openNav()
+    }
 
-  }
+}
