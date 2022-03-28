@@ -1,0 +1,434 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>openCountdown - Admin</title>
+    <meta name="description" content="openCountdown">
+    <meta name="author" content="TheGreydiamond">
+
+
+    <link rel="stylesheet" href="/css/bootstrap-icons.css">
+    <link rel="stylesheet" href="/mdbootstrap/css/style.css">
+
+    <script src="/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/mdbootstrap/js/mdb.min.js"></script>
+
+    <script type="text/javascript" src="/js/darkreader.js"></script>
+    <script type="text/javascript" src="/js/cookie.js"></script>
+    <link href="/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/mainStyle.css" rel="stylesheet">
+    <link rel="stylesheet" href="/coloris/coloris.min.css" />
+    <link rel="stylesheet" href="/bootstrap-duration-picker/bootstrap-duration-picker.css" />
+    <link rel="stylesheet" href="/flatpickr/dist/flatpickr.min.css" />
+    <script src="/bootstrap-duration-picker/bootstrap-duration-picker-debug.js"></script>
+    <script src="/coloris/coloris.min.js"></script>
+
+    <script type="text/javascript" src="/flatpickr/dist/flatpickr.js"> </script>
+
+    <link rel="stylesheet" href="/css/bootstrap-icons.css">
+</head>
+
+<body>
+
+    <main>
+        <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark trans" style="width: 250px;"
+            id="navbarToggleExternalContent">
+            <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                <svg class="bi me-2" width="40" height="32">
+                    <use xlink:href="#bootstrap" />
+                </svg>
+                <span class="fs-4">Sidebar</span>
+            </a>
+            <hr>
+            <ul class="nav nav-pills flex-column mb-auto">
+                <li class="nav-item">
+                    <a href="#homeP" class="nav-link active" aria-current="page" id="PageIndex">
+                        <i class="bi bi-house-door"></i>
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="#settings" class="nav-link text-white" id="PageSettings">
+                        <i class="bi bi-gear"></i>
+                        Settings
+                    </a>
+                </li>
+                <li>
+                    <a href="#debug" class="nav-link text-white" id="PageDebug">
+                        <i class="bi bi-bug"></i>
+                        Debug
+                    </a>
+                </li>
+                <li>
+                    <a href="#about" class="nav-link text-white" id="PageAbout">
+                        <i class="bi bi-info-circle"></i>
+                        About
+                    </a>
+                </li>
+            </ul>
+            <hr>
+            openCountdown <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+
+                <input type="radio" class="btn-check" name="btnradio2" id="Mbtnradio1" autocomplete="off" checked>
+                <label class="btn btn-outline-primary" for="Mbtnradio1"><svg xmlns="http://www.w3.org/2000/svg"
+                        width="16" height="16" fill="currentColor" class="bi bi-brightness-high-fill"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M12 8a4 4 0 1 1-8 0 4 4 0 0 1 8 0zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z" />
+                    </svg>
+                </label>
+
+                <input type="radio" class="btn-check" name="btnradio2" id="Mbtnradio2" autocomplete="off">
+                <label class="btn btn-outline-primary" for="Mbtnradio2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-moon-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z" />
+                    </svg>
+                </label>
+
+                <input type="radio" class="btn-check" name="btnradio2" id="Mbtnradio3" autocomplete="off">
+                <label class="btn btn-outline-primary" for="Mbtnradio3">
+                    Auto
+                </label>
+
+            </div>
+        </div>
+        <pages class="d-flex flex-fill" id="pageCont" class="z-index: 50;">
+            <div class="">
+                <button type="button"
+                    class="opacity mx-2 svg-center btn btn-outline-transparent rounded-circle border-0"
+                    onclick="toogleNav()">
+                    <i class="bi bi-list"></i>
+                </button>
+            </div>
+
+
+            <page id="homeP" class="pageC flex-fill overflow-auto">
+                <h1>Home page</h1>
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <h3 class="d-flex">Preview <span class="helperTip" data-placement="right" title="A preview of what is currently visible on the countdown view" data-toggle="tooltip">
+                                    <i class="bi bi-question-circle-fill"></i>
+                                </span>
+                                 <div class="ms-auto">
+                                    <span class="helperTip" data-placement="right"
+                                        title="Copies the link to the timer view" data-toggle="tooltip">
+                                        <button class="btn" onclick="navigator.clipboard.writeText(window.location.toString() + 'timer')">
+                                            <i class="bi bi-clipboard"></i>
+                                        </button>
+                                    </span>
+
+                                    <span class="helperTip" data-placement="right"
+                                        title="Open the countdown view in a new tab" data-toggle="tooltip">
+                                        <a href="/timer" class="btn " target="_blank"><i
+                                                class="bi bi-box-arrow-up-right"></i></a>
+                                    </span>
+                                </div>
+                            </h3>
+                            <iframe src="/timer?smaller=true" height="100%" width="100%" style="min-height: 400px;">
+                            </iframe>
+                        </div>
+                        <div class="col">
+                            <h3>Mode <span class="helperTip" data-placement="right"
+                                    title="Select what to show on the countdown view" data-toggle="tooltip">
+                                    <i class="bi bi-question-circle-fill"></i>
+                                </span></h3>
+                            <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                                <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off"
+                                    checked>
+                                <label class="btn btn-outline-primary" for="btnradio1">Timer</label>
+
+                                <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+                                <label class="btn btn-outline-primary" for="btnradio2">Clock</label>
+
+                                <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
+                                <label class="btn btn-outline-primary" for="btnradio3">Black</label>
+
+                                <input type="radio" class="btn-check" name="btnradio" id="btnradio4" autocomplete="off">
+                                <label class="btn btn-outline-primary" for="btnradio4">Testimage</label>
+                            </div>
+                            <br>
+                            <br>
+                            <br>
+                            <controls>
+                                <button class="btn btn-outline-success p-4" id="funcPlay"><svg
+                                        xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-play-fill" viewBox="0 0 16 16">
+                                        <path
+                                            d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z" />
+                                    </svg></button>
+
+                                <button class="btn btn-outline-warning p-4" id="funcPause"><svg
+                                        xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-pause" viewBox="0 0 16 16">
+                                        <path
+                                            d="M6 3.5a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5zm4 0a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5z" />
+                                    </svg></button>
+                                <button class="btn btn-outline-info p-4" id="funcRestart"><svg
+                                        xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-arrow-clockwise" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z" />
+                                        <path
+                                            d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z" />
+                                    </svg></button>
+                            </controls>
+                            <br>
+                            <br>
+                            <br>
+                            <h3>Messaging <span class="helperTip" data-placement="right"
+                                    title="Shows a given message on the timer view" data-toggle="tooltip">
+                                    <i class="bi bi-question-circle-fill"></i>
+                                </span></h3>
+
+                            <input type="text" id="messageContent" class="form-control" placeholder="Message here"
+                                style="width: 50%;">
+
+                            <br>
+                            <button class="btn btn-outline-primary m-1" id="sendMessage"><i
+                                    class="bi bi-send"></i></button>
+                            <button class="btn btn-outline-primary m-1" id="ctrlRemoveMessage">
+                                <i class="bi bi-eye-slash-fill"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <br><br><br>
+                <h3>Timer</h3>
+                <div class="container">
+
+
+                    <div class="row">
+                        <presets class="d-inline-flex justify-content-center">
+                            <button class="btn btn-outline-secondary m-1 pres" value="300000">00:05:00</button>
+                            <button class="btn btn-outline-secondary m-1 pres" value="600000">00:10:00</button>
+                            <button class="btn btn-outline-secondary m-1 pres" value="900000">00:15:00</button>
+                            <button class="btn btn-outline-secondary m-1 pres" value="1200000">00:20:00</button>
+                            <button class="btn btn-outline-secondary m-1 pres" value="1500000">00:25:00</button>
+                            <button class="btn btn-outline-secondary m-1 pres" value="1800000">00:30:00</button>
+                            <button class="btn btn-outline-secondary m-1 pres" value="2100000">00:35:00</button>
+                            <button class="btn btn-outline-secondary m-1 pres" value="2400000">00:40:00</button>
+                            <button class="btn btn-outline-secondary m-1 pres" value="2700000">00:45:00</button>
+                        </presets>
+                        
+                        <div class="row" style="width: 100%;">
+                            
+                            
+                            <div class="d-inline-flex justify-content-center p-2 col">
+                                <input type="text" class="form-control m-1" id="customValue">
+                                
+                                <button class="btn btn-outline-primary m-1 mt-0 goTimer"><i
+                                        class="bi bi-check2-circle"></i></button>
+                            </div>
+                        </div>
+                        <h5>
+                            Countdown to time
+                        </h5>
+                        <div class="row justify-content-center flex-nowrap d-flex" >
+                            <input id="datetimetester" class="form-control input-sm" style="width: 20%;">
+                            <button class="btn btn-outline-primary goTimeGoalCountdown ms-2" style="width: 5%;"><i
+                                class="bi bi-check2-circle"></i></button>
+
+                            
+
+                        </input>
+                        </div>
+                        
+                    </div>
+                </div>
+            </page>
+
+
+
+
+
+            <page id="settings" class="pageC hidden flex-fill overflow-auto">
+                <h1>Settings</h1>
+                <label for="showTime">Show clock on Timer:</label>
+                <input type="checkbox" name="showTime" id="showTime"><br>
+
+                <label for="showMillis">Show Milliseconds on Timer:</label>
+                <input type="checkbox" name="showMillis" id="showMillis"><br>
+
+                <label for="progBarShow">Show progressbar:</label>
+                <input type="checkbox" name="progBarShow" id="progBarShow"><br>
+                <details>
+                    <summary>Progressbar Colors</summary>
+                    <p>
+                    <div id="table" class="table-editable">
+                        <span class="table-add float-right mb-3 mr-2"><a href="#!" class="text-success"><i
+                                    class="fas fa-plus fa-2x" aria-hidden="true"></i></a></span>
+                        <table class="table table-bordered table-responsive-md table-striped text-center" id="colors1">
+                            <thead>
+                                <tr>
+                                    <th class="text-center">Time</th>
+                                    <th class="text-center">Color</th>
+                                    <th class="text-center">Remove</th>
+                                </tr>
+                            </thead>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <button type="button" class="btn btn-outline-success" id="addRow">Add row</button>
+                    </p>
+                </details>
+                <hr>
+                <label for="textColors">Enable Text Colors:</label>
+                <input type="checkbox" name="textColors" id="textColors"><br>
+                <details>
+                    <summary>Text Colors</summary>
+                    <p>
+
+                    <div id="table2" class="table-editable">
+                        <table class="table table-bordered table-responsive-md table-striped text-center" id="colors2">
+                            <thead>
+                                <tr>
+                                    <th class="text-center">Time</th>
+                                    <th class="text-center">Color</th>
+                                    <th class="text-center">Remove</th>
+                                </tr>
+                            </thead>
+                            </tbody>
+                        </table>
+                    </div>
+                    <button type="button" class="btn btn-outline-success" id="copyColors">Copy from progressbar
+                        colors</button>
+
+                    <button type="button" class="btn btn-outline-success" id="addRow2">Add row</button>
+                    </p>
+                </details>
+                <br>
+
+
+                <button type="button" class="btn btn-outline-success" id="applyLayout"><i class="bi bi-save"></i> Apply
+                    settings</button>
+
+                <button type="button" class="btn btn-outline-success" id="saveLayout"><i class="bi bi-save"></i> Save as
+                    startup settings (Layout
+                    only)</button>
+            </page>
+
+            <page id="debug" class="pageC hidden flex-fill overflow-auto">
+                <h1>Debug page</h1>
+                <div class="alert alert-danger" role="alert">
+                    <h4 class="alert-heading">Attention</h4>
+                    <p>This is a debug page which should only be used by professionals. Changing any options below might
+                        impact operation.</p>
+                    <hr>
+                    <p class="mb-0"><b>Proceed with caution.</b></p>
+                </div>
+                <label for="debugMode">Enable time variance display:</label>
+                <input type="checkbox" name="debugMode" id="debugModeEnable" value="true"><br><br>
+
+                <button type="button" class="btn btn-outline-success" id="applyDebug">Apply settings</button>
+                <br>
+                <hr>
+                <br>
+
+                <h3>Host information</h3>
+                <code id="systemInfo" class="overflow-auto">
+
+                </code>
+                <h3>Raw server reponse</h3>
+                <code id="responeSnippet" style="width: 40%; display: inline-block;" class="overflow-auto">
+
+                </code>
+                <br>
+                <hr>
+                <br>
+                <templateObj>
+                    <table class="table table-bordered table-responsive-md table-striped text-center" id="colors1">
+                        <thead>
+                            <tr>
+                                <th class="text-center">Time</th>
+                                <th class="text-center">Color</th>
+                                <th class="text-center">Remove</th>
+                            </tr>
+                        </thead>
+                        <tr id="tableCopySource">
+                            <td contenteditable="false" class="time">
+                                <input type="text" class="form-control " id="timeValue-ID" value="#VALUE#">
+                                <value></value>
+                            </td>
+                            <td class="pt-3-half full" contenteditable="false">
+                                <div class="clr-field" style="color: #bg-COLOR#;">
+                                    <button aria-labelledby="clr-open-label"></button>
+                                    <input type="text" class="coloris" value="#COLOR#">
+                                </div>
+                                </div>
+                            </td>
+                            <td>
+                                <span class="table-remove"><button type="button"
+                                        class="btn btn-danger btn-rounded btn-sm my-0 deleteRow1">
+                                        Remove
+                                    </button></span>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+
+
+                    <tr>
+                        <td class="pt-3-half numVal" contenteditable="true">#VALUE#</td>
+                        <td class="pt-3-half full" contenteditable="false">
+                            <div class="clr-field" style="color: #bg-COLOR#;">
+                                <button aria-labelledby="clr-open-label"></button>
+                                <input id="demo-input1" type="text" class="coloris" value="#COLOR#">
+                            </div>
+                            </div>
+                        </td>
+                        <td>
+                            <span class="table-remove"><button type="button"
+                                    class="btn btn-danger btn-rounded btn-sm my-0 deleteRow1">
+                                    Remove
+                                </button></span>
+                        </td>
+                    </tr>
+                </templateObj>
+                <script>
+                    $('#duration2').durationPicker({
+                        showSeconds: true,
+                        showDays: false,
+                        onChanged: function (newVal, test, val2) {
+                            $('#duration-label2').text(newVal);
+                            val2.days[0].parentElement.parentElement.parentElement.parentElement.children[1].value = newVal
+                            console.log(val2.days[0].parentElement.parentElement.parentElement.parentElement.children[1].value)
+                        }
+                    });
+                </script>
+
+                <br><br>
+            </page>
+            <page id="about" class="pageC hidden flex-fill overflow-auto">
+                <h1>About</h1>
+                Version: <b id="nodeSwVers"></b><br>
+                NodeJS Version: <b id="nodejsVers"></b><br>
+
+            </page>
+        </pages>
+    </main>
+    <script type="text/javascript" src="js/jsonview.js"></script>
+    <script type="text/javascript" src="/js/interface.js"> </script>
+    <script type="text/javascript">
+
+        Coloris({
+            el: '.coloris',
+            alpha: false,
+        });
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip({ container: "body" })
+        })                        
+    </script>
+
+</body>
+
+</html>
