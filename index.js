@@ -3,13 +3,16 @@ const fs = require("fs");
 const bodyParser = require("body-parser");
 const ws = require('ws');
 const helper = require("./helpers.js");
+const loggy = require("./logging")
+loggy.init(true)
 
-console.log("Preparing server...");
+loggy.log("Preparing server", "info", "Server");
 const app = express();
 
+loggy.log("Preparing static routes", "info", "Server");
 app.use(express.static("static"));
-app.use(express.static("node_modules"));
 
+loggy.log("Preparing middlewares", "info", "Server");
 app.use(bodyParser.json());
 app.use(
   bodyParser.urlencoded({
@@ -20,6 +23,7 @@ app.use(
 
 let loadedData = {}
 
+loggy.log("Loading config", "info", "Config");
 if (fs.existsSync("data-persistence.json")) {
   const loadedDataRaw = fs.readFileSync("data-persistence.json", "utf8");
   loadedData = JSON.parse(loadedDataRaw);
@@ -54,7 +58,7 @@ currentState = Object.assign({}, currentState, loadedData);
 currentState.textColors = currentState.colorSegments
 
 
-
+loggy.log("Preparing websocket", "info", "Websocket");
 const wsServer = new ws.Server({ noServer: true });
 wsServer.on('connection', socket => {
   socket.on('message', function incoming(data) {
@@ -81,7 +85,7 @@ function updatedData() {
   setTimeout(updatedData, 5000);
 }
 
-console.log("Preparing routes...");
+loggy.log("Preparing routes", "info", "Server");
 app.get("/", function (req, res) {
   const data = fs.readFileSync("templates/newAdminPanel.html", "utf8");
   res.send(data);
@@ -297,6 +301,7 @@ app.get("/api/v1/storage/delete", function (req, res) {
 
 app.use(function(req, res, next) {
   res.status(404);
+  loggy.log("Server responded with 404 error", "warn", "Server", true);
 
   // respond with html page
   if (req.accepts('html')) {
@@ -318,8 +323,20 @@ app.use(function(req, res, next) {
 
 
 
-console.log("Starting server...");
+loggy.log("Starting server", "info", "Server");
+
+
 const port = 3005
+
+process.on('SIGINT', function () {
+  loggy.log("Caught interrupt signal and shutting down gracefully", "info", "Shutdown");
+  server.close(); // Make the express server stop
+    loggy.log("Goodbye! 👋", "magic", "Shutdown", true)
+    loggy.close()
+    process.exit(); // Quit the application
+  
+});
+
 const server = app.listen(port);
 server.on('upgrade', (request, socket, head) => {
   wsServer.handleUpgrade(request, socket, head, socket => {
@@ -328,7 +345,8 @@ server.on('upgrade', (request, socket, head) => {
 });
 
 
-
-console.info("Server running on port " + port);
-console.info("Visit localhost:" + port + "/timer for the timer page");
-console.info("Visit localhost:" + port + " for the admin page");
+loggy.log("=======================", "info", "", true);
+loggy.log("Server running on port " + port, "magic", "", true);
+loggy.log("Visit http://localhost:" + port + "/timer for the timer view", "magic", "", true);
+loggy.log("Visit http://localhost:" + port + " for the admin view", "magic", "", true);
+loggy.log("=======================", "info", "", true);
