@@ -1,0 +1,46 @@
+{
+    "titles": {
+        "home": "Homepage",
+        "preview": "Preview",
+        "mode": "Mode",
+        "messaging": "Messaging",
+        "countdownToTime": "Countdown to time"
+    },
+    "sidebar": {
+        "home": "Home",
+        "settings": "Settings",
+        "debug": "Debug",
+        "about": "About"
+    },
+    "hints": 
+    {
+        "previewHint": "A preview of what is currently visible on the countdown view",
+        "modeHint": "",
+        "messagingHint": "Shows a given message on the timer view"
+    },
+    "placeholders": {
+        "msgHere": "Message here"
+    },
+    "others":
+    {
+        "timer": "Timer",
+        "clock": "Clock",
+        "black": "Black",
+        "test": "Testimage"
+    },
+    "labels":
+    {
+        "clockOnTimer": "Show clock on Timer:",
+        "showMillis": "Show Milliseconds on Timer:",
+        "showProgress": "Show progressbar:",
+        "progbarColors": "Progressbar Colors",
+        "time": "Time",
+        "color": "Color",
+        "remove": "Remove"
+    },
+    "_metadata": {
+        "lang": "en",
+        "version": "1.0.0",
+        "authors": ["TheGreydiamond"]
+    }
+}

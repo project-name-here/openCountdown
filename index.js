@@ -4,6 +4,8 @@ const bodyParser = require("body-parser");
 const ws = require('ws');
 const helper = require("./helpers.js");
 const loggy = require("./logging")
+const Eta = require("eta");
+
 loggy.init(true)
 
 loggy.log("Preparing server", "info", "Server");
@@ -57,6 +59,9 @@ const dataToBeWritten = {};
 currentState = Object.assign({}, currentState, loadedData);
 currentState.textColors = currentState.colorSegments
 
+loggy.log("Reading language file", "info", "Language")
+const languageProfile = JSON.parse(fs.readFileSync("lang/en_uk.json", "utf8"));
+
 
 loggy.log("Preparing websocket", "info", "Websocket");
 const wsServer = new ws.Server({ noServer: true });
@@ -88,7 +93,11 @@ function updatedData() {
 loggy.log("Preparing routes", "info", "Server");
 app.get("/", function (req, res) {
   const data = fs.readFileSync("templates/newAdminPanel.html", "utf8");
-  res.send(data);
+  
+  res.send(
+    Eta.render(data, {
+    lang: languageProfile
+  }));
 });
 
 app.get("/timer", function (req, res) {
@@ -323,10 +332,23 @@ app.use(function(req, res, next) {
 
 
 
+app.use(function(err, req, res, next) {
+  console.error(err.stack);
+  if(String(err.stack).includes("TypeError: Cannot read properties of undefined")) {
+    const data = fs.readFileSync("templates/brokenTranslation.html", "utf8");
+    res.send(data);
+  }else{
+    res.status(500).send('Something broke!');
+  }
+ 
+});
+
+
+
 loggy.log("Starting server", "info", "Server");
 
 
-const port = 3005
+const port = 3006
 
 process.on('SIGINT', function () {
   loggy.log("Caught interrupt signal and shutting down gracefully", "info", "Shutdown");

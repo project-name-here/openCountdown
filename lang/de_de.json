@@ -1,0 +1,31 @@
+{
+    "titles": {
+        "home": "Startseite",
+        "preview": "Vorschau",
+        "mode": "Modus",
+        "messaging": "Nachrichten",
+        "countdownToTime": "Auf Uhrzeit runterzählen"
+    },
+    "sidebar": {
+        "home": "Startseite",
+        "settings": "Einstellungen",
+        "debug": "Debug",
+        "about": "Über"
+    },
+    "hints": 
+    {
+        "previewHint": "Eine Vorschau der Timeransicht.",
+        "modeHint": "",
+        "messagingHint": "Zeigt eine Nachricht auf der Timeransicht an."
+    },
+    "placeholders": {
+        "msgHere": "Message here"
+    },
+    "others":
+    {
+        "timer": "Timer",
+        "clock": "Uhr",
+        "black": "Schwarz",
+        "test": "Testbild"
+    }
+}
