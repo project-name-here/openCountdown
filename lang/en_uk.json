@@ -4,7 +4,9 @@
         "preview": "Preview",
         "mode": "Mode",
         "messaging": "Messaging",
-        "countdownToTime": "Countdown to time"
+        "countdownToTime": "Countdown to time",
+        "attention": "Attention",
+        "hostinfo": "Host information"
     },
     "sidebar": {
         "home": "Home",
@@ -16,7 +18,10 @@
     {
         "previewHint": "A preview of what is currently visible on the countdown view",
         "modeHint": "",
-        "messagingHint": "Shows a given message on the timer view"
+        "messagingHint": "Shows a given message on the timer view",
+        "copyHint": "Copies the link to the timer view",
+        "openInNewTab": "Open the countdown view in a new tab",
+        "selectMode": "Select what to show on the countdown view"
     },
     "placeholders": {
         "msgHere": "Message here"
@@ -36,7 +41,25 @@
         "progbarColors": "Progressbar Colors",
         "time": "Time",
         "color": "Color",
-        "remove": "Remove"
+        "remove": "Remove",
+        "enableTextClrs": "Enable Text Colours:",
+        "textClrs": "Text Colours",
+        "addRow": "Add Row",
+        "timeVar": "Enable time variance display:"
+    },
+    "untis": 
+    {
+        "seconds": "Seconds",
+        "minutes": "Minutes",
+        "hours": "Hours",
+        "days": "Days",
+        "weeks": "Weeks",
+        "months": "Months",
+        "years": "Years"
+    },
+    "informationTexts": {
+        "debugInfo": "This is a debug page which should only be used by professionals. Changing any options below might impact operation.",
+        "proceedCaution": "Proceed with caution."
     },
     "_metadata": {
         "lang": "en",

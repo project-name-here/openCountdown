@@ -4,7 +4,9 @@
         "preview": "Vorschau",
         "mode": "Modus",
         "messaging": "Nachrichten",
-        "countdownToTime": "Auf Uhrzeit runterzählen"
+        "countdownToTime": "Auf Uhrzeit runterzählen",
+        "attention": "Achtung",
+        "hostinfo": "Host Informationen"
     },
     "sidebar": {
         "home": "Startseite",
@@ -16,7 +18,10 @@
     {
         "previewHint": "Eine Vorschau der Timeransicht.",
         "modeHint": "",
-        "messagingHint": "Zeigt eine Nachricht auf der Timeransicht an."
+        "messagingHint": "Zeigt eine Nachricht auf der Timeransicht an.",
+        "copyHint": "Kopiert den Link zu der Countdown-Seite.",
+        "openInNewTab": "Öffnet den Link in einem neuen Tab.",
+        "selectMode": "Wählt einen Modus für die Timeransicht.",
     },
     "placeholders": {
         "msgHere": "Message here"
@@ -27,5 +32,38 @@
         "clock": "Uhr",
         "black": "Schwarz",
         "test": "Testbild"
+    },
+    "labels":
+    {
+        "clockOnTimer": "Zeigt die Uhrzeit auf dem Timer:",
+        "showMillis": "Zeigt Millisekunden auf dem Timer:",
+        "showProgress": "Zeige Fortschrittsbalken:",
+        "progbarColors": "Fortschrittsbalken Farben",
+        "time": "Zeit",
+        "color": "Farbe",
+        "remove": "Entfernen",
+        "enableTextClrs": "Text Farben aktivieren:",
+        "textClrs": "Text Farben",
+        "addRow": "Neue Zeile",
+        "timeVar": "Aktiviere zeitabweichungs display:"
+    },
+    "untis": 
+    {
+        "seconds": "Sekunden",
+        "minutes": "Minutes",
+        "hours": "Stunden",
+        "days": "Tage",
+        "weeks": "Wochen",
+        "months": "Monate",
+        "years": "Jahre"
+    },
+    "informationTexts": {
+        "debugInfo": "Das hier ist eine debug seite welche nur von professionellen Personen verwendet werden sollte. ",
+        "proceedCaution": "Gehen Sie vorsichtig vor"
+    },
+    "_metadata": {
+        "lang": "de",
+        "version": "1.0.0",
+        "authors": ["TheGreydiamond"]
     }
 }

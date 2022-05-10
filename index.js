@@ -62,7 +62,6 @@ currentState.textColors = currentState.colorSegments
 loggy.log("Reading language file", "info", "Language")
 const languageProfile = JSON.parse(fs.readFileSync("lang/en_uk.json", "utf8"));
 
-
 loggy.log("Preparing websocket", "info", "Websocket");
 const wsServer = new ws.Server({ noServer: true });
 wsServer.on('connection', socket => {
@@ -93,11 +92,15 @@ function updatedData() {
 loggy.log("Preparing routes", "info", "Server");
 app.get("/", function (req, res) {
   const data = fs.readFileSync("templates/newAdminPanel.html", "utf8");
-  
-  res.send(
-    Eta.render(data, {
-    lang: languageProfile
-  }));
+  try {
+    res.send(
+      Eta.render(data, {
+        lang: languageProfile
+      }));
+  } catch (e) {
+    const data = fs.readFileSync("templates/brokenTranslation.html", "utf8");
+    res.send(data);
+  }
 });
 
 app.get("/timer", function (req, res) {
@@ -308,7 +311,7 @@ app.get("/api/v1/storage/delete", function (req, res) {
   updatedData()
 });
 
-app.use(function(req, res, next) {
+app.use(function (req, res, next) {
   res.status(404);
   loggy.log("Server responded with 404 error", "warn", "Server", true);
 
@@ -332,7 +335,7 @@ app.use(function(req, res, next) {
 
 
 
-app.use(function(err, req, res, next) {
+/*app.use(function(err, req, res, next) {
   console.error(err.stack);
   if(String(err.stack).includes("TypeError: Cannot read properties of undefined")) {
     const data = fs.readFileSync("templates/brokenTranslation.html", "utf8");
@@ -341,22 +344,20 @@ app.use(function(err, req, res, next) {
     res.status(500).send('Something broke!');
   }
  
-});
+});*/
 
 
 
 loggy.log("Starting server", "info", "Server");
 
-
-const port = 3006
+const port = 3005;
 
 process.on('SIGINT', function () {
   loggy.log("Caught interrupt signal and shutting down gracefully", "info", "Shutdown");
   server.close(); // Make the express server stop
-    loggy.log("Goodbye! 👋", "magic", "Shutdown", true)
-    loggy.close()
-    process.exit(); // Quit the application
-  
+  loggy.log("Goodbye! 👋", "magic", "Shutdown", true)
+  loggy.close(); // Close and write log
+  process.exit(); // Quit the application
 });
 
 const server = app.listen(port);

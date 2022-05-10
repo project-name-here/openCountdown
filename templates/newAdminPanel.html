@@ -119,14 +119,14 @@
                                 </span>
                                  <div class="ms-auto">
                                     <span class="helperTip" data-placement="right"
-                                        title="Copies the link to the timer view" data-toggle="tooltip">
+                                        title="<%= it.lang.hints.copyHint %>" data-toggle="tooltip">
                                         <button class="btn" onclick="navigator.clipboard.writeText(window.location.toString() + 'timer')">
                                             <i class="bi bi-clipboard"></i>
                                         </button>
                                     </span>
 
                                     <span class="helperTip" data-placement="right"
-                                        title="Open the countdown view in a new tab" data-toggle="tooltip">
+                                        title="<%= it.lang.hints.openInNewTab %>" data-toggle="tooltip">
                                         <a href="/timer" class="btn " target="_blank"><i
                                                 class="bi bi-box-arrow-up-right"></i></a>
                                     </span>
@@ -137,7 +137,7 @@
                         </div>
                         <div class="col">
                             <h3><%= it.lang.titles.mode %> <span class="helperTip" data-placement="right"
-                                    title="Select what to show on the countdown view" data-toggle="tooltip">
+                                    title=<%= it.lang.hints.selectMode %> data-toggle="tooltip">
                                     <i class="bi bi-question-circle-fill"></i>
                                 </span></h3>
                             <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
@@ -201,7 +201,7 @@
                     </div>
                 </div>
                 <br><br><br>
-                <h3><%= it.lang.titles.timer %></h3>
+                <h3><%= it.lang.others.timer %></h3>
                 <div class="container">
 
 
@@ -278,10 +278,10 @@
                     </p>
                 </details>
                 <hr>
-                <label for="textColors">Enable Text Colors:</label>
+                <label for="textColors"><%= it.lang.labels.enableTextClrs %></label>
                 <input type="checkbox" name="textColors" id="textColors"><br>
                 <details>
-                    <summary>Text Colors</summary>
+                    <summary><%= it.lang.labels.textClrs %></summary>
                     <p>
 
                     <div id="table2" class="table-editable">
@@ -299,7 +299,7 @@
                     <button type="button" class="btn btn-outline-success" id="copyColors">Copy from progressbar
                         colors</button>
 
-                    <button type="button" class="btn btn-outline-success" id="addRow2">Add row</button>
+                    <button type="button" class="btn btn-outline-success" id="addRow2"><%= it.lang.labels.row %></button>
                     </p>
                 </details>
                 <br>
@@ -316,13 +316,12 @@
             <page id="debug" class="pageC hidden flex-fill overflow-auto">
                 <h1>Debug page</h1>
                 <div class="alert alert-danger" role="alert">
-                    <h4 class="alert-heading">Attention</h4>
-                    <p>This is a debug page which should only be used by professionals. Changing any options below might
-                        impact operation.</p>
+                    <h4 class="alert-heading"><%= it.lang.titles.attention %></h4>
+                    <p><%= it.lang.informationTexts.debugInfo %></p>
                     <hr>
-                    <p class="mb-0"><b>Proceed with caution.</b></p>
+                    <p class="mb-0"><b><%= it.lang.informationTexts.proceedCaution %></b></p>
                 </div>
-                <label for="debugMode">Enable time variance display:</label>
+                <label for="debugMode"><%= it.lang.labels.timeVar %></label>
                 <input type="checkbox" name="debugMode" id="debugModeEnable" value="true"><br><br>
 
                 <button type="button" class="btn btn-outline-success" id="applyDebug">Apply settings</button>
@@ -330,7 +329,7 @@
                 <hr>
                 <br>
 
-                <h3>Host information</h3>
+                <h3><%= it.lang.titles.hostinfo %></h3>
                 <code id="systemInfo" class="overflow-auto">
 
                 </code>
@@ -345,9 +344,9 @@
                     <table class="table table-bordered table-responsive-md table-striped text-center" id="colors1">
                         <thead>
                             <tr>
-                                <th class="text-center">Time</th>
-                                <th class="text-center">Color</th>
-                                <th class="text-center">Remove</th>
+                                <th class="text-center"><%= it.lang.labels.time %></th>
+                                <th class="text-center"><%= it.lang.labels.color %></th>
+                                <th class="text-center"><%= it.lang.labels.remove %></th>
                             </tr>
                         </thead>
                         <tr id="tableCopySource">
@@ -409,7 +408,10 @@
                 <h1>About</h1>
                 Version: <b id="nodeSwVers"></b><br>
                 NodeJS Version: <b id="nodejsVers"></b><br>
-
+                <h2>About the translation</h2>
+                Author: <%= it.lang._metadata.authors %><br>
+                Language: <%= it.lang._metadata.lang %><br>
+                Version: <%= it.lang._metadata.version %><br>
             </page>
         </pages>
     </main>
