@@ -5,6 +5,7 @@ const ws = require('ws');
 const helper = require("./helpers.js");
 const loggy = require("./logging")
 const Eta = require("eta");
+const _ = require("underscore")
 
 loggy.init(true)
 
@@ -51,16 +52,34 @@ currentState = {
   srvTime: 0,
   enableColoredText: true,
   debug: false,
-  sessionToken: Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15),
+  sessionToken: Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15)
 };
 
-const dataToBeWritten = {};
+let configObject = {
+  language: "en_uk"
+}
+
+const tempJsonText = JSON.parse(fs.readFileSync("config.json", "utf8"));
+configObject = _.extend(configObject, tempJsonText);
+fs.writeFileSync("config.json", JSON.stringify(configObject));
 
 currentState = Object.assign({}, currentState, loadedData);
 currentState.textColors = currentState.colorSegments
 
+loggy.log("Searching for languages", "info", "Language")
+const languagesRaw = fs.readdirSync("./lang");
+const languages = [];
+for (let i = 0; i < languagesRaw.length; i++) {
+  if (languagesRaw[i].endsWith(".json")) {
+    languages.push(languagesRaw[i].replace(".json", ""));
+  }
+}
+loggy.log("Found " + languages.length + " languages", "info", "Language")
+
+
+
 loggy.log("Reading language file", "info", "Language")
-const languageProfile = JSON.parse(fs.readFileSync("lang/en_uk.json", "utf8"));
+let languageProfile = JSON.parse(fs.readFileSync("lang/" + configObject.language + ".json", "utf8"));
 
 loggy.log("Preparing websocket", "info", "Websocket");
 const wsServer = new ws.Server({ noServer: true });
@@ -95,11 +114,20 @@ app.get("/", function (req, res) {
   try {
     res.send(
       Eta.render(data, {
-        lang: languageProfile
+        lang: languageProfile,
+        additional: {
+          languages: languages
+        }
       }));
   } catch (e) {
-    const data = fs.readFileSync("templates/brokenTranslation.html", "utf8");
-    res.send(data);
+    loggy.log("Error rendering template", "error", "Server");
+    const dataN = fs.readFileSync("templates/brokenTranslation.html", "utf8");
+    res.send(
+      Eta.render(dataN, {
+        additional: {
+          languages: languages
+        }
+      }));
   }
 });
 
@@ -310,6 +338,48 @@ app.get("/api/v1/storage/delete", function (req, res) {
   } res.json({ status: "error", reason: "Missing delete argument" });
   updatedData()
 });
+
+// UI Routes
+// Returns an object containg all available languages
+app.get("/api/ui/v1/lang/list", function handleLangList(req, res){
+  const tempRespObject = {
+    status: "ok",
+    languages: languages
+  }
+  res.json(tempRespObject);
+})
+
+app.get("/api/ui/v1/lang/set", function (req, res) {
+  if(req.query.lang == undefined || req.query.lang == ""){
+    res.json({ status: "error", reason: "Missing language" });
+    return;
+  }
+  const testLang = req.query.lang;
+  loggy.log("Reloading language file", "info", "Language")
+  if(!fs.existsSync("lang/" + testLang + ".json")){
+    loggy.log("Language reload failed, file does not exist", "error", "Language")
+    res.status(500).json({ status: "error", reason: "Language file not found" });
+    return
+  }
+  const tempLang = fs.readFileSync("lang/" + testLang + ".json", "utf8");
+  const tempLangObj = helper.tryToParseJson(tempLang);
+  if(!tempLangObj){
+    loggy.log("Language reload failed, file is not valid", "error", "Language")
+    res.status(500).json({ status: "error", reason: "Language file is not valid" });
+    return
+  }
+  if(tempLangObj._metadata == undefined){
+    loggy.log("Language reload failed, file is not valid, metadata missing", "error", "Language")
+    res.status(500).json({ status: "error", reason: "Language file is not valid" });
+    return
+  }
+  loggy.log("Language reloaded, loaded " + tempLangObj._metadata.lang + "@" + tempLangObj._metadata.version, "info", "Language")
+  configObject.language = req.query.lang;
+  languageProfile = tempLangObj;
+  res.status(200).json({ status: "ok" });
+  fs.writeFileSync("config.json", JSON.stringify(configObject));
+});
+
 
 app.use(function (req, res, next) {
   res.status(404);

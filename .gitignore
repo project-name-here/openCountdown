@@ -2,3 +2,5 @@ node_modules
 rename.sh
 data-persistence.json
 log-journal.json
+config.json
+log-journal.json

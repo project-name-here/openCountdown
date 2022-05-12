@@ -21,7 +21,7 @@
         "messagingHint": "Zeigt eine Nachricht auf der Timeransicht an.",
         "copyHint": "Kopiert den Link zu der Countdown-Seite.",
         "openInNewTab": "Öffnet den Link in einem neuen Tab.",
-        "selectMode": "Wählt einen Modus für die Timeransicht.",
+        "selectMode": "Wählt einen Modus für die Timeransicht."
     },
     "placeholders": {
         "msgHere": "Message here"

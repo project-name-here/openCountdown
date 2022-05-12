@@ -22,6 +22,7 @@
     "js-cookie": "^3.0.1",
     "less": "^3.13",
     "mdbootstrap": "^4.20.0",
+    "underscore": "^1.13.3",
     "ws": "^8.5.0"
   }
 }

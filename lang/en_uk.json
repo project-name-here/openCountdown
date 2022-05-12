@@ -6,7 +6,8 @@
         "messaging": "Messaging",
         "countdownToTime": "Countdown to time",
         "attention": "Attention",
-        "hostinfo": "Host information"
+        "hostinfo": "Host information",
+        "uiSettings": "UI settings"
     },
     "sidebar": {
         "home": "Home",
@@ -45,7 +46,9 @@
         "enableTextClrs": "Enable Text Colours:",
         "textClrs": "Text Colours",
         "addRow": "Add Row",
-        "timeVar": "Enable time variance display:"
+        "timeVar": "Enable time variance display:",
+        "language": "Select a language",
+        "apply": "Apply"
     },
     "untis": 
     {

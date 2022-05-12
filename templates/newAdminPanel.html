@@ -137,7 +137,7 @@
                         </div>
                         <div class="col">
                             <h3><%= it.lang.titles.mode %> <span class="helperTip" data-placement="right"
-                                    title=<%= it.lang.hints.selectMode %> data-toggle="tooltip">
+                                    title="<%= it.lang.hints.selectMode %>" data-toggle="tooltip">
                                     <i class="bi bi-question-circle-fill"></i>
                                 </span></h3>
                             <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
@@ -311,7 +311,20 @@
                 <button type="button" class="btn btn-outline-success" id="saveLayout"><i class="bi bi-save"></i> Save as
                     startup settings (Layout
                     only)</button>
+
+                <hr>
+                <h2><%= it.lang.titles.uiSettings %></h2>
+                <label for="lang"><%= it.lang.labels.language %>:</label>
+                <select name="lang" id="lang">-
+                  <% it.additional.languages.forEach(function(lang){ %>
+                    <option value="<%= lang %>"><%= lang %></option>
+                  <% }) %>
+                </select>
+                <button id="applyLang" class="btn btn-outline-success">
+                    <%= it.lang.labels.apply %>
+                </button>
             </page>
+
 
             <page id="debug" class="pageC hidden flex-fill overflow-auto">
                 <h1>Debug page</h1>
@@ -343,7 +356,7 @@
                 <templateObj>
                     <table class="table table-bordered table-responsive-md table-striped text-center" id="colors1">
                         <thead>
-                            <tr>
+                            <tr><%= it.lang.labels.time %>
                                 <th class="text-center"><%= it.lang.labels.time %></th>
                                 <th class="text-center"><%= it.lang.labels.color %></th>
                                 <th class="text-center"><%= it.lang.labels.remove %></th>
@@ -370,9 +383,6 @@
                         </tr>
                         </tbody>
                     </table>
-
-
-
                     <tr>
                         <td class="pt-3-half numVal" contenteditable="true">#VALUE#</td>
                         <td class="pt-3-half full" contenteditable="false">

@@ -29,4 +29,27 @@ function wrapBooleanConverter(stringBoolean, res) {
   }
 }
 
-module.exports = { convertStringBooleanToBoolean, wrapBooleanConverter };
+/**
+ * Tries to parse a string to a JSON object. Returns false if invalid. Taken from https://stackoverflow.com/a/20392392/11317151
+ * @param {String} jsonString A JSON String to parse
+ * @returns {Object/Boolean} JSON Object if valid or false otherwise
+ */
+function tryToParseJson(jsonString) {
+    try {
+        var o = JSON.parse(jsonString);
+
+        // Handle non-exception-throwing cases:
+        // Neither JSON.parse(false) or JSON.parse(1234) throw errors, hence the type-checking,
+        // but... JSON.parse(null) returns null, and typeof null === "object", 
+        // so we must check for that, too. Thankfully, null is falsey, so this suffices:
+        if (o && typeof o === "object") {
+            return o;
+        }
+    }
+    catch (e) { }
+
+    return false;
+}
+
+
+module.exports = { convertStringBooleanToBoolean, wrapBooleanConverter, tryToParseJson };

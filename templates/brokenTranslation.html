@@ -81,24 +81,37 @@
             </div>
         </div>
         <pages class="d-flex flex-fill" id="pageCont" class="z-index: 50;">
-        
+
 
             <page id="homeP" class="pageC flex-fill overflow-auto">
-                
-                <div class="container" >
-                    <div class="" style=" display: flex;align-items: center;justify-content: center; flex-wrap: wrap; flex-direction: column;">
-                        
-                            <h1>Oh no!</h1>
-                            <h1>
-                                <i class="bi bi-translate"></i>
-                            </h1>
-                            <h5>
-                                There is a critical error with the current language template. Please select a diffrent language.
-                            </h5>
-                        
+
+                <div class="container">
+                    <div class=""
+                        style=" display: flex;align-items: center;justify-content: center; flex-wrap: wrap; flex-direction: column;">
+
+                        <h1>Oh no!</h1>
+                        <h1>
+                            <i class="bi bi-translate"></i>
+                        </h1>
+                        <h5>
+                            There is a critical error with the current language template. Please select a diffrent
+                            language.
+                        </h5>
+                        <label for="lang">Please choose a language: </label>
+                        <select name="lang" id="lang">
+                            <% it.additional.languages.forEach(function(lang){ %>
+                                <option value="<%= lang %>">
+                                    <%= lang %>
+                                </option>
+                                <% }) %>
+                        </select>
+                        <button id="applyLang" class="btn btn-outline-success">
+                            Apply & Reload
+                        </button>
+
                     </div>
                 </div>
-                
+
             </page>
         </pages>
     </main>
@@ -112,7 +125,20 @@
         });
         $(function () {
             $('[data-toggle="tooltip"]').tooltip({ container: "body" })
-        })                        
+        })
+        $("#applyLang").on("click", function (event) {
+            const lang = $("#lang").val()
+            saveOption("/api/ui/v1/lang/set?lang=" + lang, function handleLangSelect(event, xmlHttp) {
+                const temp = JSON.parse(xmlHttp.responseText)
+                if (temp.status == "error") {
+                    alert("Request failed reason: " + temp.reason)
+                } else {
+                    location.reload()
+                }
+                console.log(JSON.parse(xmlHttp.responseText))
+            })
+        })
+
     </script>
 
 </body>
