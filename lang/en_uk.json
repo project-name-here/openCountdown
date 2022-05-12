@@ -1,0 +1,72 @@
+{
+    "titles": {
+        "home": "Homepage",
+        "preview": "Preview",
+        "mode": "Mode",
+        "messaging": "Messaging",
+        "countdownToTime": "Countdown to time",
+        "attention": "Attention",
+        "hostinfo": "Host information",
+        "uiSettings": "UI settings"
+    },
+    "sidebar": {
+        "home": "Home",
+        "settings": "Settings",
+        "debug": "Debug",
+        "about": "About"
+    },
+    "hints": 
+    {
+        "previewHint": "A preview of what is currently visible on the countdown view",
+        "modeHint": "",
+        "messagingHint": "Shows a given message on the timer view",
+        "copyHint": "Copies the link to the timer view",
+        "openInNewTab": "Open the countdown view in a new tab",
+        "selectMode": "Select what to show on the countdown view"
+    },
+    "placeholders": {
+        "msgHere": "Message here"
+    },
+    "others":
+    {
+        "timer": "Timer",
+        "clock": "Clock",
+        "black": "Black",
+        "test": "Testimage"
+    },
+    "labels":
+    {
+        "clockOnTimer": "Show clock on Timer:",
+        "showMillis": "Show Milliseconds on Timer:",
+        "showProgress": "Show progressbar:",
+        "progbarColors": "Progressbar Colors",
+        "time": "Time",
+        "color": "Color",
+        "remove": "Remove",
+        "enableTextClrs": "Enable Text Colours:",
+        "textClrs": "Text Colours",
+        "addRow": "Add Row",
+        "timeVar": "Enable time variance display:",
+        "language": "Select a language",
+        "apply": "Apply"
+    },
+    "untis": 
+    {
+        "seconds": "Seconds",
+        "minutes": "Minutes",
+        "hours": "Hours",
+        "days": "Days",
+        "weeks": "Weeks",
+        "months": "Months",
+        "years": "Years"
+    },
+    "informationTexts": {
+        "debugInfo": "This is a debug page which should only be used by professionals. Changing any options below might impact operation.",
+        "proceedCaution": "Proceed with caution."
+    },
+    "_metadata": {
+        "lang": "en",
+        "version": "1.0.0",
+        "authors": ["TheGreydiamond"]
+    }
+}

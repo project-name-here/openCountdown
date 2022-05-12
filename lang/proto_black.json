@@ -1,0 +1,70 @@
+{
+    "titles": {
+        "home": "████████",
+        "preview": "██████",
+        "mode": "████",
+        "messaging": "█████████",
+        "countdownToTime": "█████████ ██ ████",
+        "attention": "███████████",
+        "hostinfo": "████ █████████"
+    },
+    "sidebar": {
+        "home": "████",
+        "settings": "████████",
+        "debug": "█████",
+        "about": "█████"
+    },
+    "hints": 
+    {
+        "previewHint": "█ ████ ███████ ████",
+        "modeHint": "",
+        "messagingHint": "████ █ ██████ ██ █████",
+        "copyHint": "██████ ███ ████ ██ ███ █████ ████",
+        "openInNewTab": "████ ███ ████████ ████ █ █ ███ ███",
+        "selectMode": "█████ ████ ██ ████ ██ ███ ████████ ████"
+    },
+    "placeholders": {
+        "msgHere": "██████ ████"
+    },
+    "others":
+    {
+        "timer": "████",
+        "clock": "█████",
+        "black": "████",
+        "test": "███████"
+    },
+    "labels":
+    {
+        "clockOnTimer": "████ █████ ██ █████:",
+        "showMillis": "████ ███████████ ██ █████:",
+        "showProgress": "████ █████████:",
+        "progbarColors": "████████ ████",
+        "time": "████",
+        "color": "█████",
+        "remove": "██████",
+        "enableTextClrs": "██████ ████ ███████:",
+        "textClrs": "████ ██████",
+        "addRow": "███ ███",
+        "timeVar": "██████ ████ ███████ ███████:"
+    },
+    "untis": 
+    {
+        "seconds": "Seconds",
+        "minutes": "Minutes",
+        "hours": "Hours",
+        "days": "Days",
+        "weeks": "Weeks",
+        "months": "Months",
+        "years": "Years"
+    },
+    "informationTexts": {
+        "debugInfo": "████ ██ █ █████ ████ █████ █████ ████ ██ ████ ██ ██████████. ████████ ███ ██████ █████ █████ █████ ██████.",
+        "proceedCaution": "█████ ████ ███████."
+    },
+    "_metadata": {
+        "lang": "none",
+        "version": "1.0.0",
+        "authors": ["TheGreydiamond"],
+        "comment": "A test language without proper text and only black blocks. █"
+    }
+}

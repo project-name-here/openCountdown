@@ -4,6 +4,9 @@ const bodyParser = require("body-parser");
 const ws = require('ws');
 const helper = require("./helpers.js");
 const loggy = require("./logging")
+const Eta = require("eta");
+const _ = require("underscore")
+
 loggy.init(true)
 
 loggy.log("Preparing server", "info", "Server");
@@ -49,14 +52,34 @@ currentState = {
   srvTime: 0,
   enableColoredText: true,
   debug: false,
-  sessionToken: Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15),
+  sessionToken: Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15)
 };
 
-const dataToBeWritten = {};
+let configObject = {
+  language: "en_uk"
+}
+
+const tempJsonText = JSON.parse(fs.readFileSync("config.json", "utf8"));
+configObject = _.extend(configObject, tempJsonText);
+fs.writeFileSync("config.json", JSON.stringify(configObject));
 
 currentState = Object.assign({}, currentState, loadedData);
 currentState.textColors = currentState.colorSegments
 
+loggy.log("Searching for languages", "info", "Language")
+const languagesRaw = fs.readdirSync("./lang");
+const languages = [];
+for (let i = 0; i < languagesRaw.length; i++) {
+  if (languagesRaw[i].endsWith(".json")) {
+    languages.push(languagesRaw[i].replace(".json", ""));
+  }
+}
+loggy.log("Found " + languages.length + " languages", "info", "Language")
+
+
+
+loggy.log("Reading language file", "info", "Language")
+let languageProfile = JSON.parse(fs.readFileSync("lang/" + configObject.language + ".json", "utf8"));
 
 loggy.log("Preparing websocket", "info", "Websocket");
 const wsServer = new ws.Server({ noServer: true });
@@ -88,7 +111,24 @@ function updatedData() {
 loggy.log("Preparing routes", "info", "Server");
 app.get("/", function (req, res) {
   const data = fs.readFileSync("templates/newAdminPanel.html", "utf8");
-  res.send(data);
+  try {
+    res.send(
+      Eta.render(data, {
+        lang: languageProfile,
+        additional: {
+          languages: languages
+        }
+      }));
+  } catch (e) {
+    loggy.log("Error rendering template", "error", "Server");
+    const dataN = fs.readFileSync("templates/brokenTranslation.html", "utf8");
+    res.send(
+      Eta.render(dataN, {
+        additional: {
+          languages: languages
+        }
+      }));
+  }
 });
 
 app.get("/timer", function (req, res) {
@@ -299,7 +339,49 @@ app.get("/api/v1/storage/delete", function (req, res) {
   updatedData()
 });
 
-app.use(function(req, res, next) {
+// UI Routes
+// Returns an object containg all available languages
+app.get("/api/ui/v1/lang/list", function handleLangList(req, res){
+  const tempRespObject = {
+    status: "ok",
+    languages: languages
+  }
+  res.json(tempRespObject);
+})
+
+app.get("/api/ui/v1/lang/set", function (req, res) {
+  if(req.query.lang == undefined || req.query.lang == ""){
+    res.json({ status: "error", reason: "Missing language" });
+    return;
+  }
+  const testLang = req.query.lang;
+  loggy.log("Reloading language file", "info", "Language")
+  if(!fs.existsSync("lang/" + testLang + ".json")){
+    loggy.log("Language reload failed, file does not exist", "error", "Language")
+    res.status(500).json({ status: "error", reason: "Language file not found" });
+    return
+  }
+  const tempLang = fs.readFileSync("lang/" + testLang + ".json", "utf8");
+  const tempLangObj = helper.tryToParseJson(tempLang);
+  if(!tempLangObj){
+    loggy.log("Language reload failed, file is not valid", "error", "Language")
+    res.status(500).json({ status: "error", reason: "Language file is not valid" });
+    return
+  }
+  if(tempLangObj._metadata == undefined){
+    loggy.log("Language reload failed, file is not valid, metadata missing", "error", "Language")
+    res.status(500).json({ status: "error", reason: "Language file is not valid" });
+    return
+  }
+  loggy.log("Language reloaded, loaded " + tempLangObj._metadata.lang + "@" + tempLangObj._metadata.version, "info", "Language")
+  configObject.language = req.query.lang;
+  languageProfile = tempLangObj;
+  res.status(200).json({ status: "ok" });
+  fs.writeFileSync("config.json", JSON.stringify(configObject));
+});
+
+
+app.use(function (req, res, next) {
   res.status(404);
   loggy.log("Server responded with 404 error", "warn", "Server", true);
 
@@ -323,18 +405,29 @@ app.use(function(req, res, next) {
 
 
 
+/*app.use(function(err, req, res, next) {
+  console.error(err.stack);
+  if(String(err.stack).includes("TypeError: Cannot read properties of undefined")) {
+    const data = fs.readFileSync("templates/brokenTranslation.html", "utf8");
+    res.send(data);
+  }else{
+    res.status(500).send('Something broke!');
+  }
+ 
+});*/
+
+
+
 loggy.log("Starting server", "info", "Server");
 
-
-const port = 3005
+const port = 3005;
 
 process.on('SIGINT', function () {
   loggy.log("Caught interrupt signal and shutting down gracefully", "info", "Shutdown");
   server.close(); // Make the express server stop
-    loggy.log("Goodbye! 👋", "magic", "Shutdown", true)
-    loggy.close()
-    process.exit(); // Quit the application
-  
+  loggy.log("Goodbye! 👋", "magic", "Shutdown", true)
+  loggy.close(); // Close and write log
+  process.exit(); // Quit the application
 });
 
 const server = app.listen(port);

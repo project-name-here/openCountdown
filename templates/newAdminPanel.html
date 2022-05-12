@@ -48,25 +48,25 @@
                 <li class="nav-item">
                     <a href="#homeP" class="nav-link active" aria-current="page" id="PageIndex">
                         <i class="bi bi-house-door"></i>
-                        Home
+                        <%= it.lang.sidebar.home %>
                     </a>
                 </li>
                 <li>
                     <a href="#settings" class="nav-link text-white" id="PageSettings">
                         <i class="bi bi-gear"></i>
-                        Settings
+                        <%= it.lang.sidebar.settings %>
                     </a>
                 </li>
                 <li>
                     <a href="#debug" class="nav-link text-white" id="PageDebug">
                         <i class="bi bi-bug"></i>
-                        Debug
+                        <%= it.lang.sidebar.debug %>
                     </a>
                 </li>
                 <li>
                     <a href="#about" class="nav-link text-white" id="PageAbout">
                         <i class="bi bi-info-circle"></i>
-                        About
+                        <%= it.lang.sidebar.about %>
                     </a>
                 </li>
             </ul>
@@ -109,24 +109,24 @@
 
 
             <page id="homeP" class="pageC flex-fill overflow-auto">
-                <h1>Home page</h1>
+                <h1><%= it.lang.titles.home %></h1>
 
                 <div class="container">
                     <div class="row">
                         <div class="col">
-                            <h3 class="d-flex">Preview <span class="helperTip" data-placement="right" title="A preview of what is currently visible on the countdown view" data-toggle="tooltip">
+                            <h3 class="d-flex"><%= it.lang.titles.preview %> <span class="helperTip" data-placement="right" title="<%= it.lang.hints.previewHint %>" data-toggle="tooltip">
                                     <i class="bi bi-question-circle-fill"></i>
                                 </span>
                                  <div class="ms-auto">
                                     <span class="helperTip" data-placement="right"
-                                        title="Copies the link to the timer view" data-toggle="tooltip">
+                                        title="<%= it.lang.hints.copyHint %>" data-toggle="tooltip">
                                         <button class="btn" onclick="navigator.clipboard.writeText(window.location.toString() + 'timer')">
                                             <i class="bi bi-clipboard"></i>
                                         </button>
                                     </span>
 
                                     <span class="helperTip" data-placement="right"
-                                        title="Open the countdown view in a new tab" data-toggle="tooltip">
+                                        title="<%= it.lang.hints.openInNewTab %>" data-toggle="tooltip">
                                         <a href="/timer" class="btn " target="_blank"><i
                                                 class="bi bi-box-arrow-up-right"></i></a>
                                     </span>
@@ -136,23 +136,23 @@
                             </iframe>
                         </div>
                         <div class="col">
-                            <h3>Mode <span class="helperTip" data-placement="right"
-                                    title="Select what to show on the countdown view" data-toggle="tooltip">
+                            <h3><%= it.lang.titles.mode %> <span class="helperTip" data-placement="right"
+                                    title="<%= it.lang.hints.selectMode %>" data-toggle="tooltip">
                                     <i class="bi bi-question-circle-fill"></i>
                                 </span></h3>
                             <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
                                 <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off"
                                     checked>
-                                <label class="btn btn-outline-primary" for="btnradio1">Timer</label>
+                                <label class="btn btn-outline-primary" for="btnradio1"><%= it.lang.others.timer %></label>
 
                                 <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
-                                <label class="btn btn-outline-primary" for="btnradio2">Clock</label>
+                                <label class="btn btn-outline-primary" for="btnradio2"><%= it.lang.others.clock %></label>
 
                                 <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
-                                <label class="btn btn-outline-primary" for="btnradio3">Black</label>
+                                <label class="btn btn-outline-primary" for="btnradio3"><%= it.lang.others.black %></label>
 
                                 <input type="radio" class="btn-check" name="btnradio" id="btnradio4" autocomplete="off">
-                                <label class="btn btn-outline-primary" for="btnradio4">Testimage</label>
+                                <label class="btn btn-outline-primary" for="btnradio4"><%= it.lang.others.test %></label>
                             </div>
                             <br>
                             <br>
@@ -183,12 +183,12 @@
                             <br>
                             <br>
                             <br>
-                            <h3>Messaging <span class="helperTip" data-placement="right"
-                                    title="Shows a given message on the timer view" data-toggle="tooltip">
+                            <h3><%= it.lang.titles.messaging %> <span class="helperTip" data-placement="right"
+                                    title="<%= it.lang.hints.messagingHint %>" data-toggle="tooltip">
                                     <i class="bi bi-question-circle-fill"></i>
                                 </span></h3>
 
-                            <input type="text" id="messageContent" class="form-control" placeholder="Message here"
+                            <input type="text" id="messageContent" class="form-control" placeholder="<%= it.lang.placeholders.msgHere %>"
                                 style="width: 50%;">
 
                             <br>
@@ -201,7 +201,7 @@
                     </div>
                 </div>
                 <br><br><br>
-                <h3>Timer</h3>
+                <h3><%= it.lang.others.timer %></h3>
                 <div class="container">
 
 
@@ -229,15 +229,12 @@
                             </div>
                         </div>
                         <h5>
-                            Countdown to time
+                            <%= it.lang.titles.countdownToTime %>
                         </h5>
                         <div class="row justify-content-center flex-nowrap d-flex" >
                             <input id="datetimetester" class="form-control input-sm" style="width: 20%;">
                             <button class="btn btn-outline-primary goTimeGoalCountdown ms-2" style="width: 5%;"><i
                                 class="bi bi-check2-circle"></i></button>
-
-                            
-
                         </input>
                         </div>
                         
@@ -250,17 +247,17 @@
 
 
             <page id="settings" class="pageC hidden flex-fill overflow-auto">
-                <h1>Settings</h1>
-                <label for="showTime">Show clock on Timer:</label>
+                <h1><%= it.lang.sidebar.settings %></h1>
+                <label for="showTime"><%= it.lang.labels.clockOnTimer %></label>
                 <input type="checkbox" name="showTime" id="showTime"><br>
 
-                <label for="showMillis">Show Milliseconds on Timer:</label>
+                <label for="showMillis"><%= it.lang.labels.showMillis %></label>
                 <input type="checkbox" name="showMillis" id="showMillis"><br>
 
-                <label for="progBarShow">Show progressbar:</label>
+                <label for="progBarShow"><%= it.lang.labels.showProgress %></label>
                 <input type="checkbox" name="progBarShow" id="progBarShow"><br>
                 <details>
-                    <summary>Progressbar Colors</summary>
+                    <summary><%= it.lang.labels.progbarColors %></summary>
                     <p>
                     <div id="table" class="table-editable">
                         <span class="table-add float-right mb-3 mr-2"><a href="#!" class="text-success"><i
@@ -268,9 +265,9 @@
                         <table class="table table-bordered table-responsive-md table-striped text-center" id="colors1">
                             <thead>
                                 <tr>
-                                    <th class="text-center">Time</th>
-                                    <th class="text-center">Color</th>
-                                    <th class="text-center">Remove</th>
+                                    <th class="text-center"><%= it.lang.labels.time %></th>
+                                    <th class="text-center"><%= it.lang.labels.color %></th>
+                                    <th class="text-center"><%= it.lang.labels.remove %></th>
                                 </tr>
                             </thead>
                             </tbody>
@@ -281,19 +278,19 @@
                     </p>
                 </details>
                 <hr>
-                <label for="textColors">Enable Text Colors:</label>
+                <label for="textColors"><%= it.lang.labels.enableTextClrs %></label>
                 <input type="checkbox" name="textColors" id="textColors"><br>
                 <details>
-                    <summary>Text Colors</summary>
+                    <summary><%= it.lang.labels.textClrs %></summary>
                     <p>
 
                     <div id="table2" class="table-editable">
                         <table class="table table-bordered table-responsive-md table-striped text-center" id="colors2">
                             <thead>
                                 <tr>
-                                    <th class="text-center">Time</th>
-                                    <th class="text-center">Color</th>
-                                    <th class="text-center">Remove</th>
+                                    <th class="text-center"><%= it.lang.labels.time %></th>
+                                    <th class="text-center"><%= it.lang.labels.color %></th>
+                                    <th class="text-center"><%= it.lang.labels.remove %></th>
                                 </tr>
                             </thead>
                             </tbody>
@@ -302,7 +299,7 @@
                     <button type="button" class="btn btn-outline-success" id="copyColors">Copy from progressbar
                         colors</button>
 
-                    <button type="button" class="btn btn-outline-success" id="addRow2">Add row</button>
+                    <button type="button" class="btn btn-outline-success" id="addRow2"><%= it.lang.labels.row %></button>
                     </p>
                 </details>
                 <br>
@@ -314,18 +311,30 @@
                 <button type="button" class="btn btn-outline-success" id="saveLayout"><i class="bi bi-save"></i> Save as
                     startup settings (Layout
                     only)</button>
+
+                <hr>
+                <h2><%= it.lang.titles.uiSettings %></h2>
+                <label for="lang"><%= it.lang.labels.language %>:</label>
+                <select name="lang" id="lang">-
+                  <% it.additional.languages.forEach(function(lang){ %>
+                    <option value="<%= lang %>"><%= lang %></option>
+                  <% }) %>
+                </select>
+                <button id="applyLang" class="btn btn-outline-success">
+                    <%= it.lang.labels.apply %>
+                </button>
             </page>
+
 
             <page id="debug" class="pageC hidden flex-fill overflow-auto">
                 <h1>Debug page</h1>
                 <div class="alert alert-danger" role="alert">
-                    <h4 class="alert-heading">Attention</h4>
-                    <p>This is a debug page which should only be used by professionals. Changing any options below might
-                        impact operation.</p>
+                    <h4 class="alert-heading"><%= it.lang.titles.attention %></h4>
+                    <p><%= it.lang.informationTexts.debugInfo %></p>
                     <hr>
-                    <p class="mb-0"><b>Proceed with caution.</b></p>
+                    <p class="mb-0"><b><%= it.lang.informationTexts.proceedCaution %></b></p>
                 </div>
-                <label for="debugMode">Enable time variance display:</label>
+                <label for="debugMode"><%= it.lang.labels.timeVar %></label>
                 <input type="checkbox" name="debugMode" id="debugModeEnable" value="true"><br><br>
 
                 <button type="button" class="btn btn-outline-success" id="applyDebug">Apply settings</button>
@@ -333,7 +342,7 @@
                 <hr>
                 <br>
 
-                <h3>Host information</h3>
+                <h3><%= it.lang.titles.hostinfo %></h3>
                 <code id="systemInfo" class="overflow-auto">
 
                 </code>
@@ -347,10 +356,10 @@
                 <templateObj>
                     <table class="table table-bordered table-responsive-md table-striped text-center" id="colors1">
                         <thead>
-                            <tr>
-                                <th class="text-center">Time</th>
-                                <th class="text-center">Color</th>
-                                <th class="text-center">Remove</th>
+                            <tr><%= it.lang.labels.time %>
+                                <th class="text-center"><%= it.lang.labels.time %></th>
+                                <th class="text-center"><%= it.lang.labels.color %></th>
+                                <th class="text-center"><%= it.lang.labels.remove %></th>
                             </tr>
                         </thead>
                         <tr id="tableCopySource">
@@ -374,9 +383,6 @@
                         </tr>
                         </tbody>
                     </table>
-
-
-
                     <tr>
                         <td class="pt-3-half numVal" contenteditable="true">#VALUE#</td>
                         <td class="pt-3-half full" contenteditable="false">
@@ -412,7 +418,10 @@
                 <h1>About</h1>
                 Version: <b id="nodeSwVers"></b><br>
                 NodeJS Version: <b id="nodejsVers"></b><br>
-
+                <h2>About the translation</h2>
+                Author: <%= it.lang._metadata.authors %><br>
+                Language: <%= it.lang._metadata.lang %><br>
+                Version: <%= it.lang._metadata.version %><br>
             </page>
         </pages>
     </main>

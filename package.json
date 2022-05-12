@@ -15,12 +15,14 @@
     "bootstrap-icons": "^1.8.1",
     "colors": "^1.4.0",
     "darkreader": "^4.9.44",
+    "eta": "^1.12.3",
     "express": "^4.17.3",
     "flatpickr": "^4.6.11",
     "jquery": "^3.6.0",
     "js-cookie": "^3.0.1",
     "less": "^3.13",
     "mdbootstrap": "^4.20.0",
+    "underscore": "^1.13.3",
     "ws": "^8.5.0"
   }
 }

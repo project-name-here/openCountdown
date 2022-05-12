@@ -50,6 +50,19 @@ $(function () {
         jsonview.expand(tree2);
     })
 
+    $("#applyLang").on("click", function (event) {
+        const lang = $("#lang").val()
+        saveOption("/api/ui/v1/lang/set?lang=" + lang, function handleLangSelect(event, xmlHttp) {
+            const temp = JSON.parse(xmlHttp.responseText)
+            if(temp.status == "error") {
+                alert("Request failed reason: " + temp.reason)
+            } else {
+                location.reload()
+            }
+            console.log(JSON.parse(xmlHttp.responseText))
+        })
+    })
+
     $("#addRow").on("click", function (event) {
         const tableEntryDom = document.getElementById("tableCopySource").cloneNode(true)
         let temp = tableEntryDom.innerHTML
