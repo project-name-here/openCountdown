@@ -58,7 +58,9 @@ currentState = {
 let configObject = {
   language: "en_uk"
 }
-
+if(!fs.existsSync("config.json")) {
+  fs.writeFileSync("config.json", "{}");
+}
 const tempJsonText = JSON.parse(fs.readFileSync("config.json", "utf8"));
 configObject = _.extend(configObject, tempJsonText);
 fs.writeFileSync("config.json", JSON.stringify(configObject));
