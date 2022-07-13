@@ -195,7 +195,12 @@ function handleUpdate() {
     timerCountdownFirst = true;
 
   } else if (data.mode == "timer") {
-    document.getElementById("wholeProgBar").style.display = "block";
+    if(data.showProgressbar) {
+      document.getElementById("wholeProgBar").style.display = "block";
+    } else {
+      document.getElementById("wholeProgBar").style.display = "none";
+    }
+    
     const now = new Date()
 
     if(timerCountdownFirst){
