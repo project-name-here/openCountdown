@@ -170,7 +170,7 @@ paths:
       operationId: "textEnableColoring"
       parameters:
         - in: path
-          name: "show"
+          name: "enable"
           required: true
           type: boolean
           description: "If true the timer will change color by value, else the timer stays white."
