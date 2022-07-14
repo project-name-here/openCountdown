@@ -199,6 +199,14 @@ app.get("/api/v1/set/addMillisToTimer", function (req, res) {
   updatedData()
 });
 
+app.get("/api/v1/set/relativAddMillisToTimer", function (req, res) {
+  currentState.timeAmountInital = req.query.time;
+  currentState.countdownGoal = currentState.countdownGoal + parseInt(req.query.time)
+  currentState.pauseMoment = new Date().getTime();
+  res.json({ status: "ok" });
+  updatedData()
+});
+
 app.get("/api/v1/ctrl/timer/pause", function (req, res) {
   currentState.timerRunState = false;
   currentState.pauseMoment = new Date().getTime();
