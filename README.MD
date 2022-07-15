@@ -9,6 +9,13 @@ You can download complete binaries from the release tab.
 2. `npm install` to install dependecies
 3. `node index.js` to launch
 
+## Packaging
+This is more a comment for the future version of me. There is one command for packaging using nexe.
+```bash
+npx nexe index.js --build --python python3 --resource "./{lang,templates,static}/**/*" --ouput "openCountdown.exe”
+```
+Where `--python` is only needed in some envoirments for some reason. Also  adjust `--output` for your target OS.
+
 *Small disclaimer: Please do not use openCountdown for military or life-depending applications. Please also refrain from using openCountdown for launching rockets.*
 
 
