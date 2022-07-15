@@ -8,5 +8,5 @@ Support for companion is currently being worked on [here](https://github.com/bit
 
 # ToDo
 Endpoint documentation is currently pretty thin. This will be changed in the future.
-- [P] Endpoint docs
+- [ ] Endpoint docs (in Progress)
 - [ ] Better WS frames
