@@ -1,4 +1,5 @@
-<img alt="openCountdown Logo" src="https://git.project-name-here.de/Project-Name-Here/openCountdown/raw/branch/master/static/logo/logoProposal.svg">
+<img alt="openCountdown Logo" height="45px" src="https://git.project-name-here.de/Project-Name-Here/openCountdown/raw/branch/master/static/logo/logoProposal.svg">
+
 # openCountdown
 openCountdown is a professional software for event countdowns. It can be used in a live settings such as a music event. 
 Support for companion is currently being worked on [here](https://github.com/bitfocus/companion-module-pnh-opencountdown).
@@ -15,7 +16,7 @@ You can download complete binaries from the release tab.
 ## Packaging
 This is more a comment for the future version of me. There is one command for packaging using nexe.
 ```bash
-npx nexe index.js --build --python python3 --resource "./{lang,templates,static}/**/*" --ouput "openCountdown.exe‚Äù
+npx nexe index.js --build --python python3 --resource "./{lang,templates,static}/**/*" --ouput "openCountdown.exeî
 ```
 Where `--python` is only needed in some envoirments for some reason. Also  adjust `--output` for your target OS.
 
