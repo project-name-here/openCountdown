@@ -430,7 +430,7 @@ app.use(function (req, res, next) {
 
 loggy.log("Starting server", "info", "Server");
 
-const port = 3005;
+const port = 3006;
 
 process.on('SIGINT', function () {
   loggy.log("Caught interrupt signal and shutting down gracefully", "info", "Shutdown");

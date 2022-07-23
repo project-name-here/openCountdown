@@ -1,0 +1,4631 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   sodipodi:docname="logoProposal.svg"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   id="svg5"
+   version="1.1"
+   viewBox="0 0 210 97"
+   height="97mm"
+   width="210mm"
+   inkscape:export-filename="E:\dev\gitgarden\openCountdown\logo\logoProposal.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="2.096401"
+     inkscape:cx="235.40344"
+     inkscape:cy="185.79461"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer2"
+     height="296mm"
+     showguides="true"
+     inkscape:lockguides="false" />
+  <defs
+     id="defs2">
+    <mask
+       id="mask11775">
+      <path
+         d="m 3323.821,1612.5292 v 58.8251 h 39.2167 39.2168 v 158.0204 158.0204 h 59.9785 59.9785 v -216.8455 -216.8455 h -99.1952 -99.1953 z m 158.0204,158.0204 v 176.4753 h -19.6084 -19.6084 l -0.6919,-157.559 -0.4614,-157.3283 h -39.2168 -39.2168 v -19.6084 -19.6083 l 59.5172,0.4614 59.2865,0.692 z"
+         id="path11777"
+         style="fill:#ffffff;stroke:none;stroke-width:0.230686" />
+    </mask>
+  </defs>
+  <g
+     inkscape:label="Ebene 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:52.6279px;line-height:1.25;font-family:Rajdhani;-inkscape-font-specification:'Rajdhani, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.309972"
+       x="85.662262"
+       y="54.200745"
+       id="text2952"
+       transform="scale(0.9968255,1.0031846)"><tspan
+         sodipodi:role="line"
+         id="tspan2950"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:52.6279px;font-family:Rajdhani;-inkscape-font-specification:'Rajdhani, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;stroke-width:0.309972"
+         x="85.662262"
+         y="54.200745">pen</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:46.4368px;line-height:1.25;font-family:Rajdhani;-inkscape-font-specification:'Rajdhani, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.420419"
+       x="-2.9272478"
+       y="94.010208"
+       id="text13106"><tspan
+         sodipodi:role="line"
+         id="tspan13104"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:46.4368px;font-family:Rajdhani;-inkscape-font-specification:'Rajdhani, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.420419"
+         x="-2.9272478"
+         y="94.010208">Countdown</tspan></text>
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="Ebene 2">
+    <g
+       id="g22230"
+       transform="matrix(0.04811019,0,0,0.04939245,-116.97676,-53.892055)"
+       mask="url(#mask11775)"
+       style="opacity:1">
+      <path
+         d="m 1900.8,1049.6 -129.7,-94.4 28.1,124.6 z"
+         fill="#fa945f"
+         shape-rendering="crispEdges"
+         id="path19515" />
+      <path
+         d="m 1900.8,1049.6 -20.5,-109.7 -109.2,15.3 z"
+         fill="#f5935e"
+         shape-rendering="crispEdges"
+         id="path19517" />
+      <path
+         d="m 1621.5,1095.1 176.6,105.9 1.1,-121.2 z"
+         fill="#f28a58"
+         shape-rendering="crispEdges"
+         id="path19519" />
+      <path
+         d="m 1799.2,1079.8 92.4,122.5 9.2,-152.7 z"
+         fill="#fb8d5a"
+         shape-rendering="crispEdges"
+         id="path19521" />
+      <path
+         d="m 1798.1,1201 93.5,1.3 -92.4,-122.5 z"
+         fill="#f28453"
+         shape-rendering="crispEdges"
+         id="path19523" />
+      <path
+         d="m 1891.6,1202.3 160.7,-157.5 -151.5,4.8 z"
+         fill="#f68654"
+         shape-rendering="crispEdges"
+         id="path19525" />
+      <path
+         d="m 1900.8,1049.6 151.5,-4.8 -172,-104.9 z"
+         fill="#f98f5b"
+         shape-rendering="crispEdges"
+         id="path19527" />
+      <path
+         d="m 1771.1,955.2 -149.6,139.9 177.7,-15.3 z"
+         fill="#f4915d"
+         shape-rendering="crispEdges"
+         id="path19529" />
+      <path
+         d="M 2098.1,887.8 1882.2,753 l -1.9,186.9 z"
+         fill="#f39662"
+         shape-rendering="crispEdges"
+         id="path19531" />
+      <path
+         d="m 1880.3,939.9 -84.9,-205.5 -24.3,220.8 z"
+         fill="#f89f69"
+         shape-rendering="crispEdges"
+         id="path19533" />
+      <path
+         d="m 1771.1,955.2 -210,-54.2 60.4,194.1 z"
+         fill="#f59b66"
+         shape-rendering="crispEdges"
+         id="path19535" />
+      <path
+         d="m 1882.2,753 -86.8,-18.6 84.9,205.5 z"
+         fill="#fca670"
+         shape-rendering="crispEdges"
+         id="path19537" />
+      <path
+         d="m 2052.3,1044.8 45.8,-157 -217.8,52.1 z"
+         fill="#fc9461"
+         shape-rendering="crispEdges"
+         id="path19539" />
+      <path
+         d="m 1599.1,767.1 -38,133.9 210,54.2 z"
+         fill="#f2a26c"
+         shape-rendering="crispEdges"
+         id="path19541" />
+      <path
+         d="m 1425.3,1206.7 210.2,27.2 -14,-138.8 z"
+         fill="#f79462"
+         shape-rendering="crispEdges"
+         id="path19543" />
+      <path
+         d="m 1621.5,1095.1 14,138.8 162.6,-32.9 z"
+         fill="#f78f5d"
+         shape-rendering="crispEdges"
+         id="path19545" />
+      <path
+         d="m 1900.4,1390.7 153,-141.5 -161.8,-46.9 z"
+         fill="#f37a4f"
+         shape-rendering="crispEdges"
+         id="path19547" />
+      <path
+         d="m 1900.4,1390.7 -8.8,-188.4 -93.5,-1.3 z"
+         fill="#f68154"
+         shape-rendering="crispEdges"
+         id="path19549" />
+      <path
+         d="m 1891.6,1202.3 161.8,46.9 -1.1,-204.4 z"
+         fill="#f78253"
+         shape-rendering="crispEdges"
+         id="path19551" />
+      <path
+         d="m 2052.3,1044.8 154.9,-85.9 -109.1,-71.1 z"
+         fill="#ee8554"
+         shape-rendering="crispEdges"
+         id="path19553" />
+      <path
+         d="m 1795.4,734.4 -196.3,32.7 172,188.1 z"
+         fill="#fbab74"
+         shape-rendering="crispEdges"
+         id="path19555" />
+      <path
+         d="m 2098.1,887.8 14.1,-122.1 -230,-12.7 z"
+         fill="#ef9562"
+         shape-rendering="crispEdges"
+         id="path19557" />
+      <path
+         d="m 1951.9,601.2 -225.2,13.1 68.7,120.1 z"
+         fill="#f5a973"
+         shape-rendering="crispEdges"
+         id="path19559" />
+      <path
+         d="m 2233.4,1068.4 -26.2,-109.5 -154.9,85.9 z"
+         fill="#f28253"
+         shape-rendering="crispEdges"
+         id="path19561" />
+      <path
+         d="m 2098.1,887.8 110.2,-124.3 -96.1,2.2 z"
+         fill="#ee9160"
+         shape-rendering="crispEdges"
+         id="path19563" />
+      <path
+         d="M 1454.9,797.8 1460,947.4 1561.1,901 Z"
+         fill="#fab079"
+         shape-rendering="crispEdges"
+         id="path19565" />
+      <path
+         d="m 1561.1,901 -101.1,46.4 161.5,147.7 z"
+         fill="#f39f69"
+         shape-rendering="crispEdges"
+         id="path19567" />
+      <path
+         d="m 1612,1374.5 108.8,1.6 -85.3,-142.2 z"
+         fill="#f7885c"
+         shape-rendering="crispEdges"
+         id="path19569" />
+      <path
+         d="m 1635.5,1233.9 85.3,142.2 77.3,-175.1 z"
+         fill="#f6875a"
+         shape-rendering="crispEdges"
+         id="path19571" />
+      <path
+         d="m 1720.8,1376.1 179.6,14.6 -102.3,-189.7 z"
+         fill="#ec784d"
+         shape-rendering="crispEdges"
+         id="path19573" />
+      <path
+         d="m 2053.4,1249.2 180,-180.8 -181.1,-23.6 z"
+         fill="#f37d50"
+         shape-rendering="crispEdges"
+         id="path19575" />
+      <path
+         d="m 1951.9,601.2 -156.5,133.2 86.8,18.6 z"
+         fill="#f2a16c"
+         shape-rendering="crispEdges"
+         id="path19577" />
+      <path
+         d="M 1795.4,734.4 1726.7,614.3 1599.1,767.1 Z"
+         fill="#f6ac76"
+         shape-rendering="crispEdges"
+         id="path19579" />
+      <path
+         d="M 2112.2,765.7 1951.9,601.2 1882.2,753 Z"
+         fill="#fba571"
+         shape-rendering="crispEdges"
+         id="path19581" />
+      <path
+         d="m 1472.7,1380.8 139.3,-6.3 23.5,-140.6 z"
+         fill="#f3885c"
+         shape-rendering="crispEdges"
+         id="path19583" />
+      <path
+         d="m 1720.8,1376.1 75.6,163.3 104,-148.7 z"
+         fill="#ec734a"
+         shape-rendering="crispEdges"
+         id="path19585" />
+      <path
+         d="m 1567.9,621.5 -113,176.3 144.2,-30.7 z"
+         fill="#f8b67f"
+         shape-rendering="crispEdges"
+         id="path19587" />
+      <path
+         d="M 1599.1,767.1 1454.9,797.8 1561.1,901 Z"
+         fill="#f3ac76"
+         shape-rendering="crispEdges"
+         id="path19589" />
+      <path
+         d="M 1291.2,1119.9 1408.4,1107 1280.5,887.9 Z"
+         fill="#f1a06a"
+         shape-rendering="crispEdges"
+         id="path19591" />
+      <path
+         d="m 1460,947.4 -51.6,159.6 213.1,-11.9 z"
+         fill="#f9a16b"
+         shape-rendering="crispEdges"
+         id="path19593" />
+      <path
+         d="m 2207.2,958.9 1.1,-195.4 -110.2,124.3 z"
+         fill="#f49060"
+         shape-rendering="crispEdges"
+         id="path19595" />
+      <path
+         d="m 2112.2,765.7 -33.2,-174.5 -127.1,10 z"
+         fill="#f6a16e"
+         shape-rendering="crispEdges"
+         id="path19597" />
+      <path
+         d="m 2386.1,789.2 -177.8,-25.7 -1.1,195.4 z"
+         fill="#ef8c5d"
+         shape-rendering="crispEdges"
+         id="path19599" />
+      <path
+         d="m 1408.4,1107 16.9,99.7 196.2,-111.6 z"
+         fill="#f69965"
+         shape-rendering="crispEdges"
+         id="path19601" />
+      <path
+         d="m 1570.9,443.7 -3,177.8 158.8,-7.2 z"
+         fill="#f7b882"
+         shape-rendering="crispEdges"
+         id="path19603" />
+      <path
+         d="m 1726.7,614.3 -158.8,7.2 31.2,145.6 z"
+         fill="#fcb780"
+         shape-rendering="crispEdges"
+         id="path19605" />
+      <path
+         d="m 2102.5,1397 112.9,-120.1 -162,-27.7 z"
+         fill="#ec6d48"
+         shape-rendering="crispEdges"
+         id="path19607" />
+      <path
+         d="m 2053.4,1249.2 162,27.7 18,-208.5 z"
+         fill="#f0754c"
+         shape-rendering="crispEdges"
+         id="path19609" />
+      <path
+         d="m 1900.4,1390.7 202.1,6.3 -49.1,-147.8 z"
+         fill="#eb6d47"
+         shape-rendering="crispEdges"
+         id="path19611" />
+      <path
+         d="M 2208.3,763.5 2079,591.2 l 33.2,174.5 z"
+         fill="#fba16f"
+         shape-rendering="crispEdges"
+         id="path19613" />
+      <path
+         d="M 1951.9,601.2 1752.6,444.7 1726.7,614.3 Z"
+         fill="#f3ac76"
+         shape-rendering="crispEdges"
+         id="path19615" />
+      <path
+         d="m 1425.3,1206.7 47.4,174.1 162.8,-146.9 z"
+         fill="#ec885a"
+         shape-rendering="crispEdges"
+         id="path19617" />
+      <path
+         d="m 1636.7,1567.5 159.7,-28.1 -75.6,-163.3 z"
+         fill="#e97147"
+         shape-rendering="crispEdges"
+         id="path19619" />
+      <path
+         d="m 1900.4,1390.7 182.8,156.9 19.3,-150.6 z"
+         fill="#e5643f"
+         shape-rendering="crispEdges"
+         id="path19621" />
+      <path
+         d="m 1636.7,1567.5 84.1,-191.4 -108.8,-1.6 z"
+         fill="#e6744a"
+         shape-rendering="crispEdges"
+         id="path19623" />
+      <path
+         d="m 1796.4,1539.4 103.9,3.9 0.1,-152.6 z"
+         fill="#ec6d44"
+         shape-rendering="crispEdges"
+         id="path19625" />
+      <path
+         d="M 1280.5,887.9 1408.4,1107 1460,947.4 Z"
+         fill="#fcad77"
+         shape-rendering="crispEdges"
+         id="path19627" />
+      <path
+         d="m 1408.4,1107 -117.2,12.9 134.1,86.8 z"
+         fill="#f79d69"
+         shape-rendering="crispEdges"
+         id="path19629" />
+      <path
+         d="m 1425.3,1206.7 -144,-2.4 191.4,176.5 z"
+         fill="#f39363"
+         shape-rendering="crispEdges"
+         id="path19631" />
+      <path
+         d="m 1264.6,760.9 15.9,127 174.4,-90.1 z"
+         fill="#fabb84"
+         shape-rendering="crispEdges"
+         id="path19633" />
+      <path
+         d="m 1454.9,797.8 -174.4,90.1 179.5,59.5 z"
+         fill="#f0ab74"
+         shape-rendering="crispEdges"
+         id="path19635" />
+      <path
+         d="m 1944.7,398.7 -192.1,46 199.3,156.5 z"
+         fill="#fcb27f"
+         shape-rendering="crispEdges"
+         id="path19637" />
+      <path
+         d="m 1567.9,621.5 -164.6,9.4 51.6,166.9 z"
+         fill="#fdbf88"
+         shape-rendering="crispEdges"
+         id="path19639" />
+      <path
+         d="m 2378,1236.3 19.5,-157.6 -164.1,-10.3 z"
+         fill="#f1754d"
+         shape-rendering="crispEdges"
+         id="path19641" />
+      <path
+         d="m 2233.4,1068.4 173.3,-119.1 -199.5,9.6 z"
+         fill="#f68457"
+         shape-rendering="crispEdges"
+         id="path19643" />
+      <path
+         d="m 1570.9,443.7 -167.6,187.2 164.6,-9.4 z"
+         fill="#fdc28c"
+         shape-rendering="crispEdges"
+         id="path19645" />
+      <path
+         d="m 2397.5,1078.7 9.2,-129.4 -173.3,119.1 z"
+         fill="#f68055"
+         shape-rendering="crispEdges"
+         id="path19647" />
+      <path
+         d="m 2208.3,763.5 46.5,-181.6 -175.8,9.3 z"
+         fill="#f79f6e"
+         shape-rendering="crispEdges"
+         id="path19649" />
+      <path
+         d="m 1137.6,1276.6 143.7,-72.3 -196.6,-135.9 z"
+         fill="#f7a06e"
+         shape-rendering="crispEdges"
+         id="path19651" />
+      <path
+         d="m 1291.2,1119.9 -9.9,84.4 144,2.4 z"
+         fill="#f89d6b"
+         shape-rendering="crispEdges"
+         id="path19653" />
+      <path
+         d="m 2235.5,1441.1 142.5,-204.8 -162.6,40.6 z"
+         fill="#ed6947"
+         shape-rendering="crispEdges"
+         id="path19655" />
+      <path
+         d="M 2215.4,1276.9 2378,1236.3 2233.4,1068.4 Z"
+         fill="#e96c46"
+         shape-rendering="crispEdges"
+         id="path19657" />
+      <path
+         d="M 2235.5,1441.1 2215.4,1276.9 2102.5,1397 Z"
+         fill="#ee6a48"
+         shape-rendering="crispEdges"
+         id="path19659" />
+      <path
+         d="m 2083.2,1547.6 152.3,-106.5 -133,-44.1 z"
+         fill="#ea6341"
+         shape-rendering="crispEdges"
+         id="path19661" />
+      <path
+         d="m 1444.3,1573.7 192.4,-6.2 -164,-186.7 z"
+         fill="#e97a4f"
+         shape-rendering="crispEdges"
+         id="path19663" />
+      <path
+         d="m 1472.7,1380.8 164,186.7 -24.7,-193 z"
+         fill="#f38358"
+         shape-rendering="crispEdges"
+         id="path19665" />
+      <path
+         d="m 1796.4,1539.4 -52.9,152.9 156.8,-149 z"
+         fill="#e6663d"
+         shape-rendering="crispEdges"
+         id="path19667" />
+      <path
+         d="M 2406.7,949.3 2386.1,789.2 2207.2,958.9 Z"
+         fill="#f68a5e"
+         shape-rendering="crispEdges"
+         id="path19669" />
+      <path
+         d="m 2096.4,1712.2 -13.2,-164.6 -182.9,-4.3 z"
+         fill="#e25a35"
+         shape-rendering="crispEdges"
+         id="path19671" />
+      <path
+         d="m 1900.3,1543.3 182.9,4.3 -182.8,-156.9 z"
+         fill="#e2613a"
+         shape-rendering="crispEdges"
+         id="path19673" />
+      <path
+         d="M 2386.1,789.2 2254.8,581.9 2208.3,763.5 Z"
+         fill="#ee9062"
+         shape-rendering="crispEdges"
+         id="path19675" />
+      <path
+         d="m 2049.2,415.6 -104.5,-16.9 7.2,202.5 z"
+         fill="#f2a675"
+         shape-rendering="crispEdges"
+         id="path19677" />
+      <path
+         d="m 2049.2,415.6 -97.3,185.6 127.1,-10 z"
+         fill="#f2a36f"
+         shape-rendering="crispEdges"
+         id="path19679" />
+      <path
+         d="m 1403.3,630.9 -138.7,130 190.3,36.9 z"
+         fill="#fdc089"
+         shape-rendering="crispEdges"
+         id="path19681" />
+      <path
+         d="m 1137.6,1276.6 108.7,140.3 35,-212.6 z"
+         fill="#f29466"
+         shape-rendering="crispEdges"
+         id="path19683" />
+      <path
+         d="m 1451.5,406.2 119.4,37.5 66.3,-136.4 z"
+         fill="#f6c090"
+         shape-rendering="crispEdges"
+         id="path19685" />
+      <path
+         d="m 1752.6,444.7 -181.7,-1 155.8,170.6 z"
+         fill="#f6b681"
+         shape-rendering="crispEdges"
+         id="path19687" />
+      <path
+         d="M 1403.3,630.9 1315.2,612 1264.6,760.9 Z"
+         fill="#fac18b"
+         shape-rendering="crispEdges"
+         id="path19689" />
+      <path
+         d="m 2248.8,422.6 -199.6,-7 29.8,175.6 z"
+         fill="#f0a071"
+         shape-rendering="crispEdges"
+         id="path19691" />
+      <path
+         d="m 1451.5,406.2 -136.3,205.8 88.1,18.9 z"
+         fill="#f8c48d"
+         shape-rendering="crispEdges"
+         id="path19693" />
+      <path
+         d="M 2096.4,1712.2 2217,1554 l -133.8,-6.4 z"
+         fill="#e75a38"
+         shape-rendering="crispEdges"
+         id="path19695" />
+      <path
+         d="m 2083.2,1547.6 133.8,6.4 18.5,-112.9 z"
+         fill="#e35a39"
+         shape-rendering="crispEdges"
+         id="path19697" />
+      <path
+         d="m 2235.5,1441.1 198.7,-4.8 -56.2,-200 z"
+         fill="#ee6446"
+         shape-rendering="crispEdges"
+         id="path19699" />
+      <path
+         d="m 1287.7,1528 156.6,45.7 28.4,-192.9 z"
+         fill="#ed8356"
+         shape-rendering="crispEdges"
+         id="path19701" />
+      <path
+         d="m 1636.7,1567.5 106.8,124.8 52.9,-152.9 z"
+         fill="#e86b41"
+         shape-rendering="crispEdges"
+         id="path19703" />
+      <path
+         d="m 1611.7,1710.3 131.8,-18 -106.8,-124.8 z"
+         fill="#e86e43"
+         shape-rendering="crispEdges"
+         id="path19705" />
+      <path
+         d="M 2386.1,789.2 2423,621.3 2254.8,581.9 Z"
+         fill="#f89a6c"
+         shape-rendering="crispEdges"
+         id="path19707" />
+      <path
+         d="m 2254.8,581.9 -6,-159.3 -169.8,168.6 z"
+         fill="#f29f6e"
+         shape-rendering="crispEdges"
+         id="path19709" />
+      <path
+         d="M 2579.3,735.9 2423,621.3 2386.1,789.2 Z"
+         fill="#f28f62"
+         shape-rendering="crispEdges"
+         id="path19711" />
+      <path
+         d="m 1637.2,307.3 -66.3,136.4 181.7,1 z"
+         fill="#fdc190"
+         shape-rendering="crispEdges"
+         id="path19713" />
+      <path
+         d="m 1570.9,443.7 -119.4,-37.5 -48.2,224.7 z"
+         fill="#f1bb87"
+         shape-rendering="crispEdges"
+         id="path19715" />
+      <path
+         d="m 1084.7,1068.4 206.5,51.5 -10.7,-232 z"
+         fill="#f1a46e"
+         shape-rendering="crispEdges"
+         id="path19717" />
+      <path
+         d="m 1281.3,1204.3 -35,212.6 226.4,-36.1 z"
+         fill="#ec8b5f"
+         shape-rendering="crispEdges"
+         id="path19719" />
+      <path
+         d="m 2437.5,414.2 -188.7,8.4 6,159.3 z"
+         fill="#f29c70"
+         shape-rendering="crispEdges"
+         id="path19721" />
+      <path
+         d="M 2049.2,415.6 1940,275.4 l 4.7,123.3 z"
+         fill="#f5ac7e"
+         shape-rendering="crispEdges"
+         id="path19723" />
+      <path
+         d="m 1784.5,264.1 -31.9,180.6 192.1,-46 z"
+         fill="#f9b687"
+         shape-rendering="crispEdges"
+         id="path19725" />
+      <path
+         d="m 1784.5,264.1 -147.3,43.2 115.4,137.4 z"
+         fill="#f2b588"
+         shape-rendering="crispEdges"
+         id="path19727" />
+      <path
+         d="m 2378,1236.3 177.7,-133.8 -158.2,-23.8 z"
+         fill="#f1724b"
+         shape-rendering="crispEdges"
+         id="path19729" />
+      <path
+         d="m 2397.5,1078.7 158.2,23.8 -149,-153.2 z"
+         fill="#f2784f"
+         shape-rendering="crispEdges"
+         id="path19731" />
+      <path
+         d="M 2406.7,949.3 2570,948.1 2386.1,789.2 Z"
+         fill="#ee8156"
+         shape-rendering="crispEdges"
+         id="path19733" />
+      <path
+         d="m 2578.7,1239.8 -23,-137.3 -177.7,133.8 z"
+         fill="#ee6a47"
+         shape-rendering="crispEdges"
+         id="path19735" />
+      <path
+         d="m 1444.3,1573.7 167.4,136.6 25,-142.8 z"
+         fill="#e46e44"
+         shape-rendering="crispEdges"
+         id="path19737" />
+      <path
+         d="m 1417.9,1704.8 193.8,5.5 -167.4,-136.6 z"
+         fill="#e77448"
+         shape-rendering="crispEdges"
+         id="path19739" />
+      <path
+         d="m 2379.7,1582.2 54.5,-145.9 -198.7,4.8 z"
+         fill="#e7593c"
+         shape-rendering="crispEdges"
+         id="path19741" />
+      <path
+         d="M 2114.3,282 1940,275.4 2049.2,415.6 Z"
+         fill="#fbb185"
+         shape-rendering="crispEdges"
+         id="path19743" />
+      <path
+         d="m 2555.7,1102.5 14.3,-154.4 -163.3,1.2 z"
+         fill="#f1794f"
+         shape-rendering="crispEdges"
+         id="path19745" />
+      <path
+         d="m 1081.4,720.2 15.5,202.3 167.7,-161.6 z"
+         fill="#f4bb84"
+         shape-rendering="crispEdges"
+         id="path19747" />
+      <path
+         d="m 1264.6,760.9 -167.7,161.6 183.6,-34.6 z"
+         fill="#f8b882"
+         shape-rendering="crispEdges"
+         id="path19749" />
+      <path
+         d="m 1081.4,720.2 183.2,40.7 50.6,-148.9 z"
+         fill="#f6c089"
+         shape-rendering="crispEdges"
+         id="path19751" />
+      <path
+         d="m 1723.7,1922.5 182.8,-175.8 -163,-54.4 z"
+         fill="#d4572e"
+         shape-rendering="crispEdges"
+         id="path19753" />
+      <path
+         d="m 1743.5,1692.3 163,54.4 -6.2,-203.4 z"
+         fill="#e26037"
+         shape-rendering="crispEdges"
+         id="path19755" />
+      <path
+         d="m 2217,1554 162.7,28.2 -144.2,-141.1 z"
+         fill="#e6583a"
+         shape-rendering="crispEdges"
+         id="path19757" />
+      <path
+         d="m 1940,275.4 -155.5,-11.3 160.2,134.6 z"
+         fill="#fcb88b"
+         shape-rendering="crispEdges"
+         id="path19759" />
+      <path
+         d="m 1084.7,1068.4 196.6,135.9 9.9,-84.4 z"
+         fill="#f9a46f"
+         shape-rendering="crispEdges"
+         id="path19761" />
+      <path
+         d="m 1096.9,922.5 -12.2,145.9 195.8,-180.5 z"
+         fill="#f9b27c"
+         shape-rendering="crispEdges"
+         id="path19763" />
+      <path
+         d="m 1906.5,1746.7 189.9,-34.5 -196.1,-168.9 z"
+         fill="#de5731"
+         shape-rendering="crispEdges"
+         id="path19765" />
+      <path
+         d="m 1139.3,1438.8 148.4,89.2 -41.4,-111.1 z"
+         fill="#f08b5e"
+         shape-rendering="crispEdges"
+         id="path19767" />
+      <path
+         d="m 1246.3,1416.9 41.4,111.1 185,-147.2 z"
+         fill="#e78256"
+         shape-rendering="crispEdges"
+         id="path19769" />
+      <path
+         d="M 2248.8,422.6 2114.3,282 2049.2,415.6 Z"
+         fill="#f4a67b"
+         shape-rendering="crispEdges"
+         id="path19771" />
+      <path
+         d="m 1946.4,108 -188,36.8 26.1,119.3 z"
+         fill="#ffc29a"
+         shape-rendering="crispEdges"
+         id="path19773" />
+      <path
+         d="m 2434.2,1436.3 144.5,-196.5 -200.7,-3.5 z"
+         fill="#e45d3f"
+         shape-rendering="crispEdges"
+         id="path19775" />
+      <path
+         d="M 2555.7,1102.5 2706.8,1106 2570,948.1 Z"
+         fill="#eb6d45"
+         shape-rendering="crispEdges"
+         id="path19777" />
+      <path
+         d="M 2096.4,1712.2 2238.5,1684 2217,1554 Z"
+         fill="#e25434"
+         shape-rendering="crispEdges"
+         id="path19779" />
+      <path
+         d="M 2238.5,1684 2379.7,1582.2 2217,1554 Z"
+         fill="#d8482d"
+         shape-rendering="crispEdges"
+         id="path19781" />
+      <path
+         d="m 2434.2,1436.3 159.9,-6.4 -15.4,-190.1 z"
+         fill="#dd5137"
+         shape-rendering="crispEdges"
+         id="path19783" />
+      <path
+         d="m 2597.5,583.2 -18.2,152.7 183.1,-17 z"
+         fill="#e88356"
+         shape-rendering="crispEdges"
+         id="path19785" />
+      <path
+         d="m 2570,948.1 9.3,-212.2 -193.2,53.3 z"
+         fill="#f3895d"
+         shape-rendering="crispEdges"
+         id="path19787" />
+      <path
+         d="m 2383.5,293.5 -156.8,-29.9 22.1,159 z"
+         fill="#f9a780"
+         shape-rendering="crispEdges"
+         id="path19789" />
+      <path
+         d="m 2248.8,422.6 -22.1,-159 -112.4,18.4 z"
+         fill="#fcad84"
+         shape-rendering="crispEdges"
+         id="path19791" />
+      <path
+         d="M 1082,577.1 1081.4,720.2 1315.2,612 Z"
+         fill="#f8c58f"
+         shape-rendering="crispEdges"
+         id="path19793" />
+      <path
+         d="m 950.5,898.3 7.5,218.5 126.7,-48.4 z"
+         fill="#f1a973"
+         shape-rendering="crispEdges"
+         id="path19795" />
+      <path
+         d="m 1287.7,1528 130.2,176.8 26.4,-131.1 z"
+         fill="#e17448"
+         shape-rendering="crispEdges"
+         id="path19797" />
+      <path
+         d="m 1611.7,1710.3 24.5,141.8 107.3,-159.8 z"
+         fill="#e0673c"
+         shape-rendering="crispEdges"
+         id="path19799" />
+      <path
+         d="m 1137.6,1276.6 1.7,162.2 107,-21.9 z"
+         fill="#f09063"
+         shape-rendering="crispEdges"
+         id="path19801" />
+      <path
+         d="m 1287.7,1528 17.7,227.5 112.5,-50.7 z"
+         fill="#e97b4f"
+         shape-rendering="crispEdges"
+         id="path19803" />
+      <path
+         d="m 967.1,1415.3 172.2,23.5 -1.7,-162.2 z"
+         fill="#ee9164"
+         shape-rendering="crispEdges"
+         id="path19805" />
+      <path
+         d="m 1637.2,307.3 -194.3,-18.7 8.6,117.6 z"
+         fill="#f2c092"
+         shape-rendering="crispEdges"
+         id="path19807" />
+      <path
+         d="m 1451.5,406.2 -204.7,8.2 68.4,197.6 z"
+         fill="#f2c28e"
+         shape-rendering="crispEdges"
+         id="path19809" />
+      <path
+         d="m 1589,142.7 -146.1,145.9 194.3,18.7 z"
+         fill="#f4c398"
+         shape-rendering="crispEdges"
+         id="path19811" />
+      <path
+         d="m 1305.4,288.6 -58.6,125.8 204.7,-8.2 z"
+         fill="#fed0a0"
+         shape-rendering="crispEdges"
+         id="path19813" />
+      <path
+         d="M 2437.5,414.2 2254.8,581.9 2423,621.3 Z"
+         fill="#ef9669"
+         shape-rendering="crispEdges"
+         id="path19815" />
+      <path
+         d="M 1946.4,108 1784.5,264.1 1940,275.4 Z"
+         fill="#f2b289"
+         shape-rendering="crispEdges"
+         id="path19817" />
+      <path
+         d="M 2596.8,466.8 2437.5,414.2 2423,621.3 Z"
+         fill="#f89c70"
+         shape-rendering="crispEdges"
+         id="path19819" />
+      <path
+         d="m 1149,433.7 -67,143.4 233.2,34.9 z"
+         fill="#f9cb95"
+         shape-rendering="crispEdges"
+         id="path19821" />
+      <path
+         d="M 2069.5,151.6 1940,275.4 2114.3,282 Z"
+         fill="#f5ae87"
+         shape-rendering="crispEdges"
+         id="path19823" />
+      <path
+         d="M 1784.5,264.1 1758.4,144.8 1637.2,307.3 Z"
+         fill="#f4bb90"
+         shape-rendering="crispEdges"
+         id="path19825" />
+      <path
+         d="m 1471.3,1848.4 164.9,3.7 -24.5,-141.8 z"
+         fill="#e16c40"
+         shape-rendering="crispEdges"
+         id="path19827" />
+      <path
+         d="m 1906.5,1746.7 173.7,114.2 16.2,-148.7 z"
+         fill="#d34c29"
+         shape-rendering="crispEdges"
+         id="path19829" />
+      <path
+         d="m 2096.4,1712.2 115.1,163.4 27,-191.6 z"
+         fill="#d94c2d"
+         shape-rendering="crispEdges"
+         id="path19831" />
+      <path
+         d="m 2588.4,1566.5 5.7,-136.6 -159.9,6.4 z"
+         fill="#e14e35"
+         shape-rendering="crispEdges"
+         id="path19833" />
+      <path
+         d="m 2761.9,921.9 -182.6,-186 -9.3,212.2 z"
+         fill="#e97a4f"
+         shape-rendering="crispEdges"
+         id="path19835" />
+      <path
+         d="m 2588.4,1566.5 -154.2,-130.2 -54.5,145.9 z"
+         fill="#e34f36"
+         shape-rendering="crispEdges"
+         id="path19837" />
+      <path
+         d="m 2706.8,1106 -151.1,-3.5 23,137.3 z"
+         fill="#ea6641"
+         shape-rendering="crispEdges"
+         id="path19839" />
+      <path
+         d="M 2579.3,735.9 2597.5,583.2 2423,621.3 Z"
+         fill="#ed8b5f"
+         shape-rendering="crispEdges"
+         id="path19841" />
+      <path
+         d="m 958.3,584.8 32.6,186.4 90.5,-51 z"
+         fill="#fbca94"
+         shape-rendering="crispEdges"
+         id="path19843" />
+      <path
+         d="m 1081.4,720.2 -90.5,51 106,151.3 z"
+         fill="#f0b983"
+         shape-rendering="crispEdges"
+         id="path19845" />
+      <path
+         d="m 1084.7,1068.4 -126.7,48.4 179.6,159.8 z"
+         fill="#f3a16e"
+         shape-rendering="crispEdges"
+         id="path19847" />
+      <path
+         d="m 2697.5,1254.3 9.3,-148.3 -128.1,133.8 z"
+         fill="#df5837"
+         shape-rendering="crispEdges"
+         id="path19849" />
+      <path
+         d="m 950.5,898.3 134.2,170.1 12.2,-145.9 z"
+         fill="#f8b37d"
+         shape-rendering="crispEdges"
+         id="path19851" />
+      <path
+         d="m 981.4,1582.4 161.8,-19.5 -3.9,-124.1 z"
+         fill="#e68356"
+         shape-rendering="crispEdges"
+         id="path19853" />
+      <path
+         d="m 1139.3,1438.8 3.9,124.1 144.5,-34.9 z"
+         fill="#ef885c"
+         shape-rendering="crispEdges"
+         id="path19855" />
+      <path
+         d="m 1417.9,1704.8 53.4,143.6 140.4,-138.1 z"
+         fill="#df6e42"
+         shape-rendering="crispEdges"
+         id="path19857" />
+      <path
+         d="m 2226.7,263.6 -157.2,-112 44.8,130.4 z"
+         fill="#f6ac86"
+         shape-rendering="crispEdges"
+         id="path19859" />
+      <path
+         d="m 990.9,771.2 -40.4,127.1 146.4,24.2 z"
+         fill="#fabe88"
+         shape-rendering="crispEdges"
+         id="path19861" />
+      <path
+         d="m 1931.2,1908.6 149,-47.7 -173.7,-114.2 z"
+         fill="#d24d28"
+         shape-rendering="crispEdges"
+         id="path19863" />
+      <path
+         d="m 2238.5,1684 155.7,51.9 -14.5,-153.7 z"
+         fill="#d6442a"
+         shape-rendering="crispEdges"
+         id="path19865" />
+      <path
+         d="m 1459.7,133.1 -154.3,155.5 h 137.5 z"
+         fill="#f2c79d"
+         shape-rendering="crispEdges"
+         id="path19867" />
+      <path
+         d="m 1442.9,288.6 h -137.5 l 146.1,117.6 z"
+         fill="#f9cb9d"
+         shape-rendering="crispEdges"
+         id="path19869" />
+      <path
+         d="M 1246.8,414.4 1149,433.7 1315.2,612 Z"
+         fill="#f7c894"
+         shape-rendering="crispEdges"
+         id="path19871" />
+      <path
+         d="m 1131,266 18,167.7 97.8,-19.3 z"
+         fill="#fbd1a2"
+         shape-rendering="crispEdges"
+         id="path19873" />
+      <path
+         d="m 1082,577.1 -123.7,7.7 123.1,135.4 z"
+         fill="#f1c28d"
+         shape-rendering="crispEdges"
+         id="path19875" />
+      <path
+         d="m 1758.4,144.8 -169.4,-2.1 48.2,164.6 z"
+         fill="#fcc69d"
+         shape-rendering="crispEdges"
+         id="path19877" />
+      <path
+         d="m 2594.1,1429.9 103.4,-175.6 -118.8,-14.5 z"
+         fill="#e4583b"
+         shape-rendering="crispEdges"
+         id="path19879" />
+      <path
+         d="m 2437.5,414.2 -54,-120.7 -134.7,129.1 z"
+         fill="#f8a37c"
+         shape-rendering="crispEdges"
+         id="path19881" />
+      <path
+         d="m 2226.7,263.6 12.5,-186.1 -169.7,74.1 z"
+         fill="#f9af8c"
+         shape-rendering="crispEdges"
+         id="path19883" />
+      <path
+         d="m 2581.2,315.4 -197.7,-21.9 54,120.7 z"
+         fill="#f59f79"
+         shape-rendering="crispEdges"
+         id="path19885" />
+      <path
+         d="M 2069.5,151.6 1946.4,108 1940,275.4 Z"
+         fill="#fbb791"
+         shape-rendering="crispEdges"
+         id="path19887" />
+      <path
+         d="M 1758.4,144.8 1591.6,-7.3 1589,142.7 Z"
+         fill="#fecca7"
+         shape-rendering="crispEdges"
+         id="path19889" />
+      <path
+         d="m 1723.7,1922.5 207.5,-13.9 -24.7,-161.9 z"
+         fill="#d15229"
+         shape-rendering="crispEdges"
+         id="path19891" />
+      <path
+         d="m 1143.2,1562.9 162.2,192.6 -17.7,-227.5 z"
+         fill="#e67a4e"
+         shape-rendering="crispEdges"
+         id="path19893" />
+      <path
+         d="m 1305.4,1755.5 165.9,92.9 -53.4,-143.6 z"
+         fill="#d76b3e"
+         shape-rendering="crispEdges"
+         id="path19895" />
+      <path
+         d="m 1636.2,1852.1 87.5,70.4 19.8,-230.2 z"
+         fill="#d65d33"
+         shape-rendering="crispEdges"
+         id="path19897" />
+      <path
+         d="M 2211.5,1875.6 2394.2,1735.9 2238.5,1684 Z"
+         fill="#d8482b"
+         shape-rendering="crispEdges"
+         id="path19899" />
+      <path
+         d="m 1618.7,2007.1 105,-84.6 -87.5,-70.4 z"
+         fill="#cd5a30"
+         shape-rendering="crispEdges"
+         id="path19901" />
+      <path
+         d="m 2867.9,932.7 -106,-10.8 133.4,122.3 z"
+         fill="#e3683e"
+         shape-rendering="crispEdges"
+         id="path19903" />
+      <path
+         d="M 2706.8,1106 2761.9,921.9 2570,948.1 Z"
+         fill="#e96e45"
+         shape-rendering="crispEdges"
+         id="path19905" />
+      <path
+         d="m 2732.1,459.8 -135.3,7 0.7,116.4 z"
+         fill="#ef9064"
+         shape-rendering="crispEdges"
+         id="path19907" />
+      <path
+         d="M 2597.5,583.2 2596.8,466.8 2423,621.3 Z"
+         fill="#f49568"
+         shape-rendering="crispEdges"
+         id="path19909" />
+      <path
+         d="m 786.3,1244.2 137.5,-4.8 34.2,-122.6 z"
+         fill="#f6a474"
+         shape-rendering="crispEdges"
+         id="path19911" />
+      <path
+         d="m 958,1116.8 -34.2,122.6 213.8,37.2 z"
+         fill="#f09d6b"
+         shape-rendering="crispEdges"
+         id="path19913" />
+      <path
+         d="m 2590.1,1686.7 -1.7,-120.2 -208.7,15.7 z"
+         fill="#d23a25"
+         shape-rendering="crispEdges"
+         id="path19915" />
+      <path
+         d="m 2594.1,1429.9 144.3,-50.9 -40.9,-124.7 z"
+         fill="#e55439"
+         shape-rendering="crispEdges"
+         id="path19917" />
+      <path
+         d="m 2080.2,1860.9 131.3,14.7 -115.1,-163.4 z"
+         fill="#d24827"
+         shape-rendering="crispEdges"
+         id="path19919" />
+      <path
+         d="m 2069.5,2074.2 142,-198.6 -131.3,-14.7 z"
+         fill="#cd4827"
+         shape-rendering="crispEdges"
+         id="path19921" />
+      <path
+         d="m 1589,142.7 -129.3,-9.6 -16.8,155.5 z"
+         fill="#fccea6"
+         shape-rendering="crispEdges"
+         id="path19923" />
+      <path
+         d="M 962.7,422.8 1082,577.1 1149,433.7 Z"
+         fill="#fbd19e"
+         shape-rendering="crispEdges"
+         id="path19925" />
+      <path
+         d="m 1591.6,-7.3 -131.9,140.4 129.3,9.6 z"
+         fill="#fdd0ab"
+         shape-rendering="crispEdges"
+         id="path19927" />
+      <path
+         d="m 923.8,1239.4 43.3,175.9 170.5,-138.7 z"
+         fill="#f1996b"
+         shape-rendering="crispEdges"
+         id="path19929" />
+      <path
+         d="m 1127.4,1859.3 150.1,22.2 27.9,-126 z"
+         fill="#d46c3f"
+         shape-rendering="crispEdges"
+         id="path19931" />
+      <path
+         d="m 962.7,422.8 -4.4,162 123.7,-7.7 z"
+         fill="#f6cd97"
+         shape-rendering="crispEdges"
+         id="path19933" />
+      <path
+         d="m 757.6,722.8 19.9,219.6 173,-44.1 z"
+         fill="#f4bd8a"
+         shape-rendering="crispEdges"
+         id="path19935" />
+      <path
+         d="M 950.5,898.3 829.2,1042.6 958,1116.8 Z"
+         fill="#f8b17c"
+         shape-rendering="crispEdges"
+         id="path19937" />
+      <path
+         d="m 1131,266 115.8,148.4 58.6,-125.8 z"
+         fill="#fdd4a6"
+         shape-rendering="crispEdges"
+         id="path19939" />
+      <path
+         d="m 2761.9,921.9 0.5,-203 -183.1,17 z"
+         fill="#ee8256"
+         shape-rendering="crispEdges"
+         id="path19941" />
+      <path
+         d="m 2748.7,1581 -10.3,-202 -144.3,50.9 z"
+         fill="#e04931"
+         shape-rendering="crispEdges"
+         id="path19943" />
+      <path
+         d="M 2895.3,1044.2 2761.9,921.9 2706.8,1106 Z"
+         fill="#e96940"
+         shape-rendering="crispEdges"
+         id="path19945" />
+      <path
+         d="m 777.5,942.4 51.7,100.2 121.3,-144.3 z"
+         fill="#f1b17e"
+         shape-rendering="crispEdges"
+         id="path19947" />
+      <path
+         d="m 923.8,1239.4 -90.5,193.3 133.8,-17.4 z"
+         fill="#f69c70"
+         shape-rendering="crispEdges"
+         id="path19949" />
+      <path
+         d="m 2762.4,718.9 -10.3,-129.3 -154.6,-6.4 z"
+         fill="#e98458"
+         shape-rendering="crispEdges"
+         id="path19951" />
+      <path
+         d="m 2382.7,148.4 -156,115.2 156.8,29.9 z"
+         fill="#f2a280"
+         shape-rendering="crispEdges"
+         id="path19953" />
+      <path
+         d="m 2581.2,315.4 -143.7,98.8 159.3,52.6 z"
+         fill="#f19770"
+         shape-rendering="crispEdges"
+         id="path19955" />
+      <path
+         d="M 2382.7,148.4 2239.2,77.5 2226.7,263.6 Z"
+         fill="#f7a989"
+         shape-rendering="crispEdges"
+         id="path19957" />
+      <path
+         d="m 2087.5,-20.2 -170.4,1.4 29.3,126.8 z"
+         fill="#ffbf9e"
+         shape-rendering="crispEdges"
+         id="path19959" />
+      <path
+         d="M 1946.4,108 1796.2,-13.5 1758.4,144.8 Z"
+         fill="#f5bb97"
+         shape-rendering="crispEdges"
+         id="path19961" />
+      <path
+         d="m 2394.2,1735.9 195.9,-49.2 -210.4,-104.5 z"
+         fill="#db442c"
+         shape-rendering="crispEdges"
+         id="path19963" />
+      <path
+         d="m 2588.4,1566.5 160.3,14.5 -154.6,-151.1 z"
+         fill="#d43c26"
+         shape-rendering="crispEdges"
+         id="path19965" />
+      <path
+         d="m 2584.8,1888.8 5.3,-202.1 -195.9,49.2 z"
+         fill="#cd3520"
+         shape-rendering="crispEdges"
+         id="path19967" />
+      <path
+         d="m 2732.1,459.8 -150.9,-144.4 15.6,151.4 z"
+         fill="#e98d65"
+         shape-rendering="crispEdges"
+         id="path19969" />
+      <path
+         d="m 2581.2,315.4 -198.5,-167 0.8,145.1 z"
+         fill="#f6a280"
+         shape-rendering="crispEdges"
+         id="path19971" />
+      <path
+         d="M 1148.8,121.7 1131,266 l 174.4,22.6 z"
+         fill="#fcd7ad"
+         shape-rendering="crispEdges"
+         id="path19973" />
+      <path
+         d="m 1917.1,-18.8 -120.9,5.3 150.2,121.5 z"
+         fill="#f7bc9a"
+         shape-rendering="crispEdges"
+         id="path19975" />
+      <path
+         d="m 1459.7,133.1 -178.2,-51.3 23.9,206.8 z"
+         fill="#fdd5ad"
+         shape-rendering="crispEdges"
+         id="path19977" />
+      <path
+         d="m 1471.3,1848.4 147.4,158.7 17.5,-155 z"
+         fill="#cf5e33"
+         shape-rendering="crispEdges"
+         id="path19979" />
+      <path
+         d="m 1723.7,1922.5 195.1,146.8 12.4,-160.7 z"
+         fill="#c34b25"
+         shape-rendering="crispEdges"
+         id="path19981" />
+      <path
+         d="m 2370.3,2049.5 32.9,-142.4 -191.7,-31.5 z"
+         fill="#c73c22"
+         shape-rendering="crispEdges"
+         id="path19983" />
+      <path
+         d="m 1409.4,2057.2 209.3,-50.1 -147.4,-158.7 z"
+         fill="#c85f35"
+         shape-rendering="crispEdges"
+         id="path19985" />
+      <path
+         d="m 833.3,1432.7 148.1,149.7 -14.3,-167.1 z"
+         fill="#ea8c60"
+         shape-rendering="crispEdges"
+         id="path19987" />
+      <path
+         d="m 967.1,1415.3 14.3,167.1 157.9,-143.6 z"
+         fill="#eb8a5e"
+         shape-rendering="crispEdges"
+         id="path19989" />
+      <path
+         d="m 1305.4,1755.5 -27.9,126 193.8,-33.1 z"
+         fill="#de7245"
+         shape-rendering="crispEdges"
+         id="path19991" />
+      <path
+         d="M 2087.5,-20.2 1946.4,108 2069.5,151.6 Z"
+         fill="#f3b18f"
+         shape-rendering="crispEdges"
+         id="path19993" />
+      <path
+         d="m 1111.9,1753.1 193.5,2.4 -162.2,-192.6 z"
+         fill="#e77d50"
+         shape-rendering="crispEdges"
+         id="path19995" />
+      <path
+         d="m 981.4,1582.4 130.5,170.7 31.3,-190.2 z"
+         fill="#e47c50"
+         shape-rendering="crispEdges"
+         id="path19997" />
+      <path
+         d="m 2846,1243.8 -139.2,-137.8 -9.3,148.3 z"
+         fill="#ea5f3d"
+         shape-rendering="crispEdges"
+         id="path19999" />
+      <path
+         d="m 2761.9,921.9 104.5,-198 -104,-5 z"
+         fill="#e3764b"
+         shape-rendering="crispEdges"
+         id="path20001" />
+      <path
+         d="m 2762.4,718.9 137.5,-96.6 -147.8,-32.7 z"
+         fill="#ee8558"
+         shape-rendering="crispEdges"
+         id="path20003" />
+      <path
+         d="M 2880.5,1367.1 2846,1243.8 2738.4,1379 Z"
+         fill="#e14e34"
+         shape-rendering="crispEdges"
+         id="path20005" />
+      <path
+         d="m 2738.4,1379 107.6,-135.2 -148.5,10.5 z"
+         fill="#e45538"
+         shape-rendering="crispEdges"
+         id="path20007" />
+      <path
+         d="m 1443.2,-16 148.4,8.7 -20.4,-160.6 z"
+         fill="#f4caa9"
+         shape-rendering="crispEdges"
+         id="path20009" />
+      <path
+         d="m 1796.2,-13.5 -204.6,6.2 166.8,152.1 z"
+         fill="#fbc7a4"
+         shape-rendering="crispEdges"
+         id="path20011" />
+      <path
+         d="m 962.2,310.8 0.5,112 186.3,10.9 z"
+         fill="#f1cb9c"
+         shape-rendering="crispEdges"
+         id="path20013" />
+      <path
+         d="M 757.6,722.8 950.5,898.3 990.9,771.2 Z"
+         fill="#f5c28d"
+         shape-rendering="crispEdges"
+         id="path20015" />
+      <path
+         d="m 2752.1,589.6 -20,-129.8 -134.6,123.4 z"
+         fill="#f08f62"
+         shape-rendering="crispEdges"
+         id="path20017" />
+      <path
+         d="m 2919.5,468.7 -187.4,-8.9 20,129.8 z"
+         fill="#e7855a"
+         shape-rendering="crispEdges"
+         id="path20019" />
+      <path
+         d="M 830.1,583.9 990.9,771.2 958.3,584.8 Z"
+         fill="#fcce99"
+         shape-rendering="crispEdges"
+         id="path20021" />
+      <path
+         d="M 829.2,1042.6 786.3,1244.2 958,1116.8 Z"
+         fill="#f9ab79"
+         shape-rendering="crispEdges"
+         id="path20023" />
+      <path
+         d="m 2262.3,-59.7 -174.8,39.5 151.7,97.7 z"
+         fill="#fdb699"
+         shape-rendering="crispEdges"
+         id="path20025" />
+      <path
+         d="m 2239.2,77.5 -151.7,-97.7 -18,171.8 z"
+         fill="#fab494"
+         shape-rendering="crispEdges"
+         id="path20027" />
+      <path
+         d="m 2846,1243.8 49.3,-199.6 -188.5,61.8 z"
+         fill="#e45c38"
+         shape-rendering="crispEdges"
+         id="path20029" />
+      <path
+         d="m 2069.5,2074.2 10.7,-213.3 -149,47.7 z"
+         fill="#c74623"
+         shape-rendering="crispEdges"
+         id="path20031" />
+      <path
+         d="m 2211.5,1875.6 191.7,31.5 -9,-171.2 z"
+         fill="#cb3a21"
+         shape-rendering="crispEdges"
+         id="path20033" />
+      <path
+         d="m 1753,2079.3 165.8,-10 -195.1,-146.8 z"
+         fill="#c5532c"
+         shape-rendering="crispEdges"
+         id="path20035" />
+      <path
+         d="m 2899.9,622.3 -33.5,101.6 149.9,11.3 z"
+         fill="#e87c50"
+         shape-rendering="crispEdges"
+         id="path20037" />
+      <path
+         d="m 2867.9,932.7 -1.5,-208.8 -104.5,198 z"
+         fill="#e57247"
+         shape-rendering="crispEdges"
+         id="path20039" />
+      <path
+         d="m 662.3,1096.1 124,148.1 42.9,-201.6 z"
+         fill="#f2a677"
+         shape-rendering="crispEdges"
+         id="path20041" />
+      <path
+         d="m 1618.7,2007.1 134.3,72.2 -29.3,-156.8 z"
+         fill="#c4552e"
+         shape-rendering="crispEdges"
+         id="path20043" />
+      <path
+         d="M 1632.9,2193.6 1753,2079.3 1618.7,2007.1 Z"
+         fill="#c15933"
+         shape-rendering="crispEdges"
+         id="path20045" />
+      <path
+         d="m 1443.2,-16 -161.7,97.8 178.2,51.3 z"
+         fill="#f3cda9"
+         shape-rendering="crispEdges"
+         id="path20047" />
+      <path
+         d="M 1131,266 962.2,310.8 1149,433.7 Z"
+         fill="#f8d2a5"
+         shape-rendering="crispEdges"
+         id="path20049" />
+      <path
+         d="M 2761.3,1691.9 2748.7,1581 2590.1,1686.7 Z"
+         fill="#d73823"
+         shape-rendering="crispEdges"
+         id="path20051" />
+      <path
+         d="M 2590.1,1686.7 2748.7,1581 2588.4,1566.5 Z"
+         fill="#d63924"
+         shape-rendering="crispEdges"
+         id="path20053" />
+      <path
+         d="m 786.3,1244.2 47,188.5 90.5,-193.3 z"
+         fill="#f69f74"
+         shape-rendering="crispEdges"
+         id="path20055" />
+      <path
+         d="m 950.9,1759.4 176.5,99.9 -15.5,-106.2 z"
+         fill="#e27c4e"
+         shape-rendering="crispEdges"
+         id="path20057" />
+      <path
+         d="m 962.7,422.8 -132.6,161.1 128.2,0.9 z"
+         fill="#f8d09c"
+         shape-rendering="crispEdges"
+         id="path20059" />
+      <path
+         d="m 2053.2,2169.7 16.3,-95.5 -150.7,-4.9 z"
+         fill="#b74323"
+         shape-rendering="crispEdges"
+         id="path20061" />
+      <path
+         d="m 1918.8,2069.3 150.7,4.9 -138.3,-165.6 z"
+         fill="#c54b27"
+         shape-rendering="crispEdges"
+         id="path20063" />
+      <path
+         d="m 1591.6,-7.3 -148.4,-8.7 16.5,149.1 z"
+         fill="#ffd5b2"
+         shape-rendering="crispEdges"
+         id="path20065" />
+      <path
+         d="m 1247,-35.1 196.2,19.1 19.3,-174.1 z"
+         fill="#fbd6b5"
+         shape-rendering="crispEdges"
+         id="path20067" />
+      <path
+         d="m 1571.2,-167.9 225,154.4 -50.5,-222.8 z"
+         fill="#f8c6a4"
+         shape-rendering="crispEdges"
+         id="path20069" />
+      <path
+         d="m 1111.9,1753.1 15.5,106.2 178,-103.8 z"
+         fill="#d97245"
+         shape-rendering="crispEdges"
+         id="path20071" />
+      <path
+         d="m 1277.5,1881.5 131.9,175.7 61.9,-208.8 z"
+         fill="#d46b3f"
+         shape-rendering="crispEdges"
+         id="path20073" />
+      <path
+         d="m 950.9,1759.4 161,-6.3 -130.5,-170.7 z"
+         fill="#e88254"
+         shape-rendering="crispEdges"
+         id="path20075" />
+      <path
+         d="m 2914.2,1542.2 -33.7,-175.1 -142.1,11.9 z"
+         fill="#d33a25"
+         shape-rendering="crispEdges"
+         id="path20077" />
+      <path
+         d="M 2846,1243.8 3034.5,1119 2895.3,1044.2 Z"
+         fill="#e65c37"
+         shape-rendering="crispEdges"
+         id="path20079" />
+      <path
+         d="m 830.1,583.9 -72.5,138.9 233.3,48.4 z"
+         fill="#f6c894"
+         shape-rendering="crispEdges"
+         id="path20081" />
+      <path
+         d="m 777.5,942.4 -115.2,153.7 166.9,-53.5 z"
+         fill="#f4b07f"
+         shape-rendering="crispEdges"
+         id="path20083" />
+      <path
+         d="M 994.4,92.3 962.2,310.8 1131,266 Z"
+         fill="#f3d2a9"
+         shape-rendering="crispEdges"
+         id="path20085" />
+      <path
+         d="m 962.7,422.8 -183.3,11.5 50.7,149.6 z"
+         fill="#fad5a4"
+         shape-rendering="crispEdges"
+         id="path20087" />
+      <path
+         d="m 667.9,633.8 6.9,153.3 82.8,-64.3 z"
+         fill="#fdd0a0"
+         shape-rendering="crispEdges"
+         id="path20089" />
+      <path
+         d="m 1247,-35.1 -98.2,156.8 132.7,-39.9 z"
+         fill="#f4d2af"
+         shape-rendering="crispEdges"
+         id="path20091" />
+      <path
+         d="m 1281.5,81.8 -132.7,39.9 156.6,166.9 z"
+         fill="#f8d3ac"
+         shape-rendering="crispEdges"
+         id="path20093" />
+      <path
+         d="m 2069.5,2074.2 144.8,-4.8 -2.8,-193.8 z"
+         fill="#be3d20"
+         shape-rendering="crispEdges"
+         id="path20095" />
+      <path
+         d="m 1254.4,2024.2 155,33 -131.9,-175.7 z"
+         fill="#c7653b"
+         shape-rendering="crispEdges"
+         id="path20097" />
+      <path
+         d="m 3016.3,735.2 -149.9,-11.3 1.5,208.8 z"
+         fill="#e27347"
+         shape-rendering="crispEdges"
+         id="path20099" />
+      <path
+         d="m 2866.4,723.9 33.5,-101.6 -137.5,96.6 z"
+         fill="#ee8356"
+         shape-rendering="crispEdges"
+         id="path20101" />
+      <path
+         d="m 2375.3,-20.1 -136.1,97.6 143.5,70.9 z"
+         fill="#f7a98d"
+         shape-rendering="crispEdges"
+         id="path20103" />
+      <path
+         d="m 2375.3,-20.1 -113,-39.6 -23.1,137.2 z"
+         fill="#f2a88e"
+         shape-rendering="crispEdges"
+         id="path20105" />
+      <path
+         d="m 1932.5,-206.2 -136.3,192.7 120.9,-5.3 z"
+         fill="#fec3a1"
+         shape-rendering="crispEdges"
+         id="path20107" />
+      <path
+         d="m 2375.3,-20.1 7.4,168.5 192.7,-68.5 z"
+         fill="#fcaa8f"
+         shape-rendering="crispEdges"
+         id="path20109" />
+      <path
+         d="m 2382.7,148.4 198.5,167 -5.8,-235.5 z"
+         fill="#f09b7c"
+         shape-rendering="crispEdges"
+         id="path20111" />
+      <path
+         d="m 2696.3,1888.5 65,-196.6 -171.2,-5.2 z"
+         fill="#ce301c"
+         shape-rendering="crispEdges"
+         id="path20113" />
+      <path
+         d="M 2748.7,1581 2914.2,1542.2 2738.4,1379 Z"
+         fill="#db3f29"
+         shape-rendering="crispEdges"
+         id="path20115" />
+      <path
+         d="m 2584.8,1888.8 -190.6,-152.9 9,171.2 z"
+         fill="#c6311c"
+         shape-rendering="crispEdges"
+         id="path20117" />
+      <path
+         d="m 2572.1,2051.6 12.7,-162.8 -181.6,18.3 z"
+         fill="#c7341f"
+         shape-rendering="crispEdges"
+         id="path20119" />
+      <path
+         d="m 809,1687.2 141.9,72.2 30.5,-177 z"
+         fill="#ec875a"
+         shape-rendering="crispEdges"
+         id="path20121" />
+      <path
+         d="m 1127.4,1859.3 127,164.9 23.1,-142.7 z"
+         fill="#d46f42"
+         shape-rendering="crispEdges"
+         id="path20123" />
+      <path
+         d="m 2575.4,79.9 5.8,235.5 178.4,-75.3 z"
+         fill="#f09877"
+         shape-rendering="crispEdges"
+         id="path20125" />
+      <path
+         d="m 1079.6,2056.4 174.8,-32.2 -127,-164.9 z"
+         fill="#ca6b3f"
+         shape-rendering="crispEdges"
+         id="path20127" />
+      <path
+         d="m 2214.3,2069.4 156,-19.9 -158.8,-173.9 z"
+         fill="#bd391f"
+         shape-rendering="crispEdges"
+         id="path20129" />
+      <path
+         d="m 648.2,919.3 14.1,176.8 115.2,-153.7 z"
+         fill="#febe8d"
+         shape-rendering="crispEdges"
+         id="path20131" />
+      <path
+         d="m 786.3,1244.2 -131.6,156.6 178.6,31.9 z"
+         fill="#f29b72"
+         shape-rendering="crispEdges"
+         id="path20133" />
+      <path
+         d="m 833.3,1432.7 -71.2,164.9 219.3,-15.2 z"
+         fill="#ef8e63"
+         shape-rendering="crispEdges"
+         id="path20135" />
+      <path
+         d="m 667.9,633.8 89.7,89 72.5,-138.9 z"
+         fill="#f8ce9c"
+         shape-rendering="crispEdges"
+         id="path20137" />
+      <path
+         d="m 757.6,722.8 -82.8,64.3 102.7,155.3 z"
+         fill="#fecb99"
+         shape-rendering="crispEdges"
+         id="path20139" />
+      <path
+         d="m 662.3,1096.1 7.6,127.9 116.4,20.2 z"
+         fill="#fdae81"
+         shape-rendering="crispEdges"
+         id="path20141" />
+      <path
+         d="m 2069.5,2074.2 -16.3,95.5 161.1,-100.3 z"
+         fill="#bd4426"
+         shape-rendering="crispEdges"
+         id="path20143" />
+      <path
+         d="m 2214.3,2069.4 35.9,161.4 120.1,-181.3 z"
+         fill="#bc3f26"
+         shape-rendering="crispEdges"
+         id="path20145" />
+      <path
+         d="m 1886.3,2209.6 166.9,-39.9 -134.4,-100.4 z"
+         fill="#b14322"
+         shape-rendering="crispEdges"
+         id="path20147" />
+      <path
+         d="m 1886.3,2209.6 32.5,-140.3 -165.8,10 z"
+         fill="#be4f2c"
+         shape-rendering="crispEdges"
+         id="path20149" />
+      <path
+         d="m 2759.6,240.1 -178.4,75.3 150.9,144.4 z"
+         fill="#f39771"
+         shape-rendering="crispEdges"
+         id="path20151" />
+      <path
+         d="m 674.8,787.1 -26.6,132.2 129.3,23.1 z"
+         fill="#f4bd8c"
+         shape-rendering="crispEdges"
+         id="path20153" />
+      <path
+         d="m 510.4,1204.8 144.3,196 15.2,-176.8 z"
+         fill="#f1a079"
+         shape-rendering="crispEdges"
+         id="path20155" />
+      <path
+         d="m 1571.2,-167.9 20.4,160.6 204.6,-6.2 z"
+         fill="#f3c4a2"
+         shape-rendering="crispEdges"
+         id="path20157" />
+      <path
+         d="M 1443.2,-16 1247,-35.1 1281.5,81.8 Z"
+         fill="#f3d0af"
+         shape-rendering="crispEdges"
+         id="path20159" />
+      <path
+         d="m 835.1,102.7 -16.5,207.6 143.6,0.5 z"
+         fill="#fbddb5"
+         shape-rendering="crispEdges"
+         id="path20161" />
+      <path
+         d="m 818.6,310.3 144.1,112.5 -0.5,-112 z"
+         fill="#f5d4a7"
+         shape-rendering="crispEdges"
+         id="path20163" />
+      <path
+         d="m 818.6,310.3 -39.2,124 183.3,-11.5 z"
+         fill="#f9d7aa"
+         shape-rendering="crispEdges"
+         id="path20165" />
+      <path
+         d="m 2846.2,275.9 -86.6,-35.8 -27.5,219.7 z"
+         fill="#f3946f"
+         shape-rendering="crispEdges"
+         id="path20167" />
+      <path
+         d="m 2055.9,-188.4 -138.8,169.6 170.4,-1.4 z"
+         fill="#fbba9b"
+         shape-rendering="crispEdges"
+         id="path20169" />
+      <path
+         d="m 1443.2,2235 189.7,-41.4 -223.5,-136.4 z"
+         fill="#b75c37"
+         shape-rendering="crispEdges"
+         id="path20171" />
+      <path
+         d="m 1409.4,2057.2 223.5,136.4 -14.2,-186.5 z"
+         fill="#bd5b33"
+         shape-rendering="crispEdges"
+         id="path20173" />
+      <path
+         d="m 1727.2,2208.1 159.1,1.5 -133.3,-130.3 z"
+         fill="#ba512e"
+         shape-rendering="crispEdges"
+         id="path20175" />
+      <path
+         d="m 1632.9,2193.6 94.3,14.5 25.8,-128.8 z"
+         fill="#b6522e"
+         shape-rendering="crispEdges"
+         id="path20177" />
+      <path
+         d="m 2761.3,1691.9 152.9,-149.7 -165.5,38.8 z"
+         fill="#cf2c1c"
+         shape-rendering="crispEdges"
+         id="path20179" />
+      <path
+         d="M 3046.4,1213.7 3034.5,1119 2846,1243.8 Z"
+         fill="#e05432"
+         shape-rendering="crispEdges"
+         id="path20181" />
+      <path
+         d="m 2895.3,1044.2 155.4,-116.3 -182.8,4.8 z"
+         fill="#e3663d"
+         shape-rendering="crispEdges"
+         id="path20183" />
+      <path
+         d="m 2886.5,1757.5 27.7,-215.3 -152.9,149.7 z"
+         fill="#d0291a"
+         shape-rendering="crispEdges"
+         id="path20185" />
+      <path
+         d="m 3046.4,1213.7 -200.4,30.1 34.5,123.3 z"
+         fill="#e04e31"
+         shape-rendering="crispEdges"
+         id="path20187" />
+      <path
+         d="M 3020.7,603 2919.5,468.7 2899.9,622.3 Z"
+         fill="#e07b4e"
+         shape-rendering="crispEdges"
+         id="path20189" />
+      <path
+         d="m 2899.9,622.3 19.6,-153.6 -167.4,120.9 z"
+         fill="#e58054"
+         shape-rendering="crispEdges"
+         id="path20191" />
+      <path
+         d="M 3050.7,927.9 3016.3,735.2 2867.9,932.7 Z"
+         fill="#de6b40"
+         shape-rendering="crispEdges"
+         id="path20193" />
+      <path
+         d="m 2233.1,-181.2 -145.6,161 174.8,-39.5 z"
+         fill="#fdb699"
+         shape-rendering="crispEdges"
+         id="path20195" />
+      <path
+         d="m 2233.1,-181.2 -177.2,-7.2 31.6,168.2 z"
+         fill="#f2af91"
+         shape-rendering="crispEdges"
+         id="path20197" />
+      <path
+         d="m 2233.1,-181.2 29.2,121.5 155.5,-182.4 z"
+         fill="#f5aa90"
+         shape-rendering="crispEdges"
+         id="path20199" />
+      <path
+         d="m 2055.9,-188.4 -123.4,-17.8 -15.4,187.4 z"
+         fill="#f8b999"
+         shape-rendering="crispEdges"
+         id="path20201" />
+      <path
+         d="m 3034.5,1119 16.2,-191.1 -155.4,116.3 z"
+         fill="#de5d35"
+         shape-rendering="crispEdges"
+         id="path20203" />
+      <path
+         d="m 654.7,1400.8 107.4,196.8 71.2,-164.9 z"
+         fill="#e98d65"
+         shape-rendering="crispEdges"
+         id="path20205" />
+      <path
+         d="m 950.9,1759.4 18.1,140.9 158.4,-41 z"
+         fill="#dc784a"
+         shape-rendering="crispEdges"
+         id="path20207" />
+      <path
+         d="M 779.4,434.3 667.9,633.8 830.1,583.9 Z"
+         fill="#fcd6a5"
+         shape-rendering="crispEdges"
+         id="path20209" />
+      <path
+         d="M 674.8,787.1 459.4,888.8 648.2,919.3 Z"
+         fill="#f9c596"
+         shape-rendering="crispEdges"
+         id="path20211" />
+      <path
+         d="m 762.1,1597.6 46.9,89.6 172.4,-104.8 z"
+         fill="#eb875c"
+         shape-rendering="crispEdges"
+         id="path20213" />
+      <path
+         d="M 994.4,92.3 1131,266 1148.8,121.7 Z"
+         fill="#f9d7b1"
+         shape-rendering="crispEdges"
+         id="path20215" />
+      <path
+         d="m 779.4,434.3 -169.3,-33 57.8,232.5 z"
+         fill="#f4d2a5"
+         shape-rendering="crispEdges"
+         id="path20217" />
+      <path
+         d="m 3064.7,1382.5 -18.3,-168.8 -165.9,153.4 z"
+         fill="#dc482e"
+         shape-rendering="crispEdges"
+         id="path20219" />
+      <path
+         d="M 3234.6,922.4 3174,737.6 3050.7,927.9 Z"
+         fill="#df6d41"
+         shape-rendering="crispEdges"
+         id="path20221" />
+      <path
+         d="m 2572.1,2051.6 124.2,-163.1 -111.5,0.3 z"
+         fill="#bc2614"
+         shape-rendering="crispEdges"
+         id="path20223" />
+      <path
+         d="m 2584.8,1888.8 111.5,-0.3 -106.2,-201.8 z"
+         fill="#cb2f1b"
+         shape-rendering="crispEdges"
+         id="path20225" />
+      <path
+         d="M 1126.2,-69.6 994.4,92.3 1148.8,121.7 Z"
+         fill="#f5d7b5"
+         shape-rendering="crispEdges"
+         id="path20227" />
+      <path
+         d="m 669.9,1224 -15.2,176.8 131.6,-156.6 z"
+         fill="#f8a47b"
+         shape-rendering="crispEdges"
+         id="path20229" />
+      <path
+         d="m 762.1,1597.6 -102.1,92.7 149,-3.1 z"
+         fill="#ea885f"
+         shape-rendering="crispEdges"
+         id="path20231" />
+      <path
+         d="m 510.4,1204.8 159.5,19.2 -7.6,-127.9 z"
+         fill="#fbae83"
+         shape-rendering="crispEdges"
+         id="path20233" />
+      <path
+         d="M 776.7,1847.9 969,1900.3 950.9,1759.4 Z"
+         fill="#d67549"
+         shape-rendering="crispEdges"
+         id="path20235" />
+      <path
+         d="m 1279.3,2213.9 163.9,21.1 -33.8,-177.8 z"
+         fill="#bb633d"
+         shape-rendering="crispEdges"
+         id="path20237" />
+      <path
+         d="m 2417.8,-242.1 -672.1,5.8 186.8,30.1 z"
+         fill="#fcbb9c"
+         shape-rendering="crispEdges"
+         id="path20239" />
+      <path
+         d="m 1932.5,-206.2 -186.8,-30.1 50.5,222.8 z"
+         fill="#fac2a1"
+         shape-rendering="crispEdges"
+         id="path20241" />
+      <path
+         d="M 2919.5,468.7 2846.2,275.9 2732.1,459.8 Z"
+         fill="#f29068"
+         shape-rendering="crispEdges"
+         id="path20243" />
+      <path
+         d="m 2709.5,-30.6 -184.1,-11.4 50,121.9 z"
+         fill="#f29e85"
+         shape-rendering="crispEdges"
+         id="path20245" />
+      <path
+         d="m 1745.7,-236.3 -283.2,46.2 108.7,22.2 z"
+         fill="#fccfad"
+         shape-rendering="crispEdges"
+         id="path20247" />
+      <path
+         d="M 1571.2,-167.9 1462.5,-190.1 1443.2,-16 Z"
+         fill="#f3cba9"
+         shape-rendering="crispEdges"
+         id="path20249" />
+      <path
+         d="m 1247,-35.1 -120.8,-34.5 22.6,191.3 z"
+         fill="#fadbba"
+         shape-rendering="crispEdges"
+         id="path20251" />
+      <path
+         d="m 2417.8,-242.1 -155.5,182.4 113,39.6 z"
+         fill="#ffb298"
+         shape-rendering="crispEdges"
+         id="path20253" />
+      <path
+         d="m 2055.9,-188.4 361.9,-53.7 -485.3,35.9 z"
+         fill="#f6b294"
+         shape-rendering="crispEdges"
+         id="path20255" />
+      <path
+         d="m 2525.4,-42 -150.1,21.9 200.1,100 z"
+         fill="#f4a38a"
+         shape-rendering="crispEdges"
+         id="path20257" />
+      <path
+         d="m 3016.3,735.2 4.4,-132.2 -120.8,19.3 z"
+         fill="#e1794c"
+         shape-rendering="crispEdges"
+         id="path20259" />
+      <path
+         d="m 2919.5,468.7 87.7,-56.8 -161,-136 z"
+         fill="#e5845d"
+         shape-rendering="crispEdges"
+         id="path20261" />
+      <path
+         d="M 3171.4,616.1 3020.7,603 3016.3,735.2 Z"
+         fill="#dd7548"
+         shape-rendering="crispEdges"
+         id="path20263" />
+      <path
+         d="M 2746.9,108.2 2575.4,79.9 2759.6,240.1 Z"
+         fill="#f2997b"
+         shape-rendering="crispEdges"
+         id="path20265" />
+      <path
+         d="m 2409.8,2184.9 162.3,-133.3 -201.8,-2.1 z"
+         fill="#b7331f"
+         shape-rendering="crispEdges"
+         id="path20267" />
+      <path
+         d="m 2370.3,2049.5 201.8,2.1 -168.9,-144.5 z"
+         fill="#c0351f"
+         shape-rendering="crispEdges"
+         id="path20269" />
+      <path
+         d="m 2250.2,2230.8 -35.9,-161.4 -161.1,100.3 z"
+         fill="#b64025"
+         shape-rendering="crispEdges"
+         id="path20271" />
+      <path
+         d="m 2877.6,147.6 -130.7,-39.4 12.7,131.9 z"
+         fill="#ea8f70"
+         shape-rendering="crispEdges"
+         id="path20273" />
+      <path
+         d="M 1237.4,-183.3 1126.2,-69.6 1247,-35.1 Z"
+         fill="#f7d7b6"
+         shape-rendering="crispEdges"
+         id="path20275" />
+      <path
+         d="m 3036,1563.3 28.7,-180.8 -150.5,159.7 z"
+         fill="#d1331f"
+         shape-rendering="crispEdges"
+         id="path20277" />
+      <path
+         d="m 2914.2,1542.2 150.5,-159.7 -184.2,-15.4 z"
+         fill="#d93f28"
+         shape-rendering="crispEdges"
+         id="path20279" />
+      <path
+         d="m 3234.7,1087.4 -184,-159.5 -16.2,191.1 z"
+         fill="#e26037"
+         shape-rendering="crispEdges"
+         id="path20281" />
+      <path
+         d="m 1279.3,2213.9 130.1,-156.7 -155,-33 z"
+         fill="#bd633b"
+         shape-rendering="crispEdges"
+         id="path20283" />
+      <path
+         d="m 1632.9,2193.6 -33.3,142.8 127.6,-128.3 z"
+         fill="#bd5b36"
+         shape-rendering="crispEdges"
+         id="path20285" />
+      <path
+         d="m 1727.2,2208.1 45.6,159.4 113.5,-157.9 z"
+         fill="#bd5430"
+         shape-rendering="crispEdges"
+         id="path20287" />
+      <path
+         d="m 953.3,2048.9 126.3,7.5 L 969,1900.3 Z"
+         fill="#cf7449"
+         shape-rendering="crispEdges"
+         id="path20289" />
+      <path
+         d="m 969,1900.3 110.6,156.1 47.8,-197.1 z"
+         fill="#cf6f43"
+         shape-rendering="crispEdges"
+         id="path20291" />
+      <path
+         d="m 1934.6,2373.4 118.6,-203.7 -166.9,39.9 z"
+         fill="#bc4c2b"
+         shape-rendering="crispEdges"
+         id="path20293" />
+      <path
+         d="m 2111.5,2384.3 138.7,-153.5 -197,-61.1 z"
+         fill="#b74226"
+         shape-rendering="crispEdges"
+         id="path20295" />
+      <path
+         d="m 2899.7,1862.4 -13.2,-104.9 -190.2,131 z"
+         fill="#be160c"
+         shape-rendering="crispEdges"
+         id="path20297" />
+      <path
+         d="m 2696.3,1888.5 190.2,-131 -125.2,-65.6 z"
+         fill="#cf2d1a"
+         shape-rendering="crispEdges"
+         id="path20299" />
+      <path
+         d="m 654.7,1400.8 7.6,191.4 99.8,5.4 z"
+         fill="#f2946c"
+         shape-rendering="crispEdges"
+         id="path20301" />
+      <path
+         d="m 809,1687.2 -32.3,160.7 174.2,-88.5 z"
+         fill="#e38156"
+         shape-rendering="crispEdges"
+         id="path20303" />
+      <path
+         d="m 2250.2,2230.8 159.6,-45.9 -39.5,-135.4 z"
+         fill="#b53923"
+         shape-rendering="crispEdges"
+         id="path20305" />
+      <path
+         d="m 3179.3,408 -172.1,3.9 13.5,191.1 z"
+         fill="#de7c52"
+         shape-rendering="crispEdges"
+         id="path20307" />
+      <path
+         d="m 3020.7,603 -13.5,-191.1 -87.7,56.8 z"
+         fill="#e88458"
+         shape-rendering="crispEdges"
+         id="path20309" />
+      <path
+         d="m 2846.2,275.9 31.4,-128.3 -118,92.5 z"
+         fill="#ed906f"
+         shape-rendering="crispEdges"
+         id="path20311" />
+      <path
+         d="M 2886.5,1757.5 3036,1563.3 2914.2,1542.2 Z"
+         fill="#d12a1b"
+         shape-rendering="crispEdges"
+         id="path20313" />
+      <path
+         d="m 1107.1,2223.5 172.2,-9.6 -24.9,-189.7 z"
+         fill="#bb6740"
+         shape-rendering="crispEdges"
+         id="path20315" />
+      <path
+         d="m 1462.5,-190.1 -225.1,6.8 9.6,148.2 z"
+         fill="#fcd9b8"
+         shape-rendering="crispEdges"
+         id="path20317" />
+      <path
+         d="m 1110.5,-232.9 126.9,49.6 225.1,-6.8 z"
+         fill="#fbd9b8"
+         shape-rendering="crispEdges"
+         id="path20319" />
+      <path
+         d="m 437.3,1059 225,37.1 -14.1,-176.8 z"
+         fill="#fdbb8e"
+         shape-rendering="crispEdges"
+         id="path20321" />
+      <path
+         d="m 437.3,1059 73.1,145.8 151.9,-108.7 z"
+         fill="#f3ac81"
+         shape-rendering="crispEdges"
+         id="path20323" />
+      <path
+         d="m 654.7,1400.8 -182.9,165.4 190.5,26 z"
+         fill="#ed916b"
+         shape-rendering="crispEdges"
+         id="path20325" />
+      <path
+         d="M 967.7,-29 835.1,102.7 994.4,92.3 Z"
+         fill="#fbe1bf"
+         shape-rendering="crispEdges"
+         id="path20327" />
+      <path
+         d="M 994.4,92.3 835.1,102.7 962.2,310.8 Z"
+         fill="#f3d6b0"
+         shape-rendering="crispEdges"
+         id="path20329" />
+      <path
+         d="m 818.6,310.3 -208.5,91 169.3,33 z"
+         fill="#f5d6ab"
+         shape-rendering="crispEdges"
+         id="path20331" />
+      <path
+         d="M 967.7,-29 994.4,92.3 1126.2,-69.6 Z"
+         fill="#fbe0bf"
+         shape-rendering="crispEdges"
+         id="path20333" />
+      <path
+         d="m 927.7,-209 40,180 158.5,-40.6 z"
+         fill="#fce2c1"
+         shape-rendering="crispEdges"
+         id="path20335" />
+      <path
+         d="m 1452.3,2335.3 147.3,1.1 -156.4,-101.4 z"
+         fill="#b85d37"
+         shape-rendering="crispEdges"
+         id="path20337" />
+      <path
+         d="m 1443.2,2235 156.4,101.4 33.3,-142.8 z"
+         fill="#bb5c37"
+         shape-rendering="crispEdges"
+         id="path20339" />
+      <path
+         d="M 660,1690.3 776.7,1847.9 809,1687.2 Z"
+         fill="#e8865d"
+         shape-rendering="crispEdges"
+         id="path20341" />
+      <path
+         d="m 1079.6,2056.4 27.5,167.1 147.3,-199.3 z"
+         fill="#bf6941"
+         shape-rendering="crispEdges"
+         id="path20343" />
+      <path
+         d="M 3028.1,298.5 2877.6,147.6 2846.2,275.9 Z"
+         fill="#e88a68"
+         shape-rendering="crispEdges"
+         id="path20345" />
+      <path
+         d="M 2746.9,108.2 2709.5,-30.6 2575.4,79.9 Z"
+         fill="#f29b80"
+         shape-rendering="crispEdges"
+         id="path20347" />
+      <path
+         d="m 662.3,1592.2 -2.3,98.1 102.1,-92.7 z"
+         fill="#e4835c"
+         shape-rendering="crispEdges"
+         id="path20349" />
+      <path
+         d="m 471.8,1566.2 188.2,124.1 2.3,-98.1 z"
+         fill="#e68661"
+         shape-rendering="crispEdges"
+         id="path20351" />
+      <path
+         d="m 2858.3,-11.8 -148.8,-18.8 37.4,138.8 z"
+         fill="#ed957b"
+         shape-rendering="crispEdges"
+         id="path20353" />
+      <path
+         d="m 2525.4,-42 -107.6,-200.1 -42.5,222 z"
+         fill="#fdad94"
+         shape-rendering="crispEdges"
+         id="path20355" />
+      <path
+         d="m 1599.6,2336.4 173.2,31.1 -45.6,-159.4 z"
+         fill="#b6532e"
+         shape-rendering="crispEdges"
+         id="path20357" />
+      <path
+         d="m 816.5,2050.5 136.8,-1.6 15.7,-148.6 z"
+         fill="#c76f45"
+         shape-rendering="crispEdges"
+         id="path20359" />
+      <path
+         d="m 604,275.9 6.1,125.4 208.5,-91 z"
+         fill="#f7dab4"
+         shape-rendering="crispEdges"
+         id="path20361" />
+      <path
+         d="M 445.8,764.2 459.4,888.8 674.8,787.1 Z"
+         fill="#f2c498"
+         shape-rendering="crispEdges"
+         id="path20363" />
+      <path
+         d="m 2761.7,2049.8 138,-187.4 -203.4,26.1 z"
+         fill="#c12213"
+         shape-rendering="crispEdges"
+         id="path20365" />
+      <path
+         d="m 2886.5,1757.5 166.1,-2 -16.6,-192.2 z"
+         fill="#c0140d"
+         shape-rendering="crispEdges"
+         id="path20367" />
+      <path
+         d="m 2761.7,2049.8 -65.4,-161.3 -124.2,163.1 z"
+         fill="#bc2817"
+         shape-rendering="crispEdges"
+         id="path20369" />
+      <path
+         d="m 3234.7,1087.4 -200.2,31.6 11.9,94.7 z"
+         fill="#dc542f"
+         shape-rendering="crispEdges"
+         id="path20371" />
+      <path
+         d="M 3050.7,927.9 3174,737.6 3016.3,735.2 Z"
+         fill="#e6774a"
+         shape-rendering="crispEdges"
+         id="path20373" />
+      <path
+         d="m 3007.2,411.9 20.9,-113.4 -181.9,-22.6 z"
+         fill="#e68761"
+         shape-rendering="crispEdges"
+         id="path20375" />
+      <path
+         d="m 3197.7,1269.5 -151.3,-55.8 18.3,168.8 z"
+         fill="#dc4b2e"
+         shape-rendering="crispEdges"
+         id="path20377" />
+      <path
+         d="m 1772.8,2367.5 161.8,5.9 -48.3,-163.8 z"
+         fill="#b14625"
+         shape-rendering="crispEdges"
+         id="path20379" />
+      <path
+         d="m 2572.4,2338.4 15.3,-171.5 -177.9,18 z"
+         fill="#af2e1c"
+         shape-rendering="crispEdges"
+         id="path20381" />
+      <path
+         d="m 445.8,764.2 229,22.9 -6.9,-153.3 z"
+         fill="#f4c99b"
+         shape-rendering="crispEdges"
+         id="path20383" />
+      <path
+         d="m 2576.7,-185.1 -158.9,-57 107.6,200.1 z"
+         fill="#f1a087"
+         shape-rendering="crispEdges"
+         id="path20385" />
+      <path
+         d="m 2233.1,-181.2 184.7,-60.9 -361.9,53.7 z"
+         fill="#f4ac91"
+         shape-rendering="crispEdges"
+         id="path20387" />
+      <path
+         d="m 1305.2,2360.7 147.1,-25.4 -9.1,-100.3 z"
+         fill="#b35c36"
+         shape-rendering="crispEdges"
+         id="path20389" />
+      <path
+         d="m 1599.6,2336.4 -294.4,24.3 467.6,6.8 z"
+         fill="#bb5d37"
+         shape-rendering="crispEdges"
+         id="path20391" />
+      <path
+         d="m 1305.2,2360.7 138,-125.7 -163.9,-21.1 z"
+         fill="#be6740"
+         shape-rendering="crispEdges"
+         id="path20393" />
+      <path
+         d="m 2424.5,2328 -14.7,-143.1 -159.6,45.9 z"
+         fill="#b33722"
+         shape-rendering="crispEdges"
+         id="path20395" />
+      <path
+         d="m 2409.8,2184.9 177.9,-18 -15.6,-115.3 z"
+         fill="#b22e1d"
+         shape-rendering="crispEdges"
+         id="path20397" />
+      <path
+         d="m 2692.9,-201.6 -116.2,16.5 132.8,154.5 z"
+         fill="#f8a288"
+         shape-rendering="crispEdges"
+         id="path20399" />
+      <path
+         d="M 3179.3,408 3028.1,298.5 3007.2,411.9 Z"
+         fill="#ea8962"
+         shape-rendering="crispEdges"
+         id="path20401" />
+      <path
+         d="m 3209.4,1397.1 -144.7,-14.6 144.5,142.5 z"
+         fill="#d23923"
+         shape-rendering="crispEdges"
+         id="path20403" />
+      <path
+         d="m 3209.4,1397.1 -11.7,-127.6 -133,113 z"
+         fill="#d33f27"
+         shape-rendering="crispEdges"
+         id="path20405" />
+      <path
+         d="m 3341.2,631.7 -169.8,-15.6 2.6,121.5 z"
+         fill="#d77043"
+         shape-rendering="crispEdges"
+         id="path20407" />
+      <path
+         d="m 3174,737.6 -2.6,-121.5 -155.1,119.1 z"
+         fill="#e2784b"
+         shape-rendering="crispEdges"
+         id="path20409" />
+      <path
+         d="M 459.4,888.8 437.3,1059 648.2,919.3 Z"
+         fill="#f6bc90"
+         shape-rendering="crispEdges"
+         id="path20411" />
+      <path
+         d="m 510.4,1204.8 -69.6,175.9 213.9,20.1 z"
+         fill="#faa782"
+         shape-rendering="crispEdges"
+         id="path20413" />
+      <path
+         d="m 2587.7,2166.9 174,-117.1 -189.6,1.8 z"
+         fill="#ad2213"
+         shape-rendering="crispEdges"
+         id="path20415" />
+      <path
+         d="m 3197.7,1269.5 37,-182.1 -188.3,126.3 z"
+         fill="#d44a29"
+         shape-rendering="crispEdges"
+         id="path20417" />
+      <path
+         d="m 3234.7,1087.4 -0.1,-165 -183.9,5.5 z"
+         fill="#d45930"
+         shape-rendering="crispEdges"
+         id="path20419" />
+      <path
+         d="M 2709.5,-30.6 2576.7,-185.1 2525.4,-42 Z"
+         fill="#f9a48b"
+         shape-rendering="crispEdges"
+         id="path20421" />
+      <path
+         d="m 2858.3,-11.8 -111.4,120 130.7,39.4 z"
+         fill="#f3977b"
+         shape-rendering="crispEdges"
+         id="path20423" />
+      <path
+         d="m 1772.8,2367.5 338.7,16.8 -176.9,-10.9 z"
+         fill="#b04222"
+         shape-rendering="crispEdges"
+         id="path20425" />
+      <path
+         d="m 1934.6,2373.4 176.9,10.9 -58.3,-214.6 z"
+         fill="#b84728"
+         shape-rendering="crispEdges"
+         id="path20427" />
+      <path
+         d="M 461.7,614.5 445.8,764.2 667.9,633.8 Z"
+         fill="#f6cfa3"
+         shape-rendering="crispEdges"
+         id="path20429" />
+      <path
+         d="m 459.4,888.8 -114.1,54.5 92,115.7 z"
+         fill="#f3bb91"
+         shape-rendering="crispEdges"
+         id="path20431" />
+      <path
+         d="m 948.7,2231.5 158.4,-8 -27.5,-167.1 z"
+         fill="#c17049"
+         shape-rendering="crispEdges"
+         id="path20433" />
+      <path
+         d="m 500.5,471.4 -38.8,143.1 206.2,19.3 z"
+         fill="#f5d3a7"
+         shape-rendering="crispEdges"
+         id="path20435" />
+      <path
+         d="M 659.5,91.6 818.6,310.3 835.1,102.7 Z"
+         fill="#f4dab8"
+         shape-rendering="crispEdges"
+         id="path20437" />
+      <path
+         d="M 659.5,91.6 604,275.9 818.6,310.3 Z"
+         fill="#fde3c0"
+         shape-rendering="crispEdges"
+         id="path20439" />
+      <path
+         d="M 610.1,401.3 500.5,471.4 667.9,633.8 Z"
+         fill="#fdddb1"
+         shape-rendering="crispEdges"
+         id="path20441" />
+      <path
+         d="M 3209.2,1525 3064.7,1382.5 3036,1563.3 Z"
+         fill="#d33621"
+         shape-rendering="crispEdges"
+         id="path20443" />
+      <path
+         d="m 3348.4,1278.4 20.2,-169.1 -133.9,-21.9 z"
+         fill="#cf4925"
+         shape-rendering="crispEdges"
+         id="path20445" />
+      <path
+         d="m 3071.6,1890.4 -19,-134.9 -152.9,106.9 z"
+         fill="#b70304"
+         shape-rendering="crispEdges"
+         id="path20447" />
+      <path
+         d="m 2899.7,1862.4 152.9,-106.9 -166.1,2 z"
+         fill="#c1170d"
+         shape-rendering="crispEdges"
+         id="path20449" />
+      <path
+         d="m 2111.5,2384.3 146.4,-10.8 -7.7,-142.7 z"
+         fill="#b23b22"
+         shape-rendering="crispEdges"
+         id="path20451" />
+      <path
+         d="m 1745.7,-236.3 -635.2,3.4 352,42.8 z"
+         fill="#ffd9b7"
+         shape-rendering="crispEdges"
+         id="path20453" />
+      <path
+         d="m 1237.4,-183.3 -126.9,-49.6 15.7,163.3 z"
+         fill="#ffe0bf"
+         shape-rendering="crispEdges"
+         id="path20455" />
+      <path
+         d="M 967.7,-29 813.6,-45.7 835.1,102.7 Z"
+         fill="#f9e1c3"
+         shape-rendering="crispEdges"
+         id="path20457" />
+      <path
+         d="m 480.9,-234.5 629.6,1.6 -826,-5.1 z"
+         fill="#f9e7ce"
+         shape-rendering="crispEdges"
+         id="path20459" />
+      <path
+         d="m 458.3,285.8 42.2,185.6 109.6,-70.1 z"
+         fill="#fbe0bb"
+         shape-rendering="crispEdges"
+         id="path20461" />
+      <path
+         d="m 276.9,1216.5 163.9,164.2 69.6,-175.9 z"
+         fill="#f8aa86"
+         shape-rendering="crispEdges"
+         id="path20463" />
+      <path
+         d="m 3051.3,91.2 -193,-103 19.3,159.4 z"
+         fill="#f09377"
+         shape-rendering="crispEdges"
+         id="path20465" />
+      <path
+         d="m 2257.9,2373.5 166.6,-45.5 -174.3,-97.2 z"
+         fill="#ae341e"
+         shape-rendering="crispEdges"
+         id="path20467" />
+      <path
+         d="m 2587.7,2166.9 165.3,18.6 8.7,-135.7 z"
+         fill="#b12718"
+         shape-rendering="crispEdges"
+         id="path20469" />
+      <path
+         d="m 1112.5,2339.6 192.7,21.1 -25.9,-146.8 z"
+         fill="#b6633c"
+         shape-rendering="crispEdges"
+         id="path20471" />
+      <path
+         d="m 1452.3,2335.3 -147.1,25.4 294.4,-24.3 z"
+         fill="#b85f39"
+         shape-rendering="crispEdges"
+         id="path20473" />
+      <path
+         d="m 1772.8,2367.5 -846.3,28.4 1185,-11.6 z"
+         fill="#b75732"
+         shape-rendering="crispEdges"
+         id="path20475" />
+      <path
+         d="M 776.7,1847.9 816.5,2050.5 969,1900.3 Z"
+         fill="#d87a4f"
+         shape-rendering="crispEdges"
+         id="path20477" />
+      <path
+         d="m 953.3,2048.9 -4.6,182.6 130.9,-175.1 z"
+         fill="#c27047"
+         shape-rendering="crispEdges"
+         id="path20479" />
+      <path
+         d="m 1107.1,2223.5 5.4,116.1 166.8,-125.7 z"
+         fill="#c06c45"
+         shape-rendering="crispEdges"
+         id="path20481" />
+      <path
+         d="m 667.3,1910.5 149.2,140 -39.8,-202.6 z"
+         fill="#d0754c"
+         shape-rendering="crispEdges"
+         id="path20483" />
+      <path
+         d="M 667.3,1910.5 776.7,1847.9 660,1690.3 Z"
+         fill="#e3835a"
+         shape-rendering="crispEdges"
+         id="path20485" />
+      <path
+         d="M 927.7,-209 813.6,-45.7 967.7,-29 Z"
+         fill="#fae2c3"
+         shape-rendering="crispEdges"
+         id="path20487" />
+      <path
+         d="M 3228.6,1702.1 3209.2,1525 3036,1563.3 Z"
+         fill="#c41d11"
+         shape-rendering="crispEdges"
+         id="path20489" />
+      <path
+         d="m 3368.6,1109.3 -134,-186.9 0.1,165 z"
+         fill="#d3542b"
+         shape-rendering="crispEdges"
+         id="path20491" />
+      <path
+         d="m 440.8,1380.7 31,185.5 182.9,-165.4 z"
+         fill="#ef9874"
+         shape-rendering="crispEdges"
+         id="path20493" />
+      <path
+         d="M 3383.5,461.2 3179.3,408 3171.4,616.1 Z"
+         fill="#d67549"
+         shape-rendering="crispEdges"
+         id="path20495" />
+      <path
+         d="M 3171.4,616.1 3179.3,408 3020.7,603 Z"
+         fill="#e17d4f"
+         shape-rendering="crispEdges"
+         id="path20497" />
+      <path
+         d="m 3028.1,298.5 23.2,-207.3 -173.7,56.4 z"
+         fill="#e68969"
+         shape-rendering="crispEdges"
+         id="path20499" />
+      <path
+         d="m 471.4,1858.8 195.9,51.7 -7.3,-220.2 z"
+         fill="#e1835c"
+         shape-rendering="crispEdges"
+         id="path20501" />
+      <path
+         d="m 2576.7,-185.1 116.2,-16.5 -275.1,-40.5 z"
+         fill="#f09d84"
+         shape-rendering="crispEdges"
+         id="path20503" />
+      <path
+         d="m 2872.4,-228.9 -179.5,27.3 16.6,171 z"
+         fill="#f89f85"
+         shape-rendering="crispEdges"
+         id="path20505" />
+      <path
+         d="M 813.6,-45.7 659.5,91.6 835.1,102.7 Z"
+         fill="#f7e0c2"
+         shape-rendering="crispEdges"
+         id="path20507" />
+      <path
+         d="m 604,275.9 -145.7,9.9 151.8,115.5 z"
+         fill="#f8dfbb"
+         shape-rendering="crispEdges"
+         id="path20509" />
+      <path
+         d="M 307.8,792.1 459.4,888.8 445.8,764.2 Z"
+         fill="#fcd0a6"
+         shape-rendering="crispEdges"
+         id="path20511" />
+      <path
+         d="m 307.8,792.1 37.5,151.2 114.1,-54.5 z"
+         fill="#f4c39a"
+         shape-rendering="crispEdges"
+         id="path20513" />
+      <path
+         d="m 437.3,1059 -91.6,25.9 164.7,119.9 z"
+         fill="#f4af86"
+         shape-rendering="crispEdges"
+         id="path20515" />
+      <path
+         d="m 337.2,1535.4 114.5,185.4 20.1,-154.6 z"
+         fill="#f19270"
+         shape-rendering="crispEdges"
+         id="path20517" />
+      <path
+         d="m 307.8,792.1 138,-27.9 15.9,-149.7 z"
+         fill="#fed5ab"
+         shape-rendering="crispEdges"
+         id="path20519" />
+      <path
+         d="m 345.3,943.3 0.4,141.6 91.6,-25.9 z"
+         fill="#f6b990"
+         shape-rendering="crispEdges"
+         id="path20521" />
+      <path
+         d="M 2572.4,2338.4 2753,2185.5 2587.7,2166.9 Z"
+         fill="#ac2617"
+         shape-rendering="crispEdges"
+         id="path20523" />
+      <path
+         d="m 2761.7,2049.8 113.9,29.9 24.1,-217.3 z"
+         fill="#b3140b"
+         shape-rendering="crispEdges"
+         id="path20525" />
+      <path
+         d="m 2753,2185.5 122.6,-105.8 -113.9,-29.9 z"
+         fill="#ad1c10"
+         shape-rendering="crispEdges"
+         id="path20527" />
+      <path
+         d="m 3052.6,1755.5 176,-53.4 -192.6,-138.8 z"
+         fill="#c82113"
+         shape-rendering="crispEdges"
+         id="path20529" />
+      <path
+         d="m 765.6,2191.4 183.1,40.1 -132.2,-181 z"
+         fill="#c1734e"
+         shape-rendering="crispEdges"
+         id="path20531" />
+      <path
+         d="m 816.5,2050.5 132.2,181 4.6,-182.6 z"
+         fill="#c5744c"
+         shape-rendering="crispEdges"
+         id="path20533" />
+      <path
+         d="m 948.7,2231.5 163.8,108.1 -5.4,-116.1 z"
+         fill="#bf6e46"
+         shape-rendering="crispEdges"
+         id="path20535" />
+      <path
+         d="M 1110.5,-232.9 927.7,-209 1126.2,-69.6 Z"
+         fill="#fbdfbe"
+         shape-rendering="crispEdges"
+         id="path20537" />
+      <path
+         d="M 813.6,-45.7 600.2,-46.5 659.5,91.6 Z"
+         fill="#fde9cf"
+         shape-rendering="crispEdges"
+         id="path20539" />
+      <path
+         d="m 2875.6,2079.7 196,-189.3 -171.9,-28 z"
+         fill="#b50c07"
+         shape-rendering="crispEdges"
+         id="path20541" />
+      <path
+         d="m 2424.5,2328 147.9,10.4 -162.6,-153.5 z"
+         fill="#a82919"
+         shape-rendering="crispEdges"
+         id="path20543" />
+      <path
+         d="M 2711.5,2401.3 2572.4,2338.4 2424.5,2328 Z"
+         fill="#a92717"
+         shape-rendering="crispEdges"
+         id="path20545" />
+      <path
+         d="M 3183.2,273.4 3051.3,91.2 3028.1,298.5 Z"
+         fill="#eb8d6b"
+         shape-rendering="crispEdges"
+         id="path20547" />
+      <path
+         d="m 2858.3,-11.8 14.1,-217.1 -162.9,198.3 z"
+         fill="#f1977d"
+         shape-rendering="crispEdges"
+         id="path20549" />
+      <path
+         d="M 3368.6,1109.3 3363,882.2 3234.6,922.4 Z"
+         fill="#d2582e"
+         shape-rendering="crispEdges"
+         id="path20551" />
+      <path
+         d="M 3234.6,922.4 3363,882.2 3174,737.6 Z"
+         fill="#d26337"
+         shape-rendering="crispEdges"
+         id="path20553" />
+      <path
+         d="m 3234.7,1087.4 -37,182.1 150.7,8.9 z"
+         fill="#cd4323"
+         shape-rendering="crispEdges"
+         id="path20555" />
+      <path
+         d="m 3366.6,282.5 -183.4,-9.1 -3.9,134.6 z"
+         fill="#e68761"
+         shape-rendering="crispEdges"
+         id="path20557" />
+      <path
+         d="m 3179.3,408 3.9,-134.6 -155.1,25.1 z"
+         fill="#e0825c"
+         shape-rendering="crispEdges"
+         id="path20559" />
+      <path
+         d="m 3348.4,1278.4 -139,118.7 153.7,31.1 z"
+         fill="#c8341e"
+         shape-rendering="crispEdges"
+         id="path20561" />
+      <path
+         d="m 3348.4,1278.4 -150.7,-8.9 11.7,127.6 z"
+         fill="#d24126"
+         shape-rendering="crispEdges"
+         id="path20563" />
+      <path
+         d="m 3363.1,1428.2 -153.7,-31.1 -0.2,127.9 z"
+         fill="#ce341e"
+         shape-rendering="crispEdges"
+         id="path20565" />
+      <path
+         d="M 289.5,560.5 307.8,792.1 461.7,614.5 Z"
+         fill="#f5d1a9"
+         shape-rendering="crispEdges"
+         id="path20567" />
+      <path
+         d="m 135.3,1044.9 141.6,171.6 68.8,-131.6 z"
+         fill="#fbb993"
+         shape-rendering="crispEdges"
+         id="path20569" />
+      <path
+         d="m 289.5,560.5 172.2,54 38.8,-143.1 z"
+         fill="#f4d5ac"
+         shape-rendering="crispEdges"
+         id="path20571" />
+      <path
+         d="M 462.6,129.6 604,275.9 659.5,91.6 Z"
+         fill="#f7e1c3"
+         shape-rendering="crispEdges"
+         id="path20573" />
+      <path
+         d="M 462.6,129.6 458.3,285.8 604,275.9 Z"
+         fill="#f3debf"
+         shape-rendering="crispEdges"
+         id="path20575" />
+      <path
+         d="M 3404.8,772.6 3341.2,631.7 3174,737.6 Z"
+         fill="#dc7345"
+         shape-rendering="crispEdges"
+         id="path20577" />
+      <path
+         d="m 337.2,1535.4 134.6,30.8 -31,-185.5 z"
+         fill="#ec9472"
+         shape-rendering="crispEdges"
+         id="path20579" />
+      <path
+         d="M 471.8,1566.2 451.7,1720.8 660,1690.3 Z"
+         fill="#e78864"
+         shape-rendering="crispEdges"
+         id="path20581" />
+      <path
+         d="m 667.3,1910.5 -18.5,122.1 167.7,17.9 z"
+         fill="#ca734d"
+         shape-rendering="crispEdges"
+         id="path20583" />
+      <path
+         d="m 3180.8,1909.7 47.8,-207.6 -176,53.4 z"
+         fill="#ba0c06"
+         shape-rendering="crispEdges"
+         id="path20585" />
+      <path
+         d="m 513.6,2015.3 135.2,17.3 18.5,-122.1 z"
+         fill="#d07a55"
+         shape-rendering="crispEdges"
+         id="path20587" />
+      <path
+         d="m 135.3,1044.9 210.4,40 -0.4,-141.6 z"
+         fill="#f5b992"
+         shape-rendering="crispEdges"
+         id="path20589" />
+      <path
+         d="m 345.7,1084.9 -68.8,131.6 233.5,-11.7 z"
+         fill="#f6af88"
+         shape-rendering="crispEdges"
+         id="path20591" />
+      <path
+         d="m 287.1,1368.6 50.1,166.8 103.6,-154.7 z"
+         fill="#faa483"
+         shape-rendering="crispEdges"
+         id="path20593" />
+      <path
+         d="m 3369.2,1560.4 -6.1,-132.2 -153.9,96.8 z"
+         fill="#c02212"
+         shape-rendering="crispEdges"
+         id="path20595" />
+      <path
+         d="M 3543.4,1057.8 3493,921.6 3368.6,1109.3 Z"
+         fill="#d1572f"
+         shape-rendering="crispEdges"
+         id="path20597" />
+      <path
+         d="m 276.9,1216.5 10.2,152.1 153.7,12.1 z"
+         fill="#f9a988"
+         shape-rendering="crispEdges"
+         id="path20599" />
+      <path
+         d="m 3493,921.6 -88.2,-149 -41.8,109.6 z"
+         fill="#cd6035"
+         shape-rendering="crispEdges"
+         id="path20601" />
+      <path
+         d="m 3363,882.2 41.8,-109.6 -230.8,-35 z"
+         fill="#d76b3e"
+         shape-rendering="crispEdges"
+         id="path20603" />
+      <path
+         d="m 3335.4,138.2 -162.6,-39.4 10.4,174.6 z"
+         fill="#e68a69"
+         shape-rendering="crispEdges"
+         id="path20605" />
+      <path
+         d="m 3493,921.6 -130,-39.4 5.6,227.1 z"
+         fill="#d55d33"
+         shape-rendering="crispEdges"
+         id="path20607" />
+      <path
+         d="M 3172.8,98.8 3062.7,-4.7 3051.3,91.2 Z"
+         fill="#e2886b"
+         shape-rendering="crispEdges"
+         id="path20609" />
+      <path
+         d="m 3051.3,91.2 11.4,-95.9 -204.4,-7.1 z"
+         fill="#f09479"
+         shape-rendering="crispEdges"
+         id="path20611" />
+      <path
+         d="m 3172.8,98.8 -121.5,-7.6 131.9,182.2 z"
+         fill="#e88c6c"
+         shape-rendering="crispEdges"
+         id="path20613" />
+      <path
+         d="m 648.8,2032.6 116.8,158.8 50.9,-140.9 z"
+         fill="#c57450"
+         shape-rendering="crispEdges"
+         id="path20615" />
+      <path
+         d="m 948.7,2231.5 -22.2,164.4 186,-56.3 z"
+         fill="#b66741"
+         shape-rendering="crispEdges"
+         id="path20617" />
+      <path
+         d="m 3072.3,2072.2 108.5,-162.5 -109.2,-19.3 z"
+         fill="#b10704"
+         shape-rendering="crispEdges"
+         id="path20619" />
+      <path
+         d="m 3071.6,1890.4 109.2,19.3 -128.2,-154.2 z"
+         fill="#b80704"
+         shape-rendering="crispEdges"
+         id="path20621" />
+      <path
+         d="m 2753,2185.5 120.5,32.2 2.1,-138 z"
+         fill="#9f0c09"
+         shape-rendering="crispEdges"
+         id="path20623" />
+      <path
+         d="m 2711.5,2401.3 162,-183.6 -120.5,-32.2 z"
+         fill="#ac2114"
+         shape-rendering="crispEdges"
+         id="path20625" />
+      <path
+         d="m 451.7,1720.8 19.7,138 188.6,-168.5 z"
+         fill="#dd805b"
+         shape-rendering="crispEdges"
+         id="path20627" />
+      <path
+         d="m 648.8,2032.6 10.4,202.6 106.4,-43.8 z"
+         fill="#be7250"
+         shape-rendering="crispEdges"
+         id="path20629" />
+      <path
+         d="m 282.9,1756.9 188.5,101.9 -19.7,-138 z"
+         fill="#e88b68"
+         shape-rendering="crispEdges"
+         id="path20631" />
+      <path
+         d="m 287.5,405.6 2,154.9 211,-89.1 z"
+         fill="#f7dab5"
+         shape-rendering="crispEdges"
+         id="path20633" />
+      <path
+         d="m 307.8,792.1 -121.3,109 158.8,42.2 z"
+         fill="#f7c7a0"
+         shape-rendering="crispEdges"
+         id="path20635" />
+      <path
+         d="m 3029.6,-191.2 -157.2,-37.7 -14.1,217.1 z"
+         fill="#ef947a"
+         shape-rendering="crispEdges"
+         id="path20637" />
+      <path
+         d="m 2692.9,-201.6 179.5,-27.3 -454.6,-13.2 z"
+         fill="#f29c83"
+         shape-rendering="crispEdges"
+         id="path20639" />
+      <path
+         d="m 3383.5,461.2 -212.1,154.9 169.8,15.6 z"
+         fill="#d57245"
+         shape-rendering="crispEdges"
+         id="path20641" />
+      <path
+         d="m 3062.7,-4.7 -33.1,-186.5 -171.3,179.4 z"
+         fill="#ef937a"
+         shape-rendering="crispEdges"
+         id="path20643" />
+      <path
+         d="m 617.6,-189.2 -17.4,142.7 213.4,0.8 z"
+         fill="#f8e4ca"
+         shape-rendering="crispEdges"
+         id="path20645" />
+      <path
+         d="m 458.3,285.8 -170.8,119.8 213,65.8 z"
+         fill="#fce3bf"
+         shape-rendering="crispEdges"
+         id="path20647" />
+      <path
+         d="m 3072.3,2072.2 -0.7,-181.8 -196,189.3 z"
+         fill="#b01009"
+         shape-rendering="crispEdges"
+         id="path20649" />
+      <path
+         d="m 3228.6,1702.1 140.6,-141.7 -160,-35.4 z"
+         fill="#bc120a"
+         shape-rendering="crispEdges"
+         id="path20651" />
+      <path
+         d="m 927.7,-209 -153,-19.4 38.9,182.7 z"
+         fill="#fee7c9"
+         shape-rendering="crispEdges"
+         id="path20653" />
+      <path
+         d="m 1110.5,-232.9 -335.8,4.5 153,19.4 z"
+         fill="#f9e0c0"
+         shape-rendering="crispEdges"
+         id="path20655" />
+      <path
+         d="M 600.2,-46.5 462.6,129.6 659.5,91.6 Z"
+         fill="#fce9cf"
+         shape-rendering="crispEdges"
+         id="path20657" />
+      <path
+         d="m 3330.9,1707.3 38.3,-146.9 -140.6,141.7 z"
+         fill="#bf140b"
+         shape-rendering="crispEdges"
+         id="path20659" />
+      <path
+         d="m 3543.4,1057.8 -174.8,51.5 165.9,123.7 z"
+         fill="#cc4b28"
+         shape-rendering="crispEdges"
+         id="path20661" />
+      <path
+         d="m 3079.5,2165.3 -7.2,-93.1 -196.7,7.5 z"
+         fill="#9f0003"
+         shape-rendering="crispEdges"
+         id="path20663" />
+      <path
+         d="M 3536.7,627.1 3383.5,461.2 3341.2,631.7 Z"
+         fill="#d57447"
+         shape-rendering="crispEdges"
+         id="path20665" />
+      <path
+         d="m 2257.9,2373.5 453.6,27.8 -287,-73.3 z"
+         fill="#b0301e"
+         shape-rendering="crispEdges"
+         id="path20667" />
+      <path
+         d="m 2572.4,2338.4 139.1,62.9 41.5,-215.8 z"
+         fill="#ad2617"
+         shape-rendering="crispEdges"
+         id="path20669" />
+      <path
+         d="m 2873.5,2217.7 206,-52.4 -203.9,-85.6 z"
+         fill="#9b0004"
+         shape-rendering="crispEdges"
+         id="path20671" />
+      <path
+         d="m 2111.5,2384.3 600,17 -453.6,-27.8 z"
+         fill="#b03420"
+         shape-rendering="crispEdges"
+         id="path20673" />
+      <path
+         d="m 160.7,771.5 25.8,129.6 121.3,-109 z"
+         fill="#f9cea8"
+         shape-rendering="crispEdges"
+         id="path20675" />
+      <path
+         d="m 276.9,1216.5 -122.4,42.9 132.6,109.2 z"
+         fill="#f8ab8b"
+         shape-rendering="crispEdges"
+         id="path20677" />
+      <path
+         d="m 3180.8,1909.7 150.1,-202.4 -102.3,-5.2 z"
+         fill="#bb0e06"
+         shape-rendering="crispEdges"
+         id="path20679" />
+      <path
+         d="m 3403,1887 -72.1,-179.7 -150.1,202.4 z"
+         fill="#b00000"
+         shape-rendering="crispEdges"
+         id="path20681" />
+      <path
+         d="M 345.8,269 287.5,405.6 458.3,285.8 Z"
+         fill="#f3ddbe"
+         shape-rendering="crispEdges"
+         id="path20683" />
+      <path
+         d="m 289.5,560.5 -128.8,211 147.1,20.6 z"
+         fill="#f3cfa8"
+         shape-rendering="crispEdges"
+         id="path20685" />
+      <path
+         d="M 811.1,2398.9 948.7,2231.5 765.6,2191.4 Z"
+         fill="#b96c48"
+         shape-rendering="crispEdges"
+         id="path20687" />
+      <path
+         d="m 811.1,2398.9 115.4,-3 22.2,-164.4 z"
+         fill="#c1734d"
+         shape-rendering="crispEdges"
+         id="path20689" />
+      <path
+         d="m 1112.5,2339.6 -186,56.3 378.7,-35.2 z"
+         fill="#b7663f"
+         shape-rendering="crispEdges"
+         id="path20691" />
+      <path
+         d="m 1305.2,2360.7 -378.7,35.2 846.3,-28.4 z"
+         fill="#bb643e"
+         shape-rendering="crispEdges"
+         id="path20693" />
+      <path
+         d="m 2111.5,2384.3 -1185,11.6 1785,5.4 z"
+         fill="#bc4e2b"
+         shape-rendering="crispEdges"
+         id="path20695" />
+      <path
+         d="M 462.6,129.6 345.8,269 458.3,285.8 Z"
+         fill="#fee9cc"
+         shape-rendering="crispEdges"
+         id="path20697" />
+      <path
+         d="M 274.6,132.3 345.8,269 462.6,129.6 Z"
+         fill="#fdebd1"
+         shape-rendering="crispEdges"
+         id="path20699" />
+      <path
+         d="m 302,1897.8 211.6,117.5 -42.2,-156.5 z"
+         fill="#d27a58"
+         shape-rendering="crispEdges"
+         id="path20701" />
+      <path
+         d="m 471.4,1858.8 42.2,156.5 153.7,-104.8 z"
+         fill="#d37955"
+         shape-rendering="crispEdges"
+         id="path20703" />
+      <path
+         d="m 3368.6,1109.3 -20.2,169.1 186.1,-45.4 z"
+         fill="#c94223"
+         shape-rendering="crispEdges"
+         id="path20705" />
+      <path
+         d="M 3404.8,772.6 3506.6,732.5 3341.2,631.7 Z"
+         fill="#d67043"
+         shape-rendering="crispEdges"
+         id="path20707" />
+      <path
+         d="m 121.4,590.1 39.3,181.4 128.8,-211 z"
+         fill="#ffddb8"
+         shape-rendering="crispEdges"
+         id="path20709" />
+      <path
+         d="M 3180.9,-71.8 3062.7,-4.7 3172.8,98.8 Z"
+         fill="#e58c71"
+         shape-rendering="crispEdges"
+         id="path20711" />
+      <path
+         d="m 3180.9,-71.8 -151.3,-119.4 33.1,186.5 z"
+         fill="#ec9177"
+         shape-rendering="crispEdges"
+         id="path20713" />
+      <path
+         d="m 3493,921.6 13.6,-189.1 -101.8,40.1 z"
+         fill="#d56c40"
+         shape-rendering="crispEdges"
+         id="path20715" />
+      <path
+         d="m 3524.6,281 -158,1.5 16.9,178.7 z"
+         fill="#d27852"
+         shape-rendering="crispEdges"
+         id="path20717" />
+      <path
+         d="M 3383.5,461.2 3366.6,282.5 3179.3,408 Z"
+         fill="#dd7e55"
+         shape-rendering="crispEdges"
+         id="path20719" />
+      <path
+         d="M 135.3,1044.9 345.3,943.3 186.5,901.1 Z"
+         fill="#fec8a1"
+         shape-rendering="crispEdges"
+         id="path20721" />
+      <path
+         d="m 135.3,1044.9 19.2,214.5 122.4,-42.9 z"
+         fill="#f8b390"
+         shape-rendering="crispEdges"
+         id="path20723" />
+      <path
+         d="m 287.1,1368.6 -119.4,15.2 169.5,151.6 z"
+         fill="#f7a284"
+         shape-rendering="crispEdges"
+         id="path20725" />
+      <path
+         d="m 337.2,1535.4 -54.3,221.5 168.8,-36.1 z"
+         fill="#ee906f"
+         shape-rendering="crispEdges"
+         id="path20727" />
+      <path
+         d="m -10.2,941.1 145.5,103.8 51.2,-143.8 z"
+         fill="#f4c19d"
+         shape-rendering="crispEdges"
+         id="path20729" />
+      <path
+         d="m 510.2,2177.6 149,57.6 -10.4,-202.6 z"
+         fill="#b96f4f"
+         shape-rendering="crispEdges"
+         id="path20731" />
+      <path
+         d="m 3061.3,2370.1 18.2,-204.8 -206,52.4 z"
+         fill="#9f0a08"
+         shape-rendering="crispEdges"
+         id="path20733" />
+      <path
+         d="m 3072.3,2072.2 158.1,-24.9 -49.6,-137.6 z"
+         fill="#aa0403"
+         shape-rendering="crispEdges"
+         id="path20735" />
+      <path
+         d="m 774.7,-228.4 -157.1,39.2 196,143.5 z"
+         fill="#ffeacf"
+         shape-rendering="crispEdges"
+         id="path20737" />
+      <path
+         d="m 600.2,-46.5 -152.7,14.6 15.1,161.5 z"
+         fill="#faead3"
+         shape-rendering="crispEdges"
+         id="path20739" />
+      <path
+         d="m 154.5,1259.4 13.2,124.4 119.4,-15.2 z"
+         fill="#fcac8e"
+         shape-rendering="crispEdges"
+         id="path20741" />
+      <path
+         d="m 3348.4,1278.4 14.7,149.8 168.9,-55.2 z"
+         fill="#c0301b"
+         shape-rendering="crispEdges"
+         id="path20743" />
+      <path
+         d="m 3534.5,1233 -186.1,45.4 183.6,94.6 z"
+         fill="#cb4025"
+         shape-rendering="crispEdges"
+         id="path20745" />
+      <path
+         d="m 3493,921.6 192.8,-182.4 -179.2,-6.7 z"
+         fill="#cf6b40"
+         shape-rendering="crispEdges"
+         id="path20747" />
+      <path
+         d="m 3532,1373 -168.9,55.2 139.8,111.4 z"
+         fill="#bb2615"
+         shape-rendering="crispEdges"
+         id="path20749" />
+      <path
+         d="m 171.6,1712.1 111.3,44.8 54.3,-221.5 z"
+         fill="#e5886a"
+         shape-rendering="crispEdges"
+         id="path20751" />
+      <path
+         d="m 513.6,2015.3 -3.4,162.3 138.6,-145 z"
+         fill="#c17352"
+         shape-rendering="crispEdges"
+         id="path20753" />
+      <path
+         d="m 3340.1,-39.9 -159.2,-31.9 -8.1,170.6 z"
+         fill="#e78d73"
+         shape-rendering="crispEdges"
+         id="path20755" />
+      <path
+         d="m 659.2,2235.2 151.9,163.7 -45.5,-207.5 z"
+         fill="#b86d4b"
+         shape-rendering="crispEdges"
+         id="path20757" />
+      <path
+         d="m 926.5,2395.9 -115.4,3 1900.4,2.4 z"
+         fill="#b75d37"
+         shape-rendering="crispEdges"
+         id="path20759" />
+      <path
+         d="M 480.9,-234.5 447.5,-31.9 600.2,-46.5 Z"
+         fill="#f7e7d1"
+         shape-rendering="crispEdges"
+         id="path20761" />
+      <path
+         d="m 157.2,420.6 132.3,139.9 -2,-154.9 z"
+         fill="#fbe1be"
+         shape-rendering="crispEdges"
+         id="path20763" />
+      <path
+         d="M 3366.6,282.5 3335.4,138.2 3183.2,273.4 Z"
+         fill="#db805d"
+         shape-rendering="crispEdges"
+         id="path20765" />
+      <path
+         d="m 3514.6,91.5 -179.2,46.7 31.2,144.3 z"
+         fill="#e18767"
+         shape-rendering="crispEdges"
+         id="path20767" />
+      <path
+         d="m 3502.9,1539.6 -139.8,-111.4 6.1,132.2 z"
+         fill="#c12514"
+         shape-rendering="crispEdges"
+         id="path20769" />
+      <path
+         d="m 3534.5,1233 160,-149.6 -151.1,-25.6 z"
+         fill="#bf4523"
+         shape-rendering="crispEdges"
+         id="path20771" />
+      <path
+         d="m 3502.9,1539.6 -133.7,20.8 118.7,139.7 z"
+         fill="#b8140b"
+         shape-rendering="crispEdges"
+         id="path20773" />
+      <path
+         d="m 3193.7,2177.6 36.7,-130.3 -158.1,24.9 z"
+         fill="#9e0002"
+         shape-rendering="crispEdges"
+         id="path20775" />
+      <path
+         d="M 3685.8,739.2 3536.7,627.1 3506.6,732.5 Z"
+         fill="#cd6e43"
+         shape-rendering="crispEdges"
+         id="path20777" />
+      <path
+         d="m 3506.6,732.5 30.1,-105.4 -195.5,4.6 z"
+         fill="#d67346"
+         shape-rendering="crispEdges"
+         id="path20779" />
+      <path
+         d="m 3487.9,1700.1 -118.7,-139.7 -38.3,146.9 z"
+         fill="#b30003"
+         shape-rendering="crispEdges"
+         id="path20781" />
+      <path
+         d="M 157.2,420.6 287.5,405.6 141.6,268.9 Z"
+         fill="#fce6c8"
+         shape-rendering="crispEdges"
+         id="path20783" />
+      <path
+         d="M 157.2,420.6 121.4,590.1 289.5,560.5 Z"
+         fill="#fee2be"
+         shape-rendering="crispEdges"
+         id="path20785" />
+      <path
+         d="m 160.7,771.5 -170.9,169.6 196.7,-40 z"
+         fill="#fed1ad"
+         shape-rendering="crispEdges"
+         id="path20787" />
+      <path
+         d="m 2711.5,2401.3 211.5,-7.9 -49.5,-175.7 z"
+         fill="#a7190f"
+         shape-rendering="crispEdges"
+         id="path20789" />
+      <path
+         d="m 3079.5,2165.3 114.2,12.3 -121.4,-105.4 z"
+         fill="#970000"
+         shape-rendering="crispEdges"
+         id="path20791" />
+      <path
+         d="m -30.7,1430.4 192.2,142 6.2,-188.6 z"
+         fill="#f09c81"
+         shape-rendering="crispEdges"
+         id="path20793" />
+      <path
+         d="m 167.7,1383.8 -6.2,188.6 175.7,-37 z"
+         fill="#f19a7c"
+         shape-rendering="crispEdges"
+         id="path20795" />
+      <path
+         d="m -30.7,1430.4 198.4,-46.6 -13.2,-124.4 z"
+         fill="#f9a98e"
+         shape-rendering="crispEdges"
+         id="path20797" />
+      <path
+         d="m 280.3,2071.9 229.9,105.7 3.4,-162.3 z"
+         fill="#c97b5d"
+         shape-rendering="crispEdges"
+         id="path20799" />
+      <path
+         d="m 659.2,2235.2 -1.1,142.2 153,21.5 z"
+         fill="#bd714f"
+         shape-rendering="crispEdges"
+         id="path20801" />
+      <path
+         d="m 302,1897.8 169.4,-39 -188.5,-101.9 z"
+         fill="#d97f5e"
+         shape-rendering="crispEdges"
+         id="path20803" />
+      <path
+         d="m 176.4,1885.8 125.6,12 -19.1,-140.9 z"
+         fill="#dd8363"
+         shape-rendering="crispEdges"
+         id="path20805" />
+      <path
+         d="M 141.6,268.9 287.5,405.6 345.8,269 Z"
+         fill="#fae6c9"
+         shape-rendering="crispEdges"
+         id="path20807" />
+      <path
+         d="m 447.5,-31.9 -172.9,164.2 188,-2.7 z"
+         fill="#f6e6d0"
+         shape-rendering="crispEdges"
+         id="path20809" />
+      <path
+         d="m 3403,1887 84.9,-186.9 -157,7.2 z"
+         fill="#af0000"
+         shape-rendering="crispEdges"
+         id="path20811" />
+      <path
+         d="M 3651.6,1529.6 3647.5,1385.5 3532,1373 Z"
+         fill="#bc301c"
+         shape-rendering="crispEdges"
+         id="path20813" />
+      <path
+         d="m 3184.6,2364.7 9.1,-187.1 -114.2,-12.3 z"
+         fill="#9a0103"
+         shape-rendering="crispEdges"
+         id="path20815" />
+      <path
+         d="M 3230.4,2047.3 3403,1887 l -222.2,22.7 z"
+         fill="#b00603"
+         shape-rendering="crispEdges"
+         id="path20817" />
+      <path
+         d="M 3399.7,2023.6 3403,1887 3230.4,2047.3 Z"
+         fill="#a00000"
+         shape-rendering="crispEdges"
+         id="path20819" />
+      <path
+         d="m 161.5,1572.4 10.1,139.7 165.6,-176.7 z"
+         fill="#f6987a"
+         shape-rendering="crispEdges"
+         id="path20821" />
+      <path
+         d="m 437.6,2374.5 221.6,-139.3 -149,-57.6 z"
+         fill="#ba7253"
+         shape-rendering="crispEdges"
+         id="path20823" />
+      <path
+         d="m 437.6,2374.5 220.5,2.9 1.1,-142.2 z"
+         fill="#b97051"
+         shape-rendering="crispEdges"
+         id="path20825" />
+      <path
+         d="m 3340.1,-39.9 -164.5,-163.6 5.3,131.7 z"
+         fill="#e68d72"
+         shape-rendering="crispEdges"
+         id="path20827" />
+      <path
+         d="m 3180.9,-71.8 -5.3,-131.7 -146,12.3 z"
+         fill="#e98f75"
+         shape-rendering="crispEdges"
+         id="path20829" />
+      <path
+         d="m 3029.6,-191.2 146,-12.3 -303.2,-25.4 z"
+         fill="#e98e74"
+         shape-rendering="crispEdges"
+         id="path20831" />
+      <path
+         d="m 3725.9,618.8 -178.8,-189 -10.4,197.3 z"
+         fill="#c46c42"
+         shape-rendering="crispEdges"
+         id="path20833" />
+      <path
+         d="m 3536.7,627.1 10.4,-197.3 -163.6,31.4 z"
+         fill="#ca6f45"
+         shape-rendering="crispEdges"
+         id="path20835" />
+      <path
+         d="m 3335.4,138.2 4.7,-178.1 -167.3,138.7 z"
+         fill="#db8265"
+         shape-rendering="crispEdges"
+         id="path20837" />
+      <path
+         d="m 3514.6,91.5 -174.5,-131.4 -4.7,178.1 z"
+         fill="#e38a6d"
+         shape-rendering="crispEdges"
+         id="path20839" />
+      <path
+         d="m 2923,2393.4 138.3,-23.3 -187.8,-152.4 z"
+         fill="#9b0004"
+         shape-rendering="crispEdges"
+         id="path20841" />
+      <path
+         d="m 3401.3,2229.8 -1.6,-206.2 -169.3,23.7 z"
+         fill="#9c0000"
+         shape-rendering="crispEdges"
+         id="path20843" />
+      <path
+         d="m 617.6,-189.2 -136.7,-45.3 119.3,188 z"
+         fill="#f5e4cc"
+         shape-rendering="crispEdges"
+         id="path20845" />
+      <path
+         d="M 447.5,-31.9 293.8,-58.2 274.6,132.3 Z"
+         fill="#f6e9d6"
+         shape-rendering="crispEdges"
+         id="path20847" />
+      <path
+         d="m 774.7,-228.4 -293.8,-6.1 136.7,45.3 z"
+         fill="#ffecd3"
+         shape-rendering="crispEdges"
+         id="path20849" />
+      <path
+         d="m 1110.5,-232.9 -629.6,-1.6 293.8,6.1 z"
+         fill="#fde7ca"
+         shape-rendering="crispEdges"
+         id="path20851" />
+      <path
+         d="m 284.5,-238 826,5.1 635.2,-3.4 z"
+         fill="#f4d9b8"
+         shape-rendering="crispEdges"
+         id="path20853" />
+      <path
+         d="M 3547.1,429.8 3524.6,281 3383.5,461.2 Z"
+         fill="#cd754e"
+         shape-rendering="crispEdges"
+         id="path20855" />
+      <path
+         d="M -17.6,736 160.7,771.5 121.4,590.1 Z"
+         fill="#ffdcb9"
+         shape-rendering="crispEdges"
+         id="path20857" />
+      <path
+         d="m -17.6,736 7.4,205.1 170.9,-169.6 z"
+         fill="#f4cdab"
+         shape-rendering="crispEdges"
+         id="path20859" />
+      <path
+         d="m 135.3,1044.9 -176.7,68.5 195.9,146 z"
+         fill="#febc9b"
+         shape-rendering="crispEdges"
+         id="path20861" />
+      <path
+         d="m 161.5,1572.4 -146.9,146.7 157,-7 z"
+         fill="#ee9276"
+         shape-rendering="crispEdges"
+         id="path20863" />
+      <path
+         d="m 274.6,132.3 -133,136.6 204.2,0.1 z"
+         fill="#f8e6cd"
+         shape-rendering="crispEdges"
+         id="path20865" />
+      <path
+         d="M 3.8,574.2 -17.6,736 121.4,590.1 Z"
+         fill="#fee0be"
+         shape-rendering="crispEdges"
+         id="path20867" />
+      <path
+         d="m 171.3,83.5 -29.7,185.4 133,-136.6 z"
+         fill="#f2e3cd"
+         shape-rendering="crispEdges"
+         id="path20869" />
+      <path
+         d="m 3532,1373 115.5,12.5 -113,-152.5 z"
+         fill="#c53d25"
+         shape-rendering="crispEdges"
+         id="path20871" />
+      <path
+         d="M 3543.4,1057.8 3700.2,930.3 3493,921.6 Z"
+         fill="#c75730"
+         shape-rendering="crispEdges"
+         id="path20873" />
+      <path
+         d="M 3651.6,1529.6 3532,1373 l -29.1,166.6 z"
+         fill="#b62314"
+         shape-rendering="crispEdges"
+         id="path20875" />
+      <path
+         d="m 3651.6,1529.6 -148.7,10 -15,160.5 z"
+         fill="#ba1f11"
+         shape-rendering="crispEdges"
+         id="path20877" />
+      <path
+         d="m 3683.7,1255.2 10.8,-171.8 -160,149.6 z"
+         fill="#c04325"
+         shape-rendering="crispEdges"
+         id="path20879" />
+      <path
+         d="M 3547.1,429.8 3693.2,298.5 3524.6,281 Z"
+         fill="#d07c58"
+         shape-rendering="crispEdges"
+         id="path20881" />
+      <path
+         d="m 3647.5,1385.5 36.2,-130.3 -149.2,-22.2 z"
+         fill="#bc3920"
+         shape-rendering="crispEdges"
+         id="path20883" />
+      <path
+         d="m 3401.3,2229.8 -170.9,-182.5 -36.7,130.3 z"
+         fill="#910000"
+         shape-rendering="crispEdges"
+         id="path20885" />
+      <path
+         d="m 3403,1887 145.5,4.8 -60.6,-191.7 z"
+         fill="#af0603"
+         shape-rendering="crispEdges"
+         id="path20887" />
+      <path
+         d="m 3694.5,1083.4 5.7,-153.1 -156.8,127.5 z"
+         fill="#c3512c"
+         shape-rendering="crispEdges"
+         id="path20889" />
+      <path
+         d="m 3.8,574.2 117.6,15.9 35.8,-169.5 z"
+         fill="#f4dab8"
+         shape-rendering="crispEdges"
+         id="path20891" />
+      <path
+         d="M 480.9,-234.5 293.8,-58.2 447.5,-31.9 Z"
+         fill="#f5e7d3"
+         shape-rendering="crispEdges"
+         id="path20893" />
+      <path
+         d="M 3700.2,930.3 3685.8,739.2 3493,921.6 Z"
+         fill="#c86239"
+         shape-rendering="crispEdges"
+         id="path20895" />
+      <path
+         d="m 14.6,1719.1 161.8,166.7 -4.8,-173.7 z"
+         fill="#e2886b"
+         shape-rendering="crispEdges"
+         id="path20897" />
+      <path
+         d="m 171.6,1712.1 4.8,173.7 106.5,-128.9 z"
+         fill="#ea8e6f"
+         shape-rendering="crispEdges"
+         id="path20899" />
+      <path
+         d="m 302,1897.8 -21.7,174.1 233.3,-56.6 z"
+         fill="#d68263"
+         shape-rendering="crispEdges"
+         id="path20901" />
+      <path
+         d="m -133.2,904.7 91.8,208.7 31.2,-172.3 z"
+         fill="#fbc7a5"
+         shape-rendering="crispEdges"
+         id="path20903" />
+      <path
+         d="m -10.2,941.1 -31.2,172.3 176.7,-68.5 z"
+         fill="#f5bc9a"
+         shape-rendering="crispEdges"
+         id="path20905" />
+      <path
+         d="M -14.4,397.3 3.8,574.2 157.2,420.6 Z"
+         fill="#ffe7c9"
+         shape-rendering="crispEdges"
+         id="path20907" />
+      <path
+         d="M 176.4,1885.8 280.3,2071.9 302,1897.8 Z"
+         fill="#dd8668"
+         shape-rendering="crispEdges"
+         id="path20909" />
+      <path
+         d="m 3657.9,1731.6 -6.3,-202 -163.7,170.5 z"
+         fill="#ae0d08"
+         shape-rendering="crispEdges"
+         id="path20911" />
+      <path
+         d="m 3846.3,1227.2 -151.8,-143.8 -10.8,171.8 z"
+         fill="#bd4527"
+         shape-rendering="crispEdges"
+         id="path20913" />
+      <path
+         d="m -41.4,1113.4 -6.1,128 202,18 z"
+         fill="#ffb99b"
+         shape-rendering="crispEdges"
+         id="path20915" />
+      <path
+         d="M 293.8,-58.2 171.3,83.5 274.6,132.3 Z"
+         fill="#fbeddb"
+         shape-rendering="crispEdges"
+         id="path20917" />
+      <path
+         d="m 141.6,268.9 -156,128.4 171.6,23.3 z"
+         fill="#f8e4c9"
+         shape-rendering="crispEdges"
+         id="path20919" />
+      <path
+         d="m -47.5,1241.4 16.8,189 185.2,-171 z"
+         fill="#fcb095"
+         shape-rendering="crispEdges"
+         id="path20921" />
+      <path
+         d="M -30.7,1430.4 6.7,1579 161.5,1572.4 Z"
+         fill="#ee977d"
+         shape-rendering="crispEdges"
+         id="path20923" />
+      <path
+         d="m 3705.4,118.5 -190.8,-27 10,189.5 z"
+         fill="#ce7d60"
+         shape-rendering="crispEdges"
+         id="path20925" />
+      <path
+         d="m 3524.6,281 -10,-189.5 -148,191 z"
+         fill="#d17b5a"
+         shape-rendering="crispEdges"
+         id="path20927" />
+      <path
+         d="m 3340.1,-39.9 35.2,-203.8 -199.7,40.2 z"
+         fill="#dd856a"
+         shape-rendering="crispEdges"
+         id="path20929" />
+      <path
+         d="m 3061.3,2370.1 123.3,-5.4 -105.1,-199.4 z"
+         fill="#9e0906"
+         shape-rendering="crispEdges"
+         id="path20931" />
+      <path
+         d="m 2923,2393.4 261.6,-28.7 -123.3,5.4 z"
+         fill="#970001"
+         shape-rendering="crispEdges"
+         id="path20933" />
+      <path
+         d="M 3399.7,2023.6 3548.5,1891.8 3403,1887 Z"
+         fill="#9d0000"
+         shape-rendering="crispEdges"
+         id="path20935" />
+      <path
+         d="m 3557.5,2025.8 -9,-134 -148.8,131.8 z"
+         fill="#960000"
+         shape-rendering="crispEdges"
+         id="path20937" />
+      <path
+         d="M 3850.2,786.4 3725.9,618.8 3685.8,739.2 Z"
+         fill="#c36a42"
+         shape-rendering="crispEdges"
+         id="path20939" />
+      <path
+         d="m 3685.8,739.2 40.1,-120.4 -189.2,8.3 z"
+         fill="#c56a41"
+         shape-rendering="crispEdges"
+         id="path20941" />
+      <path
+         d="m 3850.2,786.4 -164.4,-47.2 14.4,191.1 z"
+         fill="#c5673f"
+         shape-rendering="crispEdges"
+         id="path20943" />
+      <path
+         d="M 3844.3,920.4 3700.2,930.3 3856,1080 Z"
+         fill="#be5631"
+         shape-rendering="crispEdges"
+         id="path20945" />
+      <path
+         d="m 186.1,2211 109.3,-22.5 -15.1,-116.6 z"
+         fill="#c47d63"
+         shape-rendering="crispEdges"
+         id="path20947" />
+      <path
+         d="m 280.3,2071.9 15.1,116.6 214.8,-10.9 z"
+         fill="#bf775c"
+         shape-rendering="crispEdges"
+         id="path20949" />
+      <path
+         d="m 136.5,2029.8 143.8,42.1 -103.9,-186.1 z"
+         fill="#cd7b60"
+         shape-rendering="crispEdges"
+         id="path20951" />
+      <path
+         d="m -2.8,245.1 -11.6,152.2 156,-128.4 z"
+         fill="#f5e4cd"
+         shape-rendering="crispEdges"
+         id="path20953" />
+      <path
+         d="m -132.2,734.3 -1,170.4 L -17.6,736 Z"
+         fill="#f8d3b1"
+         shape-rendering="crispEdges"
+         id="path20955" />
+      <path
+         d="m -17.6,736 -115.6,168.7 123,36.4 z"
+         fill="#f6ccab"
+         shape-rendering="crispEdges"
+         id="path20957" />
+      <path
+         d="m -41.4,1113.4 -137.4,3 131.3,125 z"
+         fill="#fab99a"
+         shape-rendering="crispEdges"
+         id="path20959" />
+      <path
+         d="m -16.5,1862 31.1,-142.9 -170.9,36.8 z"
+         fill="#e58c71"
+         shape-rendering="crispEdges"
+         id="path20961" />
+      <path
+         d="m 6.7,1579 7.9,140.1 146.9,-146.7 z"
+         fill="#ef9378"
+         shape-rendering="crispEdges"
+         id="path20963" />
+      <path
+         d="m 295.4,2188.5 142.2,186 72.6,-196.9 z"
+         fill="#c57c60"
+         shape-rendering="crispEdges"
+         id="path20965" />
+      <path
+         d="m 658.1,2377.4 -322.5,10.7 475.5,10.8 z"
+         fill="#b86f4f"
+         shape-rendering="crispEdges"
+         id="path20967" />
+      <path
+         d="m 3548.5,1891.8 109.4,-160.2 -170,-31.5 z"
+         fill="#a20000"
+         shape-rendering="crispEdges"
+         id="path20969" />
+      <path
+         d="m 3856,1080 -161.5,3.4 151.8,143.8 z"
+         fill="#bb4828"
+         shape-rendering="crispEdges"
+         id="path20971" />
+      <path
+         d="m 3856,1080 -155.8,-149.7 -5.7,153.1 z"
+         fill="#bb4e2a"
+         shape-rendering="crispEdges"
+         id="path20973" />
+      <path
+         d="M -132.2,734.3 -17.6,736 3.8,574.2 Z"
+         fill="#f4d4b3"
+         shape-rendering="crispEdges"
+         id="path20975" />
+      <path
+         d="m -47.5,1241.4 -116.8,170.6 133.6,18.4 z"
+         fill="#f8a990"
+         shape-rendering="crispEdges"
+         id="path20977" />
+      <path
+         d="M -156.3,1755.9 14.6,1719.1 6.7,1579 Z"
+         fill="#e98f75"
+         shape-rendering="crispEdges"
+         id="path20979" />
+      <path
+         d="m -16.5,1862 153,167.8 39.9,-144 z"
+         fill="#d57f64"
+         shape-rendering="crispEdges"
+         id="path20981" />
+      <path
+         d="m 295.4,2188.5 40.2,199.6 102,-13.6 z"
+         fill="#ba7459"
+         shape-rendering="crispEdges"
+         id="path20983" />
+      <path
+         d="m -192.4,637.3 60.2,97 136,-160.1 z"
+         fill="#f3d5b4"
+         shape-rendering="crispEdges"
+         id="path20985" />
+      <path
+         d="m 3725.9,618.8 0.6,-204.8 -179.4,15.8 z"
+         fill="#c7724b"
+         shape-rendering="crispEdges"
+         id="path20987" />
+      <path
+         d="m 3505.1,-65.3 -165,25.4 174.5,131.4 z"
+         fill="#d9846b"
+         shape-rendering="crispEdges"
+         id="path20989" />
+      <path
+         d="m 3505.1,-65.3 -129.8,-178.4 -35.2,203.8 z"
+         fill="#d98369"
+         shape-rendering="crispEdges"
+         id="path20991" />
+      <path
+         d="m 3175.6,-203.5 199.7,-40.2 -502.9,14.8 z"
+         fill="#e88e74"
+         shape-rendering="crispEdges"
+         id="path20993" />
+      <path
+         d="m 2872.4,-228.9 502.9,-14.8 -957.5,1.6 z"
+         fill="#ea8f76"
+         shape-rendering="crispEdges"
+         id="path20995" />
+      <path
+         d="m 3668.7,-52.3 -163.6,-13 9.5,156.8 z"
+         fill="#cf7f68"
+         shape-rendering="crispEdges"
+         id="path20997" />
+      <path
+         d="m 480.9,-234.5 -196.4,-3.5 9.3,179.8 z"
+         fill="#f7ead7"
+         shape-rendering="crispEdges"
+         id="path20999" />
+      <path
+         d="M 293.8,-58.2 169.6,-80.1 171.3,83.5 Z"
+         fill="#f8eddd"
+         shape-rendering="crispEdges"
+         id="path21001" />
+      <path
+         d="M 171.3,83.5 -2.8,245.1 141.6,268.9 Z"
+         fill="#fbecd7"
+         shape-rendering="crispEdges"
+         id="path21003" />
+      <path
+         d="m 2417.8,-242.1 -2133.3,4.1 1461.2,1.7 z"
+         fill="#f5cead"
+         shape-rendering="crispEdges"
+         id="path21005" />
+      <path
+         d="M 284.5,-238 169.6,-80.1 293.8,-58.2 Z"
+         fill="#fbefdf"
+         shape-rendering="crispEdges"
+         id="path21007" />
+      <path
+         d="M -11.4,86 -2.8,245.1 171.3,83.5 Z"
+         fill="#fdf1df"
+         shape-rendering="crispEdges"
+         id="path21009" />
+      <path
+         d="m -14.4,397.3 -136.8,64 155,112.9 z"
+         fill="#f8e1c3"
+         shape-rendering="crispEdges"
+         id="path21011" />
+      <path
+         d="m 3332.2,2350.4 69.1,-120.6 -207.6,-52.2 z"
+         fill="#920000"
+         shape-rendering="crispEdges"
+         id="path21013" />
+      <path
+         d="m 3548.5,1891.8 175.9,-47.1 -66.5,-113.1 z"
+         fill="#9c0000"
+         shape-rendering="crispEdges"
+         id="path21015" />
+      <path
+         d="M 3726.5,414 3693.2,298.5 3547.1,429.8 Z"
+         fill="#c3724e"
+         shape-rendering="crispEdges"
+         id="path21017" />
+      <path
+         d="m 3514.6,2168.8 42.9,-143 -157.8,-2.2 z"
+         fill="#930000"
+         shape-rendering="crispEdges"
+         id="path21019" />
+      <path
+         d="m 3184.6,2364.7 147.6,-14.3 -138.5,-172.8 z"
+         fill="#970000"
+         shape-rendering="crispEdges"
+         id="path21021" />
+      <path
+         d="m 3401.3,2229.8 113.3,-61 -114.9,-145.2 z"
+         fill="#8c0000"
+         shape-rendering="crispEdges"
+         id="path21023" />
+      <path
+         d="m 3524.9,2353.2 -192.7,-2.8 -147.6,14.3 z"
+         fill="#8f0000"
+         shape-rendering="crispEdges"
+         id="path21025" />
+      <path
+         d="m 3683.7,1255.2 154.7,143.2 7.9,-171.2 z"
+         fill="#b43821"
+         shape-rendering="crispEdges"
+         id="path21027" />
+      <path
+         d="M 3725.9,618.8 3847.1,561.7 3726.5,414 Z"
+         fill="#be6d45"
+         shape-rendering="crispEdges"
+         id="path21029" />
+      <path
+         d="m -192.4,637.3 13.6,479.1 45.6,-211.7 z"
+         fill="#f7cbaa"
+         shape-rendering="crispEdges"
+         id="path21031" />
+      <path
+         d="m -133.2,904.7 -45.6,211.7 137.4,-3 z"
+         fill="#f2b998"
+         shape-rendering="crispEdges"
+         id="path21033" />
+      <path
+         d="m 3683.7,1255.2 -36.2,130.3 190.9,12.9 z"
+         fill="#bb3923"
+         shape-rendering="crispEdges"
+         id="path21035" />
+      <path
+         d="m 3838.4,1398.4 -190.9,-12.9 4.1,144.1 z"
+         fill="#b12918"
+         shape-rendering="crispEdges"
+         id="path21037" />
+      <path
+         d="m 3838.4,1398.4 -186.8,131.2 223.9,48.9 z"
+         fill="#aa2113"
+         shape-rendering="crispEdges"
+         id="path21039" />
+      <path
+         d="m 3983.1,763.9 -132.9,22.5 -5.9,134 z"
+         fill="#b95f39"
+         shape-rendering="crispEdges"
+         id="path21041" />
+      <path
+         d="m 3844.3,920.4 5.9,-134 -150,143.9 z"
+         fill="#b75832"
+         shape-rendering="crispEdges"
+         id="path21043" />
+      <path
+         d="m 3726.5,414 127.4,-163.3 -160.7,47.8 z"
+         fill="#c57858"
+         shape-rendering="crispEdges"
+         id="path21045" />
+      <path
+         d="m 186.1,2211 149.5,177.1 -40.2,-199.6 z"
+         fill="#c47d63"
+         shape-rendering="crispEdges"
+         id="path21047" />
+      <path
+         d="m 437.6,2374.5 -102,13.6 322.5,-10.7 z"
+         fill="#bc7557"
+         shape-rendering="crispEdges"
+         id="path21049" />
+      <path
+         d="M -156.3,1548.6 6.7,1579 -30.7,1430.4 Z"
+         fill="#f39c83"
+         shape-rendering="crispEdges"
+         id="path21051" />
+      <path
+         d="m 14.6,1719.1 -31.1,142.9 192.9,23.8 z"
+         fill="#e88e72"
+         shape-rendering="crispEdges"
+         id="path21053" />
+      <path
+         d="m 136.5,2029.8 49.6,181.2 94.2,-139.1 z"
+         fill="#c77d63"
+         shape-rendering="crispEdges"
+         id="path21055" />
+      <path
+         d="m -197.3,1220.7 33,191.3 116.8,-170.6 z"
+         fill="#fcb196"
+         shape-rendering="crispEdges"
+         id="path21057" />
+      <path
+         d="M 25.4,2046.7 186.1,2211 136.5,2029.8 Z"
+         fill="#c67c64"
+         shape-rendering="crispEdges"
+         id="path21059" />
+      <path
+         d="m -192.4,637.3 -4.9,583.4 18.5,-104.3 z"
+         fill="#fcc7a5"
+         shape-rendering="crispEdges"
+         id="path21061" />
+      <path
+         d="m -178.8,1116.4 -18.5,104.3 149.8,20.7 z"
+         fill="#f8b496"
+         shape-rendering="crispEdges"
+         id="path21063" />
+      <path
+         d="m 4032.3,916 -188,4.4 11.7,159.6 z"
+         fill="#bd5732"
+         shape-rendering="crispEdges"
+         id="path21065" />
+      <path
+         d="m 3875.5,1578.5 -223.9,-48.9 6.3,202 z"
+         fill="#af190f"
+         shape-rendering="crispEdges"
+         id="path21067" />
+      <path
+         d="m 3524.9,2353.2 -10.3,-184.4 -113.3,61 z"
+         fill="#870000"
+         shape-rendering="crispEdges"
+         id="path21069" />
+      <path
+         d="m 3651.4,2025.4 73,-180.7 -175.9,47.1 z"
+         fill="#970000"
+         shape-rendering="crispEdges"
+         id="path21071" />
+      <path
+         d="M -194.9,240.4 -14.4,397.3 -2.8,245.1 Z"
+         fill="#f8e8d2"
+         shape-rendering="crispEdges"
+         id="path21073" />
+      <path
+         d="m -194.9,240.4 43.7,220.9 136.8,-64 z"
+         fill="#f4e1c7"
+         shape-rendering="crispEdges"
+         id="path21075" />
+      <path
+         d="m -132.2,734.3 -60.2,-97 59.2,267.4 z"
+         fill="#f9d6b5"
+         shape-rendering="crispEdges"
+         id="path21077" />
+      <path
+         d="m -151.2,461.3 -41.2,176 196.2,-63.1 z"
+         fill="#f4daba"
+         shape-rendering="crispEdges"
+         id="path21079" />
+      <path
+         d="M 26.3,-22.9 -11.4,86 171.3,83.5 Z"
+         fill="#faf0e2"
+         shape-rendering="crispEdges"
+         id="path21081" />
+      <path
+         d="m 26.3,-22.9 145,106.4 -1.7,-163.6 z"
+         fill="#faf0e3"
+         shape-rendering="crispEdges"
+         id="path21083" />
+      <path
+         d="m -164.3,1412 8,136.6 125.6,-118.2 z"
+         fill="#f4a087"
+         shape-rendering="crispEdges"
+         id="path21085" />
+      <path
+         d="m -197.3,1220.7 41,327.9 -8,-136.6 z"
+         fill="#fdab92"
+         shape-rendering="crispEdges"
+         id="path21087" />
+      <path
+         d="m 3866.2,438.7 -19.1,123 130.9,-136.5 z"
+         fill="#bf714c"
+         shape-rendering="crispEdges"
+         id="path21089" />
+      <path
+         d="m 3850.2,786.4 -3.1,-224.7 -121.2,57.1 z"
+         fill="#bf6b43"
+         shape-rendering="crispEdges"
+         id="path21091" />
+      <path
+         d="m 3693.2,298.5 12.2,-180 -180.8,162.5 z"
+         fill="#c8785a"
+         shape-rendering="crispEdges"
+         id="path21093" />
+      <path
+         d="m 3651.4,2025.4 -102.9,-133.6 9,134 z"
+         fill="#920000"
+         shape-rendering="crispEdges"
+         id="path21095" />
+      <path
+         d="m 3853.9,250.7 -148.5,-132.2 -12.2,180 z"
+         fill="#c2775a"
+         shape-rendering="crispEdges"
+         id="path21097" />
+      <path
+         d="m 3505.1,-65.3 60.2,-116.3 -190,-62.1 z"
+         fill="#d9856c"
+         shape-rendering="crispEdges"
+         id="path21099" />
+      <path
+         d="M 127.7,-201.5 26.3,-22.9 169.6,-80.1 Z"
+         fill="#fff5e8"
+         shape-rendering="crispEdges"
+         id="path21101" />
+      <path
+         d="m -202,114 7.1,126.4 192.1,4.7 z"
+         fill="#f7e9d7"
+         shape-rendering="crispEdges"
+         id="path21103" />
+      <path
+         d="m 3514.6,2168.8 136.8,-143.4 -93.9,0.4 z"
+         fill="#910000"
+         shape-rendering="crispEdges"
+         id="path21105" />
+      <path
+         d="m -16.5,1862 41.9,184.7 111.1,-16.9 z"
+         fill="#d9876d"
+         shape-rendering="crispEdges"
+         id="path21107" />
+      <path
+         d="m 186.1,2211 -39.2,117.1 188.7,60 z"
+         fill="#c57e65"
+         shape-rendering="crispEdges"
+         id="path21109" />
+      <path
+         d="M -146.9,1896.5 25.4,2046.7 -16.5,1862 Z"
+         fill="#da856b"
+         shape-rendering="crispEdges"
+         id="path21111" />
+      <path
+         d="m 284.5,-238 -156.8,36.5 41.9,121.4 z"
+         fill="#f8eddd"
+         shape-rendering="crispEdges"
+         id="path21113" />
+      <path
+         d="m 3668.7,-52.3 -103.4,-129.3 -60.2,116.3 z"
+         fill="#cc7d66"
+         shape-rendering="crispEdges"
+         id="path21115" />
+      <path
+         d="m 3847.1,561.7 19.1,-123 -139.7,-24.7 z"
+         fill="#bb6e49"
+         shape-rendering="crispEdges"
+         id="path21117" />
+      <path
+         d="M 3705.4,118.5 3668.7,-52.3 3514.6,91.5 Z"
+         fill="#ca7c64"
+         shape-rendering="crispEdges"
+         id="path21119" />
+      <path
+         d="m 3983.1,763.9 -136,-202.2 3.1,224.7 z"
+         fill="#b4613a"
+         shape-rendering="crispEdges"
+         id="path21121" />
+      <path
+         d="m 3853.8,95.2 -185.1,-147.5 36.7,170.8 z"
+         fill="#cb816a"
+         shape-rendering="crispEdges"
+         id="path21123" />
+      <path
+         d="m 3835.8,1746.7 -177.9,-15.1 66.5,113.1 z"
+         fill="#a00203"
+         shape-rendering="crispEdges"
+         id="path21125" />
+      <path
+         d="m 3835.8,1746.7 39.7,-168.2 -217.6,153.1 z"
+         fill="#a8140c"
+         shape-rendering="crispEdges"
+         id="path21127" />
+      <path
+         d="m 4039.2,1065.9 -183.2,14.1 -9.7,147.2 z"
+         fill="#b64526"
+         shape-rendering="crispEdges"
+         id="path21129" />
+      <path
+         d="M 4032.3,916 3983.1,763.9 3844.3,920.4 Z"
+         fill="#b85b36"
+         shape-rendering="crispEdges"
+         id="path21131" />
+      <path
+         d="m -201.7,2044.3 45.4,-288.4 v -207.3 z"
+         fill="#e88e74"
+         shape-rendering="crispEdges"
+         id="path21133" />
+      <path
+         d="m -156.3,1548.6 v 207.3 L 6.7,1579 Z"
+         fill="#f2967c"
+         shape-rendering="crispEdges"
+         id="path21135" />
+      <path
+         d="m 3812.8,1869 23,-122.3 -111.4,98 z"
+         fill="#9b0001"
+         shape-rendering="crispEdges"
+         id="path21137" />
+      <path
+         d="M -29.5,2232.1 186.1,2211 25.4,2046.7 Z"
+         fill="#bf7a65"
+         shape-rendering="crispEdges"
+         id="path21139" />
+      <path
+         d="m -29.5,2232.1 176.4,96 39.2,-117.1 z"
+         fill="#c7816b"
+         shape-rendering="crispEdges"
+         id="path21141" />
+      <path
+         d="M 3866.2,438.7 3853.9,250.7 3726.5,414 Z"
+         fill="#bc7150"
+         shape-rendering="crispEdges"
+         id="path21143" />
+      <path
+         d="m 3813.2,2058.1 -0.4,-189.1 -161.4,156.4 z"
+         fill="#880000"
+         shape-rendering="crispEdges"
+         id="path21145" />
+      <path
+         d="m 3651.4,2025.4 161.4,-156.4 -88.4,-24.3 z"
+         fill="#910000"
+         shape-rendering="crispEdges"
+         id="path21147" />
+      <path
+         d="m 3971.3,1685.6 1.4,-149.8 -97.2,42.7 z"
+         fill="#a1100b"
+         shape-rendering="crispEdges"
+         id="path21149" />
+      <path
+         d="m 3332.2,2350.4 192.7,2.8 -123.6,-123.4 z"
+         fill="#940000"
+         shape-rendering="crispEdges"
+         id="path21151" />
+      <path
+         d="m 3514.6,2168.8 204.4,0.7 -67.6,-144.1 z"
+         fill="#890000"
+         shape-rendering="crispEdges"
+         id="path21153" />
+      <path
+         d="m 3721.7,2369.3 -196.8,-16.1 -340.3,11.5 z"
+         fill="#890000"
+         shape-rendering="crispEdges"
+         id="path21155" />
+      <path
+         d="m 4032.3,916 -176.3,164 183.2,-14.1 z"
+         fill="#b9502d"
+         shape-rendering="crispEdges"
+         id="path21157" />
+      <path
+         d="m 3866.2,438.7 110,-144 -122.3,-44 z"
+         fill="#bc7354"
+         shape-rendering="crispEdges"
+         id="path21159" />
+      <path
+         d="M -202,114 -11.4,86 -161.1,-45.3 Z"
+         fill="#fff5e8"
+         shape-rendering="crispEdges"
+         id="path21161" />
+      <path
+         d="M -202,114 -2.8,245.1 -11.4,86 Z"
+         fill="#f7ebda"
+         shape-rendering="crispEdges"
+         id="path21163" />
+      <path
+         d="m -151.2,461.3 -43.7,-220.9 2.5,396.9 z"
+         fill="#fde6ca"
+         shape-rendering="crispEdges"
+         id="path21165" />
+      <path
+         d="M -192.4,637.3 -202,114 l 4.7,1106.7 z"
+         fill="#f8d9b8"
+         shape-rendering="crispEdges"
+         id="path21167" />
+      <path
+         d="m -201.7,2044.3 54.8,-147.8 -9.4,-140.6 z"
+         fill="#e2896f"
+         shape-rendering="crispEdges"
+         id="path21169" />
+      <path
+         d="m -156.3,1755.9 9.4,140.6 130.4,-34.5 z"
+         fill="#e68c72"
+         shape-rendering="crispEdges"
+         id="path21171" />
+      <path
+         d="m 3876.7,-183.2 -224.5,-13.6 16.5,144.5 z"
+         fill="#c47b66"
+         shape-rendering="crispEdges"
+         id="path21173" />
+      <path
+         d="m 3668.7,-52.3 -16.5,-144.5 -86.9,15.2 z"
+         fill="#d3866e"
+         shape-rendering="crispEdges"
+         id="path21175" />
+      <path
+         d="m 3565.3,-181.6 86.9,-15.2 -276.9,-46.9 z"
+         fill="#d7866d"
+         shape-rendering="crispEdges"
+         id="path21177" />
+      <path
+         d="m 284.5,-238 -281,36.7 124.2,-0.2 z"
+         fill="#f7eddf"
+         shape-rendering="crispEdges"
+         id="path21179" />
+      <path
+         d="M 127.7,-201.5 3.5,-201.3 26.3,-22.9 Z"
+         fill="#fbf3e6"
+         shape-rendering="crispEdges"
+         id="path21181" />
+      <path
+         d="m 4029.6,1271.5 -183.3,-44.3 -7.9,171.2 z"
+         fill="#ab321d"
+         shape-rendering="crispEdges"
+         id="path21183" />
+      <path
+         d="m 4042.6,103.2 -188.8,-8 0.1,155.5 z"
+         fill="#c27b62"
+         shape-rendering="crispEdges"
+         id="path21185" />
+      <path
+         d="m 3972.7,1535.8 -134.3,-137.4 37.1,180.1 z"
+         fill="#a72013"
+         shape-rendering="crispEdges"
+         id="path21187" />
+      <path
+         d="m 3971.3,1685.6 -95.8,-107.1 -39.7,168.2 z"
+         fill="#a3110b"
+         shape-rendering="crispEdges"
+         id="path21189" />
+      <path
+         d="m 4029.6,1271.5 9.6,-205.6 -192.9,161.3 z"
+         fill="#b44024"
+         shape-rendering="crispEdges"
+         id="path21191" />
+      <path
+         d="m 4019.5,1424.1 10.1,-152.6 -191.2,126.9 z"
+         fill="#ad2f1d"
+         shape-rendering="crispEdges"
+         id="path21193" />
+      <path
+         d="m 3524.9,2353.2 194.1,-183.7 -204.4,-0.7 z"
+         fill="#870000"
+         shape-rendering="crispEdges"
+         id="path21195" />
+      <path
+         d="m 3992.3,1907.4 -21,-221.8 -135.5,61.1 z"
+         fill="#990002"
+         shape-rendering="crispEdges"
+         id="path21197" />
+      <path
+         d="m 3978,425.2 -130.9,136.5 181.7,4.2 z"
+         fill="#c0714b"
+         shape-rendering="crispEdges"
+         id="path21199" />
+      <path
+         d="m 3853.9,250.7 -0.1,-155.5 -148.4,23.3 z"
+         fill="#c1795f"
+         shape-rendering="crispEdges"
+         id="path21201" />
+      <path
+         d="M -161.1,-45.3 -11.4,86 26.3,-22.9 Z"
+         fill="#fdf5ea"
+         shape-rendering="crispEdges"
+         id="path21203" />
+      <path
+         d="M -194.9,240.4 -202,114 l 9.6,523.3 z"
+         fill="#f9e7cf"
+         shape-rendering="crispEdges"
+         id="path21205" />
+      <path
+         d="m 4028.8,565.9 -181.7,-4.2 136,202.2 z"
+         fill="#b5643e"
+         shape-rendering="crispEdges"
+         id="path21207" />
+      <path
+         d="m 3972.7,1535.8 46.8,-111.7 -181.1,-25.7 z"
+         fill="#a42013"
+         shape-rendering="crispEdges"
+         id="path21209" />
+      <path
+         d="m 3971.3,1685.6 48.2,-261.5 -46.8,111.7 z"
+         fill="#ac2315"
+         shape-rendering="crispEdges"
+         id="path21211" />
+      <path
+         d="m -149.2,2172 119.7,60.1 54.9,-185.4 z"
+         fill="#c37e6a"
+         shape-rendering="crispEdges"
+         id="path21213" />
+      <path
+         d="m 4039.2,1065.9 -10.4,-500 3.5,350.1 z"
+         fill="#b35832"
+         shape-rendering="crispEdges"
+         id="path21215" />
+      <path
+         d="m 4032.3,916 -3.5,-350.1 -45.7,198 z"
+         fill="#bd663f"
+         shape-rendering="crispEdges"
+         id="path21217" />
+      <path
+         d="m 3719,2169.5 94.2,-111.4 -161.8,-32.7 z"
+         fill="#840000"
+         shape-rendering="crispEdges"
+         id="path21219" />
+      <path
+         d="m 3992.3,1907.4 -156.5,-160.7 -23,122.3 z"
+         fill="#930000"
+         shape-rendering="crispEdges"
+         id="path21221" />
+      <path
+         d="m 3.5,-201.3 -164.6,156 187.4,22.4 z"
+         fill="#f2eadf"
+         shape-rendering="crispEdges"
+         id="path21223" />
+      <path
+         d="m 4028.8,565.9 -52.6,-271.2 1.8,130.5 z"
+         fill="#bf7350"
+         shape-rendering="crispEdges"
+         id="path21225" />
+      <path
+         d="m 3978,425.2 -1.8,-130.5 -110,144 z"
+         fill="#bf7453"
+         shape-rendering="crispEdges"
+         id="path21227" />
+      <path
+         d="m -197.3,1220.7 -4.4,823.6 45.4,-495.7 z"
+         fill="#ea9077"
+         shape-rendering="crispEdges"
+         id="path21229" />
+      <path
+         d="m -146.9,1896.5 -54.8,147.8 227.1,2.4 z"
+         fill="#d18169"
+         shape-rendering="crispEdges"
+         id="path21231" />
+      <path
+         d="m -202,114 0.3,1930.3 4.4,-823.6 z"
+         fill="#f3b494"
+         shape-rendering="crispEdges"
+         id="path21233" />
+      <path
+         d="M -201.7,2044.3 -149.2,2172 25.4,2046.7 Z"
+         fill="#c47b65"
+         shape-rendering="crispEdges"
+         id="path21235" />
+      <path
+         d="m -29.5,2232.1 -4.7,163.5 181.1,-67.5 z"
+         fill="#c8826d"
+         shape-rendering="crispEdges"
+         id="path21237" />
+      <path
+         d="m 3968.5,-12.3 -95,-63.7 -19.7,171.2 z"
+         fill="#c17c68"
+         shape-rendering="crispEdges"
+         id="path21239" />
+      <path
+         d="M 3853.8,95.2 3873.5,-76 3668.7,-52.3 Z"
+         fill="#be7964"
+         shape-rendering="crispEdges"
+         id="path21241" />
+      <path
+         d="M 3721.7,2369.3 3814.5,2213 3719,2169.5 Z"
+         fill="#7d0000"
+         shape-rendering="crispEdges"
+         id="path21243" />
+      <path
+         d="m 3719,2169.5 95.5,43.5 -1.3,-154.9 z"
+         fill="#7b0000"
+         shape-rendering="crispEdges"
+         id="path21245" />
+      <path
+         d="m 3983.3,2010.2 9,-102.8 -179.5,-38.4 z"
+         fill="#8e0000"
+         shape-rendering="crispEdges"
+         id="path21247" />
+      <path
+         d="m -133,2363.1 98.8,32.5 4.7,-163.5 z"
+         fill="#c07c68"
+         shape-rendering="crispEdges"
+         id="path21249" />
+      <path
+         d="m 146.9,2328.1 -181.1,67.5 369.8,-7.5 z"
+         fill="#bc7760"
+         shape-rendering="crispEdges"
+         id="path21251" />
+      <path
+         d="m 335.6,2388.1 -369.8,7.5 845.3,3.3 z"
+         fill="#c0785d"
+         shape-rendering="crispEdges"
+         id="path21253" />
+      <path
+         d="m 2923,2393.4 798.7,-24.1 -537.1,-4.6 z"
+         fill="#9b0403"
+         shape-rendering="crispEdges"
+         id="path21255" />
+      <path
+         d="m 3524.9,2353.2 196.8,16.1 -2.7,-199.8 z"
+         fill="#830000"
+         shape-rendering="crispEdges"
+         id="path21257" />
+      <path
+         d="m 4042.9,2364 -321.2,5.3 -798.7,24.1 z"
+         fill="#800000"
+         shape-rendering="crispEdges"
+         id="path21259" />
+      <path
+         d="m 3983.3,2010.2 -170.5,-141.2 0.4,189.1 z"
+         fill="#8d0000"
+         shape-rendering="crispEdges"
+         id="path21261" />
+      <path
+         d="m 3971.3,1685.6 21,221.8 27.2,-483.3 z"
+         fill="#a20e09"
+         shape-rendering="crispEdges"
+         id="path21263" />
+      <path
+         d="m 4019.5,1424.1 23.4,939.9 -13.3,-1092.5 z"
+         fill="#9d0506"
+         shape-rendering="crispEdges"
+         id="path21265" />
+      <path
+         d="m 3873.5,-76 3.2,-107.2 -208,130.9 z"
+         fill="#c7816c"
+         shape-rendering="crispEdges"
+         id="path21267" />
+      <path
+         d="m 3652.2,-196.8 342.1,-0.3 -619,-46.6 z"
+         fill="#c77c66"
+         shape-rendering="crispEdges"
+         id="path21269" />
+      <path
+         d="m 3994.3,-197.1 -117.6,13.9 -3.2,107.2 z"
+         fill="#c17d69"
+         shape-rendering="crispEdges"
+         id="path21271" />
+      <path
+         d="m 4042.6,103.2 -188.7,147.5 122.3,44 z"
+         fill="#c0785c"
+         shape-rendering="crispEdges"
+         id="path21273" />
+      <path
+         d="M 4042.6,103.2 3968.5,-12.3 3853.8,95.2 Z"
+         fill="#c27c66"
+         shape-rendering="crispEdges"
+         id="path21275" />
+      <path
+         d="m 4019.4,2210.6 -36.1,-200.4 -170.1,47.9 z"
+         fill="#820000"
+         shape-rendering="crispEdges"
+         id="path21277" />
+      <path
+         d="m 4019.4,2210.6 -206.2,-152.5 1.3,154.9 z"
+         fill="#7a0000"
+         shape-rendering="crispEdges"
+         id="path21279" />
+      <path
+         d="m 284.5,-238 -483.4,11.6 202.4,25.1 z"
+         fill="#fcf4e8"
+         shape-rendering="crispEdges"
+         id="path21281" />
+      <path
+         d="m 3.5,-201.3 -202.4,-25.1 37.8,181.1 z"
+         fill="#faf2e7"
+         shape-rendering="crispEdges"
+         id="path21283" />
+      <path
+         d="M -161.1,-45.3 -198.9,-226.4 -202,114 Z"
+         fill="#f9f1e6"
+         shape-rendering="crispEdges"
+         id="path21285" />
+      <path
+         d="m 4028.8,565.9 13.8,-462.7 -66.4,191.5 z"
+         fill="#bc7354"
+         shape-rendering="crispEdges"
+         id="path21287" />
+      <path
+         d="M 3968.5,-12.3 3994.3,-197.1 3873.5,-76 Z"
+         fill="#c37e6a"
+         shape-rendering="crispEdges"
+         id="path21289" />
+      <path
+         d="m 4039.2,1065.9 3.4,-962.7 -13.8,462.7 z"
+         fill="#b66740"
+         shape-rendering="crispEdges"
+         id="path21291" />
+      <path
+         d="M -201.7,2044.3 -133,2363.1 -149.2,2172 Z"
+         fill="#bc7864"
+         shape-rendering="crispEdges"
+         id="path21293" />
+      <path
+         d="m -149.2,2172 16.2,191.1 103.5,-131 z"
+         fill="#bf7b67"
+         shape-rendering="crispEdges"
+         id="path21295" />
+      <path
+         d="m 3721.7,2369.3 105.1,-19.4 -12.3,-136.9 z"
+         fill="#7c0000"
+         shape-rendering="crispEdges"
+         id="path21297" />
+      <path
+         d="m 4042.6,103.2 -48.3,-300.3 -25.8,184.8 z"
+         fill="#c17d68"
+         shape-rendering="crispEdges"
+         id="path21299" />
+      <path
+         d="m 3876.7,-183.2 117.6,-13.9 -342.1,0.3 z"
+         fill="#c5806c"
+         shape-rendering="crispEdges"
+         id="path21301" />
+      <path
+         d="m 3826.8,2349.9 192.6,-139.3 -204.9,2.4 z"
+         fill="#720000"
+         shape-rendering="crispEdges"
+         id="path21303" />
+      <path
+         d="m 3983.3,2010.2 36.1,200.4 -27.1,-303.2 z"
+         fill="#890000"
+         shape-rendering="crispEdges"
+         id="path21305" />
+      <path
+         d="m 3992.3,1907.4 27.1,303.2 0.1,-786.5 z"
+         fill="#930000"
+         shape-rendering="crispEdges"
+         id="path21307" />
+      <path
+         d="m 4029.6,1271.5 13.3,1092.5 -3.7,-1298.1 z"
+         fill="#a4170e"
+         shape-rendering="crispEdges"
+         id="path21309" />
+      <path
+         d="m 3721.7,2369.3 321.2,-5.3 -216.1,-14.1 z"
+         fill="#7d0000"
+         shape-rendering="crispEdges"
+         id="path21311" />
+      <path
+         d="m 3826.8,2349.9 216.1,14.1 -23.5,-153.4 z"
+         fill="#7d0000"
+         shape-rendering="crispEdges"
+         id="path21313" />
+      <path
+         d="m 4019.4,2210.6 23.5,153.4 -23.4,-939.9 z"
+         fill="#890000"
+         shape-rendering="crispEdges"
+         id="path21315" />
+      <path
+         d="m 4039.2,1065.9 3.7,1298.1 -0.3,-2260.8 z"
+         fill="#b34024"
+         shape-rendering="crispEdges"
+         id="path21317" />
+      <path
+         d="M 2711.5,2401.3 4042.9,2364 2923,2393.4 Z"
+         fill="#920000"
+         shape-rendering="crispEdges"
+         id="path21319" />
+    </g>
+    <path
+       d="m 48.593074,5.8718708 v 1.4812434 h -0.432837 c -0.932264,0 -3.251826,0.3874021 -4.849992,0.7975926 C 32.844472,10.88531 25.18659,20.034837 24.154441,31.075797 l -0.133181,1.458455 h -1.420592 -1.420593 v 1.025476 1.025476 h 1.431691 1.420593 l 0.07769,1.048265 c 0.09989,1.333119 0.421739,3.247341 0.787985,4.694402 0.876772,3.452437 2.785694,7.22391 5.094157,10.038273 l 0.832378,1.025476 -1.320707,1.367301 c -0.732493,0.752016 -1.331806,1.424273 -1.331806,1.481244 0,0.148124 1.132035,1.310331 1.276314,1.310331 0.05549,0 0.710296,-0.615286 1.442789,-1.367302 l 1.331806,-1.355907 0.998854,0.854563 c 3.729056,3.213159 8.29049,5.252717 13.184876,5.913579 0.721394,0.09115 1.509379,0.170913 1.753544,0.170913 h 0.432837 v 1.481244 1.481243 h 0.998854 0.998854 V 61.25898 59.800525 l 0.987756,-0.07976 c 6.936487,-0.535526 13.606614,-4.170269 17.990474,-9.810389 3.15194,-4.056328 5.116353,-9.172314 5.504796,-14.333878 l 0.07769,-0.991294 h 1.420593 1.431691 V 33.559728 32.534252 H 76.57209 75.151497 l -0.07769,-1.002688 C 74.097151,18.713112 64.019822,8.3671962 51.578538,7.3986909 L 50.590782,7.3189317 V 5.8604766 4.3906274 h -0.998854 -0.998854 z m 0.0222,7.2580922 0.03329,3.851233 h 0.943363 0.943362 l 0.03329,-0.922928 0.0333,-0.934323 0.466132,0.04558 c 4.616926,0.512738 8.345982,2.335807 11.409135,5.583148 1.542675,1.640762 2.497135,3.05364 3.373908,5.002045 0.776886,1.720521 1.409494,3.95378 1.553773,5.526177 0.0333,0.410191 0.08879,0.854564 0.122082,0.991294 0.04439,0.239278 0.0111,0.250672 -0.865674,0.284854 l -0.921165,0.03418 v 0.968505 0.968505 l 0.921165,0.03418 c 0.876772,0.03418 0.910067,0.04558 0.865674,0.284855 -0.03329,0.13673 -0.08879,0.581103 -0.122082,0.991293 -0.07769,0.911535 -0.41064,2.36999 -0.799084,3.589167 -1.487183,4.671614 -5.005369,8.716548 -9.411426,10.824471 -1.675855,0.797592 -3.851138,1.447061 -5.382714,1.595185 -0.399542,0.03418 -0.832379,0.09115 -0.965559,0.125336 -0.233066,0.04558 -0.244165,0.01139 -0.27746,-0.888746 L 50.53529,50.13826 h -0.943362 -0.943363 l -0.03329,0.922929 -0.0333,0.922928 -0.577116,-0.04558 c -3.396104,-0.273461 -7.213947,-1.891434 -9.877558,-4.17027 l -0.532722,-0.455768 0.610411,-0.638074 c 0.34405,-0.353219 0.621509,-0.695045 0.621509,-0.752016 0,-0.148124 -1.132035,-1.31033 -1.276314,-1.31033 -0.05549,0 -1.29851,1.219177 -2.741299,2.70042 L 32.167471,50.024318 31.83452,49.625522 C 28.471711,45.648953 26.41851,40.681091 25.996772,35.530921 l -0.07769,-0.945717 3.762351,-0.02279 3.762351,-0.03418 v -0.968505 -0.968505 l -3.740154,-0.03418 -3.751253,-0.02279 v -0.330431 c 0,-0.820381 0.388444,-3.281524 0.732493,-4.683008 C 28.88235,18.713114 35.718952,11.888 44.386787,9.87123 45.552116,9.5977697 47.372251,9.3243093 48.115842,9.301521 l 0.477231,-0.011394 z m 5.027567,-3.4980128 c 4.783401,0.8431698 9.200557,3.2131588 12.707645,6.8365078 3.018759,3.110611 5.105254,6.882085 6.1596,11.097932 0.332952,1.367301 0.721395,3.828444 0.721395,4.637431 v 0.330431 H 71.344757 69.46913 l -0.05549,-0.376008 c -0.0222,-0.193701 -0.13318,-0.968505 -0.233066,-1.720521 -0.854575,-6.426318 -5.149648,-12.37408 -10.987396,-15.234019 -2.0532,-1.002688 -4.339466,-1.686338 -6.159601,-1.868645 -0.399541,-0.03418 -0.88787,-0.09115 -1.076542,-0.125336 l -0.366247,-0.05697 V 11.204347 9.2559423 l 0.921166,0.079759 c 0.499427,0.045577 1.464986,0.1823069 2.130889,0.2962487 z m 19.58864,25.2836858 c 0,0.774804 -0.355148,3.122005 -0.677001,4.455124 -1.043248,4.341183 -3.15194,8.146839 -6.259486,11.337209 -3.107547,3.19037 -6.814406,5.355265 -11.042888,6.426318 -1.298511,0.330431 -3.584777,0.695045 -4.339467,0.695045 h -0.321853 v -1.937011 -1.925616 l 0.366247,-0.05697 c 0.188672,-0.02279 0.943362,-0.13673 1.675855,-0.239278 3.074251,-0.432979 6.226191,-1.788886 8.856507,-3.81705 1.331806,-1.025477 3.307317,-3.087823 4.217385,-4.398154 1.831232,-2.64345 3.074251,-5.776849 3.473792,-8.773518 0.09989,-0.752016 0.21087,-1.526821 0.233066,-1.731916 l 0.05549,-0.364614 h 1.875627 1.886724 z M 36.97307,49.306485 c 0.943362,0.797593 2.486037,1.834463 3.662465,2.438354 2.386152,1.230572 4.128598,1.74331 7.491407,2.164895 l 0.466132,0.05697 v 1.948404 1.937011 l -0.965559,-0.07976 C 45.39674,57.590054 42.799719,56.940586 40.66883,56.05184 38.20499,55.014969 36.28497,53.795792 33.88772,51.733445 l -0.332951,-0.284854 1.331805,-1.367302 c 0.732493,-0.752016 1.342904,-1.367301 1.365101,-1.367301 0.0111,0 0.34405,0.262066 0.721395,0.592497 z"
+       id="path13961"
+       style="fill:#000000;stroke:none;stroke-width:0.0112453" />
+  </g>
+  <metadata
+     id="metadata11198">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>TheGreydiamond</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:date>16.07.2022</dc:date>
+        <dc:publisher>
+          <cc:Agent>
+            <dc:title>[Project Name Here]</dc:title>
+          </cc:Agent>
+        </dc:publisher>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>
