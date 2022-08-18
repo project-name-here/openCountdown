@@ -1,4 +1,6 @@
-<img alt="openCountdown Logo" src="https://git.project-name-here.de/Project-Name-Here/openCountdown/raw/branch/master/static/logo/logoProposal.svg">
+<img alt="openCountdown Logo" height="42px" src="https://git.project-name-here.de/Project-Name-Here/openCountdown/raw/branch/master/static/logo/logoProposal.svg">
+
+
 # openCountdown
 openCountdown is a professional software for event countdowns. It can be used in a live settings such as a music event. 
 Support for companion is currently being worked on [here](https://github.com/bitfocus/companion-module-pnh-opencountdown).
