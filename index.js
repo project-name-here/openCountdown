@@ -6,6 +6,7 @@ const helper = require("./helpers.js");
 const loggy = require("./logging")
 const Eta = require("eta");
 const _ = require("underscore")
+const path = require("path")
 
 loggy.init(true)
 
@@ -23,6 +24,26 @@ app.use(
     extended: true,
   })
 );
+
+// Allowed urls for requests to /assets/
+const allowsURLs = [
+  'bootstrap-icons/font/bootstrap-icons.css',
+  'js-cookie/dist/js.cookie.min.js',
+  'bootstrap/dist/css/bootstrap.min.css',
+  'mdbootstrap/css/style.css',
+  'bootstrap/dist/js/bootstrap.bundle.min.js',
+  'jquery/dist/jquery.min.js',
+  'darkreader/darkreader.js',
+  'bootstrap-duration-picker/dist/bootstrap-duration-picker.css',
+  'flatpickr/dist/flatpickr.min.css',
+  'bootstrap-duration-picker/dist/bootstrap-duration-picker-debug.js',
+  'flatpickr/dist/flatpickr.js',
+  'bootstrap-icons/font/fonts/bootstrap-icons.woff2',
+  'bootstrap/dist/css/bootstrap.min.css.map',
+  'less/dist/less.min.js',
+  'less/dist/less.min.js.map',
+  'mdbootstrap/js/mdb.min.js'
+];
 
 let loadedData = {}
 
@@ -391,6 +412,16 @@ app.get("/api/ui/v1/lang/set", function (req, res) {
 });
 
 
+app.use("/assets/*", function handleModuleFiles(req, res) {
+  if(allowsURLs.indexOf(req.params[0]) > -1){
+    res.sendFile(path.join(__dirname, "node_modules", req.params[0]));
+  } else {
+    loggy.log("Attempt to access restricted asset file " + req.params[0], "error", "Security")
+    res.status(403).json({ status: "error", reason: "Access to restricted asset file denied" });
+  }
+  // console.log(recordedURLs)
+})
+
 app.use(function (req, res, next) {
   res.status(404);
   loggy.log("Server responded with 404 error", "warn", "Server", true);
@@ -412,6 +443,8 @@ app.use(function (req, res, next) {
   // default to plain-text. send()
   res.type('txt').send('Not found');
 });
+
+
 
 
 
