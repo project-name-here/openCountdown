@@ -11,8 +11,10 @@ You can download complete binaries from the release tab.
 ## Development build
 1. Download the repository
 2. `npm install` to install dependecies
-3. `node index.js` to launch
+3. `npm start` to launch
 
+### Startup Arguments
+One can pass a `--headless` argument to start the server in headless mode. This will disable the GUI.
 ## Packaging
 This is more a comment for the future version of me. There is one command for packaging using nexe.
 ```bash

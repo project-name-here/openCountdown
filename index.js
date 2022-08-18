@@ -73,11 +73,12 @@ currentState = {
   srvTime: 0,
   enableColoredText: true,
   debug: false,
-  sessionToken: Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15)
+  sessionToken: Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15),
 };
 
 let configObject = {
-  language: "en_uk"
+  language: "en_uk",
+  port: 3000
 }
 if(!fs.existsSync("config.json")) {
   fs.writeFileSync("config.json", "{}");
@@ -463,7 +464,7 @@ app.use(function (req, res, next) {
 
 loggy.log("Starting server", "info", "Server");
 
-const port = 3006;
+const port = configObject.port;
 
 process.on('SIGINT', function () {
   loggy.log("Caught interrupt signal and shutting down gracefully", "info", "Shutdown");
