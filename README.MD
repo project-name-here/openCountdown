@@ -22,6 +22,7 @@ npx nexe index.js --build --python python3 --resource "./{lang,templates,static}
 ```
 Where `--python` is only needed in some envoirments for some reason. Also  adjust `--output` for your target OS.
 
+> Binary Builds may be faulty or non-working. They are not offically supported.
 *Small disclaimer: Please do not use openCountdown for military or life-depending applications. Please also refrain from using openCountdown for launching rockets.*
 
 
