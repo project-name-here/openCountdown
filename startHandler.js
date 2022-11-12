@@ -88,7 +88,7 @@ const createWindow = () => {
 
 
 
-    win.loadFile('electronAssets/index2.html')
+    win.loadFile('electronAssets/index.html')
     if (configObject.startMinimised) {
         win.hide()
     }

@@ -25,7 +25,7 @@ function close(){
 /**
  * A simple logging function
  * @param {String} message A messaged to be logged
- * @param {String} level  Logleve, may either be warn, error, magic or info
+ * @param {String} level  Loglevel, may either be warn, error, magic or info
  * @param {String} module Kinda the source
  */
 function log(message, level, module, ignore = false) {
@@ -58,4 +58,4 @@ function log(message, level, module, ignore = false) {
   }
 }
 
-module.exports = { log, init, close};
+module.exports = { log, init, close };

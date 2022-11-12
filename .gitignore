@@ -9,3 +9,4 @@ log-journal.json
 openCountdown
 openCountdown.exe
 buildout
+package-lock.json
