@@ -16,23 +16,24 @@
 </head>
 
 <body onclick="updateFullscreen()">
-
-
-
-    <div id="overlay" onclick="off()">
+    <div id="overlay">
         <div id="text">Message here</div>
     </div>
+
+    <!-- Collection of warning and errors  -->
+    <noscript>
+	<div class="connectionWarning">
+	    Javascript is disabled. Please enable it to use openCountdown.
+	</div>
+    </noscript>
 
     <div class="connectionWarning" id="warningBanner" style="display: none;">
         Connection lost. Trying to reconnect...
     </div>
 
+    <!-- Color Bar Image -->
     <img src='SMPTE_Color_Bars.svg' class='testImg' id="testImg" style="display: none;">
     </img>
-    <valueStore style="display: none;">
-        <value id="initalDate">true</value>
-        <value id="incomeData"></value>
-    </valueStore>
 
     <div class="container">
         <div class="progWrapper" id="wholeProgBar">
@@ -47,8 +48,15 @@
             
         </div>
     </div>
+    <div id="moveClock" style="display: none;">
+	<div id="screensaverClock">
+		00:00:00
+	</div>
+	openCountdown
+    </div>
+    <!-- Load scripts -->
     <script src="js/reconnecting-websocket.min.js"></script>
-    <script src="js/script.js"></script>
+    <script src="js/timer/timerview.js"></script>
 </body>
 
 </html>

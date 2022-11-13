@@ -30,8 +30,9 @@
     {
         "timer": "Timer",
         "clock": "Uhr",
-        "black": "Schwarz",
-        "test": "Testbild"
+        "black": "Leer",
+        "test": "Testbild",
+	"screensaver": "Bildschirmschoner"
     },
     "labels":
     {

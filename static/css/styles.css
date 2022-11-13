@@ -111,3 +111,40 @@ animation:fade 1000ms infinite;
   font-size: x-large;
   font-family: sans-serif;
 }
+
+
+#moveClock {
+	font-size: xx-large;
+	font-family: sans-serif;
+	position: absolute;
+	-webkit-animation: moveX 40s linear 0s infinite alternate, moveY 45s linear 0s infinite alternate;
+	-moz-animation: moveX 40s linear 0s infinite alternate, moveY 45s linear 0s infinite alternate;
+	-o-animation: moveX 40s linear 0s infinite alternate, moveY 45s linear 0s infinite alternate;
+	animation: moveX 40s linear 0s infinite alternate, moveY 45s linear 0s infinite alternate;
+}
+
+@-webkit-keyframes moveX {
+	from { left: 0; } to { left: 100%; }
+      }
+      @-moz-keyframes moveX {
+	from { left: 0; } to { left: 100%; }
+      }
+      @-o-keyframes moveX {
+	from { left: 0; } to { left: 100%; }
+      }
+      @keyframes moveX {
+	from { left: 0; } to { left: 100%; }
+      }
+      
+      @-webkit-keyframes moveY {
+	from { top: 0; } to { top: 100%; }
+      }
+      @-moz-keyframes moveY {
+	from { top: 0; } to { top: 100%; }
+      }
+      @-o-keyframes moveY {
+	from { top: 0; } to { top: 100%; }
+      }
+      @keyframes moveY {
+	from { top: 0; } to { top: 100%; }
+      }

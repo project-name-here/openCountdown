@@ -32,7 +32,8 @@
         "timer": "Timer",
         "clock": "Clock",
         "black": "Black",
-        "test": "Testimage"
+        "test": "Testimage",
+	"screensaver": "Screensaver"
     },
     "labels":
     {

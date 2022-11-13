@@ -156,9 +156,14 @@ app.get("/", function (req, res) {
 });
 
 app.get("/timer", function (req, res) {
-  const data = fs.readFileSync("templates/timerPage.html", "utf8");
+  const data = fs.readFileSync("templates/ng-timerview.html", "utf8");
   res.send(data);
 });
+
+app.get("/timer-old", function (req, res) {
+	const data = fs.readFileSync("templates/timerPage.html", "utf8");
+	res.send(data);
+      });
 
 app.get("/api/v1/data", function (req, res) {
   currentState.srvTime = new Date().getTime()
