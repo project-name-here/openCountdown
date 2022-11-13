@@ -22,13 +22,13 @@ const tempJsonText = JSON.parse(fs.readFileSync("config.json", "utf8"));
 configObject = _.extend(configObject, tempJsonText);
 fs.writeFileSync("config.json", JSON.stringify(configObject));
 
+// Set a serverStatus
 let serverStatus = "Starting"
 
-const processArgs = process.argv;
 // Check if --headless is passed as an argument
+const processArgs = process.argv;
 if (processArgs.includes("--headless")) {
 	startServer()
-
 } else {
 	// Start electron 
 	app.whenReady().then(() => {
@@ -36,26 +36,34 @@ if (processArgs.includes("--headless")) {
 		createTray()
 		createWindow()
 		setInterval(() => {
+			// Check if the server is running
 			http.get('http://127.0.0.1:' + configObject.port + "/api/v1/system", (resp) => {
 				let data = '';
 
 				// A chunk of data has been received.
 				resp.on('data', (chunk) => {
-				  data += chunk;
+					data += chunk;
 				});
-			      
+
 				// The whole response has been received. Print out the result.
 				resp.on('end', () => {
-				  let parsed = JSON.parse(data)
-				  serverStatus = "Running"
+					// If we have a valid response, set the serverStatus to "Running"
+					let parsed = JSON.parse(data)
+					console.log(parsed)
+					serverStatus = "Running"
+					// Send the serverStatus to the window
+					if (win) {
+						win.webContents.send('info', { "appStatus": serverStatus, "appURL": "http://127.0.0.1:" + configObject.port, "appName": "openCountdown " + packageJson.version, "startMinimised": configObject.startMinimised, "port": configObject.port })
+					}
 				});
 			}).on("error", (err) => {
 				console.log("Error: " + err.message);
 			});
-		}, 1000);
+		}, 2000);
 	})
 
 	ipcMain.on('info', function () {
+		// Send inital data to the window
 		if (win) {
 			win.webContents.send('info', { "appStatus": serverStatus, "appURL": "http://127.0.0.1:" + configObject.port, "appName": "openCountdown " + packageJson.version, "startMinimised": configObject.startMinimised, "port": configObject.port })
 		}
@@ -169,6 +177,10 @@ function trayQuit() {
 	}
 	let response = dialog.showMessageBoxSync(options)
 	if (response == 0) {
+		serverStatus = "Stopping"
+		if (win) {
+			win.webContents.send('info', { "appStatus": serverStatus, "appURL": "http://127.0.0.1:" + configObject.port, "appName": "openCountdown " + packageJson.version, "startMinimised": configObject.startMinimised, "port": configObject.port })
+		}
 		srvProc.kill("SIGINT")
 		setTimeout(app.quit, 1000)
 	}
