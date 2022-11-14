@@ -112,39 +112,46 @@ animation:fade 1000ms infinite;
   font-family: sans-serif;
 }
 
+:root {
+	--my-end-left: 99%;
+	--my-end-top: 99%;
+    }
+    
 
 #moveClock {
-	font-size: xx-large;
+	font-size: 6em;
 	font-family: sans-serif;
 	position: absolute;
 	-webkit-animation: moveX 40s linear 0s infinite alternate, moveY 45s linear 0s infinite alternate;
 	-moz-animation: moveX 40s linear 0s infinite alternate, moveY 45s linear 0s infinite alternate;
 	-o-animation: moveX 40s linear 0s infinite alternate, moveY 45s linear 0s infinite alternate;
 	animation: moveX 40s linear 0s infinite alternate, moveY 45s linear 0s infinite alternate;
+	transition: all 0.8s ease;
 }
 
+
 @-webkit-keyframes moveX {
-	from { left: 0; } to { left: 100%; }
+	from { left: 0; } to { left: var(--my-end-left) }
       }
       @-moz-keyframes moveX {
-	from { left: 0; } to { left: 100%; }
+	from { left: 0; } to { left: var(--my-end-left); }
       }
       @-o-keyframes moveX {
-	from { left: 0; } to { left: 100%; }
+	from { left: 0; } to { left: var(--my-end-left); }
       }
       @keyframes moveX {
-	from { left: 0; } to { left: 100%; }
+	from { left: 0; } to { left: var(--my-end-left); }
       }
       
       @-webkit-keyframes moveY {
-	from { top: 0; } to { top: 100%; }
+	from { top: 0; } to { top: var(--my-end-top); }
       }
       @-moz-keyframes moveY {
-	from { top: 0; } to { top: 100%; }
+	from { top: 0; } to { top: var(--my-end-top); }
       }
       @-o-keyframes moveY {
-	from { top: 0; } to { top: 100%; }
+	from { top: 0; } to { top: var(--my-end-top); }
       }
       @keyframes moveY {
-	from { top: 0; } to { top: 100%; }
+	from { top: 0; } to { top: var(--my-end-top); }
       }

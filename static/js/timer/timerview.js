@@ -28,6 +28,10 @@ let dataFrame = {};
 let timeDiffToServer = 0;
 let sessionToken = ""; // Our current session token
 
+// Handle the screensaver to fit the screen
+setTimeout(handleDVD, 200);
+window.addEventListener("resize", handleDVD);
+
 // Handle connection event
 socket.onopen = function (e) {
 	socket.send("new client");
@@ -244,6 +248,14 @@ function handleUpdate() {
 		}
 	}
 }
+
+function handleDVD() {
+	const objHeight = document.body.offsetHeight - screensaverText.offsetHeight;
+	const objWidth = document.body.offsetWidth - screensaverText.offsetWidth;
+	document.documentElement.style.setProperty('--my-end-left', objWidth + "px");
+	document.documentElement.style.setProperty('--my-end-top', objHeight + "px");
+}
+
 
 /**
  Additional documentation
