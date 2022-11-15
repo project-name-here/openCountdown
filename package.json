@@ -1,34 +1,39 @@
 {
-  "name": "opencountdown",
-  "version": "1.0.3",
-  "description": "An opensource countdown",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "nexe index.js --build",
-    "start": "electron newStartHandler.js"
-  },
-  "author": "TheGreydiamond",
-  "license": "LGPL-3.0",
-  "dependencies": {
-    "body-parser": "^1.19.2",
-    "bootstrap": "^5.1.3",
-    "bootstrap-duration-picker": "^2.1.3",
-    "bootstrap-icons": "^1.8.1",
-    "colors": "^1.4.0",
-    "darkreader": "^4.9.44",
-    "eta": "^1.12.3",
-    "express": "^4.17.3",
-    "flatpickr": "^4.6.11",
-    "jquery": "^3.6.0",
-    "js-cookie": "^3.0.1",
-    "less": "^3.13",
-    "mdbootstrap": "^4.20.0",
-    "open": "^8.4.0",
-    "underscore": "^1.13.3",
-    "ws": "^8.5.0"
-  },
-  "devDependencies": {
-    "electron": "^20.0.3"
-  }
+	"name": "opencountdown",
+	"version": "1.0.5",
+	"description": "An opensource countdown",
+	"main": "startHandler.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "electron startHandler.js"
+	},
+	"author": "TheGreydiamond",
+	"license": "LGPL-3.0",
+	"dependencies": {
+		"body-parser": "^1.20.1",
+		"bootstrap": "^5.2.2",
+		"bootstrap-duration-picker": "^2.1.3",
+		"bootstrap-icons": "^1.10.1",
+		"colors": "^1.4.0",
+		"darkreader": "^4.9.58",
+		"eta": "^1.12.3",
+		"express": "^4.18.2",
+		"flatpickr": "^4.6.13",
+		"jquery": "^3.6.1",
+		"js-cookie": "^3.0.1",
+		"less": "^4.1.3",
+		"mdbootstrap": "^4.20.0",
+		"open": "^8.4.0",
+		"underscore": "^1.13.6",
+		"ws": "^8.11.0"
+	},
+	"devDependencies": {
+		"electron": "^21.2.3",
+		"electron-builder": "^23.6.0"
+	},
+	"build": {
+		"extraMetadata": {
+			"main": "startHandler.js"
+		}
+	}
 }
