@@ -25,7 +25,7 @@ function convertColorSegments(elementId) {
 $(function () {
     // $(".numVal").bind("DOMSubtreeModified", alert);
 
-    const modes = ["timer", "clock", "black", "test"]
+    const modes = ["timer", "clock", "black", "test", "screensaver"]
     let selectPresetTime = 0;
 
     if (Cookies.get("interfaceColor") != undefined) {
