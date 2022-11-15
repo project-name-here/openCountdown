@@ -21,8 +21,6 @@ We've introduced a new packaging system. It is based on [electron-builder](https
 chmod +x ./build.sh
 ./build.sh
 ```
-
-> Binary Builds may be faulty or non-working. They are not officially supported.
 *Small disclaimer: Please do not use openCountdown for military or life-depending applications. Please also refrain from using openCountdown for launching rockets.*
 
 
