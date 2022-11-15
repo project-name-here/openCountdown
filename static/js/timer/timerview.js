@@ -1,10 +1,4 @@
-// Scale down the interface if the smaller parameter is set
-let smallerFlag = new URLSearchParams(window.location.search).get("smaller");
-if (smallerFlag == "true") {
-	var cssURL = '/css/smallerTextMod.css';
-	document.head.innerHTML += '<link rel="stylesheet" href="' + cssURL + '"/>';
-	allowFullscreen = false;
-}
+
 
 // References to the HTML elements
 let warningBox = document.getElementById("warningBanner");
@@ -27,10 +21,21 @@ let ackSessionTokenChange = false; // Wether the user has acknowledged the sessi
 let dataFrame = {};
 let timeDiffToServer = 0;
 let sessionToken = ""; // Our current session token
+let defaultToFullscreen = false;
+let allowFullscreen = true; // If the system is allowed to go fullscreen
+
+// Scale down the interface if the smaller parameter is set
+let smallerFlag = new URLSearchParams(window.location.search).get("smaller");
+if (smallerFlag == "true") {
+	var cssURL = '/css/smallerTextMod.css';
+	document.head.innerHTML += '<link rel="stylesheet" href="' + cssURL + '"/>';
+	allowFullscreen = false;
+}
 
 // Handle the screensaver to fit the screen
 setTimeout(handleDVD, 200);
-window.addEventListener("resize", handleDVD);
+setTimeout(handleDVD, 400);
+document.body.onresize = handleDVD;
 
 // Handle connection event
 socket.onopen = function (e) {
@@ -144,6 +149,7 @@ function findProgessColor(colors, value) {
 }
 
 function handleUpdate() {
+	defaultToFullscreen = dataFrame.defaultFullScreen;
 	switch (dataFrame.mode) {
 		case "timer":
 			// Timer mode
@@ -237,6 +243,7 @@ function handleUpdate() {
 	} else {
 		overlay.style.display = "none";
 	}
+
 	// This will result in the text fading in and out when the message changes
 	if (new Date().getTime() - dataFrame.messageAppearTime < 5000) {
 		if (!overlayText.classList.contains('blink')) {
@@ -250,48 +257,25 @@ function handleUpdate() {
 }
 
 function handleDVD() {
+	console.info("Recalculating screensaver size")
 	const objHeight = document.body.offsetHeight - screensaverText.offsetHeight;
 	const objWidth = document.body.offsetWidth - screensaverText.offsetWidth;
 	document.documentElement.style.setProperty('--my-end-left', objWidth + "px");
 	document.documentElement.style.setProperty('--my-end-top', objHeight + "px");
 }
 
-
-/**
- Additional documentation
-
- {
-  "mode": "clock",
-  "countdownGoal": 1668368090542,
-  "showMilliSeconds": false,
-  "defaultFullScreen": true,
-  "timeAmountInital": 0,
-  "timerRunState": false,
-  "pauseMoment": 0,
-  "showTimeOnCountdown": true,
-  "message": "",
-  "showMessage": false,
-  "messageAppearTime": 0,
-  "showProgressbar": true,
-  "colorSegments": {
-    "5000": "#ff0000",
-    "20000": "#FFAE00",
-    "40000": "yellow",
-    "START": "green"
-  },
-  "textColors": {
-    "5000": "#ff0000",
-    "20000": "#FFAE00",
-    "40000": "yellow",
-    "START": "green"
-  },
-  "srvTime": 1668369368722,
-  "enableColoredText": true,
-  "debug": false,
-  "sessionToken": "c184x6on5yb99lkq3ola"
+function enterFullscreen(element) {
+	if (element.requestFullscreen) {
+		element.requestFullscreen();
+	} else if (element.msRequestFullscreen) {
+		element.msRequestFullscreen();
+	} else if (element.webkitRequestFullscreen) {
+		element.webkitRequestFullscreen();
+	}
 }
 
-Possible modes:
-const modes = ["timer", "clock", "black", "test"]
-
-*/
+function updateFullscreen() {
+	if (defaultToFullscreen && allowFullscreen) {
+		enterFullscreen(document.documentElement)
+	}
+}
