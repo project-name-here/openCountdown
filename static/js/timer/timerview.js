@@ -14,7 +14,7 @@ let screensaverText = document.getElementById("moveClock");
 let screensaverClock = document.getElementById("screensaverClock");
 
 // Prepare connection to backend
-let socket = new ReconnectingWebSocket("ws://127.0.0.1:" + location.port);
+let socket = new ReconnectingWebSocket("ws://" + location.hostname + ":" + location.port);
 
 // State variables
 let ackSessionTokenChange = false; // Wether the user has acknowledged the session token mismatch
