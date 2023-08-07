@@ -186,6 +186,9 @@ function handleUpdate() {
 				progressBar.style.width = percentage(diff, dataFrame.timeAmountInital) + "%";
 			} else {
 				progressBar.style.width = "0%";
+				if(!dataFrame.enableOverrun) {
+					timer.innerHTML = "00:00:00";
+				}
 			}
 			progressBar.style.backgroundColor = findProgessColor(dataFrame.colorSegments, diff)
 

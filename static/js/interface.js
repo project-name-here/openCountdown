@@ -131,6 +131,7 @@ $(function () {
         $("#showMillis")[0].checked = jsonResult.showMilliSeconds;
         $("#progBarShow")[0].checked = jsonResult.showProgressbar;
         $("#textColors")[0].checked = jsonResult.enableColoredText;
+	$("#allowOverrun")[0].checked = jsonResult.enableOverrun;
         console.log(document.getElementById("tableCopySource"))
 
         let tableEntryDom = document.getElementById("tableCopySource").cloneNode(true)
@@ -266,6 +267,7 @@ $(function () {
         const showMillisB = $("#showMillis")[0].checked
         const progBarShowB = $("#progBarShow")[0].checked
         const textColorsB = $("#textColors")[0].checked
+	const allowOverrun = $("#allowOverrun")[0].checked
 
         const colors = convertColorSegments("colors1")
         const colors2 = convertColorSegments("colors2")
@@ -276,6 +278,8 @@ $(function () {
         allPathes.push("/api/v1/set/text/enableColoring?enable=" + textColorsB)
         allPathes.push("/api/v1/set/progressbar/colors?isBase64=true&colors=" + btoa(JSON.stringify(colors)))
         allPathes.push("/api/v1/set/text/colors?isBase64=true&colors=" + btoa(JSON.stringify(colors2)))
+	allPathes.push("/api/v1/set/enableOverrun?enable=" + allowOverrun)
+
 
 
         for (pI in allPathes) {
@@ -301,11 +305,13 @@ $(function () {
         const showMillisB = $("#showMillis")[0].checked
         const progBarShowB = $("#progBarShow")[0].checked
         const textColorsB = $("#textColors")[0].checked
+	const allowOverrun = $("#allowOverrun")[0].checked
 
         allPathes.push("/api/v1/set/layout/showTime?persist=true&show=" + showTimeB)
         allPathes.push("/api/v1/set/layout/showMillis?persist=true&show=" + showMillisB)
         allPathes.push("/api/v1/set/progressbar/show?persist=true&show=" + progBarShowB)
         allPathes.push("/api/v1/set/text/enableColoring?persist=true&enable=" + textColorsB)
+	allPathes.push("/api/v1/set/enableOverrun?persist=true&enable=" + allowOverrun)
 
         for (pI in allPathes) {
             const path = allPathes[pI];

@@ -73,6 +73,7 @@ currentState = {
   srvTime: 0,
   enableColoredText: true,
   debug: false,
+  enableOverrun: true,
   sessionToken: Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15),
 };
 
@@ -268,6 +269,18 @@ app.get("/api/v1/set/layout/showTime", function (req, res) {
   }
   updatedData()
 });
+
+app.get("/api/v1/set/enableOverrun", function (req, res) {
+	const resy = helper.wrapBooleanConverter(req.query.enable, res)
+	if (resy != undefined) {
+	  currentState.enableOverrun = resy;
+	  if (req.query.persist === 'true') {
+	    dataToBeWritten.enableOverrun = currentState.enableOverrun
+	  }
+	  res.json({ status: "ok" });
+	}
+	updatedData()
+      });
 
 app.get("/api/v1/set/progressbar/show", function (req, res) {
   currentState.showProgressbar = (req.query.show === 'true');

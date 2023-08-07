@@ -46,7 +46,8 @@
         "enableTextClrs": "Text Farben aktivieren:",
         "textClrs": "Text Farben",
         "addRow": "Neue Zeile",
-        "timeVar": "Aktiviere zeitabweichungs display:"
+        "timeVar": "Aktiviere zeitabweichungs display:",
+	"allowOverrun": "Überlauf erlauben: "
     },
     "untis": 
     {

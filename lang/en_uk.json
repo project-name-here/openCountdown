@@ -49,7 +49,8 @@
         "addRow": "Add Row",
         "timeVar": "Enable time variance display:",
         "language": "Select a language",
-        "apply": "Apply"
+        "apply": "Apply",
+	"allowOverrun": "Allow overrun:"
     },
     "untis": 
     {
