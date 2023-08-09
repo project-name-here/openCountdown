@@ -46,6 +46,7 @@ const allowsURLs = [
 ];
 
 let loadedData = {};
+let dataToBeWritten = {}
 
 loggy.log("Loading config", "info", "Config");
 if (fs.existsSync("data-persistence.json")) {
@@ -236,7 +237,7 @@ app.get("/api/v1/set/addMillisToTimer", function (req, res) {
 
 app.get("/api/v1/set/relativAddMillisToTimer", function (req, res) {
 	
-	currentState.timeAmountInital += parseInt(req.query.time);
+	currentState.timeAmountInital = parseInt(req.query.time) + parseInt(currentState.timeAmountInital);
 	currentState.countdownGoal = currentState.countdownGoal + parseInt(req.query.time);
 	// currentState.pauseMoment = new Date().getTime();
 	
@@ -305,7 +306,8 @@ app.get("/api/v1/set/progressbar/colors", function (req, res) {
   try {
     let data = req.query.colors;
     if (req.query.isBase64 === "true") {
-      data = atob(data);
+	let buff = new Buffer(data, 'base64');
+	data = buff.toString('ascii');
     }
     currentState.colorSegments = JSON.parse(data);
     if (req.query.persist === "true") {
@@ -327,7 +329,8 @@ app.get("/api/v1/set/text/colors", function (req, res) {
     } else {
       let data = req.query.colors;
       if (req.query.isBase64 === "true") {
-        data = atob(data);
+        let buff = new Buffer(data, 'base64');
+	let data = buff.toString('ascii');
       }
       console.debug(data);
       currentState.textColors = JSON.parse(data);
